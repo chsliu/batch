@@ -1,15 +1,24 @@
 *.bak
+*.pyc
+log/*
+networkutil/src/build/*
+networkutil/src/dist/*
 rsync/DeltaCopyRaw/*.log
 rsync/DeltaCopyRaw/1.3fix
 rsync/DeltaCopyRaw/Profiles.ini
 rsync/DeltaCopyRaw/test.dcp
 rsync/bak/*
+script/hvremote/client.bat
 utility/20141120 rss keyword.txt
 utility/hv2/*
+utility/runasadmin.bat
+utility/runasuser.bat
 utility/status.20141125.bat
 utility/temp.bat
+utility/temp.log
 utility/test.bat
 utility/test.txt
 wuinstall/runasadmin.bat
 wuinstall/test/*
 wuinstall/update.bat
+utility/testemail.bat

@@ -1,0 +1,1 @@
+powershell -command "set-executionpolicy remotesigned"

@@ -205,6 +205,8 @@ findstr /C:"ATA Version" %LOG5%						>>%LOG1%
 findstr /C:"overall-health" %LOG5%					>>%LOG1%
 findstr /B "ID#" %LOG5%							>>%LOG1%
 findstr "Reallocated_Sector_Ct" %LOG5%					>>%LOG1%
+findstr "Reported_Uncorrect" %LOG5%					>>%LOG1%
+findstr "Command_Timeout" %LOG5%					>>%LOG1%
 findstr "Current_Pending_Sector" %LOG5%					>>%LOG1%
 findstr "Offline_Uncorrectable" %LOG5%					>>%LOG1%
 findstr "SSD_Life_Left" %LOG5%						>>%LOG1%
