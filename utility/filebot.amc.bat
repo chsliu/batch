@@ -1,0 +1,107 @@
+@echo off
+set LOG1=D:\Download\%~n0.txt
+echo %* >>%LOG1%
+
+if %1=="other" goto :EOF
+
+if %2 == "5" goto :Notify
+
+if %2 neq "11" goto :EOF
+
+REM =================================
+
+set path=%path%;%~dp0;D:\Users\sita\PortableApps\FileBot-portable
+set LOG1="D:\Users\sita\PortableApps\FileBot-portable\logs\%~n3.txt"
+set LOG2="%temp%\%~n3-summary.txt"
+set TXT1=%temp%\%~n0.txt
+set SHARE=\\\\hv3\\Media2
+set XBMC=192.168.1.64
+
+REM =================================
+
+set L=%1
+set S=%2
+set N=%3
+set K=%4
+set F=%5
+set D=%6
+
+call :dequote L
+call :dequote S
+call :dequote N
+call :dequote K
+call :dequote F
+call :dequote D
+
+REM =================================
+
+rem pushover=uCdk2gobtohF1GpECfv3YBSp73Zkgg 
+rem mail=msa.hinet.net:25:chsliu@gmail.com mailto=chsliu@gmail.com reportError=y 
+rem pushbullet=UR97NWpn7i61jqO0BQkyZWQhaNmfGe8t 
+rem start /wait 
+rem excludeList=amc-input.txt
+rem --action copy
+rem --conflict override
+
+filebot -script fn:amc --output "%SHARE%/TV" --log-file "%~n3.txt" --action move --conflict skip -non-strict --def artwork=y extras=y unsorted=y clean=y skipExtract=y subtitles=en,zh "ut_label=%L%" "ut_state=%S%" "ut_title=%N%" "ut_kind=%K%" "ut_file=%F%" "ut_dir=%D%" xbmc=%XBMC% "seriesFormat=%SHARE%/TV/{n} ({y})/{\"Season ${s.pad(2)}\"}/{n} - {s00e00} - {t} - {airdate}.{vf}{'.'+source}.{vc}{'-'+group}{'.'+lang}" "movieFormat=%SHARE%/Movie/{y}/{y} {n} {audios.language}/{n.space('.')}.{y}.{vf}{'.'+source}.{vc}.{af}.{ac}{'-'+group}{'-'+\"CD$pi\"}{'.'+lang}" "animeFormat=%SHARE%/ACG/{n} ({y})/{\"Season ${s.pad(2)}\"}/{n} - {s00e00} - {t} - {airdate}.{vf}{'.'+source}.{vc}{'-'+group}{'.'+lang}" "musicFormat=%SHARE%/Music/{n}/{'['+y+'] '+album+'/'}{pi.pad(2)+'. '} {artist} - {t} {[af, audio.SamplingRateString, audio.bitRateString]}"
+
+REM =================================
+
+echo Waiting for filebot:amc on %N% ...
+
+call :WaitForWord %LOG1% "Done" "Failure"
+
+echo List of newly download files:	 >%LOG2%
+findstr /C:"[COPY]" %LOG1%		>>%LOG2%
+findstr /C:"[MOVE]" %LOG1%		>>%LOG2%
+
+copy %0 %TXT1%
+
+sendemail -s msa.hinet.net -f egreta.su@msa.hinet.net -t chsliu@gmail.com -u [FileBot]_%N% -a %LOG2% %LOG1% %TXT1% -m "%*"
+
+rem pause
+
+del %LOG1% %LOG2% %TXT1%
+
+REM =================================
+
+:DeQuote
+for /f "delims=" %%A in ('echo %%%1%%') do set %1=%%~A
+goto :EOF
+
+REM =================================
+
+:WaitForWord
+
+ping 127.0.0.1 -n 10 -w 1000 > nul
+
+if not exist %1 goto :WaitForWord
+echo Waiting for Logfile, size is %~z1
+
+2>nul (
+  >>%1 (call )
+) && (
+  echo Logfile %~nx1 is ready
+) || (
+  echo Logfile %~nx1 is not ready
+  goto :WaitForWord
+)
+
+findstr %2 %1 > nul
+if %ERRORLEVEL%==0 goto :EOF
+
+findstr %3 %1 > nul
+if %ERRORLEVEL%==0 goto :EOF
+
+goto :WaitForWord
+
+REM =================================
+
+:Notify
+pushd %~dp0\..\pushbullet\
+python pushbullet_cmd.py UR97NWpn7i61jqO0BQkyZWQhaNmfGe8t note ufjW6eNsjAiVsKnSTs "%3" "%~n0 Download Complete"
+popd
+
+rem pause
+
+goto :EOF
