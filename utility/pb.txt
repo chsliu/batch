@@ -1,0 +1,9 @@
+from pushbullet import PushBullet
+ 
+apiKey = "APIKEYGOESHERE"
+p = PushBullet(apiKey)
+# Get a list of devices
+devices = p.getDevices()
+ 
+p.pushFile(devices[1]["id"], 'PATHTOMAYA/mayaRenderLog.txt')
+# Send a file

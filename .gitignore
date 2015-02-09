@@ -1,0 +1,15 @@
+*.bak
+rsync/DeltaCopyRaw/*.log
+rsync/DeltaCopyRaw/1.3fix
+rsync/DeltaCopyRaw/Profiles.ini
+rsync/DeltaCopyRaw/test.dcp
+rsync/bak/*
+utility/20141120 rss keyword.txt
+utility/hv2/*
+utility/status.20141125.bat
+utility/temp.bat
+utility/test.bat
+utility/test.txt
+wuinstall/runasadmin.bat
+wuinstall/test/*
+wuinstall/update.bat

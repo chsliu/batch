@@ -1,0 +1,43 @@
+# 排除檔案
+- swapfile.sys
+- *.iso
+- Thumbs.db
+- desktop.ini
+- *.o
+- *.obj
+
+# 排除目錄
+- log/
+- $RECYCLE.BIN/
+- $Recycle.Bin/
+- AMD/
+- Config.Msi/
+- DEL/
+- PerfLogs/
+- SkyDriveTemp/
+- System Volume Information/
+- TEMP/
+- Temp/
+- Windows.old/
+- Windows/
+- Virtual Machines/
+- Microsoft/
+- Package Cache/
+- BlueStacks/
+- Cache/
+- VMware/
+- Adobe/
+- Apple Computer/
+- GoogleEarth/
+- PCDr/
+- .SyncTrash/
+- ATI Stream/
+
+# 包含檔案
++ *.*
+
+# 包含目錄
++ */
+
+# 禁止傳輸其他
+- *
