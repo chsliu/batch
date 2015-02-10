@@ -210,6 +210,7 @@ findstr "Command_Timeout" %LOG5%					>>%LOG1%
 findstr "Current_Pending_Sector" %LOG5%					>>%LOG1%
 findstr "Offline_Uncorrectable" %LOG5%					>>%LOG1%
 findstr "SSD_Life_Left" %LOG5%						>>%LOG1%
+findstr "Power_On_Hours" %LOG5%						>>%LOG1%
 findstr "Temperature_Celsius" %LOG5%					>>%LOG1%
 findstr /C:"occurred at disk power-on lifetime" %LOG5%			>>%LOG1%
 echo ---------------------------------					>>%LOG1%
