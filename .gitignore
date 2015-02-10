@@ -6,6 +6,7 @@ networkutil/src/dist/*
 rsync/DeltaCopyRaw/*.log
 rsync/DeltaCopyRaw/1.3fix
 rsync/DeltaCopyRaw/Profiles.ini
+rsync/DeltaCopyRaw/deltacd.conf
 rsync/DeltaCopyRaw/test.dcp
 rsync/bak/*
 script/hvremote/client.bat
@@ -16,6 +17,7 @@ utility/hv2/*
 utility/hv3/*
 utility/runasadmin.bat
 utility/runasuser.bat
+utility/status.20141124.bat
 utility/status.20141125.bat
 utility/temp.bat
 utility/temp.log
@@ -23,5 +25,6 @@ utility/test.bat
 utility/test.txt
 utility/testemail.bat
 wuinstall/runasadmin.bat
+wuinstall/runasuser.bat
 wuinstall/test/*
 wuinstall/update.bat
