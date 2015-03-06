@@ -1,0 +1,47 @@
+﻿
+	  			X:\NTFS\Browser\Ie60_SP1\iesetup.dir
+	  			X:\NTFS\Compiler\CE.NET\eVC4\cd1.inf
+	  			X:\NTFS\Compiler\Microsoft Visual Studio 6 Pro\Visual Studio 6 CD 1\VS98PCD1.INF
+	  			X:\NTFS\Compiler\Microsoft Visual Studio 6 Pro\Visual Studio 6 CD 2\VS98PCD2.INF
+	  			X:\NTFS\Compiler\VBP600CHT1\VB98PCD1.inf
+	  			X:\NTFS\FTP\FlashGet\CUSTDATA.INI
+	  			X:\伺服器軟體\phpBB\phpBB plus v1.52 繁體中文版\phpBB2\config.php
+	  			X:\伺服器軟體\phpBB\phpBB-2.0.19\phpBB2\config.php
+	  			X:\作業系統\CWinME\readme.txt
+	  			X:\作業系統\WIN31\ACCESS.CDE
+	  			X:\驅動程式\Printer_driver\LM-PR98\LM-PR98.url
+	  			X:\驅動程式\Printer_driver\LM-PR98\PSAdmin(1.06.40)Print Monitor(4.03.17).exe
+	  			X:\驅動程式\Printer_driver\LM-PR98\old\_INST32I.EX_
+	  			X:\驅動程式\Printer_driver\LM-PR98\old\_ISDEL.EXE
+	  			X:\驅動程式\Printer_driver\LM-PR98\old\_SETUP.DLL
+	  			X:\驅動程式\Printer_driver\LM-PR98\old\_SETUP.LIB
+	  			X:\驅動程式\Printer_driver\LM-PR98\old\BUILD.LOG
+	  			X:\驅動程式\Printer_driver\LM-PR98\old\DATA.1
+	  			X:\驅動程式\Printer_driver\LM-PR98\old\DISK1.ID
+	  			X:\驅動程式\Printer_driver\LM-PR98\old\DLLAPI.DLL
+	  			X:\驅動程式\Printer_driver\LM-PR98\old\SETUP.EXE
+	  			X:\驅動程式\Printer_driver\LM-PR98\old\SETUP.INS
+	  			X:\驅動程式\Printer_driver\LM-PR98\old\SETUP.ISS
+	  			X:\驅動程式\Printer_driver\LM-PR98\old\SETUP.PKG
+	  			X:\驅動程式\Printer_driver\LM-PR98\old\UNINST.EXE
+	  			X:\驅動程式\Printer_driver\Printer_server_mini100u2\lang.dat
+	  			X:\驅動程式\Printer_server_mini100u2\lang.dat
+	  			X:\驅動程式\Printer_server_mini100u2\setupdir\0009\_Setup.dll
+	  			X:\驅動程式\Raid SR3600\RAIDGuide1.28.1.5.rar
+	  			X:\驅動程式\Raid SR3600\FIRMWARE\S3K61203.BIN
+	  			X:\驅動程式\Raid SR3600\MANUAL\1394B FIRMWARE UPLOADER STEP.doc
+	  			X:\驅動程式\Raid SR3600\MANUAL\FAN INSTALL STEP.doc
+	  			X:\驅動程式\Raid SR3600\MANUAL\FLASHROM INSTALL STEP.doc
+	  			X:\驅動程式\Raid SR3600\MANUAL\RAIDGuide RAID Manager.pdf
+	  			X:\驅動程式\Raid SR3600\MANUAL\SR3500-Manual.pdf
+	  			X:\驅動程式\Raid SR3600\RAIDGuide1.28.1.5\_INST32I.EX_
+	  			X:\驅動程式\Raid SR3600\RAIDGuide1.28.1.5\_ISDEL.EXE
+	  			X:\驅動程式\Raid SR3600\RAIDGuide1.28.1.5\_SETUP.1
+	  			X:\驅動程式\Raid SR3600\RAIDGuide1.28.1.5\_SETUP.DLL
+	  			X:\驅動程式\Raid SR3600\RAIDGuide1.28.1.5\_SETUP.LIB
+	  			X:\驅動程式\Raid SR3600\RAIDGuide1.28.1.5\DISK1.ID
+	  			X:\驅動程式\Raid SR3600\RAIDGuide1.28.1.5\SETUP.EXE
+	  			X:\驅動程式\Raid SR3600\RAIDGuide1.28.1.5\SETUP.INI
+	  			X:\驅動程式\Raid SR3600\RAIDGuide1.28.1.5\SETUP.INS
+	  			X:\驅動程式\Raid SR3600\RAIDGuide1.28.1.5\SETUP.PKG
+	  			X:\驅動程式\Umax610s\readme.txt

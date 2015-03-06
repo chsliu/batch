@@ -28,3 +28,4 @@ wuinstall/runasadmin.bat
 wuinstall/runasuser.bat
 wuinstall/test/*
 wuinstall/update.bat
+*.url

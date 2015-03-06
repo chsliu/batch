@@ -1,0 +1,11 @@
+﻿
+	  			\\gs\網管區\NTFS\Browser\Ie60_SP1\iesetup.dir
+	  			\\gs\網管區\NTFS\Compiler\CE.NET\eVC4\cd1.inf
+	  			\\gs\網管區\NTFS\Compiler\Microsoft Visual Studio 6 Pro\Visual Studio 6 CD 1\VS98PCD1.INF
+	  			\\gs\網管區\NTFS\Compiler\Microsoft Visual Studio 6 Pro\Visual Studio 6 CD 2\VS98PCD2.INF
+	  			\\gs\網管區\NTFS\Compiler\VBP600CHT1\VB98PCD1.inf
+	  			\\gs\網管區\NTFS\FTP\FlashGet\CUSTDATA.INI
+	  			\\gs\網管區\伺服器軟體\phpBB\phpBB plus v1.52 繁體中文版\phpBB2\config.php
+	  			\\gs\網管區\伺服器軟體\phpBB\phpBB-2.0.19\phpBB2\config.php
+	  			\\gs\網管區\作業系統\CWinME\readme.txt
+	  			\\gs\網管區\作業系統\WIN31\ACCESS.CDE
