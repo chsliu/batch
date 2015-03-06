@@ -1,9 +1,9 @@
-ï»¿REM RDP
-netsh advfirewall firewall set rule group=é ç«¯æ¡Œé¢ new enable=yes
+REM RDP
+netsh advfirewall firewall set rule group=»·ºİ®à­± new enable=yes
 netsh advfirewall firewall set rule group="Remote Desktop" new enable=yes
 
 
-REM ä½¿ç”¨é ç«¯æ¡Œé¢ç®¡ç† Server Core ä¼ºæœå™¨
+REM ¨Ï¥Î»·ºİ®à­±ºŞ²z Server Core ¦øªA¾¹
 cscript %windir%\system32\scregedit.wsf /AR 0
-REM èˆŠç‰ˆ Windows ä¸ŠåŸ·è¡Œé ç«¯æ¡Œé¢æœå‹™ç”¨æˆ¶ç«¯
+REM ÂÂª© Windows ¤W°õ¦æ»·ºİ®à­±ªA°È¥Î¤áºİ
 cscript %windir%\system32\scregedit.wsf /CS 0 

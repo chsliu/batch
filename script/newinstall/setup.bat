@@ -1,4 +1,4 @@
-ï»¿@echo off
+@echo off
 if [%PCNAME%]==[] goto exit
 if [%ADMPASS%]==[] goto exit
 if [%FIRSTUSER%]==[] goto exit
@@ -9,40 +9,40 @@ REM set ADMPASS=1
 REM set FIRSTUSER=sita
 REM set FIRSTUSERPASS=1
 
-REM é™ä½å¯†ç¢¼é›£åº¦
+REM ­°§C±K½XÃø«×
 call export.sec.bat
 REM set PasswordComplexity = 0
 notepad sec.cfg
 call import.sec.bat
 
-REM è¨­å®šé›»è…¦åç¨±
+REM ³]©w¹q¸£¦WºÙ
 call computername.bat %PCNAME%
 
-REM æ›´æ”¹admå¯†ç¢¼
+REM §ó§ïadm±K½X
 call passwd.bat administrator %ADMPASS%
 
-REM admå¯†ç¢¼ä¸éæœŸ
+REM adm±K½X¤£¹L´Á
 call neverexpired.bat administrator
 
-REM æ–°å¢firstuser
+REM ·s¼Wfirstuser
 call adduser.bat %FIRSTUSER% %FIRSTUSERPASS%
 
-REM firstuserå¯†ç¢¼ä¸éæœŸ
+REM firstuser±K½X¤£¹L´Á
 call neverexpired.bat %FIRSTUSER%
 
-REM çµ¦äºˆfirstuserç®¡ç†æ¬Šé™
+REM µ¹¤©firstuserºŞ²zÅv­­
 call addadmin.bat %FIRSTUSER%
 
-REM å®‰è£å¿…è¦åŠŸèƒ½
+REM ¦w¸Ë¥²­n¥\¯à
 call installfeature.bat
 
 REM open port
 call openport.bat
 
-REM é–‹å•Ÿé ç«¯æ¡Œé¢ç®¡ç†
+REM ¶}±Ò»·ºİ®à­±ºŞ²z
 call rdpon.bat
 
-REM é–‹å•Ÿé ç«¯ç®¡ç†
+REM ¶}±Ò»·ºİºŞ²z
 call remoteon2.bat
 
 :exit
