@@ -1,0 +1,829 @@
+﻿
+	  			\\N2\Media\KEEP NEW\ACG\Apple Seed\[APPLE.SEED.OVA].[POPGO][FREEWIND][APPLE_SEED_OVA][DVDRIP][XVID_MP3].avi
+	  			\\N2\Media\KEEP NEW\ACG\Apple Seed\[APPLE.SEED.OVA].[POPGO][FREEWIND][APPLE_SEED_OVA][DVDRIP][XVID_MP3].tc.ass
+	  			\\N2\Media\KEEP NEW\ACG\Apple Seed\[POPGO][FREEWIND][Appleseed_Ex_Machina][BDRIP].rmvb
+	  			\\N2\Media\KEEP NEW\ACG\Apple Seed\[蘋果核戰記].[FOSKY-FANSUB][APPLESEED][DVDRIP][FONT].rar
+	  			\\N2\Media\KEEP NEW\ACG\Apple Seed\[蘋果核戰記].[FOSKY-FANSUB][APPLESEED][DVDRIP][x264_AC3][JP_CN][C30020DA].mkv
+	  			\\N2\Media\KEEP NEW\ACG\Apple Seed\[蘋果核戰記].[FOSKY-FANSUB][APPLESEED][DVDRIP_SP1][x264_AAC][BFDA836F].mkv
+	  			\\N2\Media\KEEP NEW\ACG\Apple Seed\[蘋果核戰記].[FOSKY-FANSUB][APPLESEED][DVDRIP_SP2][x264_AAC][BF22F5C8].mkv
+	  			\\N2\Media\KEEP NEW\ACG\Apple Seed\[蘋果核戰記].[FOSKY-FANSUB][APPLESEED][DVDRIP_SP3][x264_AAC][329A5F8B].mkv
+	  			\\N2\Media\KEEP NEW\ACG\Apple Seed\[蘋果核戰記].[FOSKY-FANSUB][APPLESEED][DVDRIP_SP4][x264_AAC][E99ACC6B].mkv
+	  			\\N2\Media\KEEP NEW\ACG\Apple Seed\[蘋果核戰記].[FOSKY-FANSUB][APPLESEED][DVDRIP_SP5][x264_AAC][A9B2393A].mkv
+	  			\\N2\Media\KEEP NEW\ACG\Apple Seed\Appleseed.Ex.Machina.蘋果核戰記續篇.中文字幕日語發音.HR-HDTV.AC3.960X540.x264-人人影視製作.avi
+	  			\\N2\Media\KEEP NEW\ACG\Apple Seed\Appleseed.Ex.Machina.蘋果核戰記續篇.中文字幕日語發音.HR-HDTV.AC3.960X540.x264-人人影視製作.Sample.avi
+	  			\\N2\Media\KEEP NEW\ACG\City Hunter\[.DVD].TV'97.????[DVD.91m06s.640x480.WMV9.48KHz.VBR.192.1Kbps.WMA].sc.ssa
+	  			\\N2\Media\KEEP NEW\ACG\City Hunter\城市獵人.-.[Disc-01][City.Hunter.Sound.Collection.X-Theme.Songs-].專輯.(APE).iso
+	  			\\N2\Media\KEEP NEW\ACG\City Hunter\城市獵人.-.[Disc-01][City.Hunter.Sound.Collection.Y-Insertion.Tracks-].專輯.(APE).iso
+	  			\\N2\Media\KEEP NEW\ACG\City Hunter\城市獵人.-.[Disc-01][City.Hunter.Sound.Collection.Z-Dramatic.Album].專輯.(APE).iso
+	  			\\N2\Media\KEEP NEW\ACG\City Hunter\城市獵人.-.[Disc-02][City.Hunter.Sound.Collection.X-Theme.Songs-].專輯.(APE).iso
+	  			\\N2\Media\KEEP NEW\ACG\City Hunter\城市獵人.-.[Disc-02][City.Hunter.Sound.Collection.Y-Insertion.Tracks-].專輯.(APE).iso
+	  			\\N2\Media\KEEP NEW\ACG\City Hunter\城市獵人.-.[Disc-02][City.Hunter.Sound.Collection.Z-Dramatic.Album].專輯.(APE).iso
+	  			\\N2\Media\KEEP NEW\ACG\Cowboy_Bebop\[popgo][music][128k]COWBOY.BEBOP.CD-BOX.OST.Limited.Edition(5CD).zip
+	  			\\N2\Media\KEEP NEW\ACG\Cowboy_Bebop\[星際牛仔].[FOSKY][Cowboy_Bebop][01][BIG5][DVDrip].rmvb
+	  			\\N2\Media\KEEP NEW\ACG\Cowboy_Bebop\[星際牛仔].[FOSKY][Cowboy_Bebop][02][BIG5][dvdrip].rmvb
+	  			\\N2\Media\KEEP NEW\ACG\Cowboy_Bebop\[星際牛仔].[FOSKY][Cowboy_Bebop][03][BIG5][dvdrip].rmvb
+	  			\\N2\Media\KEEP NEW\ACG\Cowboy_Bebop\[星際牛仔].[FOSKY][Cowboy_Bebop][04][BIG5][DVDrip].rmvb
+	  			\\N2\Media\KEEP NEW\ACG\Cowboy_Bebop\[星際牛仔].[FOSKY][Cowboy_Bebop][05][BIG5][DVDrip].rmvb
+	  			\\N2\Media\KEEP NEW\ACG\Cowboy_Bebop\[星際牛仔].[FOSKY][Cowboy_Bebop][06][BIG5][DVDrip].rmvb
+	  			\\N2\Media\KEEP NEW\ACG\Cowboy_Bebop\[星際牛仔].[FOSKY][Cowboy_Bebop][07][BIG5][DVDrip].rmvb
+	  			\\N2\Media\KEEP NEW\ACG\Cowboy_Bebop\[星際牛仔].[FOSKY][Cowboy_Bebop][08][BIG5][DVDrip].rmvb
+	  			\\N2\Media\KEEP NEW\ACG\Cowboy_Bebop\[星際牛仔].[FOSKY][Cowboy_Bebop][09][BIG5][DVDrip].rmvb
+	  			\\N2\Media\KEEP NEW\ACG\Cowboy_Bebop\[星際牛仔].[FOSKY][Cowboy_Bebop][10][BIG5][DVDrip].rmvb
+	  			\\N2\Media\KEEP NEW\ACG\Cowboy_Bebop\[星際牛仔].[FOSKY][Cowboy_Bebop][11][BIG5][DVDrip].rmvb
+	  			\\N2\Media\KEEP NEW\ACG\Cowboy_Bebop\[星際牛仔].[FOSKY][Cowboy_Bebop][12][BIG5][DVDrip].rmvb
+	  			\\N2\Media\KEEP NEW\ACG\Cowboy_Bebop\[星際牛仔].[FOSKY][Cowboy_Bebop][13][BIG5][dvdrip].rmvb
+	  			\\N2\Media\KEEP NEW\ACG\Cowboy_Bebop\[星際牛仔].[FOSKY][Cowboy_Bebop][14][BIG5][dvdrip].rmvb
+	  			\\N2\Media\KEEP NEW\ACG\Cowboy_Bebop\[星際牛仔].[FOSKY][Cowboy_Bebop][15][BIG5][dvdrip].rmvb
+	  			\\N2\Media\KEEP NEW\ACG\Cowboy_Bebop\[星際牛仔].[FOSKY][Cowboy_Bebop][16][BIG5][dvdrip].rmvb
+	  			\\N2\Media\KEEP NEW\ACG\Cowboy_Bebop\[星際牛仔].[FOSKY][Cowboy_Bebop][17][BIG5][dvdrip].rmvb
+	  			\\N2\Media\KEEP NEW\ACG\Cowboy_Bebop\[星際牛仔].[FOSKY][Cowboy_Bebop][18][BIG5][dvdrip].rmvb
+	  			\\N2\Media\KEEP NEW\ACG\Cowboy_Bebop\[星際牛仔].[FOSKY][Cowboy_Bebop][19][BIG5][dvdrip].rmvb
+	  			\\N2\Media\KEEP NEW\ACG\Cowboy_Bebop\[星際牛仔].[FOSKY][Cowboy_Bebop][20][BIG5][dvdrip].rmvb
+	  			\\N2\Media\KEEP NEW\ACG\Cowboy_Bebop\[星際牛仔].[FOSKY][Cowboy_Bebop][21][BIG5][DVDrip].rmvb
+	  			\\N2\Media\KEEP NEW\ACG\Cowboy_Bebop\[星際牛仔].[FOSKY][Cowboy_Bebop][22][BIG5][DVDrip].rmvb
+	  			\\N2\Media\KEEP NEW\ACG\Cowboy_Bebop\[星際牛仔].[FOSKY][Cowboy_Bebop][23][BIG5][DVDrip].rmvb
+	  			\\N2\Media\KEEP NEW\ACG\Cowboy_Bebop\[星際牛仔].[FOSKY][Cowboy_Bebop][24][BIG5][DVDrip].rmvb
+	  			\\N2\Media\KEEP NEW\ACG\Cowboy_Bebop\[星際牛仔].[FOSKY][Cowboy_Bebop][25][BIG5][DVDrip].rmvb
+	  			\\N2\Media\KEEP NEW\ACG\Cowboy_Bebop\[星際牛仔].[FOSKY][Cowboy_Bebop][26][BIG5][DVDrip].rmvb
+	  			\\N2\Media\KEEP NEW\ACG\Cowboy_Bebop\[星際牛仔].[FOSKY][Cowboy_Bebop][XVID_AC3][DVDRIP][sp1][E3B0E3BC].avi
+	  			\\N2\Media\KEEP NEW\ACG\Cowboy_Bebop\[星際牛仔].[FOSKY][Cowboy_Bebop][XVID_AC3][DVDRIP][sp2][EBD909BC].avi
+	  			\\N2\Media\KEEP NEW\ACG\Cowboy_Bebop\[星際牛仔].[FOSKY][Cowboy_Bebop_Session][00][dvdrip][7AA422D4].mkv
+	  			\\N2\Media\KEEP NEW\ACG\Cowboy_Bebop\[星際牛仔劇場-天國之扉].[FOSKY][Cowboy_Bebop_Movie][BIG5][dvdrip].rmvb
+	  			\\N2\Media\KEEP NEW\ACG\Cowboy_Bebop\Thumbs.db
+	  			\\N2\Media\KEEP NEW\ACG\Ghost in the shell\[POPGO][Stand_Alone_Complex_Tachikoma_Special][DVDRIP][GB]02.avi
+	  			\\N2\Media\KEEP NEW\ACG\Ghost in the shell\[POPGO][Stand_Alone_Complex_Tachikoma_Special][DVDRIP][GB]07.avi
+	  			\\N2\Media\KEEP NEW\ACG\Ghost in the shell\[POPGO][Stand_Alone_Complex_Tachikoma_Special][DVDRIP][GB]09.avi
+	  			\\N2\Media\KEEP NEW\ACG\Ghost in the shell\[POPGO][Stand_Alone_Complex_Tachikoma_Special][DVDRIP][GB]10.avi
+	  			\\N2\Media\KEEP NEW\ACG\Ghost in the shell\[POPGO][Stand_Alone_Complex_Tachikoma_Special][DVDRIP][GB]25.avi
+	  			\\N2\Media\KEEP NEW\ACG\Ghost in the shell\[POPGO][Stand_Alone_Complex_Tachikoma_Special][DVDRIP][GB]26.avi
+	  			\\N2\Media\KEEP NEW\ACG\Ghost in the shell\1995 MOV GHOST IN THE SHELL\[dmhy][Ghost.In.The.Shell][Movie][DVDRip][JP][GB].avi
+	  			\\N2\Media\KEEP NEW\ACG\Ghost in the shell\2002 TV STAND ALONE COMPLEX\[STAND_ALONE_COMPLEX][GB][01].avi
+	  			\\N2\Media\KEEP NEW\ACG\Ghost in the shell\2002 TV STAND ALONE COMPLEX\[STAND_ALONE_COMPLEX][GB][02].avi
+	  			\\N2\Media\KEEP NEW\ACG\Ghost in the shell\2002 TV STAND ALONE COMPLEX\[STAND_ALONE_COMPLEX][GB][03.avi
+	  			\\N2\Media\KEEP NEW\ACG\Ghost in the shell\2002 TV STAND ALONE COMPLEX\[STAND_ALONE_COMPLEX][GB][04.avi
+	  			\\N2\Media\KEEP NEW\ACG\Ghost in the shell\2002 TV STAND ALONE COMPLEX\[STAND_ALONE_COMPLEX][GB][05.avi
+	  			\\N2\Media\KEEP NEW\ACG\Ghost in the shell\2002 TV STAND ALONE COMPLEX\[STAND_ALONE_COMPLEX][GB][06.avi
+	  			\\N2\Media\KEEP NEW\ACG\Ghost in the shell\2002 TV STAND ALONE COMPLEX\[STAND_ALONE_COMPLEX][GB][07.avi
+	  			\\N2\Media\KEEP NEW\ACG\Ghost in the shell\2002 TV STAND ALONE COMPLEX\[STAND_ALONE_COMPLEX][GB][08v2.avi
+	  			\\N2\Media\KEEP NEW\ACG\Ghost in the shell\2002 TV STAND ALONE COMPLEX\[STAND_ALONE_COMPLEX][GB][09].avi
+	  			\\N2\Media\KEEP NEW\ACG\Ghost in the shell\2002 TV STAND ALONE COMPLEX\[STAND_ALONE_COMPLEX][GB][10].avi
+	  			\\N2\Media\KEEP NEW\ACG\Ghost in the shell\2002 TV STAND ALONE COMPLEX\[STAND_ALONE_COMPLEX][GB][11.avi
+	  			\\N2\Media\KEEP NEW\ACG\Ghost in the shell\2002 TV STAND ALONE COMPLEX\[STAND_ALONE_COMPLEX][GB][12].avi
+	  			\\N2\Media\KEEP NEW\ACG\Ghost in the shell\2002 TV STAND ALONE COMPLEX\[STAND_ALONE_COMPLEX][GB][13].avi
+	  			\\N2\Media\KEEP NEW\ACG\Ghost in the shell\2002 TV STAND ALONE COMPLEX\[STAND_ALONE_COMPLEX][GB][14].avi
+	  			\\N2\Media\KEEP NEW\ACG\Ghost in the shell\2002 TV STAND ALONE COMPLEX\[STAND_ALONE_COMPLEX][GB][15].avi
+	  			\\N2\Media\KEEP NEW\ACG\Ghost in the shell\2002 TV STAND ALONE COMPLEX\[STAND_ALONE_COMPLEX][GB][16.avi
+	  			\\N2\Media\KEEP NEW\ACG\Ghost in the shell\2002 TV STAND ALONE COMPLEX\[STAND_ALONE_COMPLEX][GB][17.avi
+	  			\\N2\Media\KEEP NEW\ACG\Ghost in the shell\2002 TV STAND ALONE COMPLEX\[STAND_ALONE_COMPLEX][GB][18.avi
+	  			\\N2\Media\KEEP NEW\ACG\Ghost in the shell\2002 TV STAND ALONE COMPLEX\[STAND_ALONE_COMPLEX][GB][19.avi
+	  			\\N2\Media\KEEP NEW\ACG\Ghost in the shell\2002 TV STAND ALONE COMPLEX\[STAND_ALONE_COMPLEX][GB][20[031E5AD9].avi
+	  			\\N2\Media\KEEP NEW\ACG\Ghost in the shell\2002 TV STAND ALONE COMPLEX\[STAND_ALONE_COMPLEX][GB][21[E2E17319].avi
+	  			\\N2\Media\KEEP NEW\ACG\Ghost in the shell\2002 TV STAND ALONE COMPLEX\[STAND_ALONE_COMPLEX][GB][22[BA7E561B].avi
+	  			\\N2\Media\KEEP NEW\ACG\Ghost in the shell\2002 TV STAND ALONE COMPLEX\[STAND_ALONE_COMPLEX][GB][23[89ACADE5].avi
+	  			\\N2\Media\KEEP NEW\ACG\Ghost in the shell\2002 TV STAND ALONE COMPLEX\[STAND_ALONE_COMPLEX][GB][24[65C75593].avi
+	  			\\N2\Media\KEEP NEW\ACG\Ghost in the shell\2002 TV STAND ALONE COMPLEX\[STAND_ALONE_COMPLEX][GB][25][45BBE848].avi
+	  			\\N2\Media\KEEP NEW\ACG\Ghost in the shell\2002 TV STAND ALONE COMPLEX\[STAND_ALONE_COMPLEX][GB][26][AF93A519].avi
+	  			\\N2\Media\KEEP NEW\ACG\Ghost in the shell\2002 TV STAND ALONE COMPLEX\[攻殼機動隊之笑面男].[GITS.S.A.C.][The.Laughing.Man].rmvb
+	  			\\N2\Media\KEEP NEW\ACG\Ghost in the shell\2002 TV STAND ALONE COMPLEX\[攻殼機動隊之笑面男].[GITS.S.A.C.][The.Laughing.Man][640x352][XviD_AC3].avi
+	  			\\N2\Media\KEEP NEW\ACG\Ghost in the shell\2002 TV STAND ALONE COMPLEX\[攻殼機動隊之笑面男].[GITS.S.A.C.][The.Laughing.Man][640x352][XviD_AC3].idx
+	  			\\N2\Media\KEEP NEW\ACG\Ghost in the shell\2002 TV STAND ALONE COMPLEX\[攻殼機動隊之笑面男].[GITS.S.A.C.][The.Laughing.Man][640x352][XviD_AC3].rar
+	  			\\N2\Media\KEEP NEW\ACG\Ghost in the shell\2004 MOV INNOCENCE\[vga-pv].Innocence.no.Jokei.-Animated.Clips-..01.-.Kugutsu.Uta.-.Uramite.Chiru..(640x360.DiVX5.05.avi
+	  			\\N2\Media\KEEP NEW\ACG\Ghost in the shell\2004 MOV INNOCENCE\[vga-pv].Innocence.no.Jokei.-Animated.Clips-..02.-.River.of.Crystals.(640x360.DiVX5.05.mp3.VBR).avi
+	  			\\N2\Media\KEEP NEW\ACG\Ghost in the shell\2004 MOV INNOCENCE\[vga-pv].Innocence.no.Jokei.-Animated.Clips-..03.-.Attack.of.The.Wakabayashi.(640x360.DiVX5.05.mp.avi
+	  			\\N2\Media\KEEP NEW\ACG\Ghost in the shell\2004 MOV INNOCENCE\[vga-pv].Innocence.no.Jokei.-Animated.Clips-..04.-.Kugutsu.Uta.-.Aratayo.ni.Kamutsudohite.(640x36.avi
+	  			\\N2\Media\KEEP NEW\ACG\Ghost in the shell\2004 MOV INNOCENCE\[vga-pv].Innocence.no.Jokei.-Animated.Clips-..05.-.The.Doll.House.I.(640x360.DiVX5.05.mp3.VBR).avi
+	  			\\N2\Media\KEEP NEW\ACG\Ghost in the shell\2004 MOV INNOCENCE\[vga-pv].Innocence.no.Jokei.-Animated.Clips-..06.-.Kugutsu.Uta.-.Kagirohi.wa.Yomi.ni.Matamuto.(64.avi
+	  			\\N2\Media\KEEP NEW\ACG\Ghost in the shell\2004 MOV INNOCENCE\[vga-pv].Innocence.no.Jokei.-Animated.Clips-..07.-.Follow.Me.(640x360.DiVX5.05.mp3.VBR).avi
+	  			\\N2\Media\KEEP NEW\ACG\Ghost in the shell\2004 MOV INNOCENCE\[攻殼機動隊2].Innocence.2004.DVDRip.XviD-TLF.[VeryCD.com].avi
+	  			\\N2\Media\KEEP NEW\ACG\Ghost in the shell\2004 MOV INNOCENCE\[攻殼機動隊2].Innocence.2004.DVDRip.XviD-TLF.[VeryCD.com].nfo
+	  			\\N2\Media\KEEP NEW\ACG\Ghost in the shell\2004 MOV INNOCENCE\[攻殼機動隊2].Innocence.2004.DVDRip.XviD-TLF.[VeryCD.com].srt
+	  			\\N2\Media\KEEP NEW\ACG\Ghost in the shell\2004 TV S.A.C. 2nd GIG\[攻殼機動隊II].[FOSKY][STAND_ALONE_COMPLEX_2nd_GIG][Xvid_AC3][DVDrip][GB][01]v2.avi
+	  			\\N2\Media\KEEP NEW\ACG\Ghost in the shell\2004 TV S.A.C. 2nd GIG\[攻殼機動隊II].[FOSKY][STAND_ALONE_COMPLEX_2nd_GIG][Xvid_AC3][DVDrip][GB][02]v2.avi
+	  			\\N2\Media\KEEP NEW\ACG\Ghost in the shell\2004 TV S.A.C. 2nd GIG\[攻殼機動隊II].[FOSKY][STAND_ALONE_COMPLEX_2nd_GIG][Xvid_AC3][DVDrip][GB][03].avi
+	  			\\N2\Media\KEEP NEW\ACG\Ghost in the shell\2004 TV S.A.C. 2nd GIG\[攻殼機動隊II].[FOSKY][STAND_ALONE_COMPLEX_2nd_GIG][Xvid_AC3][DVDrip][GB][04].avi
+	  			\\N2\Media\KEEP NEW\ACG\Ghost in the shell\2004 TV S.A.C. 2nd GIG\[攻殼機動隊II].[FOSKY][STAND_ALONE_COMPLEX_2nd_GIG][Xvid_AC3][DVDrip][GB][05].avi
+	  			\\N2\Media\KEEP NEW\ACG\Ghost in the shell\2004 TV S.A.C. 2nd GIG\[攻殼機動隊II].[FOSKY][STAND_ALONE_COMPLEX_2nd_GIG][Xvid_AC3][DVDrip][GB][06].avi
+	  			\\N2\Media\KEEP NEW\ACG\Ghost in the shell\2004 TV S.A.C. 2nd GIG\[攻殼機動隊II].[FOSKY][STAND_ALONE_COMPLEX_2nd_GIG][Xvid_AC3][DVDrip][GB][07].avi
+	  			\\N2\Media\KEEP NEW\ACG\Ghost in the shell\2004 TV S.A.C. 2nd GIG\[攻殼機動隊II].[FOSKY][STAND_ALONE_COMPLEX_2nd_GIG][Xvid_AC3][DVDrip][GB][08].avi
+	  			\\N2\Media\KEEP NEW\ACG\Ghost in the shell\2004 TV S.A.C. 2nd GIG\[攻殼機動隊II].[FOSKY][STAND_ALONE_COMPLEX_2nd_GIG][Xvid_AC3][DVDrip][GB][09].avi
+	  			\\N2\Media\KEEP NEW\ACG\Ghost in the shell\2004 TV S.A.C. 2nd GIG\[攻殼機動隊II].[FOSKY][STAND_ALONE_COMPLEX_2nd_GIG][Xvid_AC3][DVDrip][GB][10].avi
+	  			\\N2\Media\KEEP NEW\ACG\Ghost in the shell\2004 TV S.A.C. 2nd GIG\[攻殼機動隊II].[FOSKY][STAND_ALONE_COMPLEX_2nd_GIG][Xvid_AC3][DVDrip][GB][11].avi
+	  			\\N2\Media\KEEP NEW\ACG\Ghost in the shell\2004 TV S.A.C. 2nd GIG\[攻殼機動隊II].[FOSKY][STAND_ALONE_COMPLEX_2nd_GIG][Xvid_AC3][DVDrip][GB][12].avi
+	  			\\N2\Media\KEEP NEW\ACG\Ghost in the shell\2004 TV S.A.C. 2nd GIG\[攻殼機動隊II].[FOSKY][STAND_ALONE_COMPLEX_2nd_GIG][Xvid_AC3][DVDrip][GB][13].avi
+	  			\\N2\Media\KEEP NEW\ACG\Ghost in the shell\2004 TV S.A.C. 2nd GIG\[攻殼機動隊II].[FOSKY][STAND_ALONE_COMPLEX_2nd_GIG][Xvid_AC3][DVDrip][GB][14].avi
+	  			\\N2\Media\KEEP NEW\ACG\Ghost in the shell\2004 TV S.A.C. 2nd GIG\[攻殼機動隊II].[FOSKY][STAND_ALONE_COMPLEX_2nd_GIG][Xvid_AC3][DVDrip][GB][15].avi
+	  			\\N2\Media\KEEP NEW\ACG\Ghost in the shell\2004 TV S.A.C. 2nd GIG\[攻殼機動隊II].[FOSKY][STAND_ALONE_COMPLEX_2nd_GIG][Xvid_AC3][DVDrip][GB][16].avi
+	  			\\N2\Media\KEEP NEW\ACG\Ghost in the shell\2004 TV S.A.C. 2nd GIG\[攻殼機動隊II].[FOSKY][STAND_ALONE_COMPLEX_2nd_GIG][Xvid_AC3][DVDrip][GB][17]v3.avi
+	  			\\N2\Media\KEEP NEW\ACG\Ghost in the shell\2004 TV S.A.C. 2nd GIG\[攻殼機動隊II].[FOSKY][STAND_ALONE_COMPLEX_2nd_GIG][Xvid_AC3][DVDrip][GB][17]vv2.avi
+	  			\\N2\Media\KEEP NEW\ACG\Ghost in the shell\2004 TV S.A.C. 2nd GIG\[攻殼機動隊II].[FOSKY][STAND_ALONE_COMPLEX_2nd_GIG][Xvid_AC3][DVDrip][GB][18]v2.avi
+	  			\\N2\Media\KEEP NEW\ACG\Ghost in the shell\2004 TV S.A.C. 2nd GIG\[攻殼機動隊II].[FOSKY][STAND_ALONE_COMPLEX_2nd_GIG][Xvid_AC3][DVDrip][GB][18]vv.avi
+	  			\\N2\Media\KEEP NEW\ACG\Ghost in the shell\2004 TV S.A.C. 2nd GIG\[攻殼機動隊II].[FOSKY][STAND_ALONE_COMPLEX_2nd_GIG][Xvid_AC3][DVDrip][GB][19].avi
+	  			\\N2\Media\KEEP NEW\ACG\Ghost in the shell\2004 TV S.A.C. 2nd GIG\[攻殼機動隊II].[FOSKY][STAND_ALONE_COMPLEX_2nd_GIG][Xvid_AC3][DVDrip][GB][20].avi
+	  			\\N2\Media\KEEP NEW\ACG\Ghost in the shell\2004 TV S.A.C. 2nd GIG\[攻殼機動隊II].[FOSKY][STAND_ALONE_COMPLEX_2nd_GIG][Xvid_AC3][DVDrip][GB][21].avi
+	  			\\N2\Media\KEEP NEW\ACG\Ghost in the shell\2004 TV S.A.C. 2nd GIG\[攻殼機動隊II].[FOSKY][STAND_ALONE_COMPLEX_2nd_GIG][Xvid_AC3][DVDrip][GB][22].avi
+	  			\\N2\Media\KEEP NEW\ACG\Ghost in the shell\2004 TV S.A.C. 2nd GIG\[攻殼機動隊II].[FOSKY][STAND_ALONE_COMPLEX_2nd_GIG][Xvid_AC3][DVDrip][GB][23].avi
+	  			\\N2\Media\KEEP NEW\ACG\Ghost in the shell\2004 TV S.A.C. 2nd GIG\[攻殼機動隊II].[FOSKY][STAND_ALONE_COMPLEX_2nd_GIG][Xvid_AC3][DVDrip][GB][24][845320F3].mkv
+	  			\\N2\Media\KEEP NEW\ACG\Ghost in the shell\2004 TV S.A.C. 2nd GIG\[攻殼機動隊II].[FOSKY][STAND_ALONE_COMPLEX_2nd_GIG][Xvid_AC3][DVDrip][GB][25][84F05752].mkv
+	  			\\N2\Media\KEEP NEW\ACG\Ghost in the shell\2004 TV S.A.C. 2nd GIG\[攻殼機動隊II].[FOSKY][STAND_ALONE_COMPLEX_2nd_GIG][Xvid_AC3][DVDrip][GB][26][FC22FF3B].mkv
+	  			\\N2\Media\KEEP NEW\ACG\Ghost in the shell\2004 TV S.A.C. 2nd GIG\攻殼機動隊S.A.C.-.[Ghost.in.the.shell][6CD-BOX附贈U盤內容].rar
+	  			\\N2\Media\KEEP NEW\ACG\Ghost in the shell\2006 OVA Solid State Society\[MarcNEO][Solid.State.Society.Anime.Car.Design][640X400][JP_GB][2011689F].avi
+	  			\\N2\Media\KEEP NEW\ACG\Ghost in the shell\2006 OVA Solid State Society\[MarcNEO][Solid.State.Society.English.Production.Interview][640X480][JP_GB][9D895A58].avi
+	  			\\N2\Media\KEEP NEW\ACG\Ghost in the shell\2006 OVA Solid State Society\[MarcNEO][Solid.State.Society.Making.Of.Tachikoma.Robot][640X480][JP_GB][001CEE86].avi
+	  			\\N2\Media\KEEP NEW\ACG\Ghost in the shell\2006 OVA Solid State Society\[MarcNEO][Solid.State.Society.Mituhisa.Lshikawa.Interview][640X480][JP_GB][7E26ADE9].avi
+	  			\\N2\Media\KEEP NEW\ACG\Ghost in the shell\2006 OVA Solid State Society\[MarcNEO][Solid.State.Society.Promotional.Clips][640X352][JP_GB][15B10F27].avi
+	  			\\N2\Media\KEEP NEW\ACG\Ghost in the shell\2006 OVA Solid State Society\[MarcNEO][Solid.State.Society.World.Work.File][640X400][Jp_GB][3A814A27].avi
+	  			\\N2\Media\KEEP NEW\ACG\Ghost in the shell\2006 OVA Solid State Society\[MarcNEO][STAND.ALONE.COMPLEX.Solid.State.Society.Uchikomatic.DAYS][640X368][JP_GB][E726AD8F].avi
+	  			\\N2\Media\KEEP NEW\ACG\Ghost in the shell\2006 OVA Solid State Society\[MarcNEO][STAND.ALONE.COMPLEX.Solid.State.Society][OVA][848X480][JP_GB][XVID_AC3][9197CFA1].avi
+	  			\\N2\Media\KEEP NEW\ACG\Ghost in the shell\200X TV Tachikoma Days\[POPGO][Stand_Alone_Complex_Tachikoma_Special][DVDRIP][GB]01.avi
+	  			\\N2\Media\KEEP NEW\ACG\Ghost in the shell\200X TV Tachikoma Days\[POPGO][Stand_Alone_Complex_Tachikoma_Special][DVDRIP][GB]03.avi
+	  			\\N2\Media\KEEP NEW\ACG\Ghost in the shell\200X TV Tachikoma Days\[POPGO][Stand_Alone_Complex_Tachikoma_Special][DVDRIP][GB]04.avi
+	  			\\N2\Media\KEEP NEW\ACG\Ghost in the shell\200X TV Tachikoma Days\[POPGO][Stand_Alone_Complex_Tachikoma_Special][DVDRIP][GB]05.avi
+	  			\\N2\Media\KEEP NEW\ACG\Ghost in the shell\200X TV Tachikoma Days\[POPGO][Stand_Alone_Complex_Tachikoma_Special][DVDRIP][GB]06.avi
+	  			\\N2\Media\KEEP NEW\ACG\Ghost in the shell\200X TV Tachikoma Days\[POPGO][Stand_Alone_Complex_Tachikoma_Special][DVDRIP][GB]08.avi
+	  			\\N2\Media\KEEP NEW\ACG\Ghost in the shell\200X TV Tachikoma Days\[POPGO][Stand_Alone_Complex_Tachikoma_Special][DVDRIP][GB]11.avi
+	  			\\N2\Media\KEEP NEW\ACG\Ghost in the shell\200X TV Tachikoma Days\[POPGO][Stand_Alone_Complex_Tachikoma_Special][DVDRIP][GB]12.avi
+	  			\\N2\Media\KEEP NEW\ACG\Ghost in the shell\200X TV Tachikoma Days\[POPGO][Stand_Alone_Complex_Tachikoma_Special][DVDRIP][GB]13.avi
+	  			\\N2\Media\KEEP NEW\ACG\Ghost in the shell\200X TV Tachikoma Days\[POPGO][Stand_Alone_Complex_Tachikoma_Special][DVDRIP][GB]14.avi
+	  			\\N2\Media\KEEP NEW\ACG\Ghost in the shell\200X TV Tachikoma Days\[POPGO][Stand_Alone_Complex_Tachikoma_Special][DVDRIP][GB]15.avi
+	  			\\N2\Media\KEEP NEW\ACG\Ghost in the shell\200X TV Tachikoma Days\[POPGO][Stand_Alone_Complex_Tachikoma_Special][DVDRIP][GB]16.avi
+	  			\\N2\Media\KEEP NEW\ACG\Ghost in the shell\200X TV Tachikoma Days\[POPGO][Stand_Alone_Complex_Tachikoma_Special][DVDRIP][GB]17.avi
+	  			\\N2\Media\KEEP NEW\ACG\Ghost in the shell\200X TV Tachikoma Days\[POPGO][Stand_Alone_Complex_Tachikoma_Special][DVDRIP][GB]18.avi
+	  			\\N2\Media\KEEP NEW\ACG\Ghost in the shell\200X TV Tachikoma Days\[POPGO][Stand_Alone_Complex_Tachikoma_Special][DVDRIP][GB]19.avi
+	  			\\N2\Media\KEEP NEW\ACG\Ghost in the shell\200X TV Tachikoma Days\[POPGO][Stand_Alone_Complex_Tachikoma_Special][DVDRIP][GB]20.avi
+	  			\\N2\Media\KEEP NEW\ACG\Ghost in the shell\200X TV Tachikoma Days\[POPGO][Stand_Alone_Complex_Tachikoma_Special][DVDRIP][GB]21.avi
+	  			\\N2\Media\KEEP NEW\ACG\Ghost in the shell\200X TV Tachikoma Days\[POPGO][Stand_Alone_Complex_Tachikoma_Special][DVDRIP][GB]22.avi
+	  			\\N2\Media\KEEP NEW\ACG\Ghost in the shell\200X TV Tachikoma Days\[POPGO][Stand_Alone_Complex_Tachikoma_Special][DVDRIP][GB]23.avi
+	  			\\N2\Media\KEEP NEW\ACG\Ghost in the shell\200X TV Tachikoma Days\[POPGO][Stand_Alone_Complex_Tachikoma_Special][DVDRIP][GB]24.avi
+	  			\\N2\Media\KEEP NEW\ACG\Keroro\keroro未看.txt
+	  			\\N2\Media\KEEP NEW\ACG\Keroro\2006 Movie\[DmzJ][Keroro_Movie][GB].rmvb
+	  			\\N2\Media\KEEP NEW\ACG\Keroro\2006 Movie\[軍曹超劇場版].[KERORO_THE_MOVIE][R2_DVDRIP][01][SP1][640x480.x264.AC3.BIG5].mkv
+	  			\\N2\Media\KEEP NEW\ACG\Keroro\2006 Movie\[軍曹超劇場版].[KERORO_THE_MOVIE][R2_DVDRIP][01][SP2][704x396.x264.AC3.BIG5].mkv
+	  			\\N2\Media\KEEP NEW\ACG\Keroro\2006 Movie\[軍曹超劇場版].[KERORO_THE_MOVIE][R2_DVDRIP][01][SP3][704x396.x264.AC3.BIG5].mkv
+	  			\\N2\Media\KEEP NEW\ACG\Keroro\2006 Movie\[軍曹超劇場版].[KERORO_THE_MOVIE][R2_DVDRIP][01][SP4][704x396.x264.AC3.BIG5].mkv
+	  			\\N2\Media\KEEP NEW\ACG\Keroro\2006 Movie\[軍曹超劇場版].[KERORO_THE_MOVIE][R2_DVDRIP][01][SP5][704x396.x264.AC3.BIG5].mkv
+	  			\\N2\Media\KEEP NEW\ACG\Keroro\2006 Movie\[軍曹超劇場版].[KERORO_THE_MOVIE][R2_DVDRIP][01][SP6][704x396.x264.AC3.BIG5].mkv
+	  			\\N2\Media\KEEP NEW\ACG\Keroro\2007 Movie 2\[dmhy-star][Keroro][movie2][CM1][DVDRIP][XVID_AC3][A451E77C].mkv
+	  			\\N2\Media\KEEP NEW\ACG\Keroro\2007 Movie 2\[dmhy-star][Keroro][movie2][CM1][DVDRIP][XVID_AC3][A451E77C].sc.ass
+	  			\\N2\Media\KEEP NEW\ACG\Keroro\2007 Movie 2\[dmhy-star][Keroro][movie2][CM1][DVDRIP][XVID_AC3][A451E77C].tc.ass
+	  			\\N2\Media\KEEP NEW\ACG\Keroro\2007 Movie 2\[dmhy-star][Keroro][movie2][CM2][DVDRIP][XVID_AC3][41F2A0BB].mkv
+	  			\\N2\Media\KEEP NEW\ACG\Keroro\2007 Movie 2\[dmhy-star][Keroro][movie2][CM2][DVDRIP][XVID_AC3][41F2A0BB].sc.ass
+	  			\\N2\Media\KEEP NEW\ACG\Keroro\2007 Movie 2\[dmhy-star][Keroro][movie2][CM2][DVDRIP][XVID_AC3][41F2A0BB].tc.ass
+	  			\\N2\Media\KEEP NEW\ACG\Keroro\2007 Movie 2\[dmhy-star][Keroro][movie2][CM3][DVDRIP][XVID_AC3][72F3110B].mkv
+	  			\\N2\Media\KEEP NEW\ACG\Keroro\2007 Movie 2\[dmhy-star][Keroro][movie2][CM3][DVDRIP][XVID_AC3][72F3110B].sc.ass
+	  			\\N2\Media\KEEP NEW\ACG\Keroro\2007 Movie 2\[dmhy-star][Keroro][movie2][CM3][DVDRIP][XVID_AC3][72F3110B].tc.ass
+	  			\\N2\Media\KEEP NEW\ACG\Keroro\2007 Movie 2\[dmhy-star][Keroro][movie2][CM4][DVDRIP][XVID_AC3][29688B95].mkv
+	  			\\N2\Media\KEEP NEW\ACG\Keroro\2007 Movie 2\[dmhy-star][Keroro][movie2][CM4][DVDRIP][XVID_AC3][29688B95].sc.ass
+	  			\\N2\Media\KEEP NEW\ACG\Keroro\2007 Movie 2\[dmhy-star][Keroro][movie2][CM4][DVDRIP][XVID_AC3][29688B95].tc.ass
+	  			\\N2\Media\KEEP NEW\ACG\Keroro\2007 Movie 2\[dmhy-star][Keroro][movie2][Fonts][9B801978].rar
+	  			\\N2\Media\KEEP NEW\ACG\Keroro\2007 Movie 2\[dmhy-star][Keroro][movie2][Interview][DVDRIP][XVID_AC3][69284DB0].mkv
+	  			\\N2\Media\KEEP NEW\ACG\Keroro\2007 Movie 2\[dmhy-star][Keroro][movie2][Interview][DVDRIP][XVID_AC3][69284DB0].sc.ass
+	  			\\N2\Media\KEEP NEW\ACG\Keroro\2007 Movie 2\[dmhy-star][Keroro][movie2][Interview][DVDRIP][XVID_AC3][69284DB0].tc.ass
+	  			\\N2\Media\KEEP NEW\ACG\Keroro\2007 Movie 2\[dmhy-star][Keroro][movie2][Menu][A9D4C1A0].rar
+	  			\\N2\Media\KEEP NEW\ACG\Keroro\2007 Movie 2\[dmhy-star][Keroro][movie2][Sp][DVDRIP][XVID_AC3][7A77E681].mkv
+	  			\\N2\Media\KEEP NEW\ACG\Keroro\2007 Movie 2\[dmhy-star][Keroro][movie2][Sp][DVDRIP][XVID_AC3][7A77E681].sc.ass
+	  			\\N2\Media\KEEP NEW\ACG\Keroro\2007 Movie 2\[dmhy-star][Keroro][movie2][Sp][DVDRIP][XVID_AC3][7A77E681].tc.ass
+	  			\\N2\Media\KEEP NEW\ACG\Keroro\2007 Movie 2\[dmhy-star][Keroro][movie2][Tokuhou][DVDRIP][XVID_AC3][BC82EC11].MKV
+	  			\\N2\Media\KEEP NEW\ACG\Keroro\2007 Movie 2\[dmhy-star][Keroro][movie2][Tokuhou][DVDRIP][XVID_AC3][BC82EC11].sc.ass
+	  			\\N2\Media\KEEP NEW\ACG\Keroro\2007 Movie 2\[dmhy-star][Keroro][movie2][Tokuhou][DVDRIP][XVID_AC3][BC82EC11].tc.ass
+	  			\\N2\Media\KEEP NEW\ACG\Keroro\2007 Movie 2\[dmhy-star][Keroro][movie2][Trailer][DVDRIP][XVID_AC3][7DE5BBEA].MKV
+	  			\\N2\Media\KEEP NEW\ACG\Keroro\2007 Movie 2\[dmhy-star][Keroro][movie2][Trailer][DVDRIP][XVID_AC3][7DE5BBEA].sc.ass
+	  			\\N2\Media\KEEP NEW\ACG\Keroro\2007 Movie 2\[dmhy-star][Keroro][movie2][Trailer][DVDRIP][XVID_AC3][7DE5BBEA].tc.ass
+	  			\\N2\Media\KEEP NEW\ACG\Keroro\2007 Movie 2\[DMZJ][KERORO球的秘密][DVDRIP][X264_AC3][CRC_7CCDFC43].mkv
+	  			\\N2\Media\KEEP NEW\ACG\Keroro\2007 Movie 2\[軍曹超劇場版2及DVD中數部短片].[DMZJ][KERORO.Interview][DVDRIP][X264_AC3][CRC_A071F185].mkv
+	  			\\N2\Media\KEEP NEW\ACG\Keroro\2007 Movie 2\[軍曹超劇場版2及DVD中數部短片].[DMZJ][KERORO][SP01][DVDRIP][X264_AC3][CRC_78166BB8].mkv
+	  			\\N2\Media\KEEP NEW\ACG\Keroro\2007 Movie 2\[軍曹超劇場版2及DVD中數部短片].[DMZJ][KERORO][SP02][DVDRIP][X264_AC3][CRC_502E19AF].mkv
+	  			\\N2\Media\KEEP NEW\ACG\Keroro\2007 Movie 2\[軍曹超劇場版2及DVD中數部短片].[DMZJ][Keroro_Gunso_Movie3_Trailer][DVDRIP][X264_AC3][1ED108874].mkv
+	  			\\N2\Media\KEEP NEW\ACG\Keroro\2007 Movie 2\[超劇場版Keroro軍曹2.深海公主是也].[DMHY-STAR][KERORO_SUPER-MOVIE2][Shinkai_no_Princess_De_Arimasu!][SAMPLE].rmvb
+	  			\\N2\Media\KEEP NEW\ACG\Keroro\2008 Movie 3\[軍曹超劇場版3].[DmzJ][Keroro_Movie3][42EF576F][RV10].rmvb
+	  			\\N2\Media\KEEP NEW\ACG\Keroro\Season 1 E51\[青蛙軍曹][KERORO][01.RMVB
+	  			\\N2\Media\KEEP NEW\ACG\Keroro\Season 1 E51\[青蛙軍曹][KERORO][02.RMVB
+	  			\\N2\Media\KEEP NEW\ACG\Keroro\Season 1 E51\[青蛙軍曹][KERORO][03.RMVB
+	  			\\N2\Media\KEEP NEW\ACG\Keroro\Season 1 E51\[青蛙軍曹][KERORO][04.RMVB
+	  			\\N2\Media\KEEP NEW\ACG\Keroro\Season 1 E51\[青蛙軍曹][KERORO][05.RMVB
+	  			\\N2\Media\KEEP NEW\ACG\Keroro\Season 1 E51\[青蛙軍曹][KERORO][06.RMVB
+	  			\\N2\Media\KEEP NEW\ACG\Keroro\Season 1 E51\[青蛙軍曹][KERORO][07.RMVB
+	  			\\N2\Media\KEEP NEW\ACG\Keroro\Season 1 E51\[青蛙軍曹][KERORO][08.RMVB
+	  			\\N2\Media\KEEP NEW\ACG\Keroro\Season 1 E51\[青蛙軍曹][KERORO][09.RMVB
+	  			\\N2\Media\KEEP NEW\ACG\Keroro\Season 1 E51\[青蛙軍曹][KERORO][10.RMVB
+	  			\\N2\Media\KEEP NEW\ACG\Keroro\Season 1 E51\[青蛙軍曹][KERORO][11.RMVB
+	  			\\N2\Media\KEEP NEW\ACG\Keroro\Season 1 E51\[青蛙軍曹][KERORO][12.RMVB
+	  			\\N2\Media\KEEP NEW\ACG\Keroro\Season 1 E51\[青蛙軍曹][KERORO][13.RMVB
+	  			\\N2\Media\KEEP NEW\ACG\Keroro\Season 1 E51\[青蛙軍曹][KERORO][14.RMVB
+	  			\\N2\Media\KEEP NEW\ACG\Keroro\Season 1 E51\[青蛙軍曹][KERORO][15.RMVB
+	  			\\N2\Media\KEEP NEW\ACG\Keroro\Season 1 E51\[青蛙軍曹][KERORO][16.RMVB
+	  			\\N2\Media\KEEP NEW\ACG\Keroro\Season 1 E51\[青蛙軍曹][KERORO][17.RMVB
+	  			\\N2\Media\KEEP NEW\ACG\Keroro\Season 1 E51\[青蛙軍曹][KERORO][18.RMVB
+	  			\\N2\Media\KEEP NEW\ACG\Keroro\Season 1 E51\[青蛙軍曹][KERORO][19.RMVB
+	  			\\N2\Media\KEEP NEW\ACG\Keroro\Season 1 E51\[青蛙軍曹][KERORO][20.RMVB
+	  			\\N2\Media\KEEP NEW\ACG\Keroro\Season 1 E51\[青蛙軍曹][KERORO][21.RMVB
+	  			\\N2\Media\KEEP NEW\ACG\Keroro\Season 1 E51\[青蛙軍曹][KERORO][22.RMVB
+	  			\\N2\Media\KEEP NEW\ACG\Keroro\Season 1 E51\[青蛙軍曹][KERORO][23.RMVB
+	  			\\N2\Media\KEEP NEW\ACG\Keroro\Season 1 E51\[青蛙軍曹][KERORO][24.RMVB
+	  			\\N2\Media\KEEP NEW\ACG\Keroro\Season 1 E51\[青蛙軍曹][KERORO][25.RMVB
+	  			\\N2\Media\KEEP NEW\ACG\Keroro\Season 1 E51\[青蛙軍曹][KERORO][26.RMVB
+	  			\\N2\Media\KEEP NEW\ACG\Keroro\Season 1 E51\[青蛙軍曹][KERORO][27].rmvb
+	  			\\N2\Media\KEEP NEW\ACG\Keroro\Season 1 E51\[青蛙軍曹][KERORO][28].rmvb
+	  			\\N2\Media\KEEP NEW\ACG\Keroro\Season 1 E51\[青蛙軍曹][KERORO][29].rmvb
+	  			\\N2\Media\KEEP NEW\ACG\Keroro\Season 1 E51\[青蛙軍曹][KERORO][30][RMVB][V2].rmvb
+	  			\\N2\Media\KEEP NEW\ACG\Keroro\Season 1 E51\[青蛙軍曹][KERORO][31][RMVB][V2].rmvb
+	  			\\N2\Media\KEEP NEW\ACG\Keroro\Season 1 E51\[青蛙軍曹][KERORO][32].rmvb
+	  			\\N2\Media\KEEP NEW\ACG\Keroro\Season 1 E51\[青蛙軍曹][KERORO][33].rmvb
+	  			\\N2\Media\KEEP NEW\ACG\Keroro\Season 1 E51\[青蛙軍曹][KERORO][34][RMVB].rmvb
+	  			\\N2\Media\KEEP NEW\ACG\Keroro\Season 1 E51\[青蛙軍曹][KERORO][35][RMVB].rmvb
+	  			\\N2\Media\KEEP NEW\ACG\Keroro\Season 1 E51\[青蛙軍曹][KERORO][36].rmvb
+	  			\\N2\Media\KEEP NEW\ACG\Keroro\Season 1 E51\[青蛙軍曹][KERORO][37].rmvb
+	  			\\N2\Media\KEEP NEW\ACG\Keroro\Season 1 E51\[青蛙軍曹][KERORO][38].rmvb
+	  			\\N2\Media\KEEP NEW\ACG\Keroro\Season 1 E51\[青蛙軍曹][KERORO][39].rmvb
+	  			\\N2\Media\KEEP NEW\ACG\Keroro\Season 1 E51\[青蛙軍曹][KERORO][40].rmvb
+	  			\\N2\Media\KEEP NEW\ACG\Keroro\Season 1 E51\[青蛙軍曹][KERORO][41].rmvb
+	  			\\N2\Media\KEEP NEW\ACG\Keroro\Season 1 E51\[青蛙軍曹][KERORO][42][GB].rmvb
+	  			\\N2\Media\KEEP NEW\ACG\Keroro\Season 1 E51\[青蛙軍曹][KERORO][43][BIG5].rmvb
+	  			\\N2\Media\KEEP NEW\ACG\Keroro\Season 1 E51\[青蛙軍曹][KERORO][44][GB](1).rmvb
+	  			\\N2\Media\KEEP NEW\ACG\Keroro\Season 1 E51\[青蛙軍曹][KERORO][45][GB].rmvb
+	  			\\N2\Media\KEEP NEW\ACG\Keroro\Season 1 E51\[青蛙軍曹][KERORO][46][BIG5].rmvb
+	  			\\N2\Media\KEEP NEW\ACG\Keroro\Season 1 E51\[青蛙軍曹][KERORO][47][BIG5].rmvb
+	  			\\N2\Media\KEEP NEW\ACG\Keroro\Season 1 E51\[青蛙軍曹][KERORO][48][GB].rmvb
+	  			\\N2\Media\KEEP NEW\ACG\Keroro\Season 1 E51\[青蛙軍曹][KERORO][49][BIG5].rmvb
+	  			\\N2\Media\KEEP NEW\ACG\Keroro\Season 1 E51\[青蛙軍曹][KERORO][50][BIG5].rmvb
+	  			\\N2\Media\KEEP NEW\ACG\Keroro\Season 1 E51\[青蛙軍曹][KERORO][51][GB].rmvb
+	  			\\N2\Media\KEEP NEW\ACG\Keroro\Season 2 E103\[青蛙軍曹][KERORO][100].rmvb
+	  			\\N2\Media\KEEP NEW\ACG\Keroro\Season 2 E103\[青蛙軍曹][KERORO][101].rmvb
+	  			\\N2\Media\KEEP NEW\ACG\Keroro\Season 2 E103\[青蛙軍曹][KERORO][102].rmvb
+	  			\\N2\Media\KEEP NEW\ACG\Keroro\Season 2 E103\[青蛙軍曹][KERORO][103].rmvb
+	  			\\N2\Media\KEEP NEW\ACG\Keroro\Season 2 E103\[青蛙軍曹][KERORO][52].rmvb
+	  			\\N2\Media\KEEP NEW\ACG\Keroro\Season 2 E103\[青蛙軍曹][KERORO][53].rmvb
+	  			\\N2\Media\KEEP NEW\ACG\Keroro\Season 2 E103\[青蛙軍曹][KERORO][54][xw].rmvb
+	  			\\N2\Media\KEEP NEW\ACG\Keroro\Season 2 E103\[青蛙軍曹][KERORO][55].rmvb
+	  			\\N2\Media\KEEP NEW\ACG\Keroro\Season 2 E103\[青蛙軍曹][KERORO][56].rmvb
+	  			\\N2\Media\KEEP NEW\ACG\Keroro\Season 2 E103\[青蛙軍曹][KERORO][57].rmvb
+	  			\\N2\Media\KEEP NEW\ACG\Keroro\Season 2 E103\[青蛙軍曹][KERORO][58].rmvb
+	  			\\N2\Media\KEEP NEW\ACG\Keroro\Season 2 E103\[青蛙軍曹][KERORO][59].rmvb
+	  			\\N2\Media\KEEP NEW\ACG\Keroro\Season 2 E103\[青蛙軍曹][KERORO][60].rmvb
+	  			\\N2\Media\KEEP NEW\ACG\Keroro\Season 2 E103\[青蛙軍曹][KERORO][61].rmvb
+	  			\\N2\Media\KEEP NEW\ACG\Keroro\Season 2 E103\[青蛙軍曹][KERORO][62].rmvb
+	  			\\N2\Media\KEEP NEW\ACG\Keroro\Season 2 E103\[青蛙軍曹][KERORO][63].rmvb
+	  			\\N2\Media\KEEP NEW\ACG\Keroro\Season 2 E103\[青蛙軍曹][KERORO][64].rmvb
+	  			\\N2\Media\KEEP NEW\ACG\Keroro\Season 2 E103\[青蛙軍曹][KERORO][65].rmvb
+	  			\\N2\Media\KEEP NEW\ACG\Keroro\Season 2 E103\[青蛙軍曹][KERORO][66].rmvb
+	  			\\N2\Media\KEEP NEW\ACG\Keroro\Season 2 E103\[青蛙軍曹][KERORO][67].rmvb
+	  			\\N2\Media\KEEP NEW\ACG\Keroro\Season 2 E103\[青蛙軍曹][KERORO][68].rmvb
+	  			\\N2\Media\KEEP NEW\ACG\Keroro\Season 2 E103\[青蛙軍曹][KERORO][69].rmvb
+	  			\\N2\Media\KEEP NEW\ACG\Keroro\Season 2 E103\[青蛙軍曹][KERORO][70].rmvb
+	  			\\N2\Media\KEEP NEW\ACG\Keroro\Season 2 E103\[青蛙軍曹][KERORO][71].rmvb
+	  			\\N2\Media\KEEP NEW\ACG\Keroro\Season 2 E103\[青蛙軍曹][KERORO][72].rmvb
+	  			\\N2\Media\KEEP NEW\ACG\Keroro\Season 2 E103\[青蛙軍曹][KERORO][73].rmvb
+	  			\\N2\Media\KEEP NEW\ACG\Keroro\Season 2 E103\[青蛙軍曹][KERORO][74].rmvb
+	  			\\N2\Media\KEEP NEW\ACG\Keroro\Season 2 E103\[青蛙軍曹][KERORO][75].rmvb
+	  			\\N2\Media\KEEP NEW\ACG\Keroro\Season 2 E103\[青蛙軍曹][KERORO][76].rmvb
+	  			\\N2\Media\KEEP NEW\ACG\Keroro\Season 2 E103\[青蛙軍曹][KERORO][77].rmvb
+	  			\\N2\Media\KEEP NEW\ACG\Keroro\Season 2 E103\[青蛙軍曹][KERORO][78].rmvb
+	  			\\N2\Media\KEEP NEW\ACG\Keroro\Season 2 E103\[青蛙軍曹][KERORO][79].rmvb
+	  			\\N2\Media\KEEP NEW\ACG\Keroro\Season 2 E103\[青蛙軍曹][KERORO][80].rmvb
+	  			\\N2\Media\KEEP NEW\ACG\Keroro\Season 2 E103\[青蛙軍曹][KERORO][81].rmvb
+	  			\\N2\Media\KEEP NEW\ACG\Keroro\Season 2 E103\[青蛙軍曹][KERORO][82v2].rmvb
+	  			\\N2\Media\KEEP NEW\ACG\Keroro\Season 2 E103\[青蛙軍曹][KERORO][83].rmvb
+	  			\\N2\Media\KEEP NEW\ACG\Keroro\Season 2 E103\[青蛙軍曹][KERORO][84].rmvb
+	  			\\N2\Media\KEEP NEW\ACG\Keroro\Season 2 E103\[青蛙軍曹][KERORO][85].rmvb
+	  			\\N2\Media\KEEP NEW\ACG\Keroro\Season 2 E103\[青蛙軍曹][KERORO][86].rmvb
+	  			\\N2\Media\KEEP NEW\ACG\Keroro\Season 2 E103\[青蛙軍曹][KERORO][87][Fast.Version].rmvb
+	  			\\N2\Media\KEEP NEW\ACG\Keroro\Season 2 E103\[青蛙軍曹][KERORO][88][Fast.Version].rmvb
+	  			\\N2\Media\KEEP NEW\ACG\Keroro\Season 2 E103\[青蛙軍曹][KERORO][89][GB].rmvb
+	  			\\N2\Media\KEEP NEW\ACG\Keroro\Season 2 E103\[青蛙軍曹][KERORO][90][GB].rmvb
+	  			\\N2\Media\KEEP NEW\ACG\Keroro\Season 2 E103\[青蛙軍曹][KERORO][91].rmvb
+	  			\\N2\Media\KEEP NEW\ACG\Keroro\Season 2 E103\[青蛙軍曹][KERORO][92].rmvb
+	  			\\N2\Media\KEEP NEW\ACG\Keroro\Season 2 E103\[青蛙軍曹][KERORO][93].rmvb
+	  			\\N2\Media\KEEP NEW\ACG\Keroro\Season 2 E103\[青蛙軍曹][KERORO][94][GB].rmvb
+	  			\\N2\Media\KEEP NEW\ACG\Keroro\Season 2 E103\[青蛙軍曹][KERORO][95][jap_chn][rv10].rmvb
+	  			\\N2\Media\KEEP NEW\ACG\Keroro\Season 2 E103\[青蛙軍曹][KERORO][96]v2.rmvb
+	  			\\N2\Media\KEEP NEW\ACG\Keroro\Season 2 E103\[青蛙軍曹][KERORO][97].rmvb
+	  			\\N2\Media\KEEP NEW\ACG\Keroro\Season 2 E103\[青蛙軍曹][KERORO][98].rmvb
+	  			\\N2\Media\KEEP NEW\ACG\Keroro\Season 2 E103\[青蛙軍曹][KERORO][99].rmvb
+	  			\\N2\Media\KEEP NEW\ACG\Keroro\Season 3 E154\[青蛙軍曹][KERORO][104].rmvb
+	  			\\N2\Media\KEEP NEW\ACG\Keroro\Season 3 E154\[青蛙軍曹][KERORO][105].rmvb
+	  			\\N2\Media\KEEP NEW\ACG\Keroro\Season 3 E154\[青蛙軍曹][KERORO][106].rmvb
+	  			\\N2\Media\KEEP NEW\ACG\Keroro\Season 3 E154\[青蛙軍曹][KERORO][107].rmvb
+	  			\\N2\Media\KEEP NEW\ACG\Keroro\Season 3 E154\[青蛙軍曹][KERORO][108].rmvb
+	  			\\N2\Media\KEEP NEW\ACG\Keroro\Season 3 E154\[青蛙軍曹][KERORO][109][jap_chn][rv10].rmvb
+	  			\\N2\Media\KEEP NEW\ACG\Keroro\Season 3 E154\[青蛙軍曹][KERORO][110][jap_chn][rv10].rmvb
+	  			\\N2\Media\KEEP NEW\ACG\Keroro\Season 3 E154\[青蛙軍曹][KERORO][111].rmvb
+	  			\\N2\Media\KEEP NEW\ACG\Keroro\Season 3 E154\[青蛙軍曹][KERORO][112][550k][Jp_Cn].rmvb
+	  			\\N2\Media\KEEP NEW\ACG\Keroro\Season 3 E154\[青蛙軍曹][KERORO][113][GB][rv10].rmvb
+	  			\\N2\Media\KEEP NEW\ACG\Keroro\Season 3 E154\[青蛙軍曹][KERORO][114].rmvb
+	  			\\N2\Media\KEEP NEW\ACG\Keroro\Season 3 E154\[青蛙軍曹][KERORO][115][GB][RV10_MP3][jap_chn].rmvb.rmvb
+	  			\\N2\Media\KEEP NEW\ACG\Keroro\Season 3 E154\[青蛙軍曹][KERORO][116][GB][RV10_MP3][jap_chn].rmvb
+	  			\\N2\Media\KEEP NEW\ACG\Keroro\Season 3 E154\[青蛙軍曹][KERORO][117][GB][RV10_MP3][jap_chn].rmvb
+	  			\\N2\Media\KEEP NEW\ACG\Keroro\Season 3 E154\[青蛙軍曹][KERORO][118][GB][rv10].rmvb
+	  			\\N2\Media\KEEP NEW\ACG\Keroro\Season 3 E154\[青蛙軍曹][KERORO][119][GB][RV10_MP3][jap_chn].rmvb
+	  			\\N2\Media\KEEP NEW\ACG\Keroro\Season 3 E154\[青蛙軍曹][KERORO][120][GB][RV10_MP3][jap_chn].rmvb
+	  			\\N2\Media\KEEP NEW\ACG\Keroro\Season 3 E154\[青蛙軍曹][KERORO][121][GB][RV10_MP3][jap_chn].rmvb
+	  			\\N2\Media\KEEP NEW\ACG\Keroro\Season 3 E154\[青蛙軍曹][KERORO][122][GB][RV10_MP3][jap_chn].rmvb
+	  			\\N2\Media\KEEP NEW\ACG\Keroro\Season 3 E154\[青蛙軍曹][KERORO][123][GB][RV10_MP3][jap_chn].rmvb
+	  			\\N2\Media\KEEP NEW\ACG\Keroro\Season 3 E154\[青蛙軍曹][KERORO][124][GB][RV10_MP3][jap_chn].rmvb
+	  			\\N2\Media\KEEP NEW\ACG\Keroro\Season 3 E154\[青蛙軍曹][KERORO][125][GB][RV10_MP3][jap_chn].rmvb
+	  			\\N2\Media\KEEP NEW\ACG\Keroro\Season 3 E154\[青蛙軍曹][KERORO][126][GB][RV10_MP3][jap_chn].rmvb
+	  			\\N2\Media\KEEP NEW\ACG\Keroro\Season 3 E154\[青蛙軍曹][KERORO][127][GB][RV10_MP3][jap_chn].rmvb
+	  			\\N2\Media\KEEP NEW\ACG\Keroro\Season 3 E154\[青蛙軍曹][KERORO][128][GB][RV10_MP3][jap_chn].rmvb
+	  			\\N2\Media\KEEP NEW\ACG\Keroro\Season 3 E154\[青蛙軍曹][KERORO][131][GB][RV11_MP3][jap_chn][7B544813]V2.rmvb
+	  			\\N2\Media\KEEP NEW\ACG\Keroro\Season 3 E154\[青蛙軍曹][KERORO][132][GB][RV11_MP3][jap_chn][179BE80E].rmvb
+	  			\\N2\Media\KEEP NEW\ACG\Keroro\Season 3 E154\[青蛙軍曹][KERORO][133][GB].rmvb
+	  			\\N2\Media\KEEP NEW\ACG\Keroro\Season 3 E154\[青蛙軍曹][KERORO][134][GB][RV11_MP3][jap_chn].rmvb
+	  			\\N2\Media\KEEP NEW\ACG\Keroro\Season 3 E154\[青蛙軍曹][KERORO][135][GB][RV11_MP3][jap_chn][179BE80E].rmvb
+	  			\\N2\Media\KEEP NEW\ACG\Keroro\Season 3 E154\[青蛙軍曹][KERORO][136][R10][GB].rmvb
+	  			\\N2\Media\KEEP NEW\ACG\Keroro\Season 3 E154\[青蛙軍曹][KERORO][137][r10][gb].rmvb
+	  			\\N2\Media\KEEP NEW\ACG\Keroro\Season 3 E154\[青蛙軍曹][KERORO][138][R10][GB].rmvb
+	  			\\N2\Media\KEEP NEW\ACG\Keroro\Season 3 E154\[青蛙軍曹][KERORO][139][R10][GB].rmvb
+	  			\\N2\Media\KEEP NEW\ACG\Keroro\Season 3 E154\[青蛙軍曹][KERORO][140][R10][GB].rmvb
+	  			\\N2\Media\KEEP NEW\ACG\Keroro\Season 3 E154\[青蛙軍曹][KERORO][141][R10][GB].rmvb
+	  			\\N2\Media\KEEP NEW\ACG\Keroro\Season 3 E154\[青蛙軍曹][KERORO][142][R10][GB].rmvb
+	  			\\N2\Media\KEEP NEW\ACG\Keroro\Season 3 E154\[青蛙軍曹][KERORO][143][R10][GB].rmvb
+	  			\\N2\Media\KEEP NEW\ACG\Keroro\Season 3 E154\[青蛙軍曹][KERORO][144][R10][GB].rmvb
+	  			\\N2\Media\KEEP NEW\ACG\Keroro\Season 3 E154\[青蛙軍曹][KERORO][146][R10][GB].rmvb
+	  			\\N2\Media\KEEP NEW\ACG\Keroro\Season 3 E154\[青蛙軍曹][KERORO][147][R10][GB].rmvb
+	  			\\N2\Media\KEEP NEW\ACG\Keroro\Season 3 E154\[青蛙軍曹][KERORO][148][R10][GB].rmvb
+	  			\\N2\Media\KEEP NEW\ACG\Keroro\Season 3 E154\[青蛙軍曹][KERORO][149][R10][GB].rmvb
+	  			\\N2\Media\KEEP NEW\ACG\Keroro\Season 3 E154\[青蛙軍曹][KERORO][150][R10][GB].rmvb
+	  			\\N2\Media\KEEP NEW\ACG\Keroro\Season 3 E154\[青蛙軍曹][KERORO][151][R10][GB].rmvb
+	  			\\N2\Media\KEEP NEW\ACG\Keroro\Season 3 E154\[青蛙軍曹][KERORO][152][R10][GB].rmvb
+	  			\\N2\Media\KEEP NEW\ACG\Keroro\Season 3 E154\[青蛙軍曹][KERORO][153][R10][GB].rmvb
+	  			\\N2\Media\KEEP NEW\ACG\Keroro\Season 3 E154\[青蛙軍曹][KERORO][154][R10][GB].rmvb
+	  			\\N2\Media\KEEP NEW\ACG\Keroro\Season 4 E205\[青蛙軍曹][KERORO][155][R10][GB].rmvb
+	  			\\N2\Media\KEEP NEW\ACG\Keroro\Season 4 E205\[青蛙軍曹][KERORO][156][R10][GB].rmvb
+	  			\\N2\Media\KEEP NEW\ACG\Keroro\Season 4 E205\[青蛙軍曹][KERORO][157][R10][GB].rmvb
+	  			\\N2\Media\KEEP NEW\ACG\Keroro\Season 4 E205\[青蛙軍曹][KERORO][158][R10][GB].rmvb
+	  			\\N2\Media\KEEP NEW\ACG\Keroro\Season 4 E205\[青蛙軍曹][KERORO][160][R10][GB].rmvb
+	  			\\N2\Media\KEEP NEW\ACG\Keroro\Season 4 E205\[青蛙軍曹][KERORO][162][R10][GB].rmvb
+	  			\\N2\Media\KEEP NEW\ACG\Keroro\Season 4 E205\[青蛙軍曹][KERORO][163][R10][GB].rmvb
+	  			\\N2\Media\KEEP NEW\ACG\Keroro\Season 4 E205\[青蛙軍曹][KERORO][164][R10][GB].rmvb
+	  			\\N2\Media\KEEP NEW\ACG\Keroro\Season 4 E205\[青蛙軍曹][KERORO][165][R10][GB].rmvb
+	  			\\N2\Media\KEEP NEW\ACG\Keroro\Season 4 E205\[青蛙軍曹][KERORO][166][R10][GB].rmvb
+	  			\\N2\Media\KEEP NEW\ACG\Keroro\Season 4 E205\[青蛙軍曹][KERORO][167][R10][GB].rmvb
+	  			\\N2\Media\KEEP NEW\ACG\Keroro\Season 4 E205\[青蛙軍曹][KERORO][168][r10].rmvb
+	  			\\N2\Media\KEEP NEW\ACG\Keroro\Season 4 E205\[青蛙軍曹][KERORO][171][r10].rmvb
+	  			\\N2\Media\KEEP NEW\ACG\Keroro\Season 4 E205\[青蛙軍曹][KERORO][172][r10].rmvb
+	  			\\N2\Media\KEEP NEW\ACG\Keroro\Season 4 E205\[青蛙軍曹][KERORO][173][r10].rmvb
+	  			\\N2\Media\KEEP NEW\ACG\Keroro\Season 4 E205\[青蛙軍曹][KERORO][174][r10].rmvb
+	  			\\N2\Media\KEEP NEW\ACG\Keroro\Season 4 E205\[青蛙軍曹][KERORO][175][r10].rmvb
+	  			\\N2\Media\KEEP NEW\ACG\Keroro\Season 4 E205\[青蛙軍曹][KERORO][176][r10].rmvb
+	  			\\N2\Media\KEEP NEW\ACG\Keroro\Season 4 E205\[青蛙軍曹][KERORO][177][r10].rmvb
+	  			\\N2\Media\KEEP NEW\ACG\Keroro\Season 4 E205\[青蛙軍曹][KERORO][178][r10].rmvb
+	  			\\N2\Media\KEEP NEW\ACG\Keroro\Season 4 E205\[青蛙軍曹][KERORO][179][r10].rmvb
+	  			\\N2\Media\KEEP NEW\ACG\Keroro\Season 4 E205\[青蛙軍曹][KERORO][180][r10].rmvb
+	  			\\N2\Media\KEEP NEW\ACG\Keroro\Season 4 E205\[青蛙軍曹][KERORO][181][r10].rmvb
+	  			\\N2\Media\KEEP NEW\ACG\Keroro\Season 4 E205\[青蛙軍曹][KERORO][182][r10].rmvb
+	  			\\N2\Media\KEEP NEW\ACG\Keroro\Season 4 E205\[青蛙軍曹][KERORO][183][r10].rmvb
+	  			\\N2\Media\KEEP NEW\ACG\Keroro\Season 4 E205\[青蛙軍曹][KERORO][184][r10].rmvb
+	  			\\N2\Media\KEEP NEW\ACG\Keroro\Season 4 E205\[青蛙軍曹][KERORO][185][r10].rmvb
+	  			\\N2\Media\KEEP NEW\ACG\Keroro\Season 4 E205\[青蛙軍曹][KERORO][186][r10].rmvb
+	  			\\N2\Media\KEEP NEW\ACG\Keroro\Season 4 E205\[青蛙軍曹][KERORO][187][r10].rmvb
+	  			\\N2\Media\KEEP NEW\ACG\Keroro\Season 4 E205\[青蛙軍曹][KERORO][188][r10].rmvb
+	  			\\N2\Media\KEEP NEW\ACG\Keroro\Season 4 E205\[青蛙軍曹][KERORO][189][r10].rmvb
+	  			\\N2\Media\KEEP NEW\ACG\Keroro\Season 4 E205\[青蛙軍曹][KERORO][190][r10].rmvb
+	  			\\N2\Media\KEEP NEW\ACG\Keroro\Season 4 E205\[青蛙軍曹][KERORO][191][r10].rmvb
+	  			\\N2\Media\KEEP NEW\ACG\Keroro\Season 4 E205\[青蛙軍曹][KERORO][192][r10].rmvb
+	  			\\N2\Media\KEEP NEW\ACG\Keroro\Season 4 E205\[青蛙軍曹][KERORO][193][r10].rmvb
+	  			\\N2\Media\KEEP NEW\ACG\Keroro\Season 4 E205\[青蛙軍曹][KERORO][194][r10].rmvb
+	  			\\N2\Media\KEEP NEW\ACG\Keroro\Season 4 E205\[青蛙軍曹][KERORO][195][r10].rmvb
+	  			\\N2\Media\KEEP NEW\ACG\Keroro\Season 4 E205\[青蛙軍曹][KERORO][196][r10].rmvb
+	  			\\N2\Media\KEEP NEW\ACG\Keroro\Season 4 E205\[青蛙軍曹][KERORO][197][r10].rmvb
+	  			\\N2\Media\KEEP NEW\ACG\Keroro\Season 4 E205\[青蛙軍曹][KERORO][198][r10].rmvb
+	  			\\N2\Media\KEEP NEW\ACG\Keroro\Season 4 E205\[青蛙軍曹][KERORO][199][r10].rmvb
+	  			\\N2\Media\KEEP NEW\ACG\Keroro\Season 4 E205\[青蛙軍曹][KERORO][200][r10].rmvb
+	  			\\N2\Media\KEEP NEW\ACG\Keroro\Season 4 E205\[青蛙軍曹][KERORO][201][r10].rmvb
+	  			\\N2\Media\KEEP NEW\ACG\Keroro\Season 4 E205\[青蛙軍曹][KERORO][202][r10].rmvb
+	  			\\N2\Media\KEEP NEW\ACG\Keroro\Season 4 E205\[青蛙軍曹][KERORO][204][GB][RV10].rmvb
+	  			\\N2\Media\KEEP NEW\ACG\Keroro\Season 4 E205\[青蛙軍曹][KERORO][205].rmvb
+	  			\\N2\Media\KEEP NEW\ACG\Keroro\Season 4 E205\Thumbs.db
+	  			\\N2\Media\KEEP NEW\ACG\Keroro\Season 5 E256\[青蛙軍曹].[SQsub][KERORO][235][GB][RV10].rmvb
+	  			\\N2\Media\KEEP NEW\ACG\Keroro\Season 5 E256\[青蛙軍曹].[SQsub][KERORO][236][GB][RV10].rmvb
+	  			\\N2\Media\KEEP NEW\ACG\Keroro\Season 5 E256\[青蛙軍曹].[SQsub][KERORO][237][GB][RV10].rmvb
+	  			\\N2\Media\KEEP NEW\ACG\Keroro\Season 5 E256\[青蛙軍曹].[SQsub][KERORO][238][GB][RV10].rmvb
+	  			\\N2\Media\KEEP NEW\ACG\Keroro\Season 5 E256\[青蛙軍曹].[SQsub][KERORO][239][GB][RV10].rmvb
+	  			\\N2\Media\KEEP NEW\ACG\Keroro\Season 5 E256\[青蛙軍曹].[SQsub][KERORO][240][GB][RV10].rmvb
+	  			\\N2\Media\KEEP NEW\ACG\Keroro\Season 5 E256\[青蛙軍曹].[SQsub][KERORO][241][GB][RV10].rmvb
+	  			\\N2\Media\KEEP NEW\ACG\Keroro\Season 5 E256\[青蛙軍曹].[SQsub][KERORO][242][GB][RV10].rmvb
+	  			\\N2\Media\KEEP NEW\ACG\Keroro\Season 5 E256\[青蛙軍曹].[SQsub][KERORO][244][GB][RV10].rmvb
+	  			\\N2\Media\KEEP NEW\ACG\Keroro\Season 5 E256\[青蛙軍曹].[SQsub][KERORO][245][GB][RV10].rmvb
+	  			\\N2\Media\KEEP NEW\ACG\Keroro\Season 5 E256\[青蛙軍曹].[SQsub][KERORO][246][GB][RV10].rmvb
+	  			\\N2\Media\KEEP NEW\ACG\Keroro\Season 5 E256\[青蛙軍曹].[SQsub][KERORO][247][GB][RV10].rmvb
+	  			\\N2\Media\KEEP NEW\ACG\Keroro\Season 5 E256\[青蛙軍曹].[SQsub][KERORO][248][GB][RV10].rmvb
+	  			\\N2\Media\KEEP NEW\ACG\Keroro\Season 5 E256\[青蛙軍曹].[SQsub][KERORO][249][GB][RV10].rmvb
+	  			\\N2\Media\KEEP NEW\ACG\Keroro\Season 5 E256\[青蛙軍曹].[SQsub][KERORO][250][GB][RV10].rmvb
+	  			\\N2\Media\KEEP NEW\ACG\Keroro\Season 5 E256\[青蛙軍曹].[SQsub][KERORO][251][GB][RV10].rmvb
+	  			\\N2\Media\KEEP NEW\ACG\Keroro\Season 5 E256\[青蛙軍曹].[SQsub][KERORO][252][GB][RV10].rmvb
+	  			\\N2\Media\KEEP NEW\ACG\Keroro\Season 5 E256\[青蛙軍曹].[SQsub][KERORO][253][GB][RV10].rmvb
+	  			\\N2\Media\KEEP NEW\ACG\Keroro\Season 5 E256\[青蛙軍曹][KERORO][206][GB][RV10].rmvb
+	  			\\N2\Media\KEEP NEW\ACG\Keroro\Season 5 E256\[青蛙軍曹][KERORO][207].rmvb
+	  			\\N2\Media\KEEP NEW\ACG\Keroro\Season 5 E256\[青蛙軍曹][KERORO][208].rmvb
+	  			\\N2\Media\KEEP NEW\ACG\Keroro\Season 5 E256\[青蛙軍曹][KERORO][209].rmvb
+	  			\\N2\Media\KEEP NEW\ACG\Keroro\Season 5 E256\[青蛙軍曹][KERORO][210].rmvb
+	  			\\N2\Media\KEEP NEW\ACG\Keroro\Season 5 E256\[青蛙軍曹][KERORO][212].rmvb
+	  			\\N2\Media\KEEP NEW\ACG\Keroro\Season 5 E256\[青蛙軍曹][KERORO][213][GB][RV10].rmvb
+	  			\\N2\Media\KEEP NEW\ACG\Keroro\Season 5 E256\[青蛙軍曹][KERORO][215].rmvb
+	  			\\N2\Media\KEEP NEW\ACG\Keroro\Season 5 E256\[青蛙軍曹][KERORO][216].rmvb
+	  			\\N2\Media\KEEP NEW\ACG\Keroro\Season 5 E256\[青蛙軍曹][KERORO][217][GB][RV10].rmvb
+	  			\\N2\Media\KEEP NEW\ACG\Keroro\Season 5 E256\[青蛙軍曹][KERORO][218][GB][RV10].rmvb
+	  			\\N2\Media\KEEP NEW\ACG\Keroro\Season 5 E256\[青蛙軍曹][KERORO][219][GB][RV10.rmvb
+	  			\\N2\Media\KEEP NEW\ACG\Keroro\Season 5 E256\[青蛙軍曹][KERORO][220][GB][RV10].rmvb
+	  			\\N2\Media\KEEP NEW\ACG\Keroro\Season 5 E256\[青蛙軍曹][KERORO][221][GB][RV10].rmvb
+	  			\\N2\Media\KEEP NEW\ACG\Keroro\Season 5 E256\[青蛙軍曹][KERORO][222][GB][RV10].rmvb
+	  			\\N2\Media\KEEP NEW\ACG\Keroro\Season 5 E256\[青蛙軍曹][KERORO][223][GB][RV10].rmvb
+	  			\\N2\Media\KEEP NEW\ACG\Keroro\Season 5 E256\[青蛙軍曹][KERORO][224][GB][RV10].rmvb
+	  			\\N2\Media\KEEP NEW\ACG\Keroro\Season 5 E256\[青蛙軍曹][KERORO][225][GB][RV10].rmvb
+	  			\\N2\Media\KEEP NEW\ACG\Keroro\Season 5 E256\[青蛙軍曹][KERORO][226][GB][RV10].rmvb
+	  			\\N2\Media\KEEP NEW\ACG\Keroro\Season 5 E256\[青蛙軍曹][KERORO][227][R10][GB].rmvb
+	  			\\N2\Media\KEEP NEW\ACG\Keroro\Season 5 E256\[青蛙軍曹][KERORO][228][GB][RV10].rmvb
+	  			\\N2\Media\KEEP NEW\ACG\Keroro\Season 5 E256\[青蛙軍曹][KERORO][229][R10][GB].rmvb
+	  			\\N2\Media\KEEP NEW\ACG\Keroro\Season 5 E256\[青蛙軍曹][KERORO][230][GB][RV10].rmvb
+	  			\\N2\Media\KEEP NEW\ACG\Keroro\Season 5 E256\[青蛙軍曹][KERORO][231][GB][RV10].rmvb
+	  			\\N2\Media\KEEP NEW\ACG\Keroro\Season 5 E256\[青蛙軍曹][KERORO][232][GB][RV10].rmvb
+	  			\\N2\Media\KEEP NEW\ACG\Keroro\Season 5 E256\[青蛙軍曹][KERORO][233][GB][RV10].rmvb
+	  			\\N2\Media\KEEP NEW\ACG\Keroro\Season 5 E256\[青蛙軍曹][KERORO][234][GB][RV10].rmvb
+	  			\\N2\Media\KEEP NEW\ACG\Keroro\Season 5 E256\Thumbs.db
+	  			\\N2\Media\KEEP NEW\ACG\Patlabor\[R2JRAW][Patlabor_The_Movie_3][MiniPato][DVDRip][WMV_WMA][55E180D3].ssa
+	  			\\N2\Media\KEEP NEW\ACG\Patlabor\[r2jraw][patlabor_tv][dvdrip][wmv_wma][37][3d2fde32].ssa
+	  			\\N2\Media\KEEP NEW\ACG\Patlabor\[機動警察全收錄].[DMHY][Patlabor][DVDRIP][OVA][JP.GB]1_1-4.[VeryCD.com].avi
+	  			\\N2\Media\KEEP NEW\ACG\Patlabor\[機動警察全收錄].[DMHY][Patlabor][DVDRIP][OVA][JP.GB]1_1-4.[VeryCD.com].idx
+	  			\\N2\Media\KEEP NEW\ACG\Patlabor\[機動警察全收錄].[DMHY][Patlabor][DVDRIP][OVA][JP.GB]1_1-4.[VeryCD.com].sub
+	  			\\N2\Media\KEEP NEW\ACG\Patlabor\[機動警察全收錄].[DMHY][Patlabor][DVDRIP][OVA][JP.GB]1_5-7.[VeryCD.com].avi
+	  			\\N2\Media\KEEP NEW\ACG\Patlabor\[機動警察全收錄].[DMHY][Patlabor][DVDRIP][OVA][JP.GB]1_5-7.[VeryCD.com].idx
+	  			\\N2\Media\KEEP NEW\ACG\Patlabor\[機動警察全收錄].[DMHY][Patlabor][DVDRIP][OVA][JP.GB]1_5-7.[VeryCD.com].sub
+	  			\\N2\Media\KEEP NEW\ACG\Patlabor\[機動警察全收錄].[dmhy][patlabor_tv][dvdrip][xvid][jap_big5][001].avi
+	  			\\N2\Media\KEEP NEW\ACG\Patlabor\[機動警察全收錄].[dmhy][patlabor_tv][dvdrip][xvid][jap_big5][002].avi
+	  			\\N2\Media\KEEP NEW\ACG\Patlabor\[機動警察全收錄].[dmhy][patlabor_tv][dvdrip][xvid][jap_big5][003].avi
+	  			\\N2\Media\KEEP NEW\ACG\Patlabor\[機動警察全收錄].[dmhy][patlabor_tv][dvdrip][xvid][jap_big5][004].avi
+	  			\\N2\Media\KEEP NEW\ACG\Patlabor\[機動警察全收錄].[dmhy][patlabor_tv][dvdrip][xvid][jap_big5][005].avi
+	  			\\N2\Media\KEEP NEW\ACG\Patlabor\[機動警察全收錄].[dmhy][patlabor_tv][dvdrip][xvid][jap_big5][006].avi
+	  			\\N2\Media\KEEP NEW\ACG\Patlabor\[機動警察全收錄].[dmhy][patlabor_tv][dvdrip][xvid][jap_big5][007].avi
+	  			\\N2\Media\KEEP NEW\ACG\Patlabor\[機動警察全收錄].[dmhy][patlabor_tv][dvdrip][xvid][jap_big5][008].avi
+	  			\\N2\Media\KEEP NEW\ACG\Patlabor\[機動警察全收錄].[dmhy][patlabor_tv][dvdrip][xvid][jap_big5][009].avi
+	  			\\N2\Media\KEEP NEW\ACG\Patlabor\[機動警察全收錄].[dmhy][patlabor_tv][dvdrip][xvid][jap_big5][010].avi
+	  			\\N2\Media\KEEP NEW\ACG\Patlabor\[機動警察全收錄].[dmhy][patlabor_tv][dvdrip][xvid][jap_big5][011].avi
+	  			\\N2\Media\KEEP NEW\ACG\Patlabor\[機動警察全收錄].[dmhy][patlabor_tv][dvdrip][xvid][jap_big5][012].avi
+	  			\\N2\Media\KEEP NEW\ACG\Patlabor\[機動警察全收錄].[dmhy][patlabor_tv][dvdrip][xvid][jap_big5][013].avi
+	  			\\N2\Media\KEEP NEW\ACG\Patlabor\[機動警察全收錄].[dmhy][patlabor_tv][dvdrip][xvid][jap_big5][014].avi
+	  			\\N2\Media\KEEP NEW\ACG\Patlabor\[機動警察全收錄].[dmhy][patlabor_tv][dvdrip][xvid][jap_big5][015].avi
+	  			\\N2\Media\KEEP NEW\ACG\Patlabor\[機動警察全收錄].[dmhy][patlabor_tv][dvdrip][xvid][jap_big5][016].avi
+	  			\\N2\Media\KEEP NEW\ACG\Patlabor\[機動警察全收錄].[dmhy][patlabor_tv][dvdrip][xvid][jap_big5][017].avi
+	  			\\N2\Media\KEEP NEW\ACG\Patlabor\[機動警察全收錄].[dmhy][patlabor_tv][dvdrip][xvid][jap_big5][018].avi
+	  			\\N2\Media\KEEP NEW\ACG\Patlabor\[機動警察全收錄].[dmhy][patlabor_tv][dvdrip][xvid][jap_big5][019].avi
+	  			\\N2\Media\KEEP NEW\ACG\Patlabor\[機動警察全收錄].[dmhy][patlabor_tv][dvdrip][xvid][jap_big5][020].avi
+	  			\\N2\Media\KEEP NEW\ACG\Patlabor\[機動警察全收錄].[dmhy][patlabor_tv][dvdrip][xvid][jap_big5][021].avi
+	  			\\N2\Media\KEEP NEW\ACG\Patlabor\[機動警察全收錄].[dmhy][patlabor_tv][dvdrip][xvid][jap_big5][022].avi
+	  			\\N2\Media\KEEP NEW\ACG\Patlabor\[機動警察全收錄].[dmhy][patlabor_tv][dvdrip][xvid][jap_big5][023].avi
+	  			\\N2\Media\KEEP NEW\ACG\Patlabor\[機動警察全收錄].[dmhy][patlabor_tv][dvdrip][xvid][jap_big5][024].avi
+	  			\\N2\Media\KEEP NEW\ACG\Patlabor\[機動警察全收錄].[dmhy][Patlabor_tv][dvdrip][xvid][jap_big5][025].avi
+	  			\\N2\Media\KEEP NEW\ACG\Patlabor\[機動警察全收錄].[dmhy][patlabor_tv][dvdrip][xvid][jap_big5][026].avi
+	  			\\N2\Media\KEEP NEW\ACG\Patlabor\[機動警察全收錄].[dmhy][patlabor_tv][dvdrip][xvid][jap_big5][027].avi
+	  			\\N2\Media\KEEP NEW\ACG\Patlabor\[機動警察全收錄].[dmhy][Patlabor_tv][dvdrip][xvid][jap_big5][028].avi
+	  			\\N2\Media\KEEP NEW\ACG\Patlabor\[機動警察全收錄].[dmhy][patlabor_tv][dvdrip][xvid][jap_big5][029].avi
+	  			\\N2\Media\KEEP NEW\ACG\Patlabor\[機動警察全收錄].[dmhy][patlabor_tv][dvdrip][xvid][jap_big5][030].avi
+	  			\\N2\Media\KEEP NEW\ACG\Patlabor\[機動警察全收錄].[dmhy][patlabor_tv][dvdrip][xvid][jap_big5][031].avi
+	  			\\N2\Media\KEEP NEW\ACG\Patlabor\[機動警察全收錄].[dmhy][patlabor_tv][dvdrip][xvid][jap_big5][032].avi
+	  			\\N2\Media\KEEP NEW\ACG\Patlabor\[機動警察全收錄].[dmhy][patlabor_tv][dvdrip][xvid][jap_big5][033].avi
+	  			\\N2\Media\KEEP NEW\ACG\Patlabor\[機動警察全收錄].[dmhy][patlabor_tv][dvdrip][xvid][jap_big5][034].avi
+	  			\\N2\Media\KEEP NEW\ACG\Patlabor\[機動警察全收錄].[dmhy][Patlabor_tv][dvdrip][xvid][jap_big5][035].avi
+	  			\\N2\Media\KEEP NEW\ACG\Patlabor\[機動警察全收錄].[dmhy][Patlabor_tv][dvdrip][xvid][jap_big5][036].avi
+	  			\\N2\Media\KEEP NEW\ACG\Patlabor\[機動警察全收錄].[dmhy][patlabor_tv][dvdrip][xvid][jap_big5][038].avi
+	  			\\N2\Media\KEEP NEW\ACG\Patlabor\[機動警察全收錄].[dmhy][patlabor_tv][dvdrip][xvid][jap_big5][039].avi
+	  			\\N2\Media\KEEP NEW\ACG\Patlabor\[機動警察全收錄].[dmhy][patlabor_tv][dvdrip][xvid][jap_big5][040].avi
+	  			\\N2\Media\KEEP NEW\ACG\Patlabor\[機動警察全收錄].[dmhy][Patlabor_tv][dvdrip][xvid][jap_big5][041].avi
+	  			\\N2\Media\KEEP NEW\ACG\Patlabor\[機動警察全收錄].[dmhy][patlabor_tv][dvdrip][xvid][jap_big5][042].avi
+	  			\\N2\Media\KEEP NEW\ACG\Patlabor\[機動警察全收錄].[dmhy][patlabor_tv][dvdrip][xvid][jap_big5][043].avi
+	  			\\N2\Media\KEEP NEW\ACG\Patlabor\[機動警察全收錄].[dmhy][patlabor_tv][dvdrip][xvid][jap_big5][044].avi
+	  			\\N2\Media\KEEP NEW\ACG\Patlabor\[機動警察全收錄].[dmhy][patlabor_tv][dvdrip][xvid][jap_big5][045].avi
+	  			\\N2\Media\KEEP NEW\ACG\Patlabor\[機動警察全收錄].[dmhy][patlabor_tv][dvdrip][xvid][jap_big5][046].avi
+	  			\\N2\Media\KEEP NEW\ACG\Patlabor\[機動警察全收錄].[dmhy][patlabor_tv][dvdrip][xvid][jap_big5][047].avi
+	  			\\N2\Media\KEEP NEW\ACG\Patlabor\[機動警察全收錄].[gz411][patlabor_ova2][001][jap_chn][1100k].avi
+	  			\\N2\Media\KEEP NEW\ACG\Patlabor\[機動警察全收錄].[gz411][patlabor_ova2][002][jap_chn][1100k].avi
+	  			\\N2\Media\KEEP NEW\ACG\Patlabor\[機動警察全收錄].[gz411][patlabor_ova2][003][jap_chn][1100k].avi
+	  			\\N2\Media\KEEP NEW\ACG\Patlabor\[機動警察全收錄].[gz411][patlabor_ova2][004][jap_chn][1100k].avi
+	  			\\N2\Media\KEEP NEW\ACG\Patlabor\[機動警察全收錄].[gz411][patlabor_ova2][005][jap_chn][1100k].avi
+	  			\\N2\Media\KEEP NEW\ACG\Patlabor\[機動警察全收錄].[gz411][patlabor_ova2][006][jap_chn][1100k].avi
+	  			\\N2\Media\KEEP NEW\ACG\Patlabor\[機動警察全收錄].[gz411][patlabor_ova2][007][jap_chn][1100k].avi
+	  			\\N2\Media\KEEP NEW\ACG\Patlabor\[機動警察全收錄].[gz411][patlabor_ova2][008][jap_chn][1100k].avi
+	  			\\N2\Media\KEEP NEW\ACG\Patlabor\[機動警察全收錄].[gz411][patlabor_ova2][009][jap_chn][1100k].avi
+	  			\\N2\Media\KEEP NEW\ACG\Patlabor\[機動警察全收錄].[gz411][patlabor_ova2][010][jap_chn][1100k].avi
+	  			\\N2\Media\KEEP NEW\ACG\Patlabor\[機動警察全收錄].[gz411][patlabor_ova2][011][jap_chn][1100k].avi
+	  			\\N2\Media\KEEP NEW\ACG\Patlabor\[機動警察全收錄].[gz411][patlabor_ova2][012][jap_chn][1100k].avi
+	  			\\N2\Media\KEEP NEW\ACG\Patlabor\[機動警察全收錄].[gz411][patlabor_ova2][013][jap_chn][1100k].avi
+	  			\\N2\Media\KEEP NEW\ACG\Patlabor\[機動警察全收錄].[gz411][patlabor_ova2][014][jap_chn][1100k].avi
+	  			\\N2\Media\KEEP NEW\ACG\Patlabor\[機動警察全收錄].[gz411][patlabor_ova2][015][jap_chn][1100k].avi
+	  			\\N2\Media\KEEP NEW\ACG\Patlabor\[機動警察全收錄].[gz411][patlabor_ova2][016][jap_chn][1100k].avi
+	  			\\N2\Media\KEEP NEW\ACG\Patlabor\[機動警察全收錄].patlabor_movie_no1_cd1.[VeryCD.com].avi
+	  			\\N2\Media\KEEP NEW\ACG\Patlabor\[機動警察全收錄].patlabor_movie_no1_cd1.[VeryCD.com].srt
+	  			\\N2\Media\KEEP NEW\ACG\Patlabor\[機動警察全收錄].patlabor_movie_no1_cd2.[VeryCD.com].avi
+	  			\\N2\Media\KEEP NEW\ACG\Patlabor\[機動警察全收錄].patlabor_movie_no1_cd2.[VeryCD.com].srt
+	  			\\N2\Media\KEEP NEW\ACG\Patlabor\[機動警察全收錄].patlabor_movie_no2_cd1.[VeryCD.com].avi
+	  			\\N2\Media\KEEP NEW\ACG\Patlabor\[機動警察全收錄].patlabor_movie_no2_cd1.[VeryCD.com].srt
+	  			\\N2\Media\KEEP NEW\ACG\Patlabor\[機動警察全收錄].patlabor_movie_no2_cd2.[VeryCD.com].avi
+	  			\\N2\Media\KEEP NEW\ACG\Patlabor\[機動警察全收錄].patlabor_movie_no2_cd2.[VeryCD.com].srt
+	  			\\N2\Media\KEEP NEW\ACG\Patlabor\[機動警察全收錄].patlabor_movie_no3_cd1.avi
+	  			\\N2\Media\KEEP NEW\ACG\Patlabor\[機動警察全收錄].patlabor_movie_no3_cd1.srt
+	  			\\N2\Media\KEEP NEW\ACG\Patlabor\[機動警察全收錄].patlabor_movie_no3_cd2.avi
+	  			\\N2\Media\KEEP NEW\ACG\Patlabor\[機動警察全收錄].patlabor_movie_no3_cd2.srt
+	  			\\N2\Media\KEEP NEW\ACG\Patlabor\[機動警察全收錄].patlabor_movie_no4_cd1.avi
+	  			\\N2\Media\KEEP NEW\ACG\Patlabor\[機動警察全收錄].patlabor_movie_no4_cd1.srt
+	  			\\N2\Media\KEEP NEW\ACG\Patlabor\[機動警察全收錄].Patlabor_Movie_No4_CD2.avi
+	  			\\N2\Media\KEEP NEW\ACG\Patlabor\[機動警察全收錄].patlabor_movie_no4_cd2.srt
+	  			\\N2\Media\KEEP NEW\ACG\Patlabor\[機動警察全收錄].patlabor_movie_no5_mini.avi
+	  			\\N2\Media\KEEP NEW\ACG\Patlabor\[機動警察全收錄].patlabor_movie_no5_mini.srt
+	  			\\N2\Media\KEEP NEW\ACG\Patlabor\patlabor.txt
+	  			\\N2\Media\KEEP NEW\ACG\Patlabor\Thumbs.db
+	  			\\N2\Media\KEEP NEW\ACG\Slayers\.DS_Store
+	  			\\N2\Media\KEEP NEW\ACG\Slayers\1995 MOV Slayers\[秀逗魔導士].[SAGA][Slayers_Movie(95)][Perfect][big5].rmvb
+	  			\\N2\Media\KEEP NEW\ACG\Slayers\1995 TV Slayers E26\[秀逗魔導士].[SAGA][Slayers]_01.rmvb
+	  			\\N2\Media\KEEP NEW\ACG\Slayers\1995 TV Slayers E26\[秀逗魔?士].[SAGA][Slayers]_01.rmvb
+	  			\\N2\Media\KEEP NEW\ACG\Slayers\1995 TV Slayers E26\[秀逗魔?士].[SAGA][Slayers]_02.rmvb
+	  			\\N2\Media\KEEP NEW\ACG\Slayers\1995 TV Slayers E26\[秀逗魔?士].[SAGA][Slayers]_03.rmvb
+	  			\\N2\Media\KEEP NEW\ACG\Slayers\1995 TV Slayers E26\[秀逗魔?士].[SAGA][Slayers]_04.rmvb
+	  			\\N2\Media\KEEP NEW\ACG\Slayers\1995 TV Slayers E26\[秀逗魔?士].[SAGA][Slayers]_05.rmvb
+	  			\\N2\Media\KEEP NEW\ACG\Slayers\1995 TV Slayers E26\[秀逗魔?士].[SAGA][Slayers]_06.rmvb
+	  			\\N2\Media\KEEP NEW\ACG\Slayers\1995 TV Slayers E26\[秀逗魔?士].[SAGA][Slayers]_07.rmvb
+	  			\\N2\Media\KEEP NEW\ACG\Slayers\1995 TV Slayers E26\[秀逗魔?士].[SAGA][Slayers]_08.rmvb
+	  			\\N2\Media\KEEP NEW\ACG\Slayers\1995 TV Slayers E26\[秀逗魔?士].[SAGA][Slayers]_09.rmvb
+	  			\\N2\Media\KEEP NEW\ACG\Slayers\1995 TV Slayers E26\[秀逗魔?士].[SAGA][Slayers]_10.rmvb
+	  			\\N2\Media\KEEP NEW\ACG\Slayers\1995 TV Slayers E26\[秀逗魔?士].[SAGA][Slayers]_11.rmvb
+	  			\\N2\Media\KEEP NEW\ACG\Slayers\1995 TV Slayers E26\[秀逗魔?士].[SAGA][Slayers]_12.rmvb
+	  			\\N2\Media\KEEP NEW\ACG\Slayers\1995 TV Slayers E26\[秀逗魔?士].[SAGA][Slayers]_13.rmvb
+	  			\\N2\Media\KEEP NEW\ACG\Slayers\1995 TV Slayers E26\[秀逗魔?士].[SAGA][Slayers]_14.rmvb
+	  			\\N2\Media\KEEP NEW\ACG\Slayers\1995 TV Slayers E26\[秀逗魔?士].[SAGA][Slayers]_15.rmvb
+	  			\\N2\Media\KEEP NEW\ACG\Slayers\1995 TV Slayers E26\[秀逗魔?士].[SAGA][Slayers]_16.rmvb
+	  			\\N2\Media\KEEP NEW\ACG\Slayers\1995 TV Slayers E26\[秀逗魔?士].[SAGA][Slayers]_17.rmvb
+	  			\\N2\Media\KEEP NEW\ACG\Slayers\1995 TV Slayers E26\[秀逗魔?士].[SAGA][Slayers]_18.rmvb
+	  			\\N2\Media\KEEP NEW\ACG\Slayers\1995 TV Slayers E26\[秀逗魔?士].[SAGA][Slayers]_19.rmvb
+	  			\\N2\Media\KEEP NEW\ACG\Slayers\1995 TV Slayers E26\[秀逗魔?士].[SAGA][Slayers]_20.rmvb
+	  			\\N2\Media\KEEP NEW\ACG\Slayers\1995 TV Slayers E26\[秀逗魔?士].[SAGA][Slayers]_21.rmvb
+	  			\\N2\Media\KEEP NEW\ACG\Slayers\1995 TV Slayers E26\[秀逗魔?士].[SAGA][Slayers]_22.rmvb
+	  			\\N2\Media\KEEP NEW\ACG\Slayers\1995 TV Slayers E26\[秀逗魔?士].[SAGA][Slayers]_23.rmvb
+	  			\\N2\Media\KEEP NEW\ACG\Slayers\1995 TV Slayers E26\[秀逗魔?士].[SAGA][Slayers]_24.rmvb
+	  			\\N2\Media\KEEP NEW\ACG\Slayers\1995 TV Slayers E26\[秀逗魔?士].[SAGA][Slayers]_25.rmvb
+	  			\\N2\Media\KEEP NEW\ACG\Slayers\1995 TV Slayers E26\[秀逗魔?士].[SAGA][Slayers]_26.rmvb
+	  			\\N2\Media\KEEP NEW\ACG\Slayers\1996 MOV Slayers Return\[秀逗魔導士].[SAGA][Slayers_Movie(96)][Return][big5].rmvb
+	  			\\N2\Media\KEEP NEW\ACG\Slayers\1996 MOV Slayers Return\秀逗魔導士1996劇場版[500k].rmvb
+	  			\\N2\Media\KEEP NEW\ACG\Slayers\1996 OVA Slayers Special E3\[Slayers.Special][OVA][1.可怕的裡美拉計畫].rmvb
+	  			\\N2\Media\KEEP NEW\ACG\Slayers\1996 OVA Slayers Special E3\[Slayers.Special][OVA][2.傑夫利的騎士道].rmvb
+	  			\\N2\Media\KEEP NEW\ACG\Slayers\1996 OVA Slayers Special E3\[Slayers.Special][OVA][3.影之鏡].rmvb
+	  			\\N2\Media\KEEP NEW\ACG\Slayers\1996 TV Slayers Next E26\[POPGO][Slayers_TV_II][DVDRIP][AC3][JP][GB]01.avi
+	  			\\N2\Media\KEEP NEW\ACG\Slayers\1996 TV Slayers Next E26\[秀逗魔導士].[SAGA][Slayers_II][big5]_01.rmvb
+	  			\\N2\Media\KEEP NEW\ACG\Slayers\1996 TV Slayers Next E26\[秀逗魔導士].[SAGA][Slayers_II][big5]_02.rmvb
+	  			\\N2\Media\KEEP NEW\ACG\Slayers\1996 TV Slayers Next E26\[秀逗魔導士].[SAGA][Slayers_II][big5]_03.rmvb
+	  			\\N2\Media\KEEP NEW\ACG\Slayers\1996 TV Slayers Next E26\[秀逗魔導士].[SAGA][Slayers_II][big5]_04.rmvb
+	  			\\N2\Media\KEEP NEW\ACG\Slayers\1996 TV Slayers Next E26\[秀逗魔導士].[SAGA][Slayers_II][big5]_05.rmvb
+	  			\\N2\Media\KEEP NEW\ACG\Slayers\1996 TV Slayers Next E26\[秀逗魔導士].[SAGA][Slayers_II][big5]_06.rmvb
+	  			\\N2\Media\KEEP NEW\ACG\Slayers\1996 TV Slayers Next E26\[秀逗魔導士].[SAGA][Slayers_II][big5]_07.rmvb
+	  			\\N2\Media\KEEP NEW\ACG\Slayers\1996 TV Slayers Next E26\[秀逗魔導士].[SAGA][Slayers_II][big5]_08.rmvb
+	  			\\N2\Media\KEEP NEW\ACG\Slayers\1996 TV Slayers Next E26\[秀逗魔導士].[SAGA][Slayers_II][big5]_09.rmvb
+	  			\\N2\Media\KEEP NEW\ACG\Slayers\1996 TV Slayers Next E26\[秀逗魔導士].[SAGA][Slayers_II][big5]_10.rmvb
+	  			\\N2\Media\KEEP NEW\ACG\Slayers\1996 TV Slayers Next E26\[秀逗魔導士].[SAGA][Slayers_II][big5]_11.rmvb
+	  			\\N2\Media\KEEP NEW\ACG\Slayers\1996 TV Slayers Next E26\[秀逗魔導士].[SAGA][Slayers_II][big5]_12.rmvb
+	  			\\N2\Media\KEEP NEW\ACG\Slayers\1996 TV Slayers Next E26\[秀逗魔導士].[SAGA][Slayers_II][big5]_13.rmvb
+	  			\\N2\Media\KEEP NEW\ACG\Slayers\1996 TV Slayers Next E26\[秀逗魔導士].[SAGA][Slayers_II][big5]_14.rmvb
+	  			\\N2\Media\KEEP NEW\ACG\Slayers\1996 TV Slayers Next E26\[秀逗魔導士].[SAGA][Slayers_II][big5]_15.rmvb
+	  			\\N2\Media\KEEP NEW\ACG\Slayers\1996 TV Slayers Next E26\[秀逗魔導士].[SAGA][Slayers_II][big5]_16.rmvb
+	  			\\N2\Media\KEEP NEW\ACG\Slayers\1996 TV Slayers Next E26\[秀逗魔導士].[SAGA][Slayers_II][big5]_17.rmvb
+	  			\\N2\Media\KEEP NEW\ACG\Slayers\1996 TV Slayers Next E26\[秀逗魔導士].[SAGA][Slayers_II][big5]_18.rmvb
+	  			\\N2\Media\KEEP NEW\ACG\Slayers\1996 TV Slayers Next E26\[秀逗魔導士].[SAGA][Slayers_II][big5]_19.rmvb
+	  			\\N2\Media\KEEP NEW\ACG\Slayers\1996 TV Slayers Next E26\[秀逗魔導士].[SAGA][Slayers_II][big5]_20.rmvb
+	  			\\N2\Media\KEEP NEW\ACG\Slayers\1996 TV Slayers Next E26\[秀逗魔導士].[SAGA][Slayers_II][big5]_21.rmvb
+	  			\\N2\Media\KEEP NEW\ACG\Slayers\1996 TV Slayers Next E26\[秀逗魔導士].[SAGA][Slayers_II][big5]_22.rmvb
+	  			\\N2\Media\KEEP NEW\ACG\Slayers\1996 TV Slayers Next E26\[秀逗魔導士].[SAGA][Slayers_II][big5]_23.rmvb
+	  			\\N2\Media\KEEP NEW\ACG\Slayers\1996 TV Slayers Next E26\[秀逗魔導士].[SAGA][Slayers_II][big5]_24.rmvb
+	  			\\N2\Media\KEEP NEW\ACG\Slayers\1996 TV Slayers Next E26\[秀逗魔導士].[SAGA][Slayers_II][big5]_25.rmvb
+	  			\\N2\Media\KEEP NEW\ACG\Slayers\1996 TV Slayers Next E26\[秀逗魔導士].[SAGA][Slayers_II][big5]_26.rmvb
+	  			\\N2\Media\KEEP NEW\ACG\Slayers\1997 MOV Slayers Great\秀逗魔導士1997劇場版[500k].rmvb
+	  			\\N2\Media\KEEP NEW\ACG\Slayers\1997 TV Slayers Try E26\[SAGA][Slayers_Ⅲ][big5]_01.rmvb
+	  			\\N2\Media\KEEP NEW\ACG\Slayers\1997 TV Slayers Try E26\[SAGA][Slayers_Ⅲ][big5]_02.rmvb
+	  			\\N2\Media\KEEP NEW\ACG\Slayers\1997 TV Slayers Try E26\[SAGA][Slayers_Ⅲ][big5]_03.rmvb
+	  			\\N2\Media\KEEP NEW\ACG\Slayers\1997 TV Slayers Try E26\[SAGA][Slayers_Ⅲ][big5]_04.rmvb
+	  			\\N2\Media\KEEP NEW\ACG\Slayers\1997 TV Slayers Try E26\[SAGA][Slayers_Ⅲ][big5]_05.rmvb
+	  			\\N2\Media\KEEP NEW\ACG\Slayers\1997 TV Slayers Try E26\[SAGA][Slayers_Ⅲ][big5]_06.rmvb
+	  			\\N2\Media\KEEP NEW\ACG\Slayers\1997 TV Slayers Try E26\[SAGA][Slayers_Ⅲ][big5]_07.rmvb
+	  			\\N2\Media\KEEP NEW\ACG\Slayers\1997 TV Slayers Try E26\[SAGA][Slayers_Ⅲ][big5]_08.rmvb
+	  			\\N2\Media\KEEP NEW\ACG\Slayers\1997 TV Slayers Try E26\[SAGA][Slayers_Ⅲ][big5]_09.rmvb
+	  			\\N2\Media\KEEP NEW\ACG\Slayers\1997 TV Slayers Try E26\[SAGA][Slayers_Ⅲ][big5]_10.rmvb
+	  			\\N2\Media\KEEP NEW\ACG\Slayers\1997 TV Slayers Try E26\[SAGA][Slayers_Ⅲ][big5]_11.rmvb
+	  			\\N2\Media\KEEP NEW\ACG\Slayers\1997 TV Slayers Try E26\[SAGA][Slayers_Ⅲ][big5]_12.rmvb
+	  			\\N2\Media\KEEP NEW\ACG\Slayers\1997 TV Slayers Try E26\[SAGA][Slayers_Ⅲ][big5]_13.rmvb
+	  			\\N2\Media\KEEP NEW\ACG\Slayers\1997 TV Slayers Try E26\[SAGA][Slayers_Ⅲ][big5]_14.rmvb
+	  			\\N2\Media\KEEP NEW\ACG\Slayers\1997 TV Slayers Try E26\[SAGA][Slayers_Ⅲ][big5]_15.rmvb
+	  			\\N2\Media\KEEP NEW\ACG\Slayers\1997 TV Slayers Try E26\[SAGA][Slayers_Ⅲ][big5]_16.rmvb
+	  			\\N2\Media\KEEP NEW\ACG\Slayers\1997 TV Slayers Try E26\[SAGA][Slayers_Ⅲ][big5]_17.rmvb
+	  			\\N2\Media\KEEP NEW\ACG\Slayers\1997 TV Slayers Try E26\[SAGA][Slayers_Ⅲ][big5]_18.rmvb
+	  			\\N2\Media\KEEP NEW\ACG\Slayers\1997 TV Slayers Try E26\[SAGA][Slayers_Ⅲ][big5]_19.rmvb
+	  			\\N2\Media\KEEP NEW\ACG\Slayers\1997 TV Slayers Try E26\[SAGA][Slayers_Ⅲ][big5]_20.rmvb
+	  			\\N2\Media\KEEP NEW\ACG\Slayers\1997 TV Slayers Try E26\[SAGA][Slayers_Ⅲ][big5]_21.rmvb
+	  			\\N2\Media\KEEP NEW\ACG\Slayers\1997 TV Slayers Try E26\[SAGA][Slayers_Ⅲ][big5]_22.rmvb
+	  			\\N2\Media\KEEP NEW\ACG\Slayers\1997 TV Slayers Try E26\[SAGA][Slayers_Ⅲ][big5]_23.rmvb
+	  			\\N2\Media\KEEP NEW\ACG\Slayers\1997 TV Slayers Try E26\[SAGA][Slayers_Ⅲ][big5]_24.rmvb
+	  			\\N2\Media\KEEP NEW\ACG\Slayers\1997 TV Slayers Try E26\[SAGA][Slayers_Ⅲ][big5]_25.rmvb
+	  			\\N2\Media\KEEP NEW\ACG\Slayers\1997 TV Slayers Try E26\[SAGA][Slayers_Ⅲ][big5]_26.rmvb
+	  			\\N2\Media\KEEP NEW\ACG\Slayers\1997 TV Slayers Try E26\SlayersTry_01.rmvb
+	  			\\N2\Media\KEEP NEW\ACG\Slayers\1998 MOV Slayers Gorgeous\秀逗魔導士1998劇場版[600k].rmvb
+	  			\\N2\Media\KEEP NEW\ACG\Slayers\1998 OVA Slayers Excellent E3\[秀逗魔導士OVA1].[R2JRAW][SLAYERS][OVA][01.迷宮].[DVDRIP].avi
+	  			\\N2\Media\KEEP NEW\ACG\Slayers\1998 OVA Slayers Excellent E3\[秀逗魔導士OVA1].[R2JRAW][SLAYERS][OVA][01.迷宮].[DVDRIP].tc.ssa
+	  			\\N2\Media\KEEP NEW\ACG\Slayers\1998 OVA Slayers Excellent E3\[秀逗魔導士OVA1].[R2JRAW][SLAYERS][OVA][02.可怕的未來].[DVDRIP].avi
+	  			\\N2\Media\KEEP NEW\ACG\Slayers\1998 OVA Slayers Excellent E3\[秀逗魔導士OVA1].[R2JRAW][SLAYERS][OVA][02.可怕的未來].[DVDRIP].tc.ssa
+	  			\\N2\Media\KEEP NEW\ACG\Slayers\1998 OVA Slayers Excellent E3\[秀逗魔導士OVA1].[R2JRAW][SLAYERS][OVA][03.莉娜的服裝大作戰].[DVDRIP].avi
+	  			\\N2\Media\KEEP NEW\ACG\Slayers\1998 OVA Slayers Excellent E3\[秀逗魔導士OVA1].[R2JRAW][SLAYERS][OVA][03.莉娜的服裝大作戰].[DVDRIP].tc.ssa
+	  			\\N2\Media\KEEP NEW\ACG\Slayers\2001 MOV Slayers Premium\秀逗魔導士2001劇場版[500k].rmvb
+	  			\\N2\Media\KEEP NEW\ACG\現視研\1\[Anifan][現視研][GENSHIKEN][TWDVDrip][01].avi
+	  			\\N2\Media\KEEP NEW\ACG\現視研\1\[Anifan][現視研][GENSHIKEN][TWDVDrip][01].idx
+	  			\\N2\Media\KEEP NEW\ACG\現視研\1\[Anifan][現視研][GENSHIKEN][TWDVDrip][01].sub
+	  			\\N2\Media\KEEP NEW\ACG\現視研\1\[Anifan][現視研][GENSHIKEN][TWDVDrip][02].avi
+	  			\\N2\Media\KEEP NEW\ACG\現視研\1\[Anifan][現視研][GENSHIKEN][TWDVDrip][02].idx
+	  			\\N2\Media\KEEP NEW\ACG\現視研\1\[Anifan][現視研][GENSHIKEN][TWDVDrip][02].sub
+	  			\\N2\Media\KEEP NEW\ACG\現視研\1\[Anifan][現視研][GENSHIKEN][TWDVDrip][03].avi
+	  			\\N2\Media\KEEP NEW\ACG\現視研\1\[Anifan][現視研][GENSHIKEN][TWDVDrip][03].idx
+	  			\\N2\Media\KEEP NEW\ACG\現視研\1\[Anifan][現視研][GENSHIKEN][TWDVDrip][03].sub
+	  			\\N2\Media\KEEP NEW\ACG\現視研\1\[Anifan][現視研][GENSHIKEN][TWDVDrip][04].avi
+	  			\\N2\Media\KEEP NEW\ACG\現視研\1\[Anifan][現視研][GENSHIKEN][TWDVDrip][04].idx
+	  			\\N2\Media\KEEP NEW\ACG\現視研\1\[Anifan][現視研][GENSHIKEN][TWDVDrip][04].sub
+	  			\\N2\Media\KEEP NEW\ACG\現視研\1\[Anifan][現視研][GENSHIKEN][TWDVDrip][05].avi
+	  			\\N2\Media\KEEP NEW\ACG\現視研\1\[Anifan][現視研][GENSHIKEN][TWDVDrip][05].idx
+	  			\\N2\Media\KEEP NEW\ACG\現視研\1\[Anifan][現視研][GENSHIKEN][TWDVDrip][05].sub
+	  			\\N2\Media\KEEP NEW\ACG\現視研\1\[Anifan][現視研][GENSHIKEN][TWDVDrip][06].avi
+	  			\\N2\Media\KEEP NEW\ACG\現視研\1\[Anifan][現視研][GENSHIKEN][TWDVDrip][06].idx
+	  			\\N2\Media\KEEP NEW\ACG\現視研\1\[Anifan][現視研][GENSHIKEN][TWDVDrip][06].sub
+	  			\\N2\Media\KEEP NEW\ACG\現視研\1\[Anifan][現視研][GENSHIKEN][TWDVDrip][07].avi
+	  			\\N2\Media\KEEP NEW\ACG\現視研\1\[Anifan][現視研][GENSHIKEN][TWDVDrip][07].idx
+	  			\\N2\Media\KEEP NEW\ACG\現視研\1\[Anifan][現視研][GENSHIKEN][TWDVDrip][07].sub
+	  			\\N2\Media\KEEP NEW\ACG\現視研\1\[Anifan][現視研][GENSHIKEN][TWDVDrip][08].avi
+	  			\\N2\Media\KEEP NEW\ACG\現視研\1\[Anifan][現視研][GENSHIKEN][TWDVDrip][08].idx
+	  			\\N2\Media\KEEP NEW\ACG\現視研\1\[Anifan][現視研][GENSHIKEN][TWDVDrip][08].sub
+	  			\\N2\Media\KEEP NEW\ACG\現視研\1\[Anifan][現視研][GENSHIKEN][TWDVDrip][09].avi
+	  			\\N2\Media\KEEP NEW\ACG\現視研\1\[Anifan][現視研][GENSHIKEN][TWDVDrip][09].idx
+	  			\\N2\Media\KEEP NEW\ACG\現視研\1\[Anifan][現視研][GENSHIKEN][TWDVDrip][09].sub
+	  			\\N2\Media\KEEP NEW\ACG\現視研\1\[Anifan][現視研][GENSHIKEN][TWDVDrip][10].avi
+	  			\\N2\Media\KEEP NEW\ACG\現視研\1\[Anifan][現視研][GENSHIKEN][TWDVDrip][10].idx
+	  			\\N2\Media\KEEP NEW\ACG\現視研\1\[Anifan][現視研][GENSHIKEN][TWDVDrip][10].sub
+	  			\\N2\Media\KEEP NEW\ACG\現視研\1\[Anifan][現視研][GENSHIKEN][TWDVDrip][11].avi
+	  			\\N2\Media\KEEP NEW\ACG\現視研\1\[Anifan][現視研][GENSHIKEN][TWDVDrip][11].idx
+	  			\\N2\Media\KEEP NEW\ACG\現視研\1\[Anifan][現視研][GENSHIKEN][TWDVDrip][11].sub
+	  			\\N2\Media\KEEP NEW\ACG\現視研\1\[Anifan][現視研][GENSHIKEN][TWDVDrip][12].avi
+	  			\\N2\Media\KEEP NEW\ACG\現視研\1\[Anifan][現視研][GENSHIKEN][TWDVDrip][12].idx
+	  			\\N2\Media\KEEP NEW\ACG\現視研\1\[Anifan][現視研][GENSHIKEN][TWDVDrip][12].sub
+	  			\\N2\Media\KEEP NEW\ACG\現視研\1\[Anifan][現視研][GENSHIKEN][TWDVDrip][OP].avi
+	  			\\N2\Media\KEEP NEW\ACG\現視研\1\[Anifan][現視研][GENSHIKEN][TWDVDrip][sub].rar
+	  			\\N2\Media\KEEP NEW\ACG\現視研\1\[現視研.OVA].[X2][Genshiken_OVA][01v2][DVDRIP][BIG5][RV10].rmvb
+	  			\\N2\Media\KEEP NEW\ACG\現視研\1\[現視研.OVA].[X2][Genshiken_OVA][02][DVDRIP][BIG5][RV10].rmvb
+	  			\\N2\Media\KEEP NEW\ACG\現視研\1\[現視研.OVA].[X2][Genshiken_OVA][03][DVDRIP][BIG5][RV10].rmvb
+	  			\\N2\Media\KEEP NEW\ACG\現視研\2\[X2&HKG][Genshiken2][DVDRip][01][AVC-VFR_AAC][349A4F50].mkv
+	  			\\N2\Media\KEEP NEW\ACG\現視研\2\[X2&HKG][Genshiken2][DVDRip][01][AVC-VFR_AAC][349A4F50].uni_sub.zip
+	  			\\N2\Media\KEEP NEW\ACG\現視研\2\[X2&HKG][Genshiken2][DVDRip][02][AVC-VFR_AAC][E81E523C].mkv
+	  			\\N2\Media\KEEP NEW\ACG\現視研\2\[X2&HKG][Genshiken2][DVDRip][02][AVC-VFR_AAC][E81E523C].uni_sub.zip
+	  			\\N2\Media\KEEP NEW\ACG\現視研\2\[X2&HKG][Genshiken2][DVDRip][03][AVC-VFR_AAC][5FDFCAFE].mkv
+	  			\\N2\Media\KEEP NEW\ACG\現視研\2\[X2&HKG][Genshiken2][DVDRip][03][AVC-VFR_AAC][5FDFCAFE].uni_sub.zip
+	  			\\N2\Media\KEEP NEW\ACG\現視研\2\[X2&HKG][Genshiken2][DVDRip][04][AVC-VFR_AAC][FBF2C405].mkv
+	  			\\N2\Media\KEEP NEW\ACG\現視研\2\[X2&HKG][Genshiken2][DVDRip][04][AVC-VFR_AAC][FBF2C405].uni_sub.zip
+	  			\\N2\Media\KEEP NEW\ACG\現視研\2\[X2&HKG][Genshiken2][DVDRip][05][AVC-VFR_AAC][9F0CE624].mkv
+	  			\\N2\Media\KEEP NEW\ACG\現視研\2\[X2&HKG][Genshiken2][DVDRip][05][AVC-VFR_AAC][9F0CE624].uni_sub.zip
+	  			\\N2\Media\KEEP NEW\ACG\現視研\2\[X2&HKG][Genshiken2][DVDRip][06][AVC-VFR_AAC][C4C3E80E].mkv
+	  			\\N2\Media\KEEP NEW\ACG\現視研\2\[X2&HKG][Genshiken2][DVDRip][06][AVC-VFR_AAC][C4C3E80E].uni_sub.zip
+	  			\\N2\Media\KEEP NEW\ACG\現視研\2\[X2&HKG][Genshiken2][DVDRip][07][AVC-VFR_AAC][A92DB799].mkv
+	  			\\N2\Media\KEEP NEW\ACG\現視研\2\[X2&HKG][Genshiken2][DVDRip][07][AVC-VFR_AAC][A92DB799].uni_sub.zip
+	  			\\N2\Media\KEEP NEW\ACG\現視研\2\[X2&HKG][Genshiken2][DVDRip][08][AVC-VFR_AAC][8236CB04].mkv
+	  			\\N2\Media\KEEP NEW\ACG\現視研\2\[X2&HKG][Genshiken2][DVDRip][08][AVC-VFR_AAC][8236CB04].uni_sub.zip
+	  			\\N2\Media\KEEP NEW\ACG\現視研\2\[X2&HKG][Genshiken2][DVDRip][09][AVC-VFR_AAC][29BE5184].mkv
+	  			\\N2\Media\KEEP NEW\ACG\現視研\2\[X2&HKG][Genshiken2][DVDRip][09][AVC-VFR_AAC][29BE5184].uni_sub.zip
+	  			\\N2\Media\KEEP NEW\ACG\現視研\2\[X2&HKG][Genshiken2][DVDRip][10][AVC-VFR_AAC][B6FDE24A].mkv
+	  			\\N2\Media\KEEP NEW\ACG\現視研\2\[X2&HKG][Genshiken2][DVDRip][10][AVC-VFR_AAC][B6FDE24A].uni_sub.zip
+	  			\\N2\Media\KEEP NEW\ACG\現視研\2\[X2&HKG][Genshiken2][DVDRip][11][AVC-VFR_AAC][2BC13B0B].mkv
+	  			\\N2\Media\KEEP NEW\ACG\現視研\2\[X2&HKG][Genshiken2][DVDRip][11][AVC-VFR_AAC][2BC13B0B].uni_sub.zip
+	  			\\N2\Media\KEEP NEW\ACG\現視研\2\[X2&HKG][Genshiken2][DVDRip][12][AVC-VFR_AAC][23BF5501].mkv
+	  			\\N2\Media\KEEP NEW\ACG\現視研\2\[X2&HKG][Genshiken2][DVDRip][12][AVC-VFR_AAC][23BF5501].uni_sub.zip
+	  			\\N2\Media\KEEP NEW\ACG\現視研\2\[X2&HKG][Genshiken2][DVDRip][Font_Pack].zip
+	  			\\N2\Media\KEEP NEW\ACG\現視研\2\[X2&HKG][Genshiken2][DVDRip][NCED_Ver.-#12][AVC_AAC][96B186ED].mkv
+	  			\\N2\Media\KEEP NEW\ACG\現視研\2\[X2&HKG][Genshiken2][DVDRip][NCED_Ver.1][AVC_AAC][E015DAA7].mkv
+	  			\\N2\Media\KEEP NEW\ACG\現視研\2\[X2&HKG][Genshiken2][DVDRip][NCED_Ver.2][AVC_AAC][5795ACD2].mkv
+	  			\\N2\Media\KEEP NEW\ACG\現視研\2\[X2&HKG][Genshiken2][DVDRip][NCOP_Ver.1][AVC_AAC][1D94BAD9].mkv
+	  			\\N2\Media\KEEP NEW\ACG\現視研\2\[X2&HKG][Genshiken2][DVDRip][NCOP_Ver.2][AVC_AAC][64AFD26C].mkv
+	  			\\N2\Media\KEEP NEW\ACG\現視研\2\[X2&HKG][Genshiken2][DVDRip][Vol.1_SP][CM][AVC-VFR_AAC][2C00F1B5].mkv
+	  			\\N2\Media\KEEP NEW\ACG\現視研\2\[X2&HKG][Genshiken2][DVDRip][Vol.3_SP][CM][AVC-VFR_AAC][1D47D542].mkv
+	  			\\N2\Media\KEEP NEW\ACG\現視研\不公正抽籤\[X2&HKG][Kujibiki_Unbalance][01][Big5].rmvb
+	  			\\N2\Media\KEEP NEW\ACG\現視研\不公正抽籤\[X2&HKG][Kujibiki_Unbalance][OVA-03][DVDRIP].rmvb
+	  			\\N2\Media\KEEP NEW\ACG\現視研\不公正抽籤\[X2_HKG][Kujibiki_Unbalance][OVA-01][DVDRIP][XVID][BIG5].rmvb
+	  			\\N2\Media\KEEP NEW\ACG\現視研\不公正抽籤\[X2_HKG][Kujibiki_Unbalance][OVA-02][DVDRIP].rmvb
+	  			\\N2\Media\KEEP NEW\ACG\現視研\不公正抽籤\[不公正抽籤].[EMD][Kujibiki_Unbalance][01][GB][RV10_AAC][CRC32_7B656D9D].rmvb
+	  			\\N2\Media\KEEP NEW\ACG\現視研\不公正抽籤\[不公正抽籤].[EMD][Kujibiki_Unbalance][02][GB][RV10_AAC][CRC32_AA56CA7E].rmvb
+	  			\\N2\Media\KEEP NEW\ACG\現視研\不公正抽籤\[不公正抽籤].[EMD][Kujibiki_Unbalance][03][GB][RV10_AAC][CRC32_97DCFBBE].rmvb
+	  			\\N2\Media\KEEP NEW\ACG\現視研\不公正抽籤\[不公正抽籤].[EMD][Kujibiki_Unbalance][04][GB][RV10_AAC][CRC32_2BF56051].rmvb
+	  			\\N2\Media\KEEP NEW\ACG\現視研\不公正抽籤\[不公正抽籤].[EMD][Kujibiki_Unbalance][05][GB][RV10_AAC][CRC32_2D66673B].rmvb
+	  			\\N2\Media\KEEP NEW\ACG\現視研\不公正抽籤\[不公正抽籤].[EMD][Kujibiki_Unbalance][06][GB][RV10_AAC][CRC32_3B67673F].rmvb
+	  			\\N2\Media\KEEP NEW\ACG\現視研\不公正抽籤\[不公正抽籤].[EMD][Kujibiki_Unbalance][07][GB][RV10_AAC][CRC32_0E57B166].rmvb
+	  			\\N2\Media\KEEP NEW\ACG\現視研\不公正抽籤\[不公正抽籤].[EMD][Kujibiki_Unbalance][08][GB][RV10_AAC][CRC32_774FB309].rmvb
+	  			\\N2\Media\KEEP NEW\ACG\現視研\不公正抽籤\[不公正抽籤].[EMD][Kujibiki_Unbalance][09][GB][RV10_AAC][CRC32_BFF8C131].rmvb
+	  			\\N2\Media\KEEP NEW\ACG\現視研\不公正抽籤\[不公正抽籤].[EMD][Kujibiki_Unbalance][10][GB][RV10_AAC][CRC32_494F0DD4].rmvb
+	  			\\N2\Media\KEEP NEW\ACG\現視研\不公正抽籤\[不公正抽籤].[EMD][Kujibiki_Unbalance][11][GB][RV10_AAC][CRC32_FB383B87].rmvb
+	  			\\N2\Media\KEEP NEW\ACG\現視研\不公正抽籤\[不公正抽籤].[EMD][Kujibiki_Unbalance][12][GB][RV10_AAC][CRC32_1622A944].rmvb
+	  			\\N2\Media\KEEP NEW\ACG\貓眼\01.rmvb
+	  			\\N2\Media\KEEP NEW\ACG\貓眼\02.rmvb
+	  			\\N2\Media\KEEP NEW\ACG\貓眼\03.rmvb
+	  			\\N2\Media\KEEP NEW\ACG\貓眼\04.rmvb
+	  			\\N2\Media\KEEP NEW\ACG\貓眼\05.rmvb
+	  			\\N2\Media\KEEP NEW\ACG\貓眼\06.rmvb
+	  			\\N2\Media\KEEP NEW\ACG\貓眼\07.rmvb
+	  			\\N2\Media\KEEP NEW\ACG\貓眼\08.rmvb
+	  			\\N2\Media\KEEP NEW\ACG\貓眼\09.rmvb
+	  			\\N2\Media\KEEP NEW\ACG\貓眼\10.rmvb
+	  			\\N2\Media\KEEP NEW\ACG\貓眼\11.rmvb
+	  			\\N2\Media\KEEP NEW\ACG\貓眼\12.rmvb
+	  			\\N2\Media\KEEP NEW\ACG\貓眼\13.rmvb
+	  			\\N2\Media\KEEP NEW\ACG\貓眼\14.rmvb
+	  			\\N2\Media\KEEP NEW\ACG\貓眼\15.rmvb
+	  			\\N2\Media\KEEP NEW\ACG\貓眼\16.rmvb
+	  			\\N2\Media\KEEP NEW\ACG\貓眼\17.rmvb
+	  			\\N2\Media\KEEP NEW\ACG\貓眼\18.rmvb
+	  			\\N2\Media\KEEP NEW\ACG\貓眼\19.rmvb
+	  			\\N2\Media\KEEP NEW\ACG\貓眼\20.rmvb
+	  			\\N2\Media\KEEP NEW\ACG\貓眼\21.rmvb
+	  			\\N2\Media\KEEP NEW\ACG\貓眼\22.rmvb
+	  			\\N2\Media\KEEP NEW\ACG\貓眼\23.rmvb
+	  			\\N2\Media\KEEP NEW\ACG\貓眼\24.rmvb
+	  			\\N2\Media\KEEP NEW\ACG\貓眼\25.rmvb
+	  			\\N2\Media\KEEP NEW\ACG\貓眼\26.rmvb
+	  			\\N2\Media\KEEP NEW\ACG\貓眼\27.rmvb
+	  			\\N2\Media\KEEP NEW\ACG\貓眼\28-29.rm
+	  			\\N2\Media\KEEP NEW\ACG\貓眼\30.rmvb
+	  			\\N2\Media\KEEP NEW\ACG\貓眼\31.rmvb
+	  			\\N2\Media\KEEP NEW\ACG\貓眼\32.rmvb
+	  			\\N2\Media\KEEP NEW\ACG\貓眼\33.rmvb
+	  			\\N2\Media\KEEP NEW\ACG\貓眼\34.rmvb
+	  			\\N2\Media\KEEP NEW\ACG\貓眼\35.rmvb
+	  			\\N2\Media\KEEP NEW\ACG\貓眼\36.rmvb
+	  			\\N2\Media\KEEP NEW\ACG\貓眼\Thumbs.db
+	  			\\N2\Media\KEEP NEW\ACG\貓眼\貓眼三姐妹第二部01.rmvb
+	  			\\N2\Media\KEEP NEW\ACG\貓眼\貓眼三姐妹第二部02.rmvb
+	  			\\N2\Media\KEEP NEW\ACG\貓眼\貓眼三姐妹第二部03.rmvb
+	  			\\N2\Media\KEEP NEW\ACG\貓眼\貓眼三姐妹第二部04.rmvb
+	  			\\N2\Media\KEEP NEW\ACG\貓眼\貓眼三姐妹第二部05.rmvb
+	  			\\N2\Media\KEEP NEW\ACG\貓眼\貓眼三姐妹第二部06.rmvb
+	  			\\N2\Media\KEEP NEW\ACG\貓眼\貓眼三姐妹第二部07.rmvb
+	  			\\N2\Media\KEEP NEW\ACG\貓眼\貓眼三姐妹第二部08.rmvb
+	  			\\N2\Media\KEEP NEW\ACG\貓眼\貓眼三姐妹第二部09.rmvb
+	  			\\N2\Media\KEEP NEW\ACG\貓眼\貓眼三姐妹第二部10.rmvb
+	  			\\N2\Media\KEEP NEW\ACG\貓眼\貓眼三姐妹第二部11.rmvb
+	  			\\N2\Media\KEEP NEW\ACG\貓眼\貓眼三姐妹第二部12.rmvb
+	  			\\N2\Media\KEEP NEW\ACG\貓眼\貓眼三姐妹第二部13.rmvb
+	  			\\N2\Media\KEEP NEW\ACG\貓眼\貓眼三姐妹第二部14.rmvb
+	  			\\N2\Media\KEEP NEW\ACG\貓眼\貓眼三姐妹第二部15.rmvb
+	  			\\N2\Media\KEEP NEW\ACG\貓眼\貓眼三姐妹第二部16.rmvb
+	  			\\N2\Media\KEEP NEW\ACG\貓眼\貓眼三姐妹第二部17.rmvb
+	  			\\N2\Media\KEEP NEW\ACG\貓眼\貓眼三姐妹第二部18.rmvb
+	  			\\N2\Media\KEEP NEW\ACG\貓眼\貓眼三姐妹第二部19.rmvb
+	  			\\N2\Media\KEEP NEW\ACG\貓眼\貓眼三姐妹第二部20.rmvb
+	  			\\N2\Media\KEEP NEW\ACG\貓眼\貓眼三姐妹第二部21.rmvb
+	  			\\N2\Media\KEEP NEW\ACG\貓眼\貓眼三姐妹第二部22.rmvb
+	  			\\N2\Media\KEEP NEW\ACG\貓眼\貓眼三姐妹第二部23.rmvb
+	  			\\N2\Media\KEEP NEW\ACG\貓眼\貓眼三姐妹第二部24.rmvb
+	  			\\N2\Media\KEEP NEW\ACG\貓眼\貓眼三姐妹第二部25.rmvb
+	  			\\N2\Media\KEEP NEW\ACG\貓眼\貓眼三姐妹第二部26.rmvb
+	  			\\N2\Media\KEEP NEW\ACG\貓眼\貓眼三姐妹第二部27.rmvb
+	  			\\N2\Media\KEEP NEW\ACG\貓眼\貓眼三姐妹第二部28.rmvb
+	  			\\N2\Media\KEEP NEW\ACG\貓眼\貓眼三姐妹第二部29.rmvb
+	  			\\N2\Media\KEEP NEW\ACG\貓眼\貓眼三姐妹第二部30.rmvb
+	  			\\N2\Media\KEEP NEW\ACG\貓眼\貓眼三姐妹第二部31.rmvb
+	  			\\N2\Media\KEEP NEW\ACG\貓眼\貓眼三姐妹第二部32.rmvb
+	  			\\N2\Media\KEEP NEW\ACG\貓眼\貓眼三姐妹第二部33.rmvb
+	  			\\N2\Media\KEEP NEW\ACG\貓眼\貓眼三姐妹第二部34.rmvb
+	  			\\N2\Media\KEEP NEW\ACG\貓眼\貓眼三姐妹第二部35.rmvb
+	  			\\N2\Media\KEEP NEW\ACG\貓眼\貓眼三姐妹第二部36.rmvb
+	  			\\N2\Media\KEEP NEW\ACG\貓眼\貓眼三姐妹第二部37.rmvb
+	  			\\N2\Media\KEEP NEW\ACG\貓眼\貓眼三姐妹劇場版.rm
+	  			\\N2\Media\KEEP NEW\AV\有碼\芸能人 原紗央莉\STAR-152.avi
+	  			\\N2\Media\KEEP NEW\AV\有碼\芸能人 原紗央莉\STAR158.avi
+	  			\\N2\Media\KEEP NEW\AV\有碼\高樹\(TV) 高樹 特命係長--只野仁 更衣室 全裸著替.mpg
+	  			\\N2\Media\KEEP NEW\AV\有碼\高樹\[][邦畫][裏] 高樹 - AV生本番[無修正][女優].mpg
+	  			\\N2\Media\KEEP NEW\AV\有碼\高樹\maria.txt
+	  			\\N2\Media\KEEP NEW\AV\有碼\高樹\Thumbs.db
+	  			\\N2\Media\KEEP NEW\AV\有碼\高樹\高樹 -  Bonus 1.avi
+	  			\\N2\Media\KEEP NEW\AV\有碼\高樹\高樹 -  Bonus 3.avi
+	  			\\N2\Media\KEEP NEW\AV\有碼\高樹\高樹 ~  ~ Maria Takagi ~ 高樹瑪莉亞 - (無修正) 高樹 - - Play Room.mpg
+	  			\\N2\Media\KEEP NEW\AV\有碼\高樹\ 高樹 - 完全無修正  1 [1h29m12s 352x240].mpg
+	  			\\N2\Media\KEEP NEW\AV\有碼\高樹\ 高樹 蒼井 常盤櫻子 伊東憐 古都.mpg
+	  			\\N2\Media\KEEP NEW\AV\無碼\Meath note.rmvb
+	  			\\N2\Media\KEEP NEW\AV\無碼\情不自禁.rmvb
+	  			\\N2\Media\KEEP NEW\AV\無碼\Cosplayer\[Oriental Dream](OD-TV02)Cosplayer Vol01-三澤真由美(Mayumi Misawa).avi
+	  			\\N2\Media\KEEP NEW\AV\無碼\Cosplayer\[Oriental Dream]]CosPlayer Vol.2 Aya Seto 瀨戶彩.avi
+	  			\\N2\Media\KEEP NEW\AV\無碼\Cosplayer\Oriental Dream Zipang Vol.22 ZP-22 CosPlayer Vol.3 籐本.avi
+	  			\\N2\Media\KEEP NEW\AV\無碼\Mike's Apartment\._.DS_Store
+	  			\\N2\Media\KEEP NEW\AV\無碼\Mike's Apartment\.DS_Store
+	  			\\N2\Media\KEEP NEW\AV\無碼\Mike's Apartment\Bangbus - Mike s Apartment - Bang bus Cindy.mpg
+	  			\\N2\Media\KEEP NEW\AV\無碼\Mike's Apartment\Mike Apartment - Anetta Keys.mpg
+	  			\\N2\Media\KEEP NEW\AV\無碼\Mike's Apartment\Mike Apartment Karina.mpeg
+	  			\\N2\Media\KEEP NEW\AV\無碼\Mike's Apartment\mike s apartment - alissa.mpg
+	  			\\N2\Media\KEEP NEW\AV\無碼\Mike's Apartment\Mikes Apartment - Rose (Castana un poco gordita con mike).mpg
+	  			\\N2\Media\KEEP NEW\AV\無碼\Mike's Apartment\mikes apartment - timi.mpg
+	  			\\N2\Media\KEEP NEW\AV\無碼\Mike's Apartment\MikesApartment.com - A man, an apartment and his camera. (2).url
+	  			\\N2\Media\KEEP NEW\AV\無碼\Mike's Apartment\MikesApartment.com - A man, an apartment and his camera. (3).url
+	  			\\N2\Media\KEEP NEW\AV\無碼\Mike's Apartment\MikesApartment.com - A man, an apartment and his camera. (4).url
+	  			\\N2\Media\KEEP NEW\AV\無碼\Mike's Apartment\MikesApartment.com - A man, an apartment and his camera..url
+	  			\\N2\Media\KEEP NEW\AV\無碼\MILF\milf hunter - severina.mpg
+	  			\\N2\Media\KEEP NEW\AV\無碼\Tokyo Hot\Tokyo Hot 74 Erotic Police Lady 愛澤kurumi Aizawa 中出 射 射.avi
+	  			\\N2\Media\KEEP NEW\AV\無碼\上原空\Thumbs.db
+	  			\\N2\Media\KEEP NEW\AV\無碼\朝河蘭\(無修正)武籐蘭(朝河蘭) 亞熱2.mpg
+	  			\\N2\Media\KEEP NEW\AV\無碼\朝河蘭\Thumbs.db
+	  			\\N2\Media\KEEP NEW\AV\寫真\陳冠希 陳文媛 張佰芝 阿嬌 自拍 英皇吃屎 無密碼 20080130版.rar
+	  			\\N2\Media\KEEP NEW\AV\寫真\陳冠希 鍾欣桐 張柏芝 目前最全 1.31晚_2.rar
+	  			\\N2\Media\KEEP NEW\Children\小查和寇弟\The Suite Life On Deck\The.Suite.Life.on.Deck.S01E04 The Kidney of the Sea.avi
+	  			\\N2\Media\KEEP NEW\Comic\木尾士目\現視研\[comic][現視研][木尾士目].Vol.08.rar
+	  			\\N2\Media\KEEP NEW\Comic\北條司\[Comic][CAT&-#39;S.EYE][貓之眼][北條司][HK]Vol.04.zip
