@@ -1,39 +1,39 @@
-ï»¿Preparation
+Preparation
 ===========
-è£½ä½œVHD
-è¤‡è£½åˆ°USB
+»s§@VHD
+½Æ»s¨ìUSB
 
 BIOS
 ====
-è¨­å®šUSBé–‹æ©Ÿ
+³]©wUSB¶}¾÷
 
 Console
 =======
-è¨­å®šadmå¯†ç¢¼
-è¨­å®šæ™‚é–“
-è¨­å®šç¶²è·¯IP
+³]©wadm±K½X
+³]©w®É¶¡
+³]©wºô¸ôIP
 
 setup.bat
 -------
-é–‹å•Ÿé ç«¯æ¡Œé¢ç®¡ç†
-é™ä½å¯†ç¢¼é›£åº¦
-æ›´æ”¹admå¯†ç¢¼
-æ–°å¢ä½¿ç”¨è€…å¸³è™Ÿä¸¦ä¿®æ”¹æ¬Šé™
-å®‰è£SMBåŠŸèƒ½
+¶}±Ò»·ºİ®à­±ºŞ²z
+­°§C±K½XÃø«×
+§ó§ïadm±K½X
+·s¼W¨Ï¥ÎªÌ±b¸¹¨Ã­×§ïÅv­­
+¦w¸ËSMB¥\¯à
 -------
 
 Remote
 ======
-å®‰è£é©…å‹•
-æ›ä¸Šç¡¬ç¢Ÿ enabledisks.bat, diskpart
-æª¢æŸ¥ç‹€æ…‹ poolstatus.bat
-è¨­å®šåˆ†äº« enableshares.bat
-è¨­å®šæ¬Šé™ mmc
-è¨­å®šVM
-è¨­å®šå®šæ™‚å·¥ä½œ
-è¨­å®šbysync
-è¨­å®šå‚™ä»½rsync client
-è¨­å®šå‚™ä»½rsync server
-é–‹å•Ÿé˜²ç«ç‰† rsync port 873
-é—œæ©Ÿå¾Œï¼Œå‚™ä»½VHD
-é‡æ–°é–‹æ©Ÿ
+¦w¸ËÅX°Ê
+±¾¤WµwºĞ enabledisks.bat, diskpart
+ÀË¬dª¬ºA poolstatus.bat
+³]©w¤À¨É enableshares.bat
+³]©wÅv­­ mmc
+³]©wVM
+³]©w©w®É¤u§@
+³]©wbysync
+³]©w³Æ¥÷rsync client
+³]©w³Æ¥÷rsync server
+¶}±Ò¨¾¤õÀğ rsync port 873
+Ãö¾÷«á¡A³Æ¥÷VHD
+­«·s¶}¾÷

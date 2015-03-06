@@ -1,54 +1,64 @@
-# ±Æ°£ÀÉ®×
-- swapfile.sys
+ï»¿# æ’é™¤æª”æ¡ˆ
 - *.iso
-- Thumbs.db
-- desktop.ini
 - *.o
 - *.obj
+- .DS_Store
+- desktop.ini
+- ehthumbs_vista.db
+- swapfile.sys
+- Thumbs.db
 
-# ±Æ°£¥Ø¿ı
-- admin/
-- log/
+# æ’é™¤ç›®éŒ„
 - $RECYCLE.BIN/
-- $Recycle.Bin/
+- .SyncArchive/
+- .SyncTrash/
+- 1FS/
+- 2NTFS/
+- 3GS/
+- 4WHS/
+- admin/
+- Adobe/
 - AMD/
+- Apple Computer/
+- ATI Stream/
+- BlueStacks/
+- BTSync/
+- cache/
+- Client Computer Backups/
+- Company/
 - Config.Msi/
 - DEL/
-- del/
+- Dropbox/
+- FOUND*/
+- Google Drive/
+- GoogleChromePortable/
+- GoogleEarth/
+- Hyper-V/
+- Junkyard/
+- log/
+- Microsoft/
+- NetBackup/
+- Notepad++Portable/
+- Package Cache/
+- PCDr/
 - PerfLogs/
+- recycle/
+- RECYCLED/
 - SkyDriveTemp/
 - System Volume Information/
 - TEMP/
-- Temp/
+- Virtual Machines/
+- VMware/
 - Windows.old/
 - Windows/
-- Virtual Machines/
-- Microsoft/
-- Package Cache/
-- BlueStacks/
-- Cache/
-- VMware/
-- Adobe/
-- Apple Computer/
-- GoogleEarth/
-- PCDr/
-- .SyncTrash/
-- .SyncArchive/
-- ATI Stream/
-- recycle/
-- BTSync/
-- Dropbox/
-- Google Drive/
-- cache/
-- Hyper-V/
-- BTSync/
-- Windows/
+- ç¶²ç®¡å€/
+- æš«å­˜å€/
 
-# ¥]§tÀÉ®×
+# åŒ…å«æª”æ¡ˆ
 + *.*
 
-# ¥]§t¥Ø¿ı
+# åŒ…å«ç›®éŒ„
 + */
 
-# ¸T¤î¶Ç¿é¨ä¥L
+# ç¦æ­¢å‚³è¼¸å…¶ä»–
 - *
