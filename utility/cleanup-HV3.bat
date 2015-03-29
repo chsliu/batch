@@ -1,5 +1,9 @@
 REM =================================
 
+call %~dp0\cleanup.bat
+
+REM =================================
+
 rd /s /q "E:\Shares\Admin\Hyper-V\Virtual Hard Disks\DEL"
 rd /s /q E:\Shares\Games\DEL
 rd /s /q E:\Shares\Games\PC\DEL
@@ -20,15 +24,6 @@ rd /s /q F:\Shares\Media\Movie\DEL
 rd /s /q F:\Shares\Media\Movie\Mandarin\DEL
 rd /s /q F:\Shares\Media\Music\AV\DEL
 rd /s /q F:\Shares\Media\TV\DEL	
-
-REM =================================
-
-pushd %temp% 					& takeown /f . /r  & rd /s /q .  & popd
-pushd %temp% & pushd %systemdrive%\recycler	& takeown /f . /r  & rd /s /q .  & popd & popd
-pushd %temp% & pushd c:\$Recycle.bin		& takeown /f . /r  & rd /s /q .  & popd & popd
-pushd %temp% & pushd d:\$Recycle.bin		& takeown /f . /r  & rd /s /q .  & popd & popd
-pushd %temp% & pushd e:\$Recycle.bin		& takeown /f . /r  & rd /s /q .  & popd & popd
-pushd %temp% & pushd f:\$Recycle.bin		& takeown /f . /r  & rd /s /q .  & popd & popd
 
 REM =================================
 

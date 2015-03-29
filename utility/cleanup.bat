@@ -1,3 +1,31 @@
+REM =================================
+
+rd /s /q C:\DEL
+rd /s /q D:\DEL
+
+REM =================================
+
+cd /d %temp%
+
+pushd %systemdrive%\recycler	& takeown /f . /r & rd /s /q . & popd 
+pushd %temp%			& takeown /f . /r & rd /s /q . & popd
+pushd %windir%\temp		& takeown /f . /r & rd /s /q . & popd
+pushd c:\$Recycle.bin		& takeown /f . /r & rd /s /q . & popd 
+pushd d:\$Recycle.bin		& takeown /f . /r & rd /s /q . & popd 
+pushd d:\temp			& takeown /f . /r & rd /s /q . & popd 
+
+REM =================================
+
+REM run below first
+REM cleanmgr /sageset:99
+cleanmgr /sagerun:99
+
+REM =================================
+
+goto :EOF
+
+REM =================================
+
 @echo off
 echo Make Sure Dropbox is not in c:
 echo Cleaning . . .
