@@ -1,7 +1,7 @@
 REM =================================
 
 rem C:\Windows\System32\PING.EXE 127.0.0.1 -n 600 -w 1000 > nul
-C:\Windows\System32\timeout.exe 300
+rem C:\Windows\System32\timeout.exe 300
 rem C:\Windows\System32\choice.exe /d y /t 600
 
 REM =================================
