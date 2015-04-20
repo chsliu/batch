@@ -14,8 +14,10 @@ set path=%path%;%~dp0;D:\Users\sita\PortableApps\FileBot-portable
 set LOG1="D:\Users\sita\PortableApps\FileBot-portable\logs\%~n3.txt"
 set LOG2="%temp%\%~n3-summary.txt"
 set TXT1=%temp%\%~n0.txt
-set SHARE=\\\\hv3\\Media2
-set XBMC=192.168.1.56
+REM set SHARE=\\\\hv3\\Media2
+set SHARE=\\hv4\Library
+REM set XBMC=192.168.1.56
+set XBMC=192.168.1.89
 
 REM =================================
 
@@ -44,7 +46,7 @@ rem --action copy
 rem --conflict override
 rem subtitles=en,zh 
 
-filebot -script fn:amc --output "%SHARE%/TV" --log-file "%~n3.txt" --action move --conflict skip -non-strict --def artwork=y extras=y unsorted=y clean=y skipExtract=y "ut_label=%L%" "ut_state=%S%" "ut_title=%N%" "ut_kind=%K%" "ut_file=%F%" "ut_dir=%D%" xbmc=%XBMC% "seriesFormat=%SHARE%/TV/{n} ({y})/{\"Season ${s.pad(2)}\"}/{n} - {s00e00} - {t} - {airdate}.{vf}{'.'+source}.{vc}{'-'+group}{'.'+lang}" "movieFormat=%SHARE%/Movie/{y}/{y} {n} {audios.language}/{n.space('.')}.{y}.{vf}{'.'+source}.{vc}.{af}.{ac}{'-'+group}{'-'+\"CD$pi\"}{'.'+lang}" "animeFormat=%SHARE%/ACG/{n} ({y})/{\"Season ${s.pad(2)}\"}/{n} - {s00e00} - {t} - {airdate}.{vf}{'.'+source}.{vc}{'-'+group}{'.'+lang}" "musicFormat=%SHARE%/Music/{n}/{'['+y+'] '+album+'/'}{pi.pad(2)+'. '} {artist} - {t} {[af, audio.SamplingRateString, audio.bitRateString]}"
+filebot -script fn:amc --output "%SHARE%/TV Shows" --log-file "%~n3.txt" --action move --conflict skip -non-strict --def artwork=y extras=y unsorted=y clean=y skipExtract=y "ut_label=%L%" "ut_state=%S%" "ut_title=%N%" "ut_kind=%K%" "ut_file=%F%" "ut_dir=%D%" xbmc=%XBMC% "seriesFormat=%SHARE%/TV Shows/{n} ({y})/{\"Season ${s.pad(2)}\"}/{n} - {s00e00} - {t} - {airdate}.{vf}{'.'+source}.{vc}{'-'+group}{'.'+lang}" "movieFormat=%SHARE%/Movies/{y}/{y} {n} {audios.language}/{n.space('.')}.{y}.{vf}{'.'+source}.{vc}.{af}.{ac}{'-'+group}{'-'+\"CD$pi\"}{'.'+lang}" "animeFormat=%SHARE%/ACG/{n} ({y})/{\"Season ${s.pad(2)}\"}/{n} - {s00e00} - {t} - {airdate}.{vf}{'.'+source}.{vc}{'-'+group}{'.'+lang}" "musicFormat=%SHARE%/Music/{n}/{'['+y+'] '+album+'/'}{pi.pad(2)+'. '} {artist} - {t} {[af, audio.SamplingRateString, audio.bitRateString]}"
 
 REM =================================
 
