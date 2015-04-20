@@ -3,27 +3,27 @@
 - *.o
 - *.obj
 - .DS_Store
+- Thumbs.db
 - desktop.ini
 - ehthumbs_vista.db
 - swapfile.sys
-- Thumbs.db
 
 # 排除目錄
 - $RECYCLE.BIN/
+- $Recycle.Bin/
 - .SyncArchive/
 - .SyncTrash/
 - 1FS/
 - 2NTFS/
 - 3GS/
 - 4WHS/
-- admin/
-- Adobe/
 - AMD/
-- Apple Computer/
 - ATI Stream/
-- BlueStacks/
+- Adobe/
+- Apple Computer/
 - BTSync/
-- cache/
+- BlueStacks/
+- Cache/
 - Client Computer Backups/
 - Company/
 - Config.Msi/
@@ -35,24 +35,28 @@
 - GoogleEarth/
 - Hyper-V/
 - Junkyard/
-- log/
 - Microsoft/
 - NetBackup/
 - Notepad++Portable/
-- Package Cache/
 - PCDr/
+- Package Cache/
 - PerfLogs/
-- recycle/
 - RECYCLED/
 - SkyDriveTemp/
 - System Volume Information/
 - TEMP/
-- Virtual Machines/
+- Temp/
 - VMware/
+- Virtual Machines/
 - Windows.old/
 - Windows/
-- 網管區/
+- admin/
+- cache/
+- del/
+- log/
+- recycle/
 - 暫存區/
+- 網管區/
 
 # 包含檔案
 + *.*
