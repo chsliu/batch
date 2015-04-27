@@ -1,9 +1,5 @@
 REM =================================
 
-call %~dp0\cleanup.bat
-
-REM =================================
-
 rd /s /q E:\DEL	
 rd /s /q E:\Shares\Admin\DEL	
 rd /s /q E:\Shares\Library\DEL	
