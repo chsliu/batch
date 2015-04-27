@@ -1,14 +1,10 @@
 REM =================================
 
-call %~dp0\clean.bat
-
-REM =================================
-
 rd /s /q M:\DEL 				
 
 REM =================================
 
-call %~dp0\emptydir.bat M:\ServerFolders\暫存區
+pushd %temp% & pushd M:\ServerFolders\暫存區	& takeown /f . /r & rd /s /q . & popd & popd
 
 REM =================================
 
