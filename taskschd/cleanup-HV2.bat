@@ -1,9 +1,5 @@
 REM =================================
 
-call %~dp0\cleanup.bat
-
-REM =================================
-
 rd /s /q E:\Shares\Games\DEL	
 rd /s /q E:\Shares\Games\PC\DEL	
 rd /s /q E:\Shares\Media2\Documentary\DEL	

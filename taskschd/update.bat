@@ -1,4 +1,4 @@
-set path=%path%;%~dp0\utility
+set path=%path%;%~dp0\..\utility
 
 REM =================================
 :BatchGotAdmin
@@ -44,7 +44,7 @@ sc start TrustedInstaller				>>%LOG1% 2>>&1
 sc config TrustedInstaller start= disabled		>>%LOG1% 2>>&1
 REM sc queryex TrustedInstaller
 
-call %~dp0\wuinstall\search.download.install.bat 	>>%LOG1% 2>>&1
+call %~dp0\..\wuinstall\search.download.install.bat 	>>%LOG1% 2>>&1
 
 REM echo Turn Off Service
 REM sc stop TrustedInstaller

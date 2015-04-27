@@ -1,9 +1,5 @@
 REM =================================
 
-call %~dp0\cleanup.bat
-
-REM =================================
-
 rd /s /q "E:\Shares\Admin\Hyper-V\Virtual Hard Disks\DEL"
 rd /s /q E:\Shares\Games\DEL
 rd /s /q E:\Shares\Games\PC\DEL
