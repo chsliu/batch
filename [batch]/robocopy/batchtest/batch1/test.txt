@@ -1,0 +1,133 @@
+
+	  			D:\Users\sita\Documents\PortableAppsRoot\StartPortableApps.exe
+	  			D:\Users\sita\Documents\PortableAppsRoot\PortableApps\!BENCHMARK\CoreTemp32\Core Temp.exe
+	  			D:\Users\sita\Documents\PortableAppsRoot\PortableApps\!BENCHMARK\CoreTemp64\Core Temp.exe
+	  			D:\Users\sita\Documents\PortableAppsRoot\PortableApps\!BENCHMARK\cpuz_144\cpuz.exe
+	  			D:\Users\sita\Documents\PortableAppsRoot\PortableApps\!BENCHMARK\CrystalCPUID413\CrystalCPUID.exe
+	  			D:\Users\sita\Documents\PortableAppsRoot\PortableApps\!BENCHMARK\CrystalCPUID415x64\CrystalCPUIDx64.exe
+	  			D:\Users\sita\Documents\PortableAppsRoot\PortableApps\!BENCHMARK\CrystalDiskMark21\DiskMark.exe
+	  			D:\Users\sita\Documents\PortableAppsRoot\PortableApps\!BENCHMARK\CrystalDiskMark21x64\DiskMarkX64.exe
+	  			D:\Users\sita\Documents\PortableAppsRoot\PortableApps\!BENCHMARK\fdben102\FDBENCH.exe
+	  			D:\Users\sita\Documents\PortableAppsRoot\PortableApps\!BENCHMARK\GPU-Z\GPU-Z.0.3.8.exe
+	  			D:\Users\sita\Documents\PortableAppsRoot\PortableApps\!BENCHMARK\NuclearMC\NuclearMC.exe
+	  			D:\Users\sita\Documents\PortableAppsRoot\PortableApps\!BENCHMARK\super_pi\SUPER_PI.EXE
+	  			D:\Users\sita\Documents\PortableAppsRoot\PortableApps\!CONSOLE\freethewads\freethewads.exe
+	  			D:\Users\sita\Documents\PortableAppsRoot\PortableApps\!CONSOLE\freethewads\FreeTheWadsGUI.exe
+	  			D:\Users\sita\Documents\PortableAppsRoot\PortableApps\!CONSOLE\Simple_WBFS_File_Manager2.5.0.0\Simple_WBFS_File_Manager.exe
+	  			D:\Users\sita\Documents\PortableAppsRoot\PortableApps\!CONSOLE\Simple_WBFS_File_Manager2.5.0.0\wbfs_file.exe
+	  			D:\Users\sita\Documents\PortableAppsRoot\PortableApps\!CONSOLE\Wiiscrubber140\MakeKeyBin.exe
+	  			D:\Users\sita\Documents\PortableAppsRoot\PortableApps\!CONSOLE\Wiiscrubber140\WIIScrubber.exe
+	  			D:\Users\sita\Documents\PortableAppsRoot\PortableApps\!CONSOLE\wuyou2.68\wuyou.exe
+	  			D:\Users\sita\Documents\PortableAppsRoot\PortableApps\!CONSOLE\XDVDMulleterBeta10.2\XDVDMulleter.exe
+	  			D:\Users\sita\Documents\PortableAppsRoot\PortableApps\!DEV\cloc-1.08.exe
+	  			D:\Users\sita\Documents\PortableAppsRoot\PortableApps\!DEV\touch.exe
+	  			D:\Users\sita\Documents\PortableAppsRoot\PortableApps\!DEV\CEFileWiz-v3.4\CEFileWiz.exe
+	  			D:\Users\sita\Documents\PortableAppsRoot\PortableApps\!DEV\depends22_x64\depends.exe
+	  			D:\Users\sita\Documents\PortableAppsRoot\PortableApps\!DEV\depends22_x86\depends.exe
+	  			D:\Users\sita\Documents\PortableAppsRoot\PortableApps\!DEV\IconExplorer\IconExplorer.exe
+	  			D:\Users\sita\Documents\PortableAppsRoot\PortableApps\!DEV\MiniCSharpLab13\MiniCSharpLab13.exe
+	  			D:\Users\sita\Documents\PortableAppsRoot\PortableApps\!DEV\SnippetCompiler 3.0.2\SnippetCompiler.exe
+	  			D:\Users\sita\Documents\PortableAppsRoot\PortableApps\!DEV\sqliteadmin\sqliteadmin.exe
+	  			D:\Users\sita\Documents\PortableAppsRoot\PortableApps\!EDITOR\UltraCompare_Pro_5.10\UC.exe
+	  			D:\Users\sita\Documents\PortableAppsRoot\PortableApps\!EDITOR\winhex\setup.exe
+	  			D:\Users\sita\Documents\PortableAppsRoot\PortableApps\!EDITOR\winhex\WinHex.exe
+	  			D:\Users\sita\Documents\PortableAppsRoot\PortableApps\!MEDIA\fseldvd.exe
+	  			D:\Users\sita\Documents\PortableAppsRoot\PortableApps\!MEDIA\Extra.FLV\Extra.FLV.exe
+	  			D:\Users\sita\Documents\PortableAppsRoot\PortableApps\!MEDIA\Extra.FLV\ExtraResFLV.exe
+	  			D:\Users\sita\Documents\PortableAppsRoot\PortableApps\!MEDIA\GSpot270a\GSpot.exe
+	  			D:\Users\sita\Documents\PortableAppsRoot\PortableApps\!MISC\fat32format.exe
+	  			D:\Users\sita\Documents\PortableAppsRoot\PortableApps\!MISC\PeToUSB\bootsect.exe
+	  			D:\Users\sita\Documents\PortableAppsRoot\PortableApps\!MISC\PeToUSB\dsfo.exe
+	  			D:\Users\sita\Documents\PortableAppsRoot\PortableApps\!MISC\PeToUSB\Fedit.exe
+	  			D:\Users\sita\Documents\PortableAppsRoot\PortableApps\!MISC\PeToUSB\PeToUSB.exe
+	  			D:\Users\sita\Documents\PortableAppsRoot\PortableApps\!MISC\PeToUSB\vdk.exe
+	  			D:\Users\sita\Documents\PortableAppsRoot\PortableApps\!MISC\upx304w\upx.exe
+	  			D:\Users\sita\Documents\PortableAppsRoot\PortableApps\!MISC\wima6481\winimage.exe
+	  			D:\Users\sita\Documents\PortableAppsRoot\PortableApps\!MISC\win32diskimager-RELEASE-0.2-r23-win32\Win32DiskImager.exe
+	  			D:\Users\sita\Documents\PortableAppsRoot\PortableApps\!MISC\Windows Edit Tool\WindowsEditToolv1.6.exe
+	  			D:\Users\sita\Documents\PortableAppsRoot\PortableApps\!NETWORK\putty\PAGEANT.EXE
+	  			D:\Users\sita\Documents\PortableAppsRoot\PortableApps\!NETWORK\putty\PLINK.EXE
+	  			D:\Users\sita\Documents\PortableAppsRoot\PortableApps\!NETWORK\putty\PSCP.EXE
+	  			D:\Users\sita\Documents\PortableAppsRoot\PortableApps\!NETWORK\putty\PSFTP.EXE
+	  			D:\Users\sita\Documents\PortableAppsRoot\PortableApps\!NETWORK\putty\putty.exe
+	  			D:\Users\sita\Documents\PortableAppsRoot\PortableApps\!NETWORK\putty\PUTTYGEN.EXE
+	  			D:\Users\sita\Documents\PortableAppsRoot\PortableApps\!NETWORK\putty\unins000.exe
+	  			D:\Users\sita\Documents\PortableAppsRoot\PortableApps\!PDF\e-PDFToWordConverter_2.5\pdf2word.exe
+	  			D:\Users\sita\Documents\PortableAppsRoot\PortableApps\!PDF\PDFV_Portable\PDFXCview.exe
+	  			D:\Users\sita\Documents\PortableAppsRoot\PortableApps\!PHONE\EssentialPIM_3.11_azo\EssentialPIM.exe
+	  			D:\Users\sita\Documents\PortableAppsRoot\PortableApps\7-ZipPortable\7-ZipPortable.exe
+	  			D:\Users\sita\Documents\PortableAppsRoot\PortableApps\convertz802\ConvertZ.exe
+	  			D:\Users\sita\Documents\PortableAppsRoot\PortableApps\Dev-CppPortable\Dev-CppPortable.exe
+	  			D:\Users\sita\Documents\PortableAppsRoot\PortableApps\DiaPortable\DiaPortable.exe
+	  			D:\Users\sita\Documents\PortableAppsRoot\PortableApps\FileZillaPortable\FileZillaPortable.exe
+	  			D:\Users\sita\Documents\PortableAppsRoot\PortableApps\FirefoxPortable\FirefoxPortable.exe
+	  			D:\Users\sita\Documents\PortableAppsRoot\PortableApps\foobar2000\foobar2000.exe
+	  			D:\Users\sita\Documents\PortableAppsRoot\PortableApps\FormatFactory_2.15_azo\FormatFactory.exe
+	  			D:\Users\sita\Documents\PortableAppsRoot\PortableApps\FormatFactory_2.15_azo\FFModules\ffmpeg.exe
+	  			D:\Users\sita\Documents\PortableAppsRoot\PortableApps\FormatFactory_2.15_azo\FFModules\mencoder.exe
+	  			D:\Users\sita\Documents\PortableAppsRoot\PortableApps\FormatFactory_2.15_azo\FFModules\mkvmerge.exe
+	  			D:\Users\sita\Documents\PortableAppsRoot\PortableApps\FormatFactory_2.15_azo\FFModules\mp4creator.exe
+	  			D:\Users\sita\Documents\PortableAppsRoot\PortableApps\FormatFactory_2.15_azo\FFModules\mplayer.exe
+	  			D:\Users\sita\Documents\PortableAppsRoot\PortableApps\FormatFactory_2.15_azo\FFModules\RMEncoder.exe
+	  			D:\Users\sita\Documents\PortableAppsRoot\PortableApps\FormatFactory_2.15_azo\FFModules\wavpack.exe
+	  			D:\Users\sita\Documents\PortableAppsRoot\PortableApps\Foxit_Reader_3.0.1506_azo\Foxit Reader.exe
+	  			D:\Users\sita\Documents\PortableAppsRoot\PortableApps\FreeCommanderPortable\FreeCommanderPortable.exe
+	  			D:\Users\sita\Documents\PortableAppsRoot\PortableApps\Gdi++\gdi++.exe
+	  			D:\Users\sita\Documents\PortableAppsRoot\PortableApps\Gdi++\gdi++_sse.exe
+	  			D:\Users\sita\Documents\PortableAppsRoot\PortableApps\Gdi++\gdippManager.exe
+	  			D:\Users\sita\Documents\PortableAppsRoot\PortableApps\Gdi++\gditray.exe
+	  			D:\Users\sita\Documents\PortableAppsRoot\PortableApps\Gdi++\gdixxTuner.exe
+	  			D:\Users\sita\Documents\PortableAppsRoot\PortableApps\GIMPPortable\GIMPPortable.exe
+	  			D:\Users\sita\Documents\PortableAppsRoot\PortableApps\Hinedo 0.5\Hinedo.exe
+	  			D:\Users\sita\Documents\PortableAppsRoot\PortableApps\HTTP File Server\hfs.exe
+	  			D:\Users\sita\Documents\PortableAppsRoot\PortableApps\IcoFXPortable\IcoFXPortable.exe
+	  			D:\Users\sita\Documents\PortableAppsRoot\PortableApps\kmp\KMPlayer.exe
+	  			D:\Users\sita\Documents\PortableAppsRoot\PortableApps\lingoes_portable_2.6.3_zh\lgsupd.exe
+	  			D:\Users\sita\Documents\PortableAppsRoot\PortableApps\lingoes_portable_2.6.3_zh\Lingoes.exe
+	  			D:\Users\sita\Documents\PortableAppsRoot\PortableApps\lingoes_portable_2.6.3_zh\lwcnc.exe
+	  			D:\Users\sita\Documents\PortableAppsRoot\PortableApps\MangaMeeyaCE 2.4\MangaMeeyaCE.exe
+	  			D:\Users\sita\Documents\PortableAppsRoot\PortableApps\Marxio Timer 1.10\Marxio Timer.exe
+	  			D:\Users\sita\Documents\PortableAppsRoot\PortableApps\Novicorp WinToFlash 0.4.0008 beta\WinToFlash.exe
+	  			D:\Users\sita\Documents\PortableAppsRoot\PortableApps\NTPClock\NTPClock.exe
+	  			D:\Users\sita\Documents\PortableAppsRoot\PortableApps\OpenOfficePortable\OpenOfficeBasePortable.exe
+	  			D:\Users\sita\Documents\PortableAppsRoot\PortableApps\OpenOfficePortable\OpenOfficeCalcPortable.exe
+	  			D:\Users\sita\Documents\PortableAppsRoot\PortableApps\OpenOfficePortable\OpenOfficeDrawPortable.exe
+	  			D:\Users\sita\Documents\PortableAppsRoot\PortableApps\OpenOfficePortable\OpenOfficeImpressPortable.exe
+	  			D:\Users\sita\Documents\PortableAppsRoot\PortableApps\OpenOfficePortable\OpenOfficeMathPortable.exe
+	  			D:\Users\sita\Documents\PortableAppsRoot\PortableApps\OpenOfficePortable\OpenOfficePortable.exe
+	  			D:\Users\sita\Documents\PortableAppsRoot\PortableApps\OpenOfficePortable\OpenOfficeWriterPortable.exe
+	  			D:\Users\sita\Documents\PortableAppsRoot\PortableApps\PCMan\PCMan.exe
+	  			D:\Users\sita\Documents\PortableAppsRoot\PortableApps\PCMan\Symbols.exe
+	  			D:\Users\sita\Documents\PortableAppsRoot\PortableApps\PidginPortable\PidginPortable.exe
+	  			D:\Users\sita\Documents\PortableAppsRoot\PortableApps\PortableApps.com\PortableAppsBackup.exe
+	  			D:\Users\sita\Documents\PortableAppsRoot\PortableApps\PortableApps.com\PortableAppsBackupRestore.exe
+	  			D:\Users\sita\Documents\PortableAppsRoot\PortableApps\PortableApps.com\PortableAppsPlatform.exe
+	  			D:\Users\sita\Documents\PortableAppsRoot\PortableApps\PotPlayer\daumvsvr.exe
+	  			D:\Users\sita\Documents\PortableAppsRoot\PortableApps\PotPlayer\IndivUtil.exe
+	  			D:\Users\sita\Documents\PortableAppsRoot\PortableApps\PotPlayer\PotPlayer.exe
+	  			D:\Users\sita\Documents\PortableAppsRoot\PortableApps\PotPlayer\PotPlayerMini.exe
+	  			D:\Users\sita\Documents\PortableAppsRoot\PortableApps\PuTTYPortable\PuTTYPortable.exe
+	  			D:\Users\sita\Documents\PortableAppsRoot\PortableApps\SkypePortable\SkypePortable.exe
+	  			D:\Users\sita\Documents\PortableAppsRoot\PortableApps\TaggedFrog_1.0.3\TaggedFrog.exe
+	  			D:\Users\sita\Documents\PortableAppsRoot\PortableApps\tftpd32.329\tftpd32.exe
+	  			D:\Users\sita\Documents\PortableAppsRoot\PortableApps\UltraEdit-32\ucl.exe
+	  			D:\Users\sita\Documents\PortableAppsRoot\PortableApps\UltraEdit-32\uedit32.exe
+	  			D:\Users\sita\Documents\PortableAppsRoot\PortableApps\UltraEdit-32\UEDOS32.exe
+	  			D:\Users\sita\Documents\PortableAppsRoot\PortableApps\UltraEdit-32\crack\Keygen.exe
+	  			D:\Users\sita\Documents\PortableAppsRoot\PortableApps\UltraEdit-32\GNU\astyle.exe
+	  			D:\Users\sita\Documents\PortableAppsRoot\PortableApps\UltraEdit-32\GNU\ctags.exe
+	  			D:\Users\sita\Documents\PortableAppsRoot\PortableApps\UltraEdit-32\GNU\xmllint.exe
+	  			D:\Users\sita\Documents\PortableAppsRoot\PortableApps\UltraVNC-Viewer-104-Security-Update-2---Feb-8-2008\vncviewer.exe
+	  			D:\Users\sita\Documents\PortableAppsRoot\PortableApps\USB Cleaner v6.0\Convert.exe
+	  			D:\Users\sita\Documents\PortableAppsRoot\PortableApps\USB Cleaner v6.0\FolderCure.exe
+	  			D:\Users\sita\Documents\PortableAppsRoot\PortableApps\USB Cleaner v6.0\KillAutoPlus.exe
+	  			D:\Users\sita\Documents\PortableAppsRoot\PortableApps\USB Cleaner v6.0\MsnPhotoKiller.exe
+	  			D:\Users\sita\Documents\PortableAppsRoot\PortableApps\USB Cleaner v6.0\UPDATE.Exe
+	  			D:\Users\sita\Documents\PortableAppsRoot\PortableApps\USB Cleaner v6.0\USBCleaner.exe
+	  			D:\Users\sita\Documents\PortableAppsRoot\PortableApps\USB Cleaner v6.0\USBEjector.exe
+	  			D:\Users\sita\Documents\PortableAppsRoot\PortableApps\USB Cleaner v6.0\Usbmon.exe
+	  			D:\Users\sita\Documents\PortableAppsRoot\PortableApps\win7loader\MB_Win7Loader.EXE
+	  			D:\Users\sita\Documents\PortableAppsRoot\PortableApps\WinDirStatPortable\WinDirStatPortable.exe
+	  			D:\Users\sita\Documents\PortableAppsRoot\PortableApps\WinkPortable\WinkPortable.exe
+	  			D:\Users\sita\Documents\PortableAppsRoot\PortableApps\WinSCPPortable\WinSCPPortable.exe
+	  			D:\Users\sita\Documents\PortableAppsRoot\PortableApps\WiresharkPortable\WiresharkPortable.exe

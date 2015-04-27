@@ -1,0 +1,2 @@
+chcp
+pause

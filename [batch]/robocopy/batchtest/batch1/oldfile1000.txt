@@ -1,0 +1,73 @@
+﻿
+	  			X:\NTFS\Browser\Ie60_SP1\iesetup.dir
+	  			X:\NTFS\Compiler\ARM ADS1.2\APPS_LIB\SOURCE\STDIN
+	  			X:\NTFS\Compiler\ARM ADS1.2\APPS_LIB\SOURCE\STDINB
+	  			X:\NTFS\Compiler\ARM ADS1.2\APPS_LIB\SOURCE\STDINL
+	  			X:\NTFS\Compiler\ARM ADS1.2\APPS_LIB\SOURCE\ARM_ADPM\STDIN
+	  			X:\NTFS\Compiler\ARM ADS1.2\APPS_LIB\SOURCE\ARM_BITM\STDINB
+	  			X:\NTFS\Compiler\ARM ADS1.2\APPS_LIB\SOURCE\ARM_BITM\STDINL
+	  			X:\NTFS\Compiler\ARM ADS1.2\APPS_LIB\SOURCE\ARM_DCT\STDINB
+	  			X:\NTFS\Compiler\ARM ADS1.2\APPS_LIB\SOURCE\ARM_DCT\STDINL
+	  			X:\NTFS\Compiler\ARM ADS1.2\APPS_LIB\SOURCE\ARM_DCT\DCT_TGEN\STDIN
+	  			X:\NTFS\Compiler\ARM ADS1.2\APPS_LIB\SOURCE\ARM_DCT\DCT_TGEN\STDINB
+	  			X:\NTFS\Compiler\ARM ADS1.2\APPS_LIB\SOURCE\ARM_DCT\DCT_TGEN\STDINL
+	  			X:\NTFS\Compiler\ARM ADS1.2\APPS_LIB\SOURCE\ARM_FFT\STDINB
+	  			X:\NTFS\Compiler\ARM ADS1.2\APPS_LIB\SOURCE\ARM_FFT\STDINL
+	  			X:\NTFS\Compiler\ARM ADS1.2\APPS_LIB\SOURCE\ARM_FFT\FFT_DGEN\STDINB
+	  			X:\NTFS\Compiler\ARM ADS1.2\APPS_LIB\SOURCE\ARM_FFT\FFT_DGEN\STDINL
+	  			X:\NTFS\Compiler\ARM ADS1.2\APPS_LIB\SOURCE\ARM_FFT\FFT_TGEN\STDIN
+	  			X:\NTFS\Compiler\ARM ADS1.2\APPS_LIB\SOURCE\ARM_FFT\FFT_TGEN\STDINB
+	  			X:\NTFS\Compiler\ARM ADS1.2\APPS_LIB\SOURCE\ARM_FFT\FFT_TGEN\STDINL
+	  			X:\NTFS\Compiler\ARM ADS1.2\APPS_LIB\SOURCE\ARM_FIL\STDINB
+	  			X:\NTFS\Compiler\ARM ADS1.2\APPS_LIB\SOURCE\ARM_FIL\STDINL
+	  			X:\NTFS\Compiler\ARM ADS1.2\APPS_LIB\SOURCE\ARM_G711\STDIN
+	  			X:\NTFS\Compiler\ARM ADS1.2\APPS_LIB\SOURCE\ARM_HUFF\STDIN
+	  			X:\NTFS\Compiler\ARM ADS1.2\APPS_LIB\SOURCE\ARM_IS54\STDINB
+	  			X:\NTFS\Compiler\ARM ADS1.2\APPS_LIB\SOURCE\ARM_IS54\STDINL
+	  			X:\NTFS\Compiler\ARM ADS1.2\APPS_LIB\SOURCE\ARM_MATH\STDINB
+	  			X:\NTFS\Compiler\ARM ADS1.2\APPS_LIB\SOURCE\ARM_MATH\STDINL
+	  			X:\NTFS\Compiler\ARM ADS1.2\APPS_LIB\SOURCE\ARM_MTMF\STDIN
+	  			X:\NTFS\Compiler\ARM ADS1.2\APPS_LIB\SOURCE\UTIL_LIB\STDIN
+	  			X:\NTFS\Compiler\ARM ADS1.2\APPS_LIB\SOURCE\UTIL_LIB\STDINB
+	  			X:\NTFS\Compiler\ARM ADS1.2\APPS_LIB\SOURCE\UTIL_LIB\STDINL
+	  			X:\NTFS\Compiler\CE.NET\eVC4\cd1.inf
+	  			X:\NTFS\Compiler\Microsoft Visual Studio 6 Pro\MSDN CD1 And 2\MSDN CD1\MSDN331.INF
+	  			X:\NTFS\Compiler\Microsoft Visual Studio 6 Pro\MSDN CD1 And 2\MSDN CD1\MSDN332.INF
+	  			X:\NTFS\Compiler\Microsoft Visual Studio 6 Pro\MSDN CD1 And 2\MSDN CD1\SAMPLES\MSDN\TECHART\174\DRAW3C.H
+	  			X:\NTFS\Compiler\Microsoft Visual Studio 6 Pro\MSDN CD1 And 2\MSDN CD1\SAMPLES\MSDN\TECHART\5184\SETUPINI\BCP.ERR
+	  			X:\NTFS\Compiler\Microsoft Visual Studio 6 Pro\MSDN CD1 And 2\MSDN CD1\SAMPLES\VC98\MFC\DATABASE\DAOTABLE\HLP\DAOTABLE.PH
+	  			X:\NTFS\Compiler\Microsoft Visual Studio 6 Pro\Visual J++\Visual J++\VJ98CD1.INF
+	  			X:\NTFS\Compiler\Microsoft Visual Studio 6 Pro\Visual J++\Visual J++\COMMON\IDE\IDE98\NEWITEMS\TEXTFILE.TXT
+	  			X:\NTFS\Compiler\Microsoft Visual Studio 6 Pro\Visual J++\Visual J++\COMMON\IDE\IDE98\TMPLTS\DBITEM\NEWQRY.DTQ
+	  			X:\NTFS\Compiler\Microsoft Visual Studio 6 Pro\Visual J++\Visual J++\VJ98\NEWITEMS\JAVAFILE.JAV
+	  			X:\NTFS\Compiler\Microsoft Visual Studio 6 Pro\Visual Studio 6 CD 1\VS98PCD1.INF
+	  			X:\NTFS\Compiler\Microsoft Visual Studio 6 Pro\Visual Studio 6 CD 1\COMMON\IDE\IDE98\NEWITEMS\TEXTFILE.TXT
+	  			X:\NTFS\Compiler\Microsoft Visual Studio 6 Pro\Visual Studio 6 CD 1\COMMON\IDE\IDE98\TMPLTS\DBITEM\NEWQRY.DTQ
+	  			X:\NTFS\Compiler\Microsoft Visual Studio 6 Pro\Visual Studio 6 CD 2\VS98PCD2.INF
+	  			X:\NTFS\Compiler\VBP600CHT1\VB98PCD1.inf
+	  			X:\NTFS\DOS\pqmagic3\MOVER\16BIT\DISK1
+	  			X:\NTFS\DOS\pqmagic3\MOVER\16BIT\DISK2
+	  			X:\NTFS\FTP\FlashGet\CUSTDATA.INI
+	  			X:\伺服器軟體\phpBB\phpBB plus v1.52 繁體中文版\phpBB2\config.php
+	  			X:\伺服器軟體\phpBB\phpBB plus v1.52 繁體中文版\phpBB2\pafiledb\uploads\.htaccess
+	  			X:\伺服器軟體\phpBB\phpBB-2.0.19\phpBB2\config.php
+	  			X:\作業系統\CWin2k\I386\WIN9XMIG\INOCULAN\_INOC\DOMAIN.TBL
+	  			X:\作業系統\CWin2k\I386\WIN9XMIG\INOCULAN\_INOC\IPMASK.TBL
+	  			X:\作業系統\CWin2k\I386\WIN9XMIG\INOCULAN\_INOC\IPNET.TBL
+	  			X:\作業系統\CWin2k\I386\WIN9XMIG\INOCULAN\_INOC\SERVER.TBL
+	  			X:\作業系統\CWinME\readme.txt
+	  			X:\作業系統\CWinME\add-ons\tsclient\icaclnt\default.htm
+	  			X:\作業系統\CWinME\add-ons\tsclient\icaclnt\ica32\_inst32i.ex_
+	  			X:\作業系統\CWinME\add-ons\tsclient\icaclnt\ica32\_setup.dll
+	  			X:\作業系統\CWinME\add-ons\tsclient\icaclnt\ica32\lang.dat
+	  			X:\作業系統\CWinME\add-ons\tsclient\icaclnt\ica32\module.src
+	  			X:\作業系統\CWinME\add-ons\tsclient\icaclnt\ica32\setup.exe
+	  			X:\作業系統\CWinME\add-ons\tsclient\mstsc\win32\mstsc.cnt
+	  			X:\作業系統\CWinME\add-ons\tsclient\mstsc\win32\setup.exe
+	  			X:\作業系統\CWinME\add-ons\tsclient\mstsc\win32\tsctrc.dll
+	  			X:\作業系統\CWinME\drivers\net\netgear\netgear.txt
+	  			X:\作業系統\CWinME\drivers\net\netgear\NGRPCI.SYS
+	  			X:\作業系統\CWinME\drivers\storage\flash\tffs9x.txt
+	  			X:\作業系統\CWinME\drivers\storage\flash\trueffs.inf
+	  			X:\作業系統\CWinME\drivers\storage\flash\usbmtd.vxd
+	  			X:\作業系統\WIN31\ACCESS.CDE

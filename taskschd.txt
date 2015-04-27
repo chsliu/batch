@@ -1,0 +1,12 @@
+alarm		6:55am everyday nologin superuser
+backup		6:55am everyday nologin 
+cleanup		6:05am last sunday nologin 
+startup		startup nologin 
+status		6:55am every sunday nologin 
+update		6:55am 3rd sunday nologin superuser
+
+-------------------------
+daily	6:00am everyday nologin superuser
+weekly	6:00am every sunday nologin superuser
+monthly	6:00am last sunday nologin superuser
+startup	startup nologin superuser
