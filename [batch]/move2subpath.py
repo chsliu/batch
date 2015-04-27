@@ -5,43 +5,60 @@ import os
 import locale
 
 # former is more dominant
+# rootPathWords = [
+
+# 'GBA',
+# 'iOS',
+# 'NDS',
+# 'NGC',
+# 'PC',
+# 'PS2',
+# 'PS3',
+# 'PSP',
+# 'Wii',
+# 'X360',
+# 'XBox',
+
+# 'Movie',
+# 'Music',
+# 'TV',
+
+# 'ACG',
+# 'AV',
+# 'Book',
+# 'Comic',
+# 'Documentary',
+# 'Dorama',
+# 'Mandarin',
+
+# 'Install',
+# 'Media',
+# 'Library',
+# 'Documentary',
+# 'Public',
+# 'Software',
+# 'D:',
+# 'C:',
+# 'Backup',
+# 'Download',
+
+# 'Games'
+# ]
+
 rootPathWords = [
-#
-'GBA',
-'iOS',
-'NDS',
-'NGC',
-'PC',
-'PS2',
-'PS3',
-'PSP',
-'Wii',
-'X360',
-'XBox',
-#
-'Movie',
-'Music',
-'TV',
-#
-'ACG',
-'AV',
-'Book',
-'Comic',
-'Documentary',
-'Dorama',
-'Mandarin',
-#
-'Install',
-'Media',
-'Documentary',
-'Public',
-'Software',
-'D:',
-'C:',
-'Backup',
+'Admin',
 'Download',
-#
-'Games'
+'Games',
+'Library',
+'Media',
+'Music',
+'NetBackup',
+'Photos',
+'Software',
+'Users',
+'Video',
+'C:',
+'D:',
 ]
 
 removeWords = [

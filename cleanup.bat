@@ -1,3 +1,5 @@
+REM =================================
+
 set path=%path%;%~dp0\utility
 
 REM =================================
@@ -34,6 +36,8 @@ REM =================================
 set LOG1=%~dp0\%~n0-%TODAY%.txt
 set TXT1=%temp%\%~n0.txt
 set TXT2=%temp%\cleanup-%COMPUTERNAME%.txt
+
+REM =================================
 
 echo %DATE%%TIME% 				>%LOG1%
 
