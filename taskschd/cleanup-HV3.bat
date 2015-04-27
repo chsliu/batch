@@ -1,28 +1,17 @@
 REM =================================
 
-rd /s /q "E:\Shares\Admin\Hyper-V\Virtual Hard Disks\DEL"
+rd /s /q E:\DEL	
+rd /s /q F:\DEL	
+rd /s /q E:\Shares\Admin\DEL	
 rd /s /q E:\Shares\Games\DEL
-rd /s /q E:\Shares\Games\PC\DEL
-rd /s /q E:\Shares\Media2\ACG\DEL
-rd /s /q E:\Shares\Media2\DEL
-rd /s /q E:\Shares\Media2\Documentary\DEL
-rd /s /q E:\Shares\Media2\Dorama\DEL
-rd /s /q E:\Shares\Media2\Mandarin\DEL
-rd /s /q E:\Shares\Media2\Movie\DEL
-rd /s /q E:\Shares\Media2\Movie\Mandarin\DEL
-rd /s /q E:\Shares\Media2\TV\DEL
-rd /s /q E:\Shares\Media\Music\DEL
+rd /s /q E:\Shares\Music\DEL
+rd /s /q E:\Shares\NetBackup\DEL
+rd /s /q E:\Shares\Photos\DEL
 rd /s /q E:\Shares\Software\DEL
-rd /s /q F:\Shares\Media\ACG\DEL
+rd /s /q E:\Shares\Users\DEL
+rd /s /q E:\Shares\Video\DEL
+rd /s /q F:\Shares\Library\DEL	
 rd /s /q F:\Shares\Media\DEL
-rd /s /q F:\Shares\Media\Documentary\DEL
-rd /s /q F:\Shares\Media\Dorama\DEL
-rd /s /q F:\Shares\Media\Mandarin\DEL
-rd /s /q F:\Shares\Media\Movie\DEL
-rd /s /q F:\Shares\Media\Movie\Mandarin\DEL
-rd /s /q F:\Shares\Media\Music\AV\DEL
-rd /s /q F:\Shares\Media\Music\DEL
-rd /s /q F:\Shares\Media\TV\DEL	
 
 REM =================================
 
