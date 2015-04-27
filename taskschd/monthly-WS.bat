@@ -1,7 +1,7 @@
 REM =================================
 
-call %~dp0\cleanup.bat
+rem call %~dp0\update.bat
 
 REM =================================
 
-rd /s /q D:\Download\DEL
+call %~dp0\cleanup.bat
