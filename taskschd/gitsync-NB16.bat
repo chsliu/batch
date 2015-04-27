@@ -1,1 +1,1 @@
-set path=%path%;D:\Users\sita\PortableApps\GitPortable\App\Git\bin
+set path=D:\Users\sita\PortableApps\GitPortable\App\Git\bin;%path%
