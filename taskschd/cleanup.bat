@@ -1,6 +1,6 @@
 REM =================================
 
-set path=%path%;%~dp0\utility
+set path=%path%;%~dp0\..\utility
 
 REM =================================
 :BatchGotAdmin
@@ -43,12 +43,12 @@ echo %DATE%%TIME% 				>%LOG1%
 
 REM =================================
 
-call %~dp0\utility\cleanup-%COMPUTERNAME%.bat 	>>%LOG1% 2>>&1
+call %~dp0\cleanup-%COMPUTERNAME%.bat 	>>%LOG1% 2>>&1
 
 REM =================================
 
 copy %0 %TXT1%
-copy %~dp0\utility\cleanup-%COMPUTERNAME%.bat %TXT2%
+copy %~dp0\cleanup-%COMPUTERNAME%.bat %TXT2%
 
 sendemail -s msa.hinet.net -f egreta.su@msa.hinet.net -t chsliu@gmail.com -u [LOG] %COMPUTERNAME% %~n0 -m %0 -a %LOG1% %TXT1% %TXT2%
 

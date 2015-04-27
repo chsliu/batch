@@ -1,8 +1,8 @@
 REM =================================
-@echo off
+rem @echo off
 
 REM =================================
-pushd %~dp0
+pushd %~dp0\..
 
 REM =================================
 REM get date and time 
