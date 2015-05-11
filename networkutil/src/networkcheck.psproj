@@ -1,0 +1,51 @@
+[PyScripter]
+Version=1.9.9.6
+
+[Project]
+ClassName=TProjectRootNode
+StoreRelativePaths=FALSE
+ShowFileExtensions=FALSE
+
+[Project\ChildNodes\Node0]
+ClassName=TProjectFilesNode
+
+[Project\ChildNodes\Node0\ChildNodes\Node0]
+ClassName=TProjectFileNode
+FileName=D:\Users\sita\Documents\My Dropbox\networkutil\log.py
+
+[Project\ChildNodes\Node0\ChildNodes\Node1]
+ClassName=TProjectFileNode
+FileName=D:\Users\sita\Documents\My Dropbox\networkutil\mail.py
+
+[Project\ChildNodes\Node0\ChildNodes\Node2]
+ClassName=TProjectFileNode
+FileName=D:\Users\sita\Documents\My Dropbox\networkutil\networkcheck.py
+
+[Project\ChildNodes\Node0\ChildNodes\Node3]
+ClassName=TProjectFileNode
+FileName=D:\Users\sita\Documents\My Dropbox\networkutil\ping.py
+
+[Project\ChildNodes\Node0\ChildNodes\Node4]
+ClassName=TProjectFileNode
+FileName=D:\Users\sita\Documents\My Dropbox\networkutil\pingserver.py
+
+[Project\ChildNodes\Node0\ChildNodes\Node5]
+ClassName=TProjectFileNode
+FileName=D:\Users\sita\Documents\My Dropbox\networkutil\reboot.py
+
+[Project\ChildNodes\Node0\ChildNodes\Node6]
+ClassName=TProjectFileNode
+FileName=D:\Users\sita\Documents\My Dropbox\networkutil\setup.py
+
+[Project\ChildNodes\Node0\ChildNodes]
+Count=7
+
+[Project\ChildNodes\Node1]
+ClassName=TProjectRunConfiguationsNode
+
+[Project\ChildNodes]
+Count=2
+
+[Project\ExtraPythonPath]
+Count=0
+
