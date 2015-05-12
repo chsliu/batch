@@ -1,1 +1,0 @@
-@sc delete %1
