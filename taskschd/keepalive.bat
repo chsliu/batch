@@ -1,4 +1,6 @@
 @echo off
+set LOG=%temp%\%~n0.txt
+
 cls
 echo Keep Network Alive
 echo.
@@ -25,6 +27,7 @@ goto :EOF
 cls
 echo Connection Error, Reseting Connection...
 call :resetConnetion
+echo %date%, %time% >> %LOG%
 SET /A RESET+=1
 goto :EOF
 
