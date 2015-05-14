@@ -1,6 +1,6 @@
 REM =================================
 
-call %~dp0\..\utility\getdisklog.bat 1
+start %~dp0\keepalive.bat
 
 REM =================================
 
