@@ -1,5 +1,6 @@
 @echo off
 set LOG=%temp%\%~n0.txt
+set SERVER=192.168.7.250
 
 cls
 echo Keep Network Alive
@@ -33,7 +34,7 @@ goto :EOF
 
 
 :testConnection
-ping 192.168.1.250 -n 1 -w 1000 > nul
+ping %SERVER% -n 1 -w 1000 > nul
 if errorlevel 1 goto :ErrorConnection
 
 goto :OkConnection
