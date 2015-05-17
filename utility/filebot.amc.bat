@@ -17,7 +17,8 @@ set TXT1=%temp%\%~n0.txt
 REM set SHARE=\\\\hv3\\Media2
 set SHARE=\\hv4\Library
 REM set XBMC=192.168.1.56
-set XBMC=192.168.1.89
+REM set XBMC=192.168.7.59
+set XBMC=macmini
 
 REM =================================
 

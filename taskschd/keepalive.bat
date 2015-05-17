@@ -49,6 +49,7 @@ rem C:\Windows\System32\timeout.exe 300
 rem C:\Windows\System32\choice.exe /d y /t 600
 
 rem netsh interface set interface "Ethernet 2" ENABLE
+rem wmic nic get name, index
 wmic path win32_networkadapter where index=11 call enable
 
 goto :EOF

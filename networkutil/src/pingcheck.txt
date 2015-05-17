@@ -1,0 +1,5 @@
+wait some time
+if ping failed and reboot count = 0
+write a log to system
+reboot
+ 

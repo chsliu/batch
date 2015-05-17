@@ -19,6 +19,10 @@ set var=%mydate%%mytime%
 
 REM =================================
 
+call %~dp0\..\utility\gitconf.bat
+
+REM =================================
+
 git pull
 
 git add .
