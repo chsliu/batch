@@ -1,5 +1,6 @@
 @echo off
-if not "%1" == "max" start /MAX cmd /c %0 max & exit/b
+call :lastarg %*
+if not [%ARG_LAST%] == ["max"] start /MAX cmd /c %0 %* max & goto :EOF
 
 set static_ip=192.168.7.100
 set ind=0
@@ -44,3 +45,14 @@ ipconfig /renew >nul
 ipconfig /all
 echo.
 pause
+
+
+goto :EOF
+
+REM =================================
+:lastarg
+set ARG_LAST="%~1"
+shift
+if not [%~1]==[] goto lastarg
+
+goto :EOF
