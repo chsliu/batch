@@ -1,4 +1,15 @@
 @echo off
+REM echo all args: %*
+REM pause
+
+REM call :lastarg %*
+REM echo last arg: %ARG_LAST%
+
+REM if not [%ARG_LAST%] == ["max"] start /MAX cmd /c %0 %* max & goto :EOF
+
+REM echo all args: %*
+REM pause
+
 set LOG1=D:\Download\%~n0.txt
 echo %* >>%LOG1%
 
@@ -113,3 +124,13 @@ popd
 rem pause
 
 goto :EOF
+
+REM =================================
+
+:lastarg
+set ARG_LAST="%~1"
+shift
+if not [%~1]==[] goto lastarg
+
+goto :EOF
+
