@@ -1,11 +1,11 @@
 REM =================================
 
-call %~dp0\alarm.bat
+start /min call %~dp0\alarm.bat
 
 REM =================================
 
-call %~dp0\gitsync.bat
+start /min call %~dp0\gitsync.bat
 
 REM =================================
 
-rem call %~dp0\backup.bat
+start /min rem call %~dp0\backup.bat

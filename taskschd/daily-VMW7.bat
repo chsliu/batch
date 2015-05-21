@@ -1,23 +1,23 @@
 REM =================================
 
-call %~dp0\alarm.bat
+start /min call %~dp0\alarm.bat
 
 REM =================================
 
-call %~dp0\gitsync.bat
+start /min call %~dp0\gitsync.bat
 
 REM =================================
 
-call %~dp0\shooter.bat
+start /min call %~dp0\shooter.bat
 
 REM =================================
 
-rem call %~dp0\backup.bat
+rem start /min call %~dp0\backup.bat
 
 REM =================================
 
-rem %~dp0\..\networkutil\pinggoodview.bat
+rem start /min %~dp0\..\networkutil\pinggoodview.bat
 
 REM =================================
 
-rem %~dp0\..\utility\reboot.bat
+rem start /min %~dp0\..\utility\reboot.bat
