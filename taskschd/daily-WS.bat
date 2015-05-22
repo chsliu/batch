@@ -5,16 +5,16 @@ w32tm /query /status
 
 REM =================================
 
-start /min call %~dp0\alarm.bat
+call %~dp0\alarm.bat
 
 REM =================================
 
-start /min call %~dp0\gitsync.bat
+call %~dp0\gitsync.bat
 
 REM =================================
 
-start /min call %~dp0\backup.bat
+call %~dp0\backup.bat
 
 REM =================================
 
-start /min call %~dp0\killhale.bat
+call %~dp0\killhale.bat

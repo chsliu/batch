@@ -1,3 +1,3 @@
 REM =================================
 
-start /min call %~dp0\status.bat
+call %~dp0\status.bat

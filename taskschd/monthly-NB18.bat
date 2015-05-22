@@ -1,7 +1,7 @@
 REM =================================
 
-start /min %~dp0\update.bat
+start /min call %~dp0\update.bat
 
 REM =================================
 
-start /min %~dp0\cleanup.bat
+start /min call %~dp0\cleanup.bat
