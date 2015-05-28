@@ -15,6 +15,7 @@
 import argparse
 import sys
 import json
+import os
 from pushbullet import PushBullet
 from requests.exceptions import HTTPError
 
@@ -34,9 +35,12 @@ def getDevices(args):
         print(json.dumps(devices))
         return
     for device in devices:
-        print("%s %s %s" % (device["iden"],
+        if "manufacturer" in device:
+            print("%s %s %s" % (device["iden"],
                             device["manufacturer"],
                             device["model"]))
+        else:
+            print(device["iden"])
 
 def pushNote(args):
     p = PushBullet(args.api_key)
@@ -92,7 +96,7 @@ def pushLink(args):
 
 def pushFile(args):
     p = PushBullet(args.api_key)
-    file = p.pushFile(args.device, open(args.file, 'rb'))
+    file = p.pushFile(args.device, os.path.basename(args.file), "", open(args.file, 'rb'))
     if args.json:
         print(json.dumps(file))
         return
