@@ -43,6 +43,10 @@ echo %DATE%%TIME% 				>%LOG1%
 
 REM =================================
 
+call %~dp0\cleanup-%COMPUTERNAME%.bat 	>>%LOG1% 2>>&1
+
+REM =================================
+
 call %~dp0\clean.bat 	>>%LOG1% 2>>&1
 
 REM =================================

@@ -1,9 +1,5 @@
 REM =================================
 
-call %~dp0\cleanup-%COMPUTERNAME%.bat
-
-REM =================================
-
 rd /s /q C:\DEL
 rd /s /q D:\DEL
 
