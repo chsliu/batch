@@ -1,1 +1,1 @@
-iperf -s -V
+%~dp0\iperf -s -V

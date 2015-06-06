@@ -1,5 +1,5 @@
-iperf -c hv2
-iperf -c hv3
-iperf -c hv4
+%~dp0\iperf -c hv2
+%~dp0\iperf -c hv3
+%~dp0\iperf -c hv4
 
 pause
