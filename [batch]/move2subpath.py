@@ -46,6 +46,9 @@ import locale
 # ]
 
 rootPathWords = [
+'C:',
+'D:',
+'P:',
 'Admin',
 'Download',
 'Games',
@@ -57,8 +60,6 @@ rootPathWords = [
 'Software',
 'Users',
 'Video',
-'C:',
-'D:',
 ]
 
 removeWords = [

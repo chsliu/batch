@@ -16,8 +16,8 @@ rem call %~dp0\backup.bat
 
 REM =================================
 
-rem %~dp0\..\networkutil\pinggoodview.bat
+rem call %~dp0\..\networkutil\pinggoodview.bat
 
 REM =================================
 
-rem %~dp0\..\utility\reboot.bat
+rem call %~dp0\..\utility\reboot.bat

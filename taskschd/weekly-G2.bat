@@ -1,3 +1,3 @@
 REM =================================
 
-call %~dp0\status.bat
+rem call %~dp0\status.bat

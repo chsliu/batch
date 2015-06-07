@@ -17,10 +17,14 @@ set var=%mydate%%mytime%
 
 REM =================================
 
+call %~dp0\..\utility\gitconf.bat
+
+REM =================================
+
 git pull
 
 git add .
-call git commit -a -m "Automated commit at %var% on %COMPUTERNAME%" 
+git commit -a -m "Automated commit at %var% on %COMPUTERNAME%" 
 git push
 
 REM =================================

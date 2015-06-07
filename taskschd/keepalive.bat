@@ -1,4 +1,7 @@
 @echo off
+set LOG=%temp%\%~n0.txt
+set SERVER=192.168.1.247
+
 cls
 echo Keep Network Alive
 echo.
@@ -25,12 +28,13 @@ goto :EOF
 cls
 echo Connection Error, Reseting Connection...
 call :resetConnetion
+echo %date%, %time% >> %LOG%
 SET /A RESET+=1
 goto :EOF
 
 
 :testConnection
-ping 192.168.1.250 -n 1 -w 1000 > nul
+ping %SERVER% -n 1 -w 1000 > nul
 if errorlevel 1 goto :ErrorConnection
 
 goto :OkConnection
@@ -45,6 +49,7 @@ rem C:\Windows\System32\timeout.exe 300
 rem C:\Windows\System32\choice.exe /d y /t 600
 
 rem netsh interface set interface "Ethernet 2" ENABLE
+rem wmic nic get name, index
 wmic path win32_networkadapter where index=11 call enable
 
 goto :EOF
