@@ -47,10 +47,9 @@ REM ultravnc
 REM usbit
 REM windirstat
 REM winimage
-REM winscp
 REM wireshark
 
-cinst -y cpu-z crystaldiskinfo crystaldiskmark putty.portable
+cinst -y cpu-z crystaldiskinfo crystaldiskmark putty.portable winscp
 
 pause
 
