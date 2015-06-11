@@ -42,22 +42,38 @@ REM freemind
 REM gimp
 REM googledrive
 REM itunes
+REM jdownloader
 REM keepass.portable
 REM launchy
 REM libreoffice
+REM openhardwaremonitor
 REM opera
 REM picasa
 REM pidgin
+<<<<<<< HEAD
 REM pushbullet
+=======
+REM pushbullet 
+>>>>>>> 0ba72cb27c91511596d1ff837acb674479276af0
 REM spacesniffer
 REM stickies
 REM sumatrapdf
 REM teamviewer.host
+<<<<<<< HEAD
 REM upx
+=======
+>>>>>>> 0ba72cb27c91511596d1ff837acb674479276af0
 REM wincdemu
 REM winsplitrevolution
 REM xnview
+<<<<<<< HEAD
 REM zim
 
 cinst -y 7zip.install classic-shell cmdermini.portable dropbox everything foxitreader google-chrome-x64 line listary notepadplusplus.install openhardwaremonitor python2-x86_32 skype teamviewer git.install
+=======
+
+cinst -y 7zip.install classic-shell cmdermini.portable dropbox everything foxitreader google-chrome-x64 line listary notepadplusplus.install  python2 skype teamviewer git.install
+
+pause
+>>>>>>> 0ba72cb27c91511596d1ff837acb674479276af0
 

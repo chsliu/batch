@@ -30,6 +30,7 @@ powershell -NoProfile -ExecutionPolicy unrestricted -Command "iex ((new-object n
 
 REM =================================
 
+REM audacity
 REM foobar2000 
 REM imgburn 
 REM lame-front-end 
@@ -40,4 +41,6 @@ REM virtualdub
 REM vlc
 
 cinst -y filebot kodi mp3tag potplayer
+
+pause
 

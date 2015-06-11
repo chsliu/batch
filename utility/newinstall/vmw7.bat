@@ -30,27 +30,7 @@ powershell -NoProfile -ExecutionPolicy unrestricted -Command "iex ((new-object n
 
 REM =================================
 
-REM aida64-engineer
-REM angryip
-REM apple_airport_utility
-REM as-ssd
-REM disk2vhd
-REM easybcd
-REM filezilla
-REM hdtune
-REM no-ip-duc
-REM partitionassistant
-REM spacesniffer
-REM sysinternals
-REM tightvnc
-REM treesizefree
-REM ultravnc
-REM usbit
-REM windirstat
-REM winimage
-REM wireshark
-
-cinst -y cpu-z crystaldiskinfo crystaldiskmark putty.portable winscp
+cinst -y 7zip.install emule everything filebot git.install google-chrome-x64 jdownloader no-ip-duc picasa python2-x86_32 putty.portable winscp
 
 pause
 
