@@ -30,30 +30,26 @@ powershell -NoProfile -ExecutionPolicy unrestricted -Command "iex ((new-object n
 
 REM =================================
 
-cinst -y astyle
-cinst -y atom
-cinst -y dependencywalker
-cinst -y fiddler
-cinst -y git.install
-cinst -y github
-cinst -y gource
-cinst -y hg
-cinst -y icofx
-cinst -y jenkins
-cinst -y linqpad4.AnyCPU.portable
-cinst -y nodejs.install
-cinst -y procexp
-cinst -y procmon
-cinst -y pspad
-cinst -y pstools
-cinst -y python
-cinst -y ruby
-cinst -y sqliteadmin
-cinst -y sqlitebrowser
-cinst -y sublimetext3 
-cinst -y swig
-cinst -y sysinternals
-cinst -y teraterm
-cinst -y visualstudioexpress2008
-cinst -y wink
-cinst -y winmerge
+REM astyle
+REM atom
+REM dependencywalker
+REM fiddler
+REM gource
+REM icofx
+REM jenkins
+REM linqpad4.AnyCPU.portable
+REM nodejs.install
+REM procexp
+REM procmon
+REM pspad
+REM pstools
+REM ruby
+REM sqliteadmin
+REM sqlitebrowser
+REM sublimetext3 
+REM swig
+REM sysinternals
+REM wink
+
+cinst -y git.install github hg python2 teraterm visualstudioexpress2008 winmerge
+

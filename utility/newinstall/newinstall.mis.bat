@@ -30,25 +30,24 @@ powershell -NoProfile -ExecutionPolicy unrestricted -Command "iex ((new-object n
 
 REM =================================
 
-cinst -y aida64-engineer
-cinst -y angryip
-cinst -y apple_airport_utility
-cinst -y as-ssd
-cinst -y cpu-z
-cinst -y crystaldiskinfo
-cinst -y crystaldiskmark
-cinst -y disk2vhd
-cinst -y easybcd
-cinst -y filezilla
-cinst -y hdtune
-cinst -y putty.portable
-cinst -y spacesniffer
-cinst -y sysinternals
-cinst -y tightvnc
-cinst -y treesizefree
-cinst -y ultravnc
-cinst -y usbit
-cinst -y windirstat
-cinst -y winimage
-cinst -y winscp
-cinst -y wireshark
+REM aida64-engineer
+REM angryip
+REM apple_airport_utility
+REM as-ssd
+REM disk2vhd
+REM easybcd
+REM filezilla
+REM hdtune
+REM spacesniffer
+REM sysinternals
+REM tightvnc
+REM treesizefree
+REM ultravnc
+REM usbit
+REM windirstat
+REM winimage
+REM winscp
+REM wireshark
+
+cinst -y cpu-z crystaldiskinfo crystaldiskmark putty.portable
+

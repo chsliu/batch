@@ -30,20 +30,29 @@ powershell -NoProfile -ExecutionPolicy unrestricted -Command "iex ((new-object n
 
 REM =================================
 
-cinst -y 7zip.install
-cinst -y classic-shell
-cinst -y cmdermini.portable
-cinst -y dropbox
-cinst -y everything
-cinst -y foxitreader
-cinst -y google-chrome-x64
+REM anydvd
+REM bitmessage
+REM btsync
+REM chocolateygui
+REM dbgl
+REM firefox
+REM foobar2000
+REM freedownloadmanager
+REM gimp
+REM itunes
+REM keepass.portable
+REM launchy
+REM libreoffice
+REM opera
+REM picasa
+REM pidgin
+REM spacesniffer
+REM sumatrapdf
+REM wincdemu
+REM xnview
+REM googledrive
+REM teamviewer.host
+REM pushbullet 
 
-cinst -y line
-cinst -y listary
-cinst -y notepadplusplus.install
-cinst -y openhardwaremonitor
-cinst -y pushbullet
-cinst -y python
-cinst -y skype
-cinst -y teamviewer
+cinst -y 7zip.install classic-shell cmdermini.portable dropbox everything foxitreader google-chrome-x64 line listary notepadplusplus.install openhardwaremonitor python2 skype teamviewer git.install
 

@@ -30,15 +30,14 @@ powershell -NoProfile -ExecutionPolicy unrestricted -Command "iex ((new-object n
 
 REM =================================
 
-cinst -y filebot
-cinst -y foobar2000
-cinst -y imgburn
-cinst -y kodi
-cinst -y lame-front-end
-cinst -y mkvtoolnix
-cinst -y mp3tag
-cinst -y mpc-hc
-cinst -y potplayer
-cinst -y splayer
-cinst -y virtualdub
-cinst -y vlc
+REM foobar2000 
+REM imgburn 
+REM lame-front-end 
+REM mkvtoolnix
+REM mpc-hc
+REM splayer
+REM virtualdub
+REM vlc
+
+cinst -y filebot kodi mp3tag potplayer
+
