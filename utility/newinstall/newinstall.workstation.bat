@@ -45,6 +45,7 @@ REM jdownloader
 REM keepass.portable
 REM launchy
 REM libreoffice
+REM openhardwaremonitor
 REM opera
 REM picasa
 REM pidgin
@@ -55,8 +56,7 @@ REM teamviewer.host
 REM wincdemu
 REM xnview
 
-
-cinst -y 7zip.install classic-shell cmdermini.portable dropbox everything foxitreader google-chrome-x64 line listary notepadplusplus.install openhardwaremonitor python2 skype teamviewer git.install
+cinst -y 7zip.install classic-shell cmdermini.portable dropbox everything foxitreader google-chrome-x64 line listary notepadplusplus.install  python2 skype teamviewer git.install
 
 pause
 
