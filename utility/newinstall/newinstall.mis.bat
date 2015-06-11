@@ -38,6 +38,7 @@ REM disk2vhd
 REM easybcd
 REM filezilla
 REM hdtune
+REM no-ip-duc
 REM partitionassistant
 REM spacesniffer
 REM sysinternals
