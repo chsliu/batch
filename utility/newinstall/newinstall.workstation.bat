@@ -54,5 +54,5 @@ REM googledrive
 REM teamviewer.host
 REM pushbullet 
 
-cinst -y 7zip.install classic-shell cmdermini.portable dropbox everything foxitreader google-chrome-x64 line listary notepadplusplus.install openhardwaremonitor python2 skype teamviewer git.install
+cinst -y 7zip.install classic-shell cmdermini.portable dropbox everything foxitreader google-chrome-x64 line listary notepadplusplus.install openhardwaremonitor python2-x86_32 skype teamviewer git.install
 
