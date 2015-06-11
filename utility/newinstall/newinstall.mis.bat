@@ -50,7 +50,7 @@ REM windirstat
 REM winimage
 REM wireshark
 
-cinst -y cpu-z crystaldiskinfo crystaldiskmark putty.portable winscp
+cinst -y cpu-z crystaldiskinfo crystaldiskmark putty winscp
 
 pause
 

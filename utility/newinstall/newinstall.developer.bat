@@ -37,7 +37,7 @@ REM fiddler
 REM gource
 REM icofx
 REM jenkins
-REM linqpad4.AnyCPU.portable
+REM linqpad4
 REM nodejs.install
 REM procexp
 REM procmon
@@ -52,7 +52,7 @@ REM swig
 REM sysinternals
 REM wink
 
-cinst -y git.install github hg python2 teraterm visualstudioexpress2008 winmerge
+cinst -y git github hg python2 teraterm visualstudioexpress2008 winmerge
 
 pause
 
