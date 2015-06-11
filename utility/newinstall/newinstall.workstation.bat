@@ -39,20 +39,24 @@ REM firefox
 REM foobar2000
 REM freedownloadmanager
 REM gimp
+REM googledrive
 REM itunes
+REM jdownloader
 REM keepass.portable
 REM launchy
 REM libreoffice
 REM opera
 REM picasa
 REM pidgin
+REM pushbullet 
 REM spacesniffer
 REM sumatrapdf
+REM teamviewer.host
 REM wincdemu
 REM xnview
-REM googledrive
-REM teamviewer.host
-REM pushbullet 
+
 
 cinst -y 7zip.install classic-shell cmdermini.portable dropbox everything foxitreader google-chrome-x64 line listary notepadplusplus.install openhardwaremonitor python2 skype teamviewer git.install
+
+pause
 

@@ -38,6 +38,7 @@ REM disk2vhd
 REM easybcd
 REM filezilla
 REM hdtune
+REM partitionassistant
 REM spacesniffer
 REM sysinternals
 REM tightvnc
@@ -50,4 +51,6 @@ REM winscp
 REM wireshark
 
 cinst -y cpu-z crystaldiskinfo crystaldiskmark putty.portable
+
+pause
 

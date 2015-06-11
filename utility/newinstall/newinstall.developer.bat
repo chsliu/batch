@@ -43,6 +43,7 @@ REM procexp
 REM procmon
 REM pspad
 REM pstools
+REM python.pypy
 REM ruby
 REM sqliteadmin
 REM sqlitebrowser
@@ -52,4 +53,6 @@ REM sysinternals
 REM wink
 
 cinst -y git.install github hg python2 teraterm visualstudioexpress2008 winmerge
+
+pause
 
