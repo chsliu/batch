@@ -38,7 +38,7 @@ REM gource
 REM icofx
 REM jenkins
 REM linqpad4
-REM nodejs.install
+REM nodejs
 REM procexp
 REM procmon
 REM pspad
