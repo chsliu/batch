@@ -32,7 +32,6 @@ REM =================================
 
 REM audacity
 REM foobar2000 
-REM imgburn 
 REM lame-front-end 
 REM mkvtoolnix
 REM mpc-hc

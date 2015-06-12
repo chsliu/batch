@@ -4,7 +4,7 @@ call %~dp0\update.bat
 
 REM =================================
 
-choco upgrade all
+cup all
 
 REM =================================
 
