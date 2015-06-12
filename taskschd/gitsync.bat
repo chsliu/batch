@@ -35,3 +35,4 @@ REM =================================
 
 rem pause
 
+C:\Windows\System32\timeout.exe 10

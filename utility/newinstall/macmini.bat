@@ -30,29 +30,7 @@ powershell -NoProfile -ExecutionPolicy unrestricted -Command "iex ((new-object n
 
 REM =================================
 
-REM astyle
-REM atom
-REM dependencywalker
-REM fiddler
-REM gource
-REM icofx
-REM jenkins
-REM linqpad4
-REM nodejs
-REM procexp
-REM procmon
-REM pspad
-REM pstools
-REM python.pypy
-REM ruby
-REM sqliteadmin
-REM sqlitebrowser
-REM sublimetext3 
-REM swig
-REM sysinternals
-REM wink
-
-cinst -y git github hg python2 teraterm visualstudioexpress2008 winmerge
+cinst -y 7zip git kodi microsoftsecurityessentials teamviewer GoogleChrome python2
 
 pause
 

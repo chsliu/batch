@@ -30,7 +30,11 @@ powershell -NoProfile -ExecutionPolicy unrestricted -Command "iex ((new-object n
 
 REM =================================
 
+<<<<<<< HEAD
 cinst -y 7zip emule everything filebot git google-chrome-x64 jdownloader no-ip-duc picasa python2-x86_32 putty winscp
+=======
+cinst -y 7zip emule everything filebot git google-chrome-x64 jdownloader no-ip-duc picasa python2 putty winscp
+>>>>>>> cc868fd5d291b156aa3ff9b977047357d4edb881
 
 pause
 

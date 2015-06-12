@@ -4,7 +4,7 @@ start /min call %~dp0\update.bat
 
 REM =================================
 
-start /min choco upgrade all
+start /min cup all
 
 REM =================================
 

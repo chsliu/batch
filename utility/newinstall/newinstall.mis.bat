@@ -30,14 +30,14 @@ powershell -NoProfile -ExecutionPolicy unrestricted -Command "iex ((new-object n
 
 REM =================================
 
-REM aida64-engineer
-REM angryip
+REM aida64-engineer 
 REM apple_airport_utility
 REM as-ssd
 REM disk2vhd
 REM easybcd
 REM filezilla
 REM hdtune
+REM imgburn 
 REM no-ip-duc
 REM partitionassistant
 REM spacesniffer
@@ -47,10 +47,9 @@ REM treesizefree
 REM ultravnc
 REM usbit
 REM windirstat
-REM winimage
-REM wireshark
+REM winimage 
 
-cinst -y cpu-z crystaldiskinfo crystaldiskmark putty.portable winscp
+cinst -y angryip cpu-z crystaldiskinfo crystaldiskmark putty winscp wireshark
 
 pause
 

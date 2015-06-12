@@ -43,7 +43,7 @@ REM gimp
 REM googledrive
 REM itunes
 REM jdownloader
-REM keepass.portable
+REM keepass
 REM launchy
 REM libreoffice
 REM openhardwaremonitor
@@ -61,7 +61,7 @@ REM winsplitrevolution
 REM xnview
 REM zim
 
-cinst -y 7zip.install classic-shell cmdermini.portable dropbox everything foxitreader google-chrome-x64 line listary notepadplusplus.install python2-x86_32 skype teamviewer git.install
+cinst -y 7zip classic-shell cmder dropbox everything foxitreader google-chrome-x64 line listary notepadplusplus python2 skype teamviewer git microsoftsecurityessentials f.lux gow hg paint.net windowsliveinstaller
 
 pause
 
