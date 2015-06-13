@@ -12,5 +12,5 @@ call %~dp0\backup.bat
 
 REM =================================
 
-call e:\Shares\Media\¼½©ñ¦Cªí\gitsync.bat
+call e:\Shares\Media\æ’­æ”¾åˆ—è¡¨\gitsync.bat
 
