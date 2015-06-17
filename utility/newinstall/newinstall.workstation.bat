@@ -61,7 +61,7 @@ REM winsplitrevolution
 REM xnview
 REM zim
 
-cinst -y 7zip classic-shell cmder dropbox everything foxitreader google-chrome-x64 line listary notepadplusplus python2 skype teamviewer git microsoftsecurityessentials f.lux gow hg paint.net windowsliveinstaller
+cinst -y 7zip classic-shell cmder dropbox everything foxitreader google-chrome-x64 line listary notepadplusplus python2 skype teamviewer git microsoftsecurityessentials f.lux gow hg paint.net windowsliveinstaller directx
 
 pause
 
