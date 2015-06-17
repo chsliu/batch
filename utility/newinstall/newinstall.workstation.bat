@@ -41,6 +41,7 @@ REM freedownloadmanager
 REM freemind
 REM gimp
 REM googledrive
+REM hddguardian
 REM itunes
 REM jdownloader
 REM keepass
