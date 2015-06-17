@@ -8,9 +8,9 @@ call %~dp0\gitsync.bat
 
 REM =================================
 
-call %~dp0\backup.bat
+call e:\Shares\Media\userdata\gitsync.bat
 
 REM =================================
 
-call e:\Shares\Media\¼½©ñ¦Cªí\gitsync.bat
+call %~dp0\backup.bat
 

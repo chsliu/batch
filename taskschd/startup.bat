@@ -19,7 +19,7 @@ echo. >>%TXT1%
 
 REM =================================
 
-call %~dp0\%~n0-%COMPUTERNAME%.bat > %LOG1%
+call %~dp0\%~n0-%COMPUTERNAME%.bat >%LOG1% 2>>&1
 
 REM =================================
 

@@ -22,7 +22,8 @@ if %2 neq "11" goto :EOF
 REM =================================
 
 set path=%path%;%~dp0;"C:\Program Files\FileBot"
-set LOG1="D:\Users\sita\PortableApps\FileBot-portable\logs\%~n3.txt"
+REM set LOG1="D:\Users\sita\PortableApps\FileBot-portable\logs\%~n3.txt"
+set LOG1="C:\Users\sita\AppData\Roaming\FileBot\logs\%~n3.txt"
 set LOG2="%temp%\%~n3-summary.txt"
 set TXT1=%temp%\%~n0.txt
 set SHARE=\\hv4\Library
