@@ -56,8 +56,10 @@ taskkill /F /FI "SERVICES eq TrustedInstaller"		>>%LOG1% 2>>&1
 
 REM =================================
 
-c:\Windows\Microsoft.NET\Framework64\v4.0.30319\ngen.exe executeQueuedItems >>%LOG1% 2>>&1
-c:\Windows\Microsoft.NET\Framework64\v2.0.50727\ngen.exe executeQueuedItems >>%LOG1% 2>>&1
+REM c:\Windows\Microsoft.NET\Framework64\v4.0.30319\ngen.exe executeQueuedItems >>%LOG1% 2>>&1
+REM c:\Windows\Microsoft.NET\Framework64\v2.0.50727\ngen.exe executeQueuedItems >>%LOG1% 2>>&1
+
+for /f "delims=" %%i in ('dir /b /a-d /s %SystemDrive%\Windows\Microsoft.NET\ngen.exe') do %%~fi executeQueuedItems >>%LOG1% 2>>&1
 
 REM =================================
 
