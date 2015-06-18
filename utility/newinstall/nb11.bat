@@ -30,7 +30,7 @@ powershell -NoProfile -ExecutionPolicy Bypass -Command "iex ((new-object net.web
 
 REM =================================
 
-cinst -y 7zip everything git GoogleChrome python2 microsoftsecurityessentials teamviewer cmder f.lux potplayer foxitreader notepadplusplus putty teracopy
+cinst -y 7zip everything git GoogleChrome python2 microsoftsecurityessentials teamviewer cmder f.lux potplayer foxitreader notepadplusplus putty teracopy classic-shell 
 
 pause
 
