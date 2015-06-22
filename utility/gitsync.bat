@@ -2,7 +2,7 @@
 
 REM =================================
 
-REM call %~dp0\%~n0-%COMPUTERNAME%.bat
+call %~dp0\..\taskschd\%~n0-%COMPUTERNAME%.bat
 
 REM =================================
 
