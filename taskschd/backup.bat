@@ -15,7 +15,8 @@ echo %DATE%%TIME% 				>%LOG1%
 
 REM =================================
 
-call %~dp0\..\rsync\daily-%COMPUTERNAME%.bat 	>>%LOG1% 2>>&1
+set _=%~dp0\..\rsync\daily-%COMPUTERNAME%.bat 	
+if exist %_% call %_%				>>%LOG1% 2>>&1
 
 REM =================================
 

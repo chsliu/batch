@@ -19,7 +19,8 @@ echo. >>%TXT1%
 
 REM =================================
 
-call %~dp0\%~n0-%COMPUTERNAME%.bat >%LOG1% 2>>&1
+set _=%~dp0\%~n0-%COMPUTERNAME%.bat
+if exist %_% call %_%			>%LOG1% 2>>&1
 
 REM =================================
 
