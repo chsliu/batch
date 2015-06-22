@@ -1,4 +1,5 @@
-call %~dp0\..\taskschd\gitsync-%COMPUTERNAME%.bat
+set _=%~dp0\..\taskschd\gitsync-%COMPUTERNAME%.bat
+if exist %_% call %_%
 
 git config --global user.email "chsliu@gmail.com"
 
