@@ -1,28 +1,8 @@
-set path=%path%;%~dp0\..\utility
+REM =================================
+if [%1]==[] %~dp0\..\utility\getadmin.bat %0
 
 REM =================================
-:BatchGotAdmin
-REM  --> Check for permissions
->nul 2>&1 "%SYSTEMROOT%\system32\cacls.exe" "%SYSTEMROOT%\system32\config\system"
-
-REM --> If error flag set, we do not have admin.
-if '%errorlevel%' NEQ '0' (
-    echo Requesting administrative privileges...
-    goto UACPrompt
-) else ( goto gotAdmin )
-
-:UACPrompt
-    if '%1'=='UACdone' (shift & goto gotAdmin)
-    echo Set UAC = CreateObject^("Shell.Application"^) > "%temp%\getadmin.vbs"
-    echo UAC.ShellExecute "%~0", "UACdone", "", "runas", 1 >> "%temp%\getadmin.vbs"
-
-    "%temp%\getadmin.vbs"
-    exit /B
-
-:gotAdmin
-    if exist "%temp%\getadmin.vbs" ( del "%temp%\getadmin.vbs" )
-    pushd "%CD%"
-    CD /D "%~dp0"
+set path=%path%;%~dp0\..\utility
 
 REM =================================
 call :whereis wmic.exe WMIC
@@ -52,6 +32,7 @@ set LOG5=%temp%\smart-%TODAY%.txt
 set LOG6=%temp%\msinfo32.txt
 set LOG6NFO=%temp%\msinfo32.nfo
 set LOG6CAB=%temp%\msinfo32-%COMPUTERNAME%.cab
+set LOG7=%temp%\ipconfig.txt
 set TXT1=%temp%\%~n0.txt
 
 REM =================================
@@ -101,6 +82,8 @@ echo.  >>%LOG5%
 if not exist %LOG6NFO% msinfo32 /nfo %LOG6NFO%
 if not exist %LOG6% msinfo32 /report %LOG6%
 
+ipconfig /all >>%LOG7% 2>>&1
+
 REM =================================
 REM Generate Report
 REM =================================
@@ -126,6 +109,13 @@ echo =================================					>>%LOG1%
 if defined WMIC (
 wmic BASEBOARD get Manufacturer,Product,SerialNumber,Version |more 	>>%LOG1% 2>>&1
 )
+
+echo.									>>%LOG1%
+echo =================================					>>%LOG1%
+echo NETWORK								>>%LOG1%
+echo =================================					>>%LOG1%
+findstr /C:"¹êÅé¦ì§}" %LOG7%						>>%LOG1%
+findstr /C:"Physical Address" %LOG7%					>>%LOG1%
 
 echo.									>>%LOG1%
 echo =================================					>>%LOG1%
@@ -249,10 +239,10 @@ copy %0 %TXT1%
 if not exist %LOG3CAB% makecab %LOG3% %LOG3CAB%
 if not exist %LOG6CAB% makecab %LOG6NFO% %LOG6CAB%
 
-sendemail -s msa.hinet.net -f egreta.su@msa.hinet.net -t chsliu@gmail.com -u [LOG] %COMPUTERNAME% %~n0 -m %0 -a %LOG1% %LOG2% %LOG3CAB% %LOG4% %LOG5% %LOG6CAB% %TXT1%
+sendemail -s msa.hinet.net -f egreta.su@msa.hinet.net -t chsliu@gmail.com -u [LOG] %COMPUTERNAME% %~n0 -m %0 -a %LOG1% %LOG2% %LOG3CAB% %LOG4% %LOG5% %LOG6CAB% %LOG7% %TXT1%
 
-rem %LOG2% %LOG3% %LOG3CAB% %LOG4% %LOG6% %LOG6NFO% %LOG6CAB% 
-del %LOG1% %LOG5% %TXT1%
+rem %LOG2% %LOG3% %LOG3CAB% %LOG4% %LOG6% %LOG6NFO% %LOG6CAB%
+del %LOG1% %LOG5% %LOG7% %TXT1%
 
 goto :EOF
 

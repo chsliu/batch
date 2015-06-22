@@ -1,14 +1,14 @@
 REM =================================
 
-call %~dp0\sync.bat
+call %~dp0\..\utility\sync.bat
 
 REM =================================
 
-call %~dp0\alarm.bat
+call %~dp0\..\utility\alarm.bat
 
 REM =================================
 
-call %~dp0\gitsync.bat
+call %~dp0\..\utility\gitsync.bat
 
 REM =================================
 

@@ -1,4 +1,4 @@
-call %~dp0\..\taskschd\gitsync-%COMPUTERNAME%.bat
+REM call %~dp0\..\taskschd\gitsync-%COMPUTERNAME%.bat
 
 git config --global user.email "chsliu@gmail.com"
 

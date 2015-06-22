@@ -1,6 +1,6 @@
 REM =================================
 
-call %~dp0\update.bat
+call %~dp0\..\utility\update.bat
 
 REM =================================
 

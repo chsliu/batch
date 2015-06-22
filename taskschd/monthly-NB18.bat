@@ -1,6 +1,6 @@
 REM =================================
 
-start /min call %~dp0\update.bat
+start /min call %~dp0\..\utility\update.bat
 
 REM =================================
 

@@ -2,7 +2,7 @@
 
 REM =================================
 
-call %~dp0\%~n0-%COMPUTERNAME%.bat
+REM call %~dp0\%~n0-%COMPUTERNAME%.bat
 
 REM =================================
 
@@ -23,7 +23,7 @@ REM =================================
 
 git pull
 
-git add .
+git add . --all
 git commit -a -m "Automated commit at %var% on %COMPUTERNAME%" 
 git push
 

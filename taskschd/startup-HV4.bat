@@ -1,6 +1,6 @@
 REM =================================
 
-start /min %~dp0\keepalive.bat
+start /min %~dp0\..\utility\keepalive.bat
 
 REM =================================
 
