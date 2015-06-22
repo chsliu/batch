@@ -116,6 +116,8 @@ echo NETWORK								>>%LOG1%
 echo =================================					>>%LOG1%
 findstr /C:"¹êÅé¦ì§}" %LOG7%						>>%LOG1%
 findstr /C:"Physical Address" %LOG7%					>>%LOG1%
+Echo "Get-NetAdapterPowerManagement"					>>%LOG1%
+powershell -command "Get-NetAdapter | Get-NetAdapterPowerManagement"	>>%LOG1%
 
 echo.									>>%LOG1%
 echo =================================					>>%LOG1%
