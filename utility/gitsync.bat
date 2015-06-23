@@ -55,15 +55,12 @@ set UPDATED=
 findstr /C:"Already up-to-date." %LOG1% >> %LINE%
 findstr /C:"nothing to commit, working directory clean" %LOG1% >> %LINE%
 call :COUNTLINE %LINE%
-echo cnt=%cnt%
-type %LINE%
-pause
+
 if %cnt% LSS 2 set UPDATED=1
 
 REM =================================
 if defined UPDATED (
-echo sending e-mail
-REM sendemail -s msa.hinet.net -f egreta.su@msa.hinet.net -t chsliu@gmail.com -u [LOG] %COMPUTERNAME% %~n0 -m %0 -a %LOG1% %TXT1%
+sendemail -s msa.hinet.net -f egreta.su@msa.hinet.net -t chsliu@gmail.com -u [LOG] %COMPUTERNAME% %~n0 -m %0 -a %LOG1% %TXT1%
 )
 
 del %LOG1% %TXT1% %LINE%
