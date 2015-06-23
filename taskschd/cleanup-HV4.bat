@@ -5,6 +5,9 @@ rd /s /q E:\Shares\Admin\DEL
 rd /s /q E:\Shares\Library\DEL	
 rd /s /q E:\Shares\Media\DEL
 rd /s /q E:\Shares\NetBackup\DEL
+rd /s /q E:\Shares\Photos\DEL
+rd /s /q E:\Shares\Software\DEL
+rd /s /q E:\Shares\Users\DEL
 
 REM =================================
 

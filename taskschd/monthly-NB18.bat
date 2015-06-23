@@ -4,7 +4,7 @@ start /min call %~dp0\..\utility\update.bat
 
 REM =================================
 
-start /min cup all
+start /min cup -y all
 
 REM =================================
 
