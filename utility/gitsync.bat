@@ -29,7 +29,8 @@ set var=%mydate%%mytime%
 
 REM =================================
 
-call %~dp0\..\utility\gitconf.bat
+set _=%~dp0\..\utility\gitconf.bat
+if exist %_% call %_%
 
 REM =================================
 
