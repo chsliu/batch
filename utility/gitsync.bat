@@ -56,6 +56,7 @@ findstr /C:"Already up-to-date." %LOG1% >> %LINE%
 findstr /C:"nothing to commit, working directory clean" %LOG1% >> %LINE%
 call :COUNTLINE %LINE%
 echo cnt=%cnt%
+type %LINE%
 pause
 if %cnt% GTR 0 set UPDATED=1
 
