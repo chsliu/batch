@@ -1,14 +1,10 @@
 @echo off
 
 REM =================================
-if not defined WMIC goto :MyDateEnd
-
 set MyDate=
 for /f "skip=1" %%x in ('wmic os get localdatetime') do if not defined MyDate set MyDate=%%x
 set TODAY=%MyDate:~0,4%-%MyDate:~4,2%-%MyDate:~6,2%
 set MONTH=%MyDate:~0,4%-%MyDate:~4,2%
-
-:MyDateEnd
 
 REM =================================
 set LOG1=%temp%\%~n0-%COMPUTERNAME%-%TODAY%.txt

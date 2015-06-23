@@ -11,12 +11,13 @@ set LOG1=%temp%\%~n0-%TODAY%.txt
 set TXT1=%temp%\%~n0.txt
 set TXT2=%temp%\daily-%COMPUTERNAME%.txt
 
-echo %DATE%%TIME% 				>%LOG1%
+REM =================================
+set _=%~dp0\..\rsync\daily-%COMPUTERNAME%.bat 	
+if not exist %_% goto :EOF
 
 REM =================================
-
-set _=%~dp0\..\rsync\daily-%COMPUTERNAME%.bat 	
-if exist %_% call %_%				>>%LOG1% 2>>&1
+echo %DATE%%TIME% 				>%LOG1%
+call %_%									>>%LOG1% 2>>&1
 
 REM =================================
 
