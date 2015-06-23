@@ -1,6 +1,17 @@
 @echo off
 
 REM =================================
+set MyDate=
+for /f "skip=1" %%x in ('wmic os get localdatetime') do if not defined MyDate set MyDate=%%x
+set TODAY=%MyDate:~0,4%-%MyDate:~4,2%-%MyDate:~6,2%
+set MONTH=%MyDate:~0,4%-%MyDate:~4,2%
+
+REM =================================
+set LOG1=%temp%\%~n0-%COMPUTERNAME%-%TODAY%.txt
+set TXT1=%temp%\%~n0.txt
+set LINE=%temp%\%~n0-line.txt
+
+REM =================================
 
 set _=%~dp0\..\taskschd\%~n0-%COMPUTERNAME%.bat
 if exist %_% call %_%
@@ -22,11 +33,12 @@ call %~dp0\..\utility\gitconf.bat
 
 REM =================================
 
-git pull
+git pull																												>>%LOG1% 2>>&1
 
-git add . --all
-git commit -a -m "Automated commit at %var% on %COMPUTERNAME%" 
-git push
+git add . --all																									>>%LOG1% 2>>&1
+git commit -a -m "Automated commit at %var% on %COMPUTERNAME%"	>>%LOG1% 2>>&1
+git push																												>>%LOG1% 2>>&1
+
 
 REM =================================
 
@@ -36,4 +48,31 @@ REM =================================
 
 rem pause
 
-C:\Windows\System32\timeout.exe 10
+rem C:\Windows\System32\timeout.exe 10
+
+REM =================================
+set ALARM=
+findstr /C:"error:" %LOG1% >> %LINE%
+call :COUNTLINE %LINE%
+
+if %cnt% GTR 0 set ALARM=1
+
+REM =================================
+copy %0 %TXT1% >nul
+
+if defined ALARM (
+sendemail -s msa.hinet.net -f egreta.su@msa.hinet.net -t chsliu@gmail.com -u [LOG] %COMPUTERNAME% %~n0 -m %0 -a %LOG1% %TXT1%
+)
+
+del %LOG1% %TXT1% %LINE%
+
+goto :EOF
+
+REM =================================
+REM call :COUNTLINE <linefile>
+REM call :COUNTLINE temp.txt
+REM =================================
+:COUNTLINE
+for /f %%a in ('type "%1"^|find "" /v /c') do set /a cnt=%%a
+
+exit /b

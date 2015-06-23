@@ -157,7 +157,7 @@ REM =================================
 REM Send E-mail only if ALARM is set
 REM =================================
 
-copy %0 %TXT1%
+copy %0 %TXT1% >nul
 if not exist %LOG3CAB% makecab %LOG3% %LOG3CAB%
 if not exist %LOG6CAB% makecab %LOG6NFO% %LOG6CAB%
 

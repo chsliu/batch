@@ -5,7 +5,7 @@ rd /s /q F:\DEL
 rd /s /q E:\Shares\Admin\DEL	
 rd /s /q E:\Shares\Games\DEL
 rd /s /q E:\Shares\Music\DEL
-rd /s /q E:\Shares\NetBackup\DEL
+REM rd /s /q E:\Shares\NetBackup\DEL
 rd /s /q E:\Shares\Photos\DEL
 rd /s /q E:\Shares\Software\DEL
 rd /s /q E:\Shares\Users\DEL

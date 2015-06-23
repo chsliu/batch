@@ -4,7 +4,7 @@ call %~dp0\..\utility\update.bat
 
 REM =================================
 
-cup all
+cup -y all
 
 REM =================================
 

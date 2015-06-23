@@ -19,7 +19,7 @@ sc config WSearch start= disabled		>>%LOG1% 2>>&1
 taskkill /F /T /IM SearchIndexer.exe		>>%LOG1% 2>>&1
 
 REM =================================
-copy %0 %TXT1%
+copy %0 %TXT1% >nul
 
 for /f %%a in ('type "%LOG1%"^|find "ERROR:" /v /c') do set /a cnt=%%a
 

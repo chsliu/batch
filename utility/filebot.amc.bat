@@ -72,7 +72,7 @@ call %~dp0\log2download.cmd %LOG2%	>>%LOG2%
 
 REM =================================
 
-copy %0 %TXT1%
+copy %0 %TXT1% >nul
 
 sendemail -s msa.hinet.net -f egreta.su@msa.hinet.net -t chsliu@gmail.com -u [FileBot]_%N% -a %LOG2% %LOG1% %TXT1% -m "%*"
 
