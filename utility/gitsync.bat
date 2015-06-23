@@ -58,7 +58,7 @@ call :COUNTLINE %LINE%
 echo cnt=%cnt%
 type %LINE%
 pause
-if %cnt% GTR 0 set UPDATED=1
+if %cnt% LSS 2 set UPDATED=1
 
 REM =================================
 if defined UPDATED (
