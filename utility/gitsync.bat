@@ -49,7 +49,9 @@ REM =================================
 
 rem pause
 
-rem C:\Windows\System32\timeout.exe 10
+type %LOG1%
+
+C:\Windows\System32\timeout.exe 10
 
 REM =================================
 set ALARM=
