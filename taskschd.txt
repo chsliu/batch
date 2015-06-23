@@ -16,7 +16,7 @@ hv4	+35
 macmini	+55
 nb16	
 nb18	
-nb19	
+nb19	+0
 vmw7	+35
 ws	+30
 
