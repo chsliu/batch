@@ -51,17 +51,16 @@ rem pause
 rem C:\Windows\System32\timeout.exe 10
 
 REM =================================
-set UPDATED=
-findstr /C:"Already up-to-date." %LOG1% >> %LINE%
-findstr /C:"nothing to commit, working directory clean" %LOG1% >> %LINE%
+set ALARM=
+findstr /C:"error:" %LOG1% >> %LINE%
 call :COUNTLINE %LINE%
 
-if %cnt% LSS 2 set UPDATED=1
+if %cnt% GTR 0 set ALARM=1
 
 REM =================================
 copy %0 %TXT1% >nul
 
-if defined UPDATED (
+if defined ALARM (
 sendemail -s msa.hinet.net -f egreta.su@msa.hinet.net -t chsliu@gmail.com -u [LOG] %COMPUTERNAME% %~n0 -m %0 -a %LOG1% %TXT1%
 )
 
