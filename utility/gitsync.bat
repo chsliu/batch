@@ -1,4 +1,6 @@
 @echo off
+REM =================================
+set path=%path%;%~dp0\..\utility
 
 REM =================================
 set MyDate=
@@ -50,10 +52,14 @@ set ALARM=
 findstr /C:"Already up-to-date." %LOG1%													>%LINE%
 findstr /C:"nothing to commit, working directory clean" %LOG1% >>%LINE%
 call :COUNTLINE %LINE%
+rem echo cnt = %cnt%
+rem pause
 if %cnt% EQU 0 set ALARM=1
 
 findstr /C:"error:" %LOG1% >%LINE%
 call :COUNTLINE %LINE%
+rem echo cnt = %cnt%
+rem pause
 if %cnt% GTR 0 set ALARM=1
 
 REM =================================
