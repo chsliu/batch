@@ -10,7 +10,7 @@ monthly	7:00am last sunday nologin superuser
 time offset
 -------------------------
 g2	+5
-hv2	
+hv2	+10
 hv3	+25
 hv4	+35
 macmini	+55

@@ -165,8 +165,12 @@ if defined ALARM (
 sendemail -s msa.hinet.net -f egreta.su@msa.hinet.net -t chsliu@gmail.com -u [LOG] %COMPUTERNAME% %~n0 -m %0 -a %LOG1% %LOG2% %LOG3CAB% %LOG4% %LOG5% %LOG6CAB% %TXT1%
 )
 
+type %LOG1%
+
 rem %LOG2% %LOG3% %LOG3CAB% %LOG4% %LOG6% %LOG6NFO% %LOG6CAB% 
 del %LOG1% %LOG5% %TXT1%
+
+C:\Windows\System32\timeout.exe 10
 
 goto :EOF
 

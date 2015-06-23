@@ -1,4 +1,4 @@
 REM =================================
 
-clist -l
+call %~dp0\..\utility\chocolist.bat
 
