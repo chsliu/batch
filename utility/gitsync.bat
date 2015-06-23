@@ -53,7 +53,10 @@ rem C:\Windows\System32\timeout.exe 10
 REM =================================
 set ALARM=
 findstr /C:"error:" %LOG1% >> %LINE%
+pause
 call :COUNTLINE %LINE%
+echo cnt = %cnt%
+pause
 
 if %cnt% GTR 0 set ALARM=1
 
