@@ -59,7 +59,7 @@ call :COUNTLINE %LINE%
 if %cnt% LSS 2 set UPDATED=1
 
 REM =================================
-copy %0 %TXT1%
+copy %0 %TXT1% >nul
 
 if defined UPDATED (
 sendemail -s msa.hinet.net -f egreta.su@msa.hinet.net -t chsliu@gmail.com -u [LOG] %COMPUTERNAME% %~n0 -m %0 -a %LOG1% %TXT1%
