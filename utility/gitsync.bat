@@ -18,7 +18,7 @@ if exist %_% call %_%
 
 REM =================================
 
-pushd %~dp0\..
+pushd %~dp0
 
 REM =================================
 
@@ -29,7 +29,8 @@ set var=%mydate%%mytime%
 
 REM =================================
 
-call %~dp0\..\utility\gitconf.bat
+set _=%~dp0\..\utility\gitconf.bat
+if exist %_% call %_%
 
 REM =================================
 
@@ -39,16 +40,9 @@ git add . --all																									>>%LOG1% 2>>&1
 git commit -a -m "Automated commit at %var% on %COMPUTERNAME%"	>>%LOG1% 2>>&1
 git push																												>>%LOG1% 2>>&1
 
-
 REM =================================
 
 popd
-
-REM =================================
-
-rem pause
-
-rem C:\Windows\System32\timeout.exe 10
 
 REM =================================
 set ALARM=
@@ -64,7 +58,17 @@ if defined ALARM (
 sendemail -s msa.hinet.net -f egreta.su@msa.hinet.net -t chsliu@gmail.com -u [LOG] %COMPUTERNAME% %~n0 -m %0 -a %LOG1% %TXT1%
 )
 
+type %LOG1%
+
 del %LOG1% %TXT1% %LINE%
+
+REM =================================
+
+rem pause
+
+C:\Windows\System32\timeout.exe 10
+
+REM =================================
 
 goto :EOF
 
