@@ -46,9 +46,14 @@ popd
 
 REM =================================
 set ALARM=
-findstr /C:"error:" %LOG1% >> %LINE%
-call :COUNTLINE %LINE%
 
+findstr /C:"Already up-to-date." %LOG1%													>%LINE%
+findstr /C:"nothing to commit, working directory clean" %LOG1% >>%LINE%
+call :COUNTLINE %LINE%
+if %cnt% EQU 0 set ALARM=1
+
+findstr /C:"error:" %LOG1% >%LINE%
+call :COUNTLINE %LINE%
 if %cnt% GTR 0 set ALARM=1
 
 REM =================================
