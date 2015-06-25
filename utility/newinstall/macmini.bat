@@ -11,5 +11,6 @@ REM =================================
 
 cinst -y 7zip git kodi microsoftsecurityessentials teamviewer GoogleChrome python2
 
-pause
+rem pause
 
+C:\Windows\System32\timeout.exe 10

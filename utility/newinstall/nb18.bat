@@ -11,5 +11,6 @@ REM =================================
 
 cinst -y 7zip everything git google-chrome-x64 python2 microsoftsecurityessentials teamviewer classic-shell cmder f.lux paint.net kodi potplayer foxitreader filebot notepadplusplus putty
 
-pause
+rem pause
 
+C:\Windows\System32\timeout.exe 10

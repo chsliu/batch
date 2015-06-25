@@ -9,27 +9,7 @@ powershell -NoProfile -ExecutionPolicy Bypass -Command "iex ((new-object net.web
 
 REM =================================
 
-REM aida64-engineer 
-REM apple_airport_utility
-REM as-ssd
-REM disk2vhd
-REM easybcd
-REM filezilla
-REM hdtune
-REM imgburn 
-REM no-ip-duc
-REM partitionassistant
-REM spacesniffer
-REM sysinternals
-REM tightvnc
-REM treesizefree
-REM ultravnc
-REM usbit
-REM windirstat
-REM winimage 
-REM angryip
-
-cinst -y cpu-z crystaldiskinfo crystaldiskmark netscan64 putty winscp wireshark
+cinst -y 7zip cmder cpu-z crystaldiskinfo crystaldiskmark dropbox everything f.lux foxitreader git github google-chrome-x64 gow hg line listary netscan64 notepadplusplus putty python2 skype teamviewer teraterm winmerge winscp wireshark
 
 rem pause
 

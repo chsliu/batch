@@ -33,5 +33,6 @@ REM wink
 
 cinst -y git github hg python2 teraterm visualstudioexpress2008 winmerge
 
-pause
+rem pause
 
+C:\Windows\System32\timeout.exe 10

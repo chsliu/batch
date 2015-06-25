@@ -20,5 +20,6 @@ REM vlc
 
 cinst -y filebot kodi mp3tag potplayer
 
-pause
+rem pause
 
+C:\Windows\System32\timeout.exe 10

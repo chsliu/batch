@@ -11,5 +11,6 @@ REM =================================
 
 cinst -y 7zip emule everything filebot git google-chrome-x64 jdownloader no-ip-duc picasa python2 putty winscp
 
-pause
+rem pause
 
+C:\Windows\System32\timeout.exe 10
