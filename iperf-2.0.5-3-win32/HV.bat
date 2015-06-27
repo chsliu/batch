@@ -2,4 +2,6 @@
 %~dp0\iperf -c hv3
 %~dp0\iperf -c hv4
 
-pause
+REM pause
+
+C:\Windows\System32\timeout.exe 10
