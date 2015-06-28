@@ -49,7 +49,7 @@ popd
 REM =================================
 set ALARM=
 
-rem findstr /C:"Already up-to-date." %LOG1%							>%LINE%
+rem findstr /C:"Already up-to-date." %LOG1% >%LINE%
 rem findstr /C:"nothing to commit, working directory clean" %LOG1% >>%LINE%
 rem call :COUNTLINE %LINE%
 rem rem echo cnt = %cnt%
