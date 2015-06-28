@@ -1,11 +1,4 @@
 REM =================================
 
-start /min call %~dp0\..\utility\alarm.bat
+call "C:\Users\yoz\AppData\Roaming\Kodi\userdata\gitsync.bat"
 
-REM =================================
-
-start /min call %~dp0\..\utility\gitsync.bat
-
-REM =================================
-
-start /min call %~dp0\backup.bat
