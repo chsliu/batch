@@ -49,20 +49,10 @@ popd
 REM =================================
 set ALARM=
 
-rem findstr /C:"Already up-to-date." %LOG1% >%LINE%
-rem findstr /C:"nothing to commit, working directory clean" %LOG1% >>%LINE%
-rem call :COUNTLINE %LINE%
-rem rem echo cnt = %cnt%
-rem rem pause
-rem if %cnt% EQU 0 set ALARM=1
-
-findstr /C:"merge" %LOG1% >%LINE%
-call :COUNTLINE %LINE%
-rem echo cnt = %cnt%
-rem pause
-if %cnt% GTR 0 set ALARM=1
-
 findstr /C:"error:" %LOG1% >%LINE%
+findstr /C:"fatal:" %LOG1% >>%LINE%
+findstr /C:"merge" %LOG1% >>%LINE%
+findstr /C:"Untracked files:" %LOG1% >>%LINE%
 call :COUNTLINE %LINE%
 rem echo cnt = %cnt%
 rem pause
