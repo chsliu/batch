@@ -56,6 +56,12 @@ rem rem echo cnt = %cnt%
 rem rem pause
 rem if %cnt% EQU 0 set ALARM=1
 
+findstr /C:"merge" %LOG1% >%LINE%
+call :COUNTLINE %LINE%
+rem echo cnt = %cnt%
+rem pause
+if %cnt% GTR 0 set ALARM=1
+
 findstr /C:"error:" %LOG1% >%LINE%
 call :COUNTLINE %LINE%
 rem echo cnt = %cnt%
