@@ -1,10 +1,14 @@
 REM =================================
 
-start /min call %~dp0\utility\alarm.bat
+call %~dp0\utility\gitsync.bat
 
 REM =================================
 
-start /min call %~dp0\utility\gitsync.bat
+call %~dp0\ShooterSubPyDownloader\gitsync.bat
+
+REM =================================
+
+call %~dp0\utility\alarm.bat
 
 REM =================================
 
@@ -13,5 +17,5 @@ if exist %_% call %_%
 
 REM =================================
 
-start /min call %~dp0\taskschd\backup.bat
+call %~dp0\taskschd\backup.bat
 

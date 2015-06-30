@@ -52,6 +52,7 @@ set ALARM=
 findstr /C:"error:" %LOG1% >%LINE%
 findstr /C:"fatal:" %LOG1% >>%LINE%
 findstr /C:"merge" %LOG1% >>%LINE%
+findstr /C:"CONFLICT" %LOG1% >>%LINE%
 findstr /C:"Untracked files:" %LOG1% >>%LINE%
 call :COUNTLINE %LINE%
 rem echo cnt = %cnt%
