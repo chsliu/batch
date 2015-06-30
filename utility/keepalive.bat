@@ -1,6 +1,6 @@
 @echo off
 set LOG=%temp%\%~n0.txt
-set SERVER=192.168.1.250
+set SERVER=192.168.1.67
 
 cls
 echo Keep Network Alive
