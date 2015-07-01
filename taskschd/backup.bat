@@ -1,4 +1,4 @@
-set path=%path%;%~dp0\..\utility
+set path=%path%;%~dp0\..\bin
 
 REM =================================
 set MyDate=

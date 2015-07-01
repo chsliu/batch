@@ -1,5 +1,5 @@
 @echo off
-set path=%path%;%~dp0\..\utility
+set path=%path%;%~dp0\..\bin
 
 set OKCNT=7
 

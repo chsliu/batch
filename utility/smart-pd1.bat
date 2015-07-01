@@ -1,3 +1,4 @@
+set path=%path%;%~dp0\..\bin
 set LOG1=%temp%\%~n0.txt
 set LOG2=%temp%\%~n0-summary.txt
 
