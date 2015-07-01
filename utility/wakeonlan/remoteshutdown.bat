@@ -10,4 +10,4 @@ shutdown /s /m \\%1 /t 0 /c "%0 from %COMPUTERNAME%"
 rem psshutdown -s -t 0 -f \\%1
 
 
-C:\Windows\System32\timeout.exe 20
+C:\Windows\System32\timeout.exe 15
