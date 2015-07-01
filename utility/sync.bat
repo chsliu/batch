@@ -1,5 +1,7 @@
 @echo off
-set path=%path%;%~dp0\utility
+set path=%path%;%~dp0\..\utility
+
+set OKCNT=7
 
 REM =================================
 set MyDate=
@@ -10,6 +12,7 @@ REM =================================
 
 set LOG1=%temp%\%~n0-%TODAY%.txt
 set TXT1=%temp%\%~n0.txt
+set LINE=%temp%\%~n0-line.txt
 
 echo %DATE%%TIME% 				>%LOG1%
 
@@ -30,10 +33,35 @@ popd
 
 REM =================================
 
+set ALARM=
+
+findstr /C:"nothing changed" %LOG1% >%LINE%
+call :COUNTLINE %LINE%
+REM echo cnt = %cnt%
+REM pause
+if %cnt% LSS %OKCNT% set ALARM=1
+
+REM =================================
+
 copy %0 %TXT1% >nul
 
+if defined ALARM (
 sendemail -s msa.hinet.net -f egreta.su@msa.hinet.net -t chsliu@gmail.com -u [LOG] %COMPUTERNAME% %~n0 -m %0 -a %LOG1% %TXT1%
+)
 
-del %LOG1% %TXT1%
+del %LOG1% %TXT1% %LINE%
 
 REM pause
+
+REM =================================
+
+goto :EOF
+
+REM =================================
+REM call :COUNTLINE <linefile>
+REM call :COUNTLINE temp.txt
+REM =================================
+:COUNTLINE
+for /f %%a in ('type "%1"^|find "" /v /c') do set /a cnt=%%a
+
+exit /b
