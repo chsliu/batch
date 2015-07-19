@@ -27,7 +27,7 @@ set LOG1="C:\Users\sita\AppData\Roaming\FileBot\logs\%~n3.txt"
 set LOG2="%temp%\%~n3-summary.txt"
 set TXT1=%temp%\%~n0.txt
 set SHARE=\\hv4\Library
-set XBMC=macmini
+set XBMC=w1
 
 REM =================================
 
