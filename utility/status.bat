@@ -33,6 +33,7 @@ set LOG6=%temp%\msinfo32.txt
 set LOG6NFO=%temp%\msinfo32.nfo
 set LOG6CAB=%temp%\msinfo32-%COMPUTERNAME%.cab
 set LOG7=%temp%\ipconfig.txt
+set LOG8=%temp%\coreinfo.txt
 set TXT1=%temp%\%~n0.txt
 
 REM =================================
@@ -83,6 +84,8 @@ if not exist %LOG6NFO% msinfo32 /nfo %LOG6NFO%
 if not exist %LOG6% msinfo32 /report %LOG6%
 
 ipconfig /all >>%LOG7% 2>>&1
+
+if not exist %LOG8% coreinfo >%LOG8%
 
 REM =================================
 REM Generate Report
@@ -241,7 +244,7 @@ copy %0 %TXT1% >nul
 if not exist %LOG3CAB% makecab %LOG3% %LOG3CAB%
 if not exist %LOG6CAB% makecab %LOG6NFO% %LOG6CAB%
 
-sendemail -s msa.hinet.net -f egreta.su@msa.hinet.net -t chsliu@gmail.com -u [LOG] %COMPUTERNAME% %~n0 -m %0 -a %LOG1% %LOG2% %LOG3CAB% %LOG4% %LOG5% %LOG6CAB% %LOG7% %TXT1%
+sendemail -s msa.hinet.net -f egreta.su@msa.hinet.net -t chsliu@gmail.com -u [LOG] %COMPUTERNAME% %~n0 -m %0 -a %LOG1% %LOG2% %LOG3CAB% %LOG4% %LOG5% %LOG6CAB% %LOG7% %LOG8% %TXT1%
 
 rem %LOG2% %LOG3% %LOG3CAB% %LOG4% %LOG6% %LOG6NFO% %LOG6CAB%
 del %LOG1% %LOG5% %LOG7% %TXT1%
