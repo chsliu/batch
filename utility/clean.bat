@@ -10,12 +10,22 @@ REM =================================
 
 cd /d %temp%
 
-pushd %temp% & pushd %systemdrive%\recycler	& rd /s /q . & takeown /f . /r & rd /s /q . & popd & popd
 pushd %temp% & pushd %temp%			& rd /s /q . & takeown /f . /r & rd /s /q . & popd & popd
 pushd %temp% & pushd %windir%\temp		& rd /s /q . & takeown /f . /r & rd /s /q . & popd & popd
-pushd %temp% & pushd c:\$Recycle.bin		& rd /s /q . & takeown /f . /r & rd /s /q . & popd & popd
-pushd %temp% & pushd d:\$Recycle.bin		& rd /s /q . & takeown /f . /r & rd /s /q . & popd & popd
-pushd %temp% & pushd d:\temp			& rd /s /q . & takeown /f . /r & rd /s /q . & popd & popd
+REM pushd %temp% & pushd d:\temp		& rd /s /q . & takeown /f . /r & rd /s /q . & popd & popd
+
+REM pushd %temp% & pushd %systemdrive%\recycler	& rd /s /q . & takeown /f . /r & rd /s /q . & popd & popd
+REM pushd %temp% & pushd c:\$Recycle.bin	& rd /s /q . & takeown /f . /r & rd /s /q . & popd & popd
+REM pushd %temp% & pushd d:\$Recycle.bin	& rd /s /q . & takeown /f . /r & rd /s /q . & popd & popd
+
+for %%G in (A B C D E F G H I J K L M N O P Q R S T U V W X Y Z) do (
+  if exist %%G:\nul (
+    pushd %temp% & pushd %%G:\temp		& rd /s /q . & takeown /f . /r & rd /s /q . & popd & popd
+
+    pushd %temp% & pushd %%G:\recycler		& rd /s /q . & takeown /f . /r & rd /s /q . & popd & popd
+    pushd %temp% & pushd %%G:\$Recycle.bin	& rd /s /q . & takeown /f . /r & rd /s /q . & popd & popd
+  )
+)
 
 REM =================================
 
