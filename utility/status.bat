@@ -2,7 +2,7 @@ REM =================================
 if [%1]==[] %~dp0\..\utility\getadmin.bat "%~dp0\%~nx0"
 
 REM =================================
-set path=%path%;%~dp0\..\bin
+set path=C:\Windows\system32;%path%;%~dp0\..\bin
 
 REM =================================
 call :whereis wmic.exe WMIC
