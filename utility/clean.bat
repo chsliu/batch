@@ -55,10 +55,10 @@ REM call :EMPTYDIR c:\temp
 REM =================================
 :EMPTYDIR
 pushd %1 || exit /b
-echo Emptying %1...
-rd /q /s . 2>NUL
-takeown /f . /r /D Y 2>NUL
-rd /q /s . 2>NUL
+echo Emptying %1 ...
+rd /q /s . >NUL 2>>&1
+takeown /f . /r /D Y >NUL 2>>&1
+rd /q /s . >NUL 2>>&1
 popd
 
 exit /b
@@ -68,10 +68,10 @@ REM call :REMOVEDIR <dir to remove>
 REM call :REMOVEDIR c:\del
 REM =================================
 :REMOVEDIR
-echo Removing %1...
-rd /q /s %1 2>NUL
-takeown /f %1 /r /D Y 2>NUL
-rd /q /s %1 2>NUL
+echo Removing %1 ...
+rd /q /s %1 >NUL 2>>&1
+takeown /f %1 /r /D Y >NUL 2>>&1
+rd /q /s %1 >NUL 2>>&1
 
 exit /b
 
