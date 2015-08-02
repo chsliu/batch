@@ -26,8 +26,8 @@ REM d:\Users\sita\Documents\tasks\monthly.bat
 cd/d batch
 git clone https://github.com/chsliu/ShooterSubPyDownloader.git
 
-mkdir %appdata%\kodi
-cd/d %appdata%\kodi
+mkdir %appdata%\Kodi
+cd/d %appdata%\Kodi
 git clone https://github.com/chsliu/userdata.git
 
 rem pause

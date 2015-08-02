@@ -18,6 +18,10 @@ cinst -y 7zip cmder Everything f.lux git GoogleChrome notepadplusplus potplayer 
 cd/d d:\Users\sita\Documents
 git clone https://github.com/chsliu/batch.git
 
+mkdir %appdata%\Kodi
+cd/d %appdata%\Kodi
+git clone https://github.com/chsliu/userdata.git
+
 rem pause
 
 C:\Windows\System32\timeout.exe 10
