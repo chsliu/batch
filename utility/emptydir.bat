@@ -13,8 +13,10 @@ goto :DONE
 
 :START
 pushd %1 || goto :DONE
-takeown /f . /r
-rd /q /s . 2> NUL
+echo Emptying %1...
+rd /q /s . 2>NUL
+takeown /f . /r /D Y 2>NUL
+rd /q /s . 2>NUL
 popd
 
 :DONE

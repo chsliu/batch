@@ -3,15 +3,24 @@ if [%1]==[] %~dp0\..\utility\getadmin.bat "%~dp0\%~nx0"
 
 REM =================================
 
-rd /s /q C:\DEL
-rd /s /q D:\DEL
+REM rd /s /q C:\DEL
+REM rd /s /q D:\DEL
+
+for %%G in (A B C D E F G H I J K L M N O P Q R S T U V W X Y Z) do (
+  if exist %%G:\nul (
+    REM rd /s /q %%G:\DEL
+	call :REMOVEDIR %%G:\DEL
+  )
+)
 
 REM =================================
 
 cd /d %temp%
 
-pushd %temp% & pushd %temp%			& rd /s /q . & takeown /f . /r & rd /s /q . & popd & popd
-pushd %temp% & pushd %windir%\temp		& rd /s /q . & takeown /f . /r & rd /s /q . & popd & popd
+REM pushd %temp% & pushd %temp%			& rd /s /q . & takeown /f . /r & rd /s /q . & popd & popd
+REM pushd %temp% & pushd %windir%\temp		& rd /s /q . & takeown /f . /r & rd /s /q . & popd & popd
+call :EMPTYDIR %temp%
+call :EMPTYDIR %windir%\temp
 REM pushd %temp% & pushd d:\temp		& rd /s /q . & takeown /f . /r & rd /s /q . & popd & popd
 
 REM pushd %temp% & pushd %systemdrive%\recycler	& rd /s /q . & takeown /f . /r & rd /s /q . & popd & popd
@@ -20,10 +29,13 @@ REM pushd %temp% & pushd d:\$Recycle.bin	& rd /s /q . & takeown /f . /r & rd /s 
 
 for %%G in (A B C D E F G H I J K L M N O P Q R S T U V W X Y Z) do (
   if exist %%G:\nul (
-    pushd %temp% & pushd %%G:\temp		& rd /s /q . & takeown /f . /r & rd /s /q . & popd & popd
+    REM pushd %temp% & pushd %%G:\temp		& rd /s /q . & takeown /f . /r & rd /s /q . & popd & popd
+	call :EMPTYDIR %%G:\temp
 
-    pushd %temp% & pushd %%G:\recycler		& rd /s /q . & takeown /f . /r & rd /s /q . & popd & popd
-    pushd %temp% & pushd %%G:\$Recycle.bin	& rd /s /q . & takeown /f . /r & rd /s /q . & popd & popd
+    REM pushd %temp% & pushd %%G:\recycler		& rd /s /q . & takeown /f . /r & rd /s /q . & popd & popd
+    REM pushd %temp% & pushd %%G:\$Recycle.bin	& rd /s /q . & takeown /f . /r & rd /s /q . & popd & popd
+	call :EMPTYDIR %%G:\recycler
+	call :EMPTYDIR %%G:\$Recycle.bin
   )
 )
 
@@ -36,6 +48,32 @@ cleanmgr /sagerun:99
 REM =================================
 
 goto :EOF
+
+REM =================================
+REM call :EMPTYDIR <dir to empty>
+REM call :EMPTYDIR c:\temp
+REM =================================
+:EMPTYDIR
+pushd %1 || exit /b
+echo Emptying %1...
+rd /q /s . 2>NUL
+takeown /f . /r /D Y 2>NUL
+rd /q /s . 2>NUL
+popd
+
+exit /b
+
+REM =================================
+REM call :REMOVEDIR <dir to remove>
+REM call :REMOVEDIR c:\del
+REM =================================
+:REMOVEDIR
+echo Removing %1...
+rd /q /s %1 2>NUL
+takeown /f %1 /r /D Y 2>NUL
+rd /q /s %1 2>NUL
+
+exit /b
 
 REM =================================
 
