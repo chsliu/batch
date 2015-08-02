@@ -105,10 +105,10 @@ echo Waiting for Logfile, size is %~z1
 )
 
 findstr %2 %1 > nul
-if %ERRORLEVEL%==0 goto :EOF
+if %ERRORLEVEL%==0 exit /b
 
 findstr %3 %1 > nul
-if %ERRORLEVEL%==0 goto :EOF
+if %ERRORLEVEL%==0 exit /b
 
 goto :WaitForWord
 
@@ -121,7 +121,7 @@ popd
 
 rem pause
 
-goto :EOF
+exit /b
 
 REM =================================
 
@@ -130,5 +130,5 @@ set ARG_LAST="%~1"
 shift
 if not [%~1]==[] goto lastarg
 
-goto :EOF
+exit /b
 
