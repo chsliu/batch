@@ -1,3 +1,5 @@
+@echo on
+
 set _=%~dp0\..\taskschd\gitsync-%COMPUTERNAME%.bat
 if exist %_% call %_%
 
