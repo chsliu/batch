@@ -10,3 +10,5 @@ git config --global user.name "Sita Liu"
 git config --global credential.helper wincred
 
 git config --global push.default matching
+
+@echo off
