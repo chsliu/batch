@@ -3,12 +3,8 @@ if [%1]==[] %~dp0\..\utility\getadmin.bat "%~dp0\%~nx0"
 
 REM =================================
 
-REM rd /s /q C:\DEL
-REM rd /s /q D:\DEL
-
 for %%G in (A B C D E F G H I J K L M N O P Q R S T U V W X Y Z) do (
   if exist %%G:\nul (
-    REM rd /s /q %%G:\DEL
 	call :REMOVEDIR %%G:\DEL
   )
 )
@@ -17,23 +13,14 @@ REM =================================
 
 cd /d %temp%
 
-REM pushd %temp% & pushd %temp%			& rd /s /q . & takeown /f . /r & rd /s /q . & popd & popd
-REM pushd %temp% & pushd %windir%\temp		& rd /s /q . & takeown /f . /r & rd /s /q . & popd & popd
 call :EMPTYDIR %temp%
-call :EMPTYDIR %windir%\temp
-REM pushd %temp% & pushd d:\temp		& rd /s /q . & takeown /f . /r & rd /s /q . & popd & popd
-
-REM pushd %temp% & pushd %systemdrive%\recycler	& rd /s /q . & takeown /f . /r & rd /s /q . & popd & popd
-REM pushd %temp% & pushd c:\$Recycle.bin	& rd /s /q . & takeown /f . /r & rd /s /q . & popd & popd
-REM pushd %temp% & pushd d:\$Recycle.bin	& rd /s /q . & takeown /f . /r & rd /s /q . & popd & popd
+call :EMPTYDIR %USERPROFILE%\AppData\Local\Temp
+call :EMPTYDIR %SystemRoot%\TEMP
 
 for %%G in (A B C D E F G H I J K L M N O P Q R S T U V W X Y Z) do (
   if exist %%G:\nul (
-    REM pushd %temp% & pushd %%G:\temp		& rd /s /q . & takeown /f . /r & rd /s /q . & popd & popd
 	call :EMPTYDIR %%G:\temp
 
-    REM pushd %temp% & pushd %%G:\recycler		& rd /s /q . & takeown /f . /r & rd /s /q . & popd & popd
-    REM pushd %temp% & pushd %%G:\$Recycle.bin	& rd /s /q . & takeown /f . /r & rd /s /q . & popd & popd
 	call :EMPTYDIR %%G:\recycler
 	call :EMPTYDIR %%G:\$Recycle.bin
   )
