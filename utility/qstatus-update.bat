@@ -14,5 +14,6 @@ copy %~dp0\..\bin\smartctl.exe %TEMPPATH%\bin
 
 7za a -mx9 %~dp0\qstatus.7z %TEMPPATH%
 move %~dp0\qstatus.7z %DSTPATH%
+copy %~dp0\qstatus-run.bat %DSTPATH%
 
 rd /s /q %TEMPPATH%
