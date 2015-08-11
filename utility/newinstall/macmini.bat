@@ -14,7 +14,14 @@ REM =================================
 
 choco feature enable -nautoUninstaller
 
-cinst -y 7zip git kodi microsoftsecurityessentials teamviewer GoogleChrome python2
+cinst -y 7zip cmder f.lux git kodi potplayer putty teamviewer python2
+
+cd/d c:\Users\sita\Documents
+git clone https://github.com/chsliu/batch.git
+
+mkdir %appdata%\Kodi
+cd/d %appdata%\Kodi
+git clone https://github.com/chsliu/userdata.git
 
 rem pause
 
