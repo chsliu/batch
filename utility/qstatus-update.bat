@@ -9,6 +9,7 @@ mkdir %TEMPPATH%\bin
 mkdir %TEMPPATH%\utility
 copy %~dp0\status.bat %TEMPPATH%\utility
 copy %~dp0\getadmin.bat %TEMPPATH%\utility
+copy %~dp0\..\bin\coreinfo.exe %TEMPPATH%\bin
 copy %~dp0\..\bin\sendEmail.exe %TEMPPATH%\bin
 copy %~dp0\..\bin\smartctl.exe %TEMPPATH%\bin
 

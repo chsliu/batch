@@ -132,7 +132,7 @@ echo =================================					>>%LOG1%
 echo MB									>>%LOG1%
 echo =================================					>>%LOG1%
 if defined WMIC (
-wmic BASEBOARD get Manufacturer,Product,SerialNumber,Version |more 	>>%LOG1% 2>>&1
+wmic BASEBOARD get Manufacturer,Product,SerialNumber,Version |more 	>>%LOG1% 
 )
 
 echo.									>>%LOG1%
@@ -149,7 +149,7 @@ echo =================================					>>%LOG1%
 echo RAM								>>%LOG1%
 echo =================================					>>%LOG1%
 if defined WMIC (
-wmic memorychip get BankLabel,Capacity,DataWidth,DeviceLocator,FormFactor,Manufacturer,PartNumber,SerialNumber,Speed,TotalWidth,TypeDetail |more >>%LOG1% 2>>&1
+wmic memorychip get BankLabel,Capacity,DataWidth,DeviceLocator,FormFactor,Manufacturer,PartNumber,SerialNumber,Speed,TotalWidth,TypeDetail |more >>%LOG1% 
 )
 echo ---------------------------------					>>%LOG1%
 findstr /C:"             Memory" %LOG3%					>>%LOG1%
@@ -194,8 +194,8 @@ echo DISK								>>%LOG1%
 echo =================================					>>%LOG1%
 if not defined WMIC goto :disklog1end
 
-wmic diskdrive get Model,Name,SerialNumber,Size,Status,StatusInfo |more >>%LOG1% 2>>&1
-wmic logicaldisk get DeviceID,FileSystem,FreeSpace,MaximumComponentLength,MediaType,Size,VolumeSerialNumber |more >>%LOG1% 2>>&1
+wmic diskdrive get Model,Name,SerialNumber,Size,Status,StatusInfo |more >>%LOG1% 
+wmic logicaldisk get DeviceID,FileSystem,FreeSpace,MaximumComponentLength,MediaType,Size,VolumeSerialNumber |more >>%LOG1% 
 
 :disklog1end
 
@@ -265,6 +265,16 @@ REM =================================
 copy %0 %TXT1% >nul
 if not exist %LOG3CAB% makecab %LOG3% %LOG3CAB%
 if not exist %LOG6CAB% makecab %LOG6NFO% %LOG6CAB%
+
+if not exist %LOG1% set LOG1=
+if not exist %LOG2% set LOG2=
+if not exist %LOG3CAB% set LOG3CAB=
+if not exist %LOG4% set LOG4=
+if not exist %LOG5% set LOG5=
+if not exist %LOG6CAB% set LOG6CAB=
+if not exist %LOG7% set LOG7=
+if not exist %LOG8% set LOG8=
+if not exist %TXT1% set TXT1=
 
 sendemail -s msa.hinet.net -f egreta.su@msa.hinet.net -t chsliu@gmail.com -u [LOG] %COMPUTERNAME% %~n0 -m %0 -a %LOG1% %LOG2% %LOG3CAB% %LOG4% %LOG5% %LOG6CAB% %LOG7% %LOG8% %TXT1%
 
