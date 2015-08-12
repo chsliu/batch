@@ -30,10 +30,10 @@ mkdir %DOC%
 cd/d %DOC%
 git clone https://github.com/chsliu/batch.git tasks
 
-SchTasks /Create /F /RL HIGHEST /RU %USERNAME% /RP %PASS% /SC ONSTART /TN "startup-%USERNAME%" /TR "%TASKS%\startup.bat"
-SchTasks /Create /F /RL HIGHEST /RU %USERNAME% /RP %PASS% /SC DAILY /TN "daily-%USERNAME%" /TR "%TASKS%\daily.bat" /ST 16:30
-SchTasks /Create /F /RL HIGHEST /RU %USERNAME% /RP %PASS% /SC WEEKLY /D FRI /TN "weekly-%USERNAME%" /TR "%TASKS%\weekly.bat" /ST 17:00
-SchTasks /Create /F /RL HIGHEST /RU %USERNAME% /RP %PASS% /SC MONTHLY /MO LAST /D FRI /TN "monthly-%USERNAME%" /TR "%TASKS%\monthly.bat" /ST 17:30
+SchTasks /Create /F /RL HIGHEST /RU %USERNAME% /RP %PASS% /SC ONSTART /TN "%USERNAME%-startup" /TR "%TASKS%\startup.bat"
+SchTasks /Create /F /RL HIGHEST /RU %USERNAME% /RP %PASS% /SC DAILY /TN "%USERNAME%-daily" /TR "%TASKS%\daily.bat" /ST 16:30
+SchTasks /Create /F /RL HIGHEST /RU %USERNAME% /RP %PASS% /SC WEEKLY /D FRI /TN "%USERNAME%-weekly" /TR "%TASKS%\weekly.bat" /ST 17:00
+SchTasks /Create /F /RL HIGHEST /RU %USERNAME% /RP %PASS% /SC MONTHLY /MO LAST /D FRI /TN "%USERNAME%-monthly" /TR "%TASKS%\monthly.bat" /ST 17:30
 
 REM =================================
 
