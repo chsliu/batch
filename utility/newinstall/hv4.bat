@@ -7,7 +7,7 @@ REM =================================
 set path=%path%;C:\Program Files (x86)\Git\cmd
 set DOC=E:\Shares\Admin
 set TASKS=%DOC%\tasks
-set SCHEDULE=16:30-17:00-17:30
+set SCHEDULE=06:35-07:05-07:35
 set DAILY=%SCHEDULE:~0,5%
 set WEEKLY=%SCHEDULE:~6,5%
 set MONTHLY=%SCHEDULE:~12,5%
