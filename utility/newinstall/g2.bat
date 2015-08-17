@@ -21,6 +21,21 @@ REM =================================
 
 choco feature enable -nautoUninstaller
 
+REM classic-shell
+REM foxitreader
+REM gow
+REM hg
+REM line
+REM listary
+REM mp3tag
+REM netscan64
+REM nimbletext
+REM paint.net
+REM teraterm
+REM visualstudioexpress2008
+REM windowsliveinstaller
+REM winmerge 
+
 cinst -y 7zip classic-shell cmder cpu-z crystaldiskinfo crystaldiskmark dropbox everything f.lux filebot firefox foxitreader git github google-chrome-x64 gow hg kodi line listary mp3tag netscan64 nimbletext notepadplusplus paint.net potplayer putty python2 skype teamviewer teraterm visualstudioexpress2008 windowsliveinstaller winmerge winscp wireshark
 
 REM =================================
@@ -36,7 +51,7 @@ SchTasks /Create /F /RL HIGHEST /RU %USERNAME% /RP %PASS% /SC MONTHLY /MO LAST /
 
 REM =================================
 
-cd/d batch
+cd/d tasks
 git clone https://github.com/chsliu/ShooterSubPyDownloader.git
 
 REM =================================

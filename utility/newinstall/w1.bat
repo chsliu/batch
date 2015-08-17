@@ -36,7 +36,7 @@ SchTasks /Create /F /RL HIGHEST /RU %USERNAME% /RP %PASS% /SC MONTHLY /MO LAST /
 
 REM =================================
 
-cd/d batch
+cd/d tasks
 git clone https://github.com/chsliu/ShooterSubPyDownloader.git
 
 REM =================================
