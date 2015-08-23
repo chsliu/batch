@@ -30,7 +30,7 @@ goto :WaitForLockFileLoop
 
 :Main
 
-mkdir %DSTPATH%
+if not exist %DSTPATH% mkdir %DSTPATH%
 
 call :whereis bitsadmin.exe BITSADMIN
 if not defined BITSADMIN call :Stop "bitsadmin.exe not existed"
