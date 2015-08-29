@@ -9,8 +9,8 @@ REM set host=%1
 REM if [%1]==[] set host=%COMPUTERNAME%
 
 REM =================================
-set LOG1=%temp%\triage-%COMPUTERNAME%.html
-set LOG2=%temp%\triage-%COMPUTERNAME%.txt 
+set LOG1=%temp%\%~n0-%COMPUTERNAME%.html
+set LOG2=%temp%\%~n0-%COMPUTERNAME%.txt 
 set TXT1=%temp%\%~n0.txt
 
 REM =================================
