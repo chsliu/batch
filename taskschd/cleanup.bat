@@ -22,11 +22,14 @@ echo %DATE%%TIME% 				>%LOG1%
 REM =================================
 
 set _=%~dp0\%~n0-%COMPUTERNAME%.bat 	
+echo calling %_% ... 				>>%LOG1% 2>>&1
 if exist %_% call %_%			>>%LOG1% 2>>&1
 
 REM =================================
 
-call %~dp0\..\utility\clean.bat 	>>%LOG1% 2>>&1
+set _=%~dp0\..\utility\clean.bat
+echo calling %_% ... 				>>%LOG1% 2>>&1
+call %_% 	>>%LOG1% 2>>&1
 
 REM =================================
 

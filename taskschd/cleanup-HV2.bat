@@ -1,6 +1,6 @@
 REM =================================
 
-rd /s /q E:\DEL	
+REM rd /s /q E:\DEL	
 rd /s /q E:\Shares\Admin\DEL	
 rd /s /q E:\Shares\Library\DEL	
 rd /s /q E:\Shares\Media\DEL

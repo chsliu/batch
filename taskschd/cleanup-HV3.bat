@@ -1,11 +1,11 @@
 REM =================================
 
-rd /s /q E:\DEL	
-rd /s /q F:\DEL	
+REM rd /s /q E:\DEL	
+REM rd /s /q F:\DEL	
 rd /s /q E:\Shares\Admin\DEL	
 rd /s /q E:\Shares\Games\DEL
 rd /s /q E:\Shares\Music\DEL
-REM rd /s /q E:\Shares\NetBackup\DEL
+rd /s /q E:\Shares\NetBackup\DEL
 rd /s /q E:\Shares\Photos\DEL
 rd /s /q E:\Shares\Software\DEL
 rd /s /q E:\Shares\Users\DEL

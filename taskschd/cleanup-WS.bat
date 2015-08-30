@@ -1,10 +1,28 @@
 REM =================================
 
-rd /s /q M:\DEL 				
+goto Main:
+
+REM =================================
+:EMPTYDIR
+pushd %1 || exit /b
+echo Emptying %1 ...
+rd /q /s . >NUL 2>>&1
+takeown /f . /r /D Y >NUL 2>>&1
+rd /q /s . >NUL 2>>&1
+popd
+
+exit /b
+
+REM =================================
+Main:
+REM =================================
+
+REM rd /s /q M:\DEL 				
 
 REM =================================
 
-pushd %temp% & pushd M:\ServerFolders\暫存區	& takeown /f . /r & rd /s /q . & popd & popd
+REM pushd %temp% & pushd M:\ServerFolders\暫存區	& takeown /f . /r & rd /s /q . & popd & popd
+call :EMPTYDIR M:\ServerFolders\暫存區
 
 REM =================================
 
