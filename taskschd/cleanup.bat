@@ -36,6 +36,8 @@ REM =================================
 copy %0 %TXT1%
 copy %~dp0\cleanup-%COMPUTERNAME%.bat %TXT2%
 
+if not exist %TXT2% set TXT2=
+
 sendemail -s msa.hinet.net -f egreta.su@msa.hinet.net -t chsliu@gmail.com -u [LOG] %COMPUTERNAME% %~n0 -m %0 -a %LOG1% %TXT1% %TXT2%
 
 del %LOG1% %TXT1% %TXT2%
