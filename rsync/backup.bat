@@ -3,18 +3,21 @@ set path=%path%;%~dp0
 
 if [%1] == [] GOTO usage
 if [%2] == [] (set PATTERNS=patterns.txt) else (set PATTERNS=%2)
-goto start
+goto main
 
+REM =================================
 :usage
 echo backup [dir] [pattern files]
-goto exit
+goto :EOF
 
-:start
+
+REM =================================
+:main
 REM =================================
 set tempbat=%~dp0\host-%COMPUTERNAME%.bat
 if not exist %tempbat% (
   echo %tempbat% not found
-  goto exit
+  goto :EOF
 )
 call %tempbat%
 set CYGWIN=nodosfilewarning
@@ -29,7 +32,7 @@ set log="%temp%\rsync.%drive:~0,1%.%~n1.txt"
 REM =================================
 if not exist %1 (
   echo %1 not found
-  goto exit
+  goto :EOF
 )
 
 REM =================================
@@ -80,5 +83,3 @@ del %log%
 
 REM =================================
 popd
-
-:exit
