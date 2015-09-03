@@ -55,4 +55,4 @@ sendemail -s msa.hinet.net -f egreta.su@msa.hinet.net -t chsliu@gmail.com -u [LO
 sendemail -s msa.hinet.net -f egreta.su@msa.hinet.net -t chsliu@gmail.com -u [LOG] %COMPUTERNAME% %~n0 -m %0 -a %LOG1% %TXT1% %TXT2%
 )
 
-del %LOG1% %TXT1% %TXT2%
+del %LOG1% %TXT1% %TXT2% %LINE%
