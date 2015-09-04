@@ -1,9 +1,8 @@
 REM =================================
-if [%1]==[] %~dp0\..\..\utility\getadmin.bat "%~dp0\%~nx0"
+if [%1]==[] %~dp0\..\utility\getadmin.bat "%~dp0\%~nx0"
 
 REM =================================
-set DOC=d:\Users\%USERNAME%\Documents
-set TASKS=%DOC%\tasks
+set TASKS=%CD%\..\
 set SCHEDULE=16:30-17:00-17:30
 set DAILY=%SCHEDULE:~0,5%
 set WEEKLY=%SCHEDULE:~6,5%
