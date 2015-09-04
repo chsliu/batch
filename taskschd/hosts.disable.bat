@@ -1,5 +1,5 @@
 REM =================================
-if [%1]==[] %~dp0\utility\getadmin.bat "%~dp0\%~nx0"
+if [%1]==[] %~dp0\..\utility\getadmin.bat "%~dp0\%~nx0"
 
 REM =================================
 set SRC="\\hv4\Software\UNIX\Lubuntu\hosts"
