@@ -1,6 +1,47 @@
+@echo off
+
 REM =================================
 if [%1]==[] %~dp0\..\utility\getadmin.bat "%~dp0\%~nx0"
 
+REM =================================
+goto :main
+
+REM =================================
+REM call :whereis <exe> <Location Variable>
+REM call :whereis wmic.exe WMIC
+REM =================================
+:whereis
+set %2=
+for %%X in (%1) do (set %2=%%~$PATH:X)
+exit /b
+
+REM =================================
+REM call :findtext <file> <string> <Found Boolean Variable>
+REM call :findtext %LOG2% "Virtual Machine" UnderVM
+REM =================================
+:findtext
+>nul find %2 %1 && (
+  echo %2 was found.
+  set %3=1
+) || (
+  echo %2 was NOT found.
+)
+exit /b
+
+REM =================================
+REM call :AWK <linefile> <location>
+REM call :AWK temp.txt 10
+REM =================================
+:AWK
+set RET=
+FOR /F "tokens=%2 delims= " %%G IN (%1) DO (
+    set RET=%%G
+)
+exit /b
+
+
+REM =================================
+:main
 REM =================================
 set path=%path%;%~dp0\..\bin
 
@@ -148,8 +189,10 @@ call :AWK %LINE% 10
 if defined RET if [0] neq [%RET%] set ALARM=1
 
 findstr "SSD_Life_Left" %LOG5% > %LINE%
-call :AWK %LINE% 10
-if defined RET if [0] neq [%RET%] set ALARM=1
+call :AWK %LINE% 6
+set THRESHOLD=%RET%
+call :AWK %LINE% 4
+if defined RET if [%THRESHOLD%] geq [%RET%] set ALARM=1
 
 del %LINE%
 
@@ -171,38 +214,3 @@ rem %LOG2% %LOG3% %LOG3CAB% %LOG4% %LOG6% %LOG6NFO% %LOG6CAB%
 del %LOG1% %LOG5% %TXT1%
 
 C:\Windows\System32\timeout.exe 10
-
-goto :EOF
-
-REM =================================
-REM call :whereis <exe> <Location Variable>
-REM call :whereis wmic.exe WMIC
-REM =================================
-:whereis
-set %2=
-for %%X in (%1) do (set %2=%%~$PATH:X)
-exit /b
-
-REM =================================
-REM call :findtext <file> <string> <Found Boolean Variable>
-REM call :findtext %LOG2% "Virtual Machine" UnderVM
-REM =================================
-:findtext
->nul find %2 %1 && (
-  echo %2 was found.
-  set %3=1
-) || (
-  echo %2 was NOT found.
-)
-exit /b
-
-REM =================================
-REM call :AWK <linefile> <location>
-REM call :AWK temp.txt 10
-REM =================================
-:AWK
-set RET=
-FOR /F "tokens=%2 delims= " %%G IN (%1) DO (
-    set RET=%%G
-)
-exit /b

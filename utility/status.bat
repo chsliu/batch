@@ -1,6 +1,31 @@
+@echo off
+
 REM =================================
 if [%1]==[] %~dp0\..\utility\getadmin.bat "%~dp0\%~nx0"
 
+REM =================================
+goto :main
+
+REM =================================
+:whereis
+set %2=
+for %%X in (%1) do (set %2=%%~$PATH:X)
+
+exit /b
+
+REM =================================
+:findtext
+>nul find %2 %1 && (
+  echo %2 was found.
+  set %3=1
+) || (
+  echo %2 was NOT found.
+)
+
+exit /b
+
+REM =================================
+:main
 REM =================================
 set path=%path%;%~dp0\..\bin
 
@@ -37,30 +62,8 @@ set LOG8=%temp%\coreinfo.txt
 set TXT1=%temp%\%~n0.txt
 
 REM =================================
-goto :Main
-
-REM =================================
-:whereis
-set %2=
-for %%X in (%1) do (set %2=%%~$PATH:X)
-
-exit /b
-
-REM =================================
-:findtext
->nul find %2 %1 && (
-  echo %2 was found.
-  set %3=1
-) || (
-  echo %2 was NOT found.
-)
-
-exit /b
-
-REM =================================
 REM Gathering System Report
 REM =================================
-:Main
 
 if not exist %LOG2% systeminfo >%LOG2% 2>>&1
 echo. >>%LOG2%
@@ -280,4 +283,3 @@ sendemail -s msa.hinet.net -f egreta.su@msa.hinet.net -t chsliu@gmail.com -u [LO
 
 rem %LOG2% %LOG3% %LOG3CAB% %LOG4% %LOG6% %LOG6NFO% %LOG6CAB%
 del %LOG1% %LOG5% %LOG7% %TXT1%
-

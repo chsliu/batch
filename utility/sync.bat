@@ -1,4 +1,21 @@
 @echo off
+
+REM =================================
+goto :main
+
+REM =================================
+REM call :COUNTLINE <linefile>
+REM call :COUNTLINE temp.txt
+REM =================================
+:COUNTLINE
+for /f %%a in ('type "%1"^|find "" /v /c') do set /a cnt=%%a
+
+exit /b
+
+
+REM =================================
+:main
+REM =================================
 set path=%path%;%~dp0\..\bin
 
 set OKCNT=7
@@ -52,16 +69,4 @@ sendemail -s msa.hinet.net -f egreta.su@msa.hinet.net -t chsliu@gmail.com -u [LO
 del %LOG1% %TXT1% %LINE%
 
 REM pause
-
-REM =================================
-
-goto :EOF
-
-REM =================================
-REM call :COUNTLINE <linefile>
-REM call :COUNTLINE temp.txt
-REM =================================
-:COUNTLINE
-for /f %%a in ('type "%1"^|find "" /v /c') do set /a cnt=%%a
-
-exit /b
+C:\Windows\System32\timeout.exe 10

@@ -1,4 +1,20 @@
 @echo off
+
+REM =================================
+goto :main
+
+REM =================================
+REM call :COUNTLINE <linefile>
+REM call :COUNTLINE temp.txt
+REM =================================
+:COUNTLINE
+for /f %%a in ('type "%1"^|find "" /v /c') do set /a cnt=%%a
+
+exit /b
+
+
+REM =================================
+:main
 REM =================================
 set path=C:\Windows\system32;%path%;%~dp0\..\bin
 
@@ -75,16 +91,3 @@ REM =================================
 rem pause
 
 C:\Windows\System32\timeout.exe 10
-
-REM =================================
-
-goto :EOF
-
-REM =================================
-REM call :COUNTLINE <linefile>
-REM call :COUNTLINE temp.txt
-REM =================================
-:COUNTLINE
-for /f %%a in ('type "%1"^|find "" /v /c') do set /a cnt=%%a
-
-exit /b

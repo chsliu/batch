@@ -1,4 +1,11 @@
 @echo off
+
+REM =================================
+goto :main
+
+REM =================================
+:main
+REM =================================
 if not "%1" == "max" start /MAX cmd /c %0 max & exit/b
 
 set static_ip=192.168.7.100
