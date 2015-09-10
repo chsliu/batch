@@ -6,6 +6,33 @@ if [%1]==[] %~dp0\..\utility\getadmin.bat "%~dp0\%~nx0"
 REM =================================
 goto :main
 
+
+REM =================================
+REM call :EMPTYDIR <dir to empty>
+REM call :EMPTYDIR c:\temp
+REM =================================
+:EMPTYDIR
+pushd %1 || exit /b
+echo Emptying %1 ...
+rd /q /s . >NUL 2>>&1
+takeown /f . /r /D Y >NUL 2>>&1
+rd /q /s . >NUL 2>>&1
+popd
+
+exit /b
+
+REM =================================
+REM call :REMOVEDIR <dir to remove>
+REM call :REMOVEDIR c:\del
+REM =================================
+:REMOVEDIR
+echo Removing %1 ...
+rd /q /s %1 >NUL 2>>&1
+takeown /f %1 /r /D Y >NUL 2>>&1
+rd /q /s %1 >NUL 2>>&1
+
+exit /b
+
 REM =================================
 @echo off
 echo Make Sure Dropbox is not in c:
@@ -37,33 +64,6 @@ echo Clean Complete !!!
 echo. & pause
 
 goto :EOF
-
-
-REM =================================
-REM call :EMPTYDIR <dir to empty>
-REM call :EMPTYDIR c:\temp
-REM =================================
-:EMPTYDIR
-pushd %1 || exit /b
-echo Emptying %1 ...
-rd /q /s . >NUL 2>>&1
-takeown /f . /r /D Y >NUL 2>>&1
-rd /q /s . >NUL 2>>&1
-popd
-
-exit /b
-
-REM =================================
-REM call :REMOVEDIR <dir to remove>
-REM call :REMOVEDIR c:\del
-REM =================================
-:REMOVEDIR
-echo Removing %1 ...
-rd /q /s %1 >NUL 2>>&1
-takeown /f %1 /r /D Y >NUL 2>>&1
-rd /q /s %1 >NUL 2>>&1
-
-exit /b
 
 
 REM =================================
