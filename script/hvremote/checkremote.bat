@@ -1,1 +1,1 @@
-cscript %~dp0\hvremote.wsf /show /target:%1
+cscript %~dp0\hvremote.wsf /show /override /target:%1
