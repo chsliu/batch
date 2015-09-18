@@ -1,0 +1,15 @@
+{
+  "name": "",
+  "description": "",
+	"versions": [
+		{
+			"version": "0.1.0",
+			"providers": [
+				{
+					"name": "hyperv"
+				}
+			]
+		}
+	],  
+  "provider": "hyperv"
+}

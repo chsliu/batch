@@ -22,4 +22,14 @@ REM =================================
 move /y %HOSTSTEMP% %DST%
 
 REM =================================
+<<<<<<< HEAD
 popd
+=======
+icacls %DST% /grant "NT AUTHORITY\SYSTEM":(F)
+icacls %DST% /grant BUILTIN\Administrators:(F)
+icacls %DST% /grant BUILTIN\Users:(RX)
+icacls %DST% /grant "APPLICATION PACKAGE AUTHORITY\ALL APPLICATION PACKAGES":(RX)
+
+REM =================================
+ipconfig /flushdns
+>>>>>>> 17550805572f0581532038702f544a1748a71ded

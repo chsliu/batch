@@ -1,4 +1,9 @@
 @echo off
+
+REM =================================
+goto :main
+
+REM =================================
 REM echo all args: %*
 REM pause
 
@@ -10,6 +15,59 @@ REM if not [%ARG_LAST%] == ["max"] start /MAX cmd /c %0 %* max & goto :EOF
 REM echo all args: %*
 REM pause
 
+REM =================================
+:DeQuote
+for /f "delims=" %%A in ('echo %%%1%%') do set %1=%%~A
+REM goto :EOF
+exit /b
+
+REM =================================
+:WaitForWord
+
+ping 127.0.0.1 -n 10 -w 1000 > nul
+
+if not exist %1 goto :WaitForWord
+echo Waiting for Logfile, size is %~z1
+
+2>nul (
+  >>%1 (call )
+) && (
+  echo Logfile %~nx1 is ready
+) || (
+  echo Logfile %~nx1 is not ready
+  goto :WaitForWord
+)
+
+findstr %2 %1 > nul
+if %ERRORLEVEL%==0 exit /b
+
+findstr %3 %1 > nul
+if %ERRORLEVEL%==0 exit /b
+
+goto :WaitForWord
+
+REM =================================
+:Notify
+pushd %~dp0\..\pushbullet\
+python pushbullet_cmd.py UR97NWpn7i61jqO0BQkyZWQhaNmfGe8t note ufjW6eNsjz3KRxFVWm "%3" "%~n0 Download Complete"
+popd
+
+rem pause
+
+exit /b
+
+REM =================================
+:lastarg
+set ARG_LAST="%~1"
+shift
+if not [%~1]==[] goto lastarg
+
+exit /b
+
+
+REM =================================
+:main
+REM =================================
 set LOG1=D:\Download\%~n0.txt
 echo %* >>%LOG1%
 
@@ -79,56 +137,3 @@ sendemail -s msa.hinet.net -f egreta.su@msa.hinet.net -t chsliu@gmail.com -u [Fi
 rem pause
 
 del %LOG1% %LOG2% %TXT1%
-
-REM =================================
-
-:DeQuote
-for /f "delims=" %%A in ('echo %%%1%%') do set %1=%%~A
-goto :EOF
-
-REM =================================
-
-:WaitForWord
-
-ping 127.0.0.1 -n 10 -w 1000 > nul
-
-if not exist %1 goto :WaitForWord
-echo Waiting for Logfile, size is %~z1
-
-2>nul (
-  >>%1 (call )
-) && (
-  echo Logfile %~nx1 is ready
-) || (
-  echo Logfile %~nx1 is not ready
-  goto :WaitForWord
-)
-
-findstr %2 %1 > nul
-if %ERRORLEVEL%==0 exit /b
-
-findstr %3 %1 > nul
-if %ERRORLEVEL%==0 exit /b
-
-goto :WaitForWord
-
-REM =================================
-
-:Notify
-pushd %~dp0\..\pushbullet\
-python pushbullet_cmd.py UR97NWpn7i61jqO0BQkyZWQhaNmfGe8t note ufjW6eNsjz3KRxFVWm "%3" "%~n0 Download Complete"
-popd
-
-rem pause
-
-exit /b
-
-REM =================================
-
-:lastarg
-set ARG_LAST="%~1"
-shift
-if not [%~1]==[] goto lastarg
-
-exit /b
-

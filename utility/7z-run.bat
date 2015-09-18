@@ -1,34 +1,40 @@
 @echo off
 
-set DSTPATH=%temp%\%~n0
-set PROJ=%1
-set RUNFILE=%DSTPATH%\%PROJ%\utility\%PROJ%.bat
-set ZA7=%~dp07za.exe
-set PROJ7Z="%~dp0%PROJ%.7z"
+REM =================================
+goto :main
 
-goto :Main
-
+REM =================================
 :whereis
 set %2=
 for %%X in (%1) do (set %2=%%~$PATH:X)
 
 exit /b
 
+REM =================================
 :Stop
 echo Stopping on %1.
 pause
 goto :EOF
 
+REM =================================
 :WaitForLockFile
 echo Waiting for %1 ...
 :WaitForLockFileLoop
-if not exist %1 exit/b
+if not exist %1 exit /b
 echo .
 ping 127.0.0.1 -n 10 -w 1000 > nul
 
 goto :WaitForLockFileLoop
 
-:Main
+
+REM =================================
+:main
+REM =================================
+set DSTPATH=%temp%\%~n0
+set PROJ=%1
+set RUNFILE=%DSTPATH%\%PROJ%\utility\%PROJ%.bat
+set ZA7=%~dp07za.exe
+set PROJ7Z="%~dp0%PROJ%.7z"
 
 if not exist %DSTPATH% mkdir %DSTPATH%
 

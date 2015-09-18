@@ -9,7 +9,6 @@ rsync/DeltaCopyRaw/Profiles.ini
 rsync/DeltaCopyRaw/deltacd.conf
 rsync/DeltaCopyRaw/test.dcp
 rsync/bak/*
-script/hvremote/client.bat
 suball.bat
 utility/20141120 rss keyword.txt
 utility/filebot.suball.bat
