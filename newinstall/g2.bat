@@ -5,7 +5,7 @@ if [%1]==[] %~dp0\..\utility\getadmin.bat "%~dp0\%~nx0"
 
 REM =================================
 set path=%path%;C:\Program Files (x86)\Git\cmd
-set DOC=c:\Users\%USERNAME%\Documents
+set DOC=%USERPROFILE%\Documents
 set TASKS=%DOC%\tasks
 set SCHEDULE=06:05-06:35-07:05
 set DAILY=%SCHEDULE:~0,5%
