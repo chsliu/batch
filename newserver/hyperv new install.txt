@@ -1,0 +1,39 @@
+Preparation
+===========
+製作VHD
+複製到USB
+
+BIOS
+====
+設定USB開機
+
+Console
+=======
+設定adm密碼
+設定時間
+設定網路IP
+
+setup.bat
+-------
+開啟遠端桌面管理
+降低密碼難度
+更改adm密碼
+新增使用者帳號並修改權限
+安裝SMB功能
+-------
+
+Remote
+======
+安裝驅動
+掛上硬碟 enabledisks.bat, diskpart
+檢查狀態 poolstatus.bat
+設定分享 enableshares.bat
+設定權限 mmc
+設定VM
+設定定時工作
+設定bysync
+設定備份rsync client
+設定備份rsync server
+開啟防火牆 rsync port 873
+關機後，備份VHD
+重新開機
