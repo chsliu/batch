@@ -49,7 +49,7 @@ def parsefileToarray(f,pat):
 	for line in f:
 		# print line
 		key = parselineToKey(line,pat)
-		if key: dict[key]=line
+		if key and key not in dict: dict[key]=line
 	# print dict.keys()
 	return dict
 
