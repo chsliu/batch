@@ -45,9 +45,7 @@ git clone https://github.com/chsliu/ShooterSubPyDownloader.git
 
 REM =================================
 
-mkdir %appdata%\Kodi
-cd/d %appdata%\Kodi
-git clone https://github.com/chsliu/userdata.git
+call %~dp0\newinstall.kodi.bat
 
 REM =================================
 

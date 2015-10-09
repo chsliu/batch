@@ -41,9 +41,7 @@ SchTasks /Create /F /RL HIGHEST /RU %USERNAME% /RP %PASS% /SC MONTHLY /MO LAST /
 
 REM =================================
 
-mkdir %appdata%\Kodi
-cd/d %appdata%\Kodi
-git clone https://github.com/chsliu/userdata.git
+call %~dp0\newinstall.kodi.bat
 
 REM =================================
 
