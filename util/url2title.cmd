@@ -86,7 +86,7 @@ def outputtitle(file, db):
 
 def dbinit(dbfilename):
 	warning("[Init]",dbfilename)
-	raw_input()
+	# raw_input()
 	db = {}
 	dbsave(dbfilename,db)
 	
@@ -102,7 +102,7 @@ def dbload(dbfilename):
 		pkl_file.close()
 	except:
 		warning("[Loading Error]",dbfilename)
-		raw_input()
+		# raw_input()
 	# print(db) 
 	warning("[Loading Done]",dbfilename)
 	return db
