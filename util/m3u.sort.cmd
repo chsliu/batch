@@ -1,12 +1,13 @@
 @setlocal enableextensions & python -x "%~f0" %* & goto :EOF
 
 
+from __future__ import print_function
 import sys
 
 
 def usage(prog):
     # print "%s <inputfile> <pattern> [|Reverse|Nosort]" % prog
-    print "%s <pattern> [Reverse]" % prog
+    print("%s <pattern> [Reverse]" % prog) 
 
 
 def win32_unicode_argv():
@@ -39,18 +40,58 @@ def win32_unicode_argv():
                 xrange(start, argc.value)]
 
 
-def lineprint(file,count):
-	i=0
-	history=[]
-	for line in file:
-		line=line.strip()
-		if line not in history:
-			history.append(line)
-			if i>=count: return
-			i=i+1
-			# print "line",i,">=",count,i>=count,":",line,
-			print line
+def warning_item(*objs):
+	for obj in objs:
+		if isinstance(obj,unicode): obj=unicode(obj).encode(sys.stderr.encoding,'replace')
+		print(obj,file=sys.stderr, end=" ")
 
+
+def warning(*objs):
+	for obj in objs: warning_item(obj)
+	print("",file=sys.stderr)
+
+
+def readData(f):
+	table = {}
+	line = f.readline().strip()
+	while line:
+		if line[0] == '#':
+			url = f.readline().strip()
+			if url: table[line]=url
+		line = f.readline().strip()
+	return table
+	
+	
+def sortByDefault(file):
+	# print("sortByDefault")
+	for line in file:
+		print(line, end="") 
+	
+
+def sortByReverse(f):
+	# print("sortByReverse")
+	items = []
+	while True:
+		line1 = f.readline().strip()
+		line2 = f.readline().strip()
+		if not line2: break
+		item = (line1, line2)
+		items.append(item)
+	
+	for item in reversed(items):
+		print(item[0])
+		print(item[1])
+		
+
+def sortByTitle(file):
+	# print("sortByTitle")
+	table = readData(file)
+	# print(table) 
+	
+	for cmt in sorted(table.keys()):
+		print(cmt)
+		print(table[cmt])
+	
 
 def main():
 	sys.argv = win32_unicode_argv()
@@ -58,18 +99,22 @@ def main():
 		usage(sys.argv[0])
 		return
 	
-	count = 1000
-	try: count=int(sys.argv[1])
-	except: pass
+	f = sys.stdin
 	
-	f=sys.stdin
-	lineprint(f,count)
+	sort={  
+    "Default":	sortByDefault,        
+    "Reverse":	sortByReverse,
+	"Title":	sortByTitle,
+    }    
+	
+	try:
+		sortType = sys.argv[1]
+		# print(sortType)
+		sort[sortType](f)
+	except:
+		# warning(sys.exc_info()[0])
+		sort["Default"](f)	
 	
 	
-	# print len(sys.argv)
-	# print sys.argv
-	# raw_input()
-
-
 if __name__ == '__main__':
 	main()

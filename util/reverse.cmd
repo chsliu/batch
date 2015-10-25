@@ -39,17 +39,9 @@ def win32_unicode_argv():
                 xrange(start, argc.value)]
 
 
-def lineprint(file,count):
-	i=0
-	history=[]
-	for line in file:
-		line=line.strip()
-		if line not in history:
-			history.append(line)
-			if i>=count: return
-			i=i+1
-			# print "line",i,">=",count,i>=count,":",line,
-			print line
+def reverse(file):
+	lines = file.readlines()
+	for line in reversed(lines): print line
 
 
 def main():
@@ -58,17 +50,9 @@ def main():
 		usage(sys.argv[0])
 		return
 	
-	count = 1000
-	try: count=int(sys.argv[1])
-	except: pass
-	
 	f=sys.stdin
-	lineprint(f,count)
-	
-	
-	# print len(sys.argv)
-	# print sys.argv
-	# raw_input()
+	reverse(f)
+
 
 
 if __name__ == '__main__':
