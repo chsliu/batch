@@ -41,8 +41,15 @@ def win32_unicode_argv():
                 xrange(start, argc.value)]
 
 
+def warning_item(*objs):
+	for obj in objs:
+		if isinstance(obj,unicode): obj=unicode(obj).encode(sys.stderr.encoding,'xmlcharrefreplace')
+		print(obj,file=sys.stderr, end=" ")
+
+
 def warning(*objs):
-	print(*objs, file=sys.stderr)
+	for obj in objs: warning_item(obj)
+	print("",file=sys.stderr)
 
 
 def parselineToKey(line, pat, index=0):
@@ -54,12 +61,14 @@ def parselineToKey(line, pat, index=0):
 
 def search(f,pat,index=0):
 	warning("[Searching ....]",pat)
+	# warning_item("[Searching ....]",pat)
 	dict = {}
 	for line in f:
 		# print line
 		key = parselineToKey(line,pat,index)
 		if key: print(key) 
-	warning("[Searching Done]",pat)
+	# warning("[Searching Done]",pat)
+	warning("[Searching Done]")
 
 
 def main():

@@ -42,8 +42,15 @@ def win32_unicode_argv():
                 xrange(start, argc.value)]
 
 
+def warning_item(*objs):
+	for obj in objs:
+		if isinstance(obj,unicode): obj=unicode(obj).encode(sys.stderr.encoding,'xmlcharrefreplace')
+		print(obj,file=sys.stderr, end=" ")
+
+
 def warning(*objs):
-	print(*objs, file=sys.stderr)
+	for obj in objs: warning_item(obj)
+	print("",file=sys.stderr)
 
 
 def encode(encodetxt):
@@ -59,14 +66,17 @@ def encode(encodetxt):
 
 
 def htmldump(url):
-	warning("[Dumping ....]",url)
+	# warning("[Dumping ....]",url)
+	warning_item("[Dumping]",url)
 	# raw_input()
 	try:
 		filehandle = urllib2.urlopen(url)
 		print("".join(filehandle.readlines())) 
-		warning("[Dumping Done]",url)
+		# warning("[Dumping Done]",url)
+		warning("[Done]")
 	except:
-		warning("[Dumping Error]",url)
+		# warning("[Dumping Error]",url)
+		warning("[Error]")
 	return
 
 

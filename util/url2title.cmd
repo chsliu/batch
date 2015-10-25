@@ -44,8 +44,15 @@ def win32_unicode_argv():
                 xrange(start, argc.value)]
 
 
+def warning_item(*objs):
+	for obj in objs:
+		if isinstance(obj,unicode): obj=unicode(obj).encode(sys.stderr.encoding,'xmlcharrefreplace')
+		print(obj,file=sys.stderr, end=" ")
+
+
 def warning(*objs):
-	print(*objs, file=sys.stderr)
+	for obj in objs: warning_item(obj)
+	print("",file=sys.stderr)
 
 
 def isValidURL(url):
@@ -65,19 +72,19 @@ def outputtitle(file, db):
 		if not isValidURL(url): continue
 		
 		if url in db:
-			title = db[url].encode('utf-8').replace('\n',' ')
-			warning("[Cache Found]",title)
-			print("TITLE:",title) 
+			title = db[url].replace('\n',' ')
+			warning("[Cached]",title)
+			print("TITLE:",title.encode('utf-8')) 
 			print(url) 
 		else:
 			try:
-				warning("[Souping ....]",url)
+				warning_item("[Souping]")
 				page = BeautifulSoup(urllib2.urlopen(url))
-				title = page.title.string.encode('utf-8').replace('\n',' ')
+				title = page.title.string.replace('\n',' ')
+				warning(title)
 				db[url] = page.title.string
-				print("TITLE:",title) 
+				print("TITLE:",title.encode('utf-8')) 
 				print(url) 
-				warning("[Souping Done]",title)
 				page.decompose()
 			except:
 				warning("[Souping Error]",sys.exc_info()[0],url)
@@ -93,6 +100,7 @@ def dbinit(dbfilename):
 	
 def dbload(dbfilename):
 	warning("[Loading ....]",dbfilename)
+	# warning_item("[Loading]",dbfilename)
 	if not os.path.isfile(dbfilename): dbinit(dbfilename)
 	
 	pkl_file = gzip.open(dbfilename, 'rb')
@@ -102,18 +110,22 @@ def dbload(dbfilename):
 		pkl_file.close()
 	except:
 		warning("[Loading Error]",dbfilename)
+		# warning("[Error]")
 		# raw_input()
 	# print(db) 
-	warning("[Loading Done]",dbfilename)
+	warning("[Loading Done]")
+	# warning("[Done]")
 	return db
 	
 	
 def dbsave(dbfilename,db):
-	warning("[Saving ....]",dbfilename)
+	# warning("[Saving ....]",dbfilename)
+	warning_item("[Saving]",dbfilename)
 	pkl_file = gzip.open(dbfilename, 'wb')
 	pickle.dump(db, pkl_file)
 	pkl_file.close()
-	warning("[Saving Done]",dbfilename)
+	# warning("[Saving Done]",dbfilename)
+	warning("[Done]")
 	
 	
 def main():
