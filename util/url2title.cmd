@@ -46,7 +46,7 @@ def win32_unicode_argv():
 
 def warning_item(*objs):
 	for obj in objs:
-		if isinstance(obj,unicode): obj=unicode(obj).encode(sys.stderr.encoding,'xmlcharrefreplace')
+		if isinstance(obj,unicode): obj=unicode(obj).encode(sys.stderr.encoding,'replace')
 		print(obj,file=sys.stderr, end=" ")
 
 
@@ -118,7 +118,21 @@ def dbload(dbfilename):
 	return db
 	
 	
+def isdbchanged(dbfilename,db):
+	import hashlib
+	
+	olddb=dbload(dbfilename)
+	oldhex=hashlib.md5(str(olddb)).hexdigest()
+	hex=hashlib.md5(str(db)).hexdigest()
+	changed= (oldhex != hex)
+	# warning("oldhex:",oldhex,"hex:",hex,"changed:",changed)
+	return changed
+	
+	
 def dbsave(dbfilename,db):
+	if not isdbchanged(dbfilename,db): 
+		# warning_item("[Nochange]",dbfilename)
+		return
 	# warning("[Saving ....]",dbfilename)
 	warning_item("[Saving]",dbfilename)
 	pkl_file = gzip.open(dbfilename, 'wb')

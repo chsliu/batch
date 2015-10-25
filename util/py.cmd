@@ -7,7 +7,7 @@ import sys
 
 def warning_item(*objs):
 	for obj in objs:
-		if isinstance(obj,unicode): obj=unicode(obj).encode(sys.stderr.encoding,'xmlcharrefreplace')
+		if isinstance(obj,unicode): obj=unicode(obj).encode(sys.stderr.encoding,'replace')
 		print(obj,file=sys.stderr, end=" ")
 
 
