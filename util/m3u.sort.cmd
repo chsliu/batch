@@ -92,7 +92,28 @@ def sortByTitle(file):
 		print(cmt)
 		print(table[cmt])
 	
-
+	
+def sortByTitleDigital(file):
+	import re
+	
+	table = readData(file)
+	tableDigital = {}
+	
+	for entry in table:
+		digit = re.sub("\D","",entry)
+		list = []
+		try: list = tableDigital[digit]
+		except: pass
+		list.append(entry)
+		tableDigital[digit]=list
+	
+	for digit in sorted(tableDigital.keys()):
+		list = tableDigital[digit]
+		for entry in sorted(list):
+			print(entry)
+			print(table[entry])		
+	
+	
 def main():
 	sys.argv = win32_unicode_argv()
 	if len(sys.argv) < 1:
@@ -105,6 +126,7 @@ def main():
     "Default":	sortByDefault,        
     "Reverse":	sortByReverse,
 	"Title":	sortByTitle,
+	"TitleDigital":	sortByTitleDigital,
     }    
 	
 	try:
