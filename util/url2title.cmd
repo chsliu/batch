@@ -72,6 +72,7 @@ def outputtitle(file, db):
 		if not isValidURL(url): continue
 		
 		if url in db:
+			dbrejuvenate(db, url)
 			title = db[url].replace('\n',' ')
 			warning("[Cached]",title)
 			print("TITLE:",title.encode('utf-8')) 
@@ -82,7 +83,7 @@ def outputtitle(file, db):
 				page = BeautifulSoup(urllib2.urlopen(url))
 				title = page.title.string.replace('\n',' ')
 				warning(title)
-				db[url] = page.title.string
+				db[url] = title
 				print("TITLE:",title.encode('utf-8')) 
 				print(url) 
 				page.decompose()
@@ -99,8 +100,7 @@ def dbinit(dbfilename):
 	
 	
 def dbload(dbfilename):
-	warning("[Loading ....]",dbfilename)
-	# warning_item("[Loading]",dbfilename)
+	# warning("[Loading ....]",dbfilename)
 	if not os.path.isfile(dbfilename): dbinit(dbfilename)
 	
 	pkl_file = gzip.open(dbfilename, 'rb')
@@ -113,8 +113,7 @@ def dbload(dbfilename):
 		# warning("[Error]")
 		# raw_input()
 	# print(db) 
-	warning("[Loading Done]")
-	# warning("[Done]")
+	# warning("[Loading Done]")
 	return db
 	
 	
@@ -133,14 +132,48 @@ def dbsave(dbfilename,db):
 	if not isdbchanged(dbfilename,db): 
 		# warning_item("[Nochange]",dbfilename)
 		return
-	# warning("[Saving ....]",dbfilename)
+	dbaging(db)
+	dbretire(db,8)
 	warning_item("[Saving]",dbfilename)
 	pkl_file = gzip.open(dbfilename, 'wb')
 	pickle.dump(db, pkl_file)
 	pkl_file.close()
-	# warning("[Saving Done]",dbfilename)
 	warning("[Done]")
 	
+
+AGEKEY = '__age__'
+AGE = {}	
+	
+def dbaging(db):
+	age = {}
+	try: age = db[AGEKEY]
+	except: pass
+	for var in db:
+		if var != AGEKEY:
+			try: age[var] = age[var] + 1
+			except: age[var] = 1
+	db[AGEKEY] = age
+	
+	
+def dbretire(db, agecount=100):
+	age = {}
+	try: age = db[AGEKEY]
+	except: pass
+	vars = age.keys()
+	for var in vars:
+		if age[var] >= agecount:
+			warning("[Retired]",db[var])
+			db.pop(var)
+			age.pop(var)
+
+
+def dbrejuvenate(db, var):
+	age = {}
+	try: 
+		age = db[AGEKEY]
+		age[var] = 0
+	except: pass
+
 	
 def main():
 	sys.argv = win32_unicode_argv()
