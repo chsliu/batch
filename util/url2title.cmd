@@ -99,6 +99,10 @@ def dbinit(dbfilename):
 	dbsave(dbfilename,db)
 	
 	
+AGEKEY = '__age__'
+AGE = {}	
+
+
 def dbload(dbfilename):
 	# warning("[Loading ....]",dbfilename)
 	if not os.path.isfile(dbfilename): dbinit(dbfilename)
@@ -133,7 +137,7 @@ def dbsave(dbfilename,db):
 		# warning_item("[Nochange]",dbfilename)
 		return
 	dbaging(db)
-	dbretire(db,8)
+	dbretire(db)
 	warning_item("[Saving]",dbfilename)
 	pkl_file = gzip.open(dbfilename, 'wb')
 	pickle.dump(db, pkl_file)
@@ -141,37 +145,40 @@ def dbsave(dbfilename,db):
 	warning("[Done]")
 	
 
-AGEKEY = '__age__'
-AGE = {}	
+def dbloadage(db,age):
+	# age = {}
+	try: AGE = db[AGEKEY]
+	except: pass
+
 	
 def dbaging(db):
-	age = {}
-	try: age = db[AGEKEY]
+	# age = {}
+	try: AGE = db[AGEKEY]
 	except: pass
 	for var in db:
 		if var != AGEKEY:
-			try: age[var] = age[var] + 1
-			except: age[var] = 1
-	db[AGEKEY] = age
+			try: AGE[var] = AGE[var] + 1
+			except: AGE[var] = 1
+	db[AGEKEY] = AGE
 	
 	
 def dbretire(db, agecount=100):
-	age = {}
-	try: age = db[AGEKEY]
+	# age = {}
+	try: AGE = db[AGEKEY]
 	except: pass
-	vars = age.keys()
+	vars = AGE.keys()
 	for var in vars:
-		if age[var] >= agecount:
+		if AGE[var] >= agecount:
 			warning("[Retired]",db[var])
 			db.pop(var)
-			age.pop(var)
+			AGE.pop(var)
 
 
 def dbrejuvenate(db, var):
-	age = {}
+	# age = {}
 	try: 
-		age = db[AGEKEY]
-		age[var] = 0
+		AGE = db[AGEKEY]
+		AGE[var] = 0
 	except: pass
 
 	
