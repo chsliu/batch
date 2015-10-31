@@ -7,6 +7,7 @@ import os
 import pickle
 # import cPickle as pickle
 import gzip
+from persistendb import PersistenDB
 
 
 def usage(prog):
@@ -63,7 +64,7 @@ def isValidURL(url):
 	return True
 
 
-def outputtitle(file, db):
+def outputtitle(file, db, onlynew):
 	import urllib2
 	from BeautifulSoup import BeautifulSoup
 	for url in file:
@@ -72,14 +73,15 @@ def outputtitle(file, db):
 		if not isValidURL(url): continue
 		
 		if url in db:
-			dbrejuvenate(db, url)
-			title = db[url].replace('\n',' ')
-			warning("[Cached]",title)
-			print("TITLE:",title.encode('utf-8')) 
-			print(url) 
+			if not onlynew:
+				# dbrejuvenate(db, url)
+				title = db[url].replace('\n',' ')
+				warning("[Cached]",title)
+				print("TITLE:",title.encode('utf-8')) 
+				print(url) 
 		else:
 			try:
-				warning_item("[Souping]")
+				warning_item("[Title]")
 				page = BeautifulSoup(urllib2.urlopen(url))
 				title = page.title.string.replace('\n',' ')
 				warning(title)
@@ -88,98 +90,97 @@ def outputtitle(file, db):
 				print(url) 
 				page.decompose()
 			except:
-				warning("[Souping Error]",sys.exc_info()[0],url)
+				warning("[Title Error]",sys.exc_info()[0],url)
 				
+	
+# def dbinit(dbfilename):
+	# warning("[Init]",dbfilename)
+	##raw_input()
+	# db = {}
+	# dbsave(dbfilename,db)
+	
+	
+# AGEKEY = '__age__'
+# AGE = {}	
 
 
-def dbinit(dbfilename):
-	warning("[Init]",dbfilename)
-	# raw_input()
-	db = {}
-	dbsave(dbfilename,db)
+# def dbload(dbfilename):
+	##warning("[Loading ....]",dbfilename)
+	# if not os.path.isfile(dbfilename): dbinit(dbfilename)
+	
+	# pkl_file = gzip.open(dbfilename, 'rb')
+	# db = {}
+	# try:
+		# db = pickle.load(pkl_file)
+		# pkl_file.close()
+	# except:
+		# warning("[Loading Error]",dbfilename)
+		##warning("[Error]")
+		##raw_input()
+	##print(db) 
+	##warning("[Loading Done]")
+	# return db
 	
 	
-AGEKEY = '__age__'
-AGE = {}	
-
-
-def dbload(dbfilename):
-	# warning("[Loading ....]",dbfilename)
-	if not os.path.isfile(dbfilename): dbinit(dbfilename)
+# def isdbchanged(dbfilename,db):
+	# import hashlib
 	
-	pkl_file = gzip.open(dbfilename, 'rb')
-	db = {}
-	try:
-		db = pickle.load(pkl_file)
-		pkl_file.close()
-	except:
-		warning("[Loading Error]",dbfilename)
-		# warning("[Error]")
-		# raw_input()
-	# print(db) 
-	# warning("[Loading Done]")
-	return db
+	# olddb=dbload(dbfilename)
+	# oldhex=hashlib.md5(str(olddb)).hexdigest()
+	# hex=hashlib.md5(str(db)).hexdigest()
+	# changed= (oldhex != hex)
+	##warning("oldhex:",oldhex,"hex:",hex,"changed:",changed)
+	# return changed
 	
 	
-def isdbchanged(dbfilename,db):
-	import hashlib
-	
-	olddb=dbload(dbfilename)
-	oldhex=hashlib.md5(str(olddb)).hexdigest()
-	hex=hashlib.md5(str(db)).hexdigest()
-	changed= (oldhex != hex)
-	# warning("oldhex:",oldhex,"hex:",hex,"changed:",changed)
-	return changed
-	
-	
-def dbsave(dbfilename,db):
-	if not isdbchanged(dbfilename,db): 
-		# warning_item("[Nochange]",dbfilename)
-		return
-	dbaging(db)
-	dbretire(db)
-	warning_item("[Saving]",dbfilename)
-	pkl_file = gzip.open(dbfilename, 'wb')
-	pickle.dump(db, pkl_file)
-	pkl_file.close()
-	warning("[Done]")
+# def dbsave(dbfilename,db):
+	# if not isdbchanged(dbfilename,db): 
+		##warning_item("[Nochange]",dbfilename)
+		# return
+	# dbaging(db)
+	# dbretire(db)
+	# warning_item("[Saving]",dbfilename)
+	# pkl_file = gzip.open(dbfilename, 'wb')
+	# pickle.dump(db, pkl_file)
+	# pkl_file.close()
+	# warning("[Done]")
 	
 
-def dbloadage(db,age):
-	# age = {}
-	try: AGE = db[AGEKEY]
-	except: pass
+# def dbloadage(db,age):
+	##age = {}
+	# try: AGE = db[AGEKEY]
+	# except: pass
 
 	
-def dbaging(db):
-	# age = {}
-	try: AGE = db[AGEKEY]
-	except: pass
-	for var in db:
-		if var != AGEKEY:
-			try: AGE[var] = AGE[var] + 1
-			except: AGE[var] = 1
-	db[AGEKEY] = AGE
+# def dbaging(db):
+	##age = {}
+	# try: AGE = db[AGEKEY]
+	# except: pass
+	# for var in db:
+		# if var != AGEKEY:
+			# try: AGE[var] = AGE[var] + 1
+			# except: AGE[var] = 1
+	# db[AGEKEY] = AGE
 	
 	
-def dbretire(db, agecount=100):
-	# age = {}
-	try: AGE = db[AGEKEY]
-	except: pass
-	vars = AGE.keys()
-	for var in vars:
-		if AGE[var] >= agecount:
-			warning("[Retired]",db[var])
-			db.pop(var)
-			AGE.pop(var)
+# def dbretire(db, agecount=100):
+	##age = {}
+	# try: AGE = db[AGEKEY]
+	# except: pass
+	# vars = AGE.keys()
+	# for var in vars:
+		# if AGE[var] >= agecount:
+			# warning("[Retired]",db[var])
+			# db.pop(var)
+			# AGE.pop(var)
 
 
-def dbrejuvenate(db, var):
-	# age = {}
-	try: 
-		AGE = db[AGEKEY]
-		AGE[var] = 0
-	except: pass
+# def dbrejuvenate(db, var):
+	##age = {}
+	# try: 
+		# AGE = db[AGEKEY]
+		# AGE[var] = 0
+	# except: pass
 
 	
 def main():
@@ -189,21 +190,29 @@ def main():
 		return
 	
 	f = sys.stdin
-	dbname = sys.argv[1]
 	
-	## path = os.path.dirname(os.path.abspath(__file__))
-	# home = os.path.expanduser("~")
-	# dbfile = os.path.join(home,dbname+".pkl")
-	
-	db = dbload(dbname)
-	
-	outputtitle(f,db)
-	
-	dbsave(dbname,db)
-	# print(len(sys.argv)) 
-	# print(sys.argv) 
-	# raw_input()
+	dbsize = 1000
+	try: dbsize = int(sys.argv[2])
+	except: pass
 
-
+	# warning("[dbsize]",dbsize)
+	
+	# db = dbload(dbname)
+	db = PersistenDB(dbsize)
+	try:
+		dbname = sys.argv[1]
+		db.open(dbname)
+	except: pass
+	
+	onlynew = False
+	try: onlynew = sys.argv[3]
+	except: pass
+	
+	outputtitle(f,db,onlynew)
+	
+	# dbsave(dbname,db)
+	
+	
 if __name__ == '__main__':
 	main()
+	
