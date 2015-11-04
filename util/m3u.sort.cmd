@@ -53,12 +53,14 @@ def warning(*objs):
 
 def readData(f):
 	table = {}
-	line = f.readline().strip()
+	line = f.readline()
 	while line:
-		if line[0] == '#':
+		line = line.strip()
+		if len(line) and line[0] == '#':
 			url = f.readline().strip()
 			if url: table[line]=url
-		line = f.readline().strip()
+			# warning("Adding",line.strip(),url.strip())
+		line = f.readline()
 	return table
 	
 	

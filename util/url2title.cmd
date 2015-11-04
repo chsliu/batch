@@ -7,7 +7,8 @@ import os
 import pickle
 # import cPickle as pickle
 import gzip
-from persistendb import PersistenDB
+from persistendb import PersistenDB, PersistenDBDated
+from datetime import datetime, timedelta
 
 
 def usage(prog):
@@ -191,14 +192,42 @@ def main():
 	
 	f = sys.stdin
 	
-	dbsize = 1000
-	try: dbsize = int(sys.argv[2])
-	except: pass
+	# dbsize = 1000
+	# try: dbsize = int(sys.argv[2])
+	# except: pass
 
 	# warning("[dbsize]",dbsize)
 	
 	# db = dbload(dbname)
-	db = PersistenDB(dbsize)
+	# db = PersistenDB(dbsize)
+	
+	db = PersistenDB(1000)
+	# warning("[DB",1000,"items]")
+	dblimit = sys.argv[2]
+	# warning("[dblimit",dblimit,"]")
+	try:
+		if dblimit[-1] == 'd':
+			dblimit = int(dblimit[:-1])
+			db = PersistenDBDated(expiredelta=timedelta(days=dblimit))
+			# warning("[DB",dblimit,"days]")
+		elif dblimit[-1] == 'w':
+			dblimit = int(dblimit[:-1])
+			db = PersistenDBDated(expiredelta=timedelta(weeks=dblimit))
+			# warning("[DB",dblimit,"weeks]")
+		elif dblimit[-1] == 'm':
+			dblimit = int(dblimit[:-1])
+			db = PersistenDBDated(expiredelta=timedelta(days=dblimit*365.0/12))
+			# warning("[DB",dblimit,"months]")
+		elif dblimit[-1] == 'y':
+			dblimit = int(dblimit[:-1])
+			db = PersistenDBDated(expiredelta=timedelta(days=dblimit*365))
+			# warning("[DB",dblimit,"months]")
+		else:
+			dblimit = int(dblimit)
+			db = PersistenDB(dblimit)
+			# warning("[DB",dblimit,"items]")
+	except: pass
+		
 	try:
 		dbname = sys.argv[1]
 		db.open(dbname)

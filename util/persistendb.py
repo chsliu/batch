@@ -94,21 +94,30 @@ class PersistenDB(UserDict.DictMixin):
 		# print(index,sorted(self.age.values())[index])		
 		
 		keys = self.dict.keys()
-		retired = 0
+		# retired = 0
 		for key in keys:
 			try: 
 				count = self.age[key]
 				if count < countmin:
 					warning("[Retired]", self.dict[key])
-					retired = retired + 1
+					# retired = retired + 1
 					del self.age[key]
 					del self.dict[key]
 			except:
-				pass
+				warning("[AgeCounted]", self.dict[key])
+				self.age[key] = count
 				
 		# if retired: warning("[Retired", retired, "]")
 		
-		
+	
+	def report(self):
+		try: 
+			warning("[", len(self.dict), "Items", len(self.dict)*100/self.maxitem, "% Used ]")
+		except:
+			# warning("[", len(self.dict), "Items ]")
+			pass
+	
+	
 	def close(self):
 		# warning("[close]")
 		if self.dict is None:
@@ -120,15 +129,65 @@ class PersistenDB(UserDict.DictMixin):
 				pkl_file = gzip.open(self.filename, 'wb')
 				pickle.dump(self.dict, pkl_file)
 				pickle.dump(self.age, pkl_file)
-				pickle.dump(self.count, pkl_file)
+				try:
+					pickle.dump(self.count, pkl_file)
+				except: pass
 				pkl_file.close()
-				warning("[", len(self.dict), "Done ]")
 				self.ischanged = False
+				# warning("[", len(self.dict), "Done ]")
+				self.report()
 		except:
 			pass
 
 	def __del__(self):
 		if self.filename is not None: self.close()
+
+
+from datetime import datetime, timedelta
+		
+class PersistenDBDated(PersistenDB):
+	def __init__(self, expiredelta=timedelta(1)):
+		self.dict = {}
+		self.age = {}
+		self.ischanged = False
+		self.filename = None
+		self.expiredelta = expiredelta
+	
+	def __getitem__(self, key):
+		if key in self.age:
+			if type(self.age[key]) == int: 
+				self.ischanged = True
+		self.age[key] = datetime.now()
+		return self.dict[key]
+		
+	def __setitem__(self, key, value):
+		self.ischanged = True
+		self.age[key] = datetime.now()
+		self.dict[key] = value
+	
+	def retire(self):
+		timemin = datetime.now() - self.expiredelta
+		keys = self.dict.keys()
+		for key in keys:
+			try: 
+				time = self.age[key]
+				try:
+					if time < timemin:
+						warning("[Retired]", self.dict[key])
+						del self.age[key]
+						del self.dict[key]
+				except:
+					# warning("[Retired!]", self.dict[key])
+					# del self.age[key]
+					# del self.dict[key]
+					warning("[AgeDated]", self.dict[key])
+					self.age[key] = datetime.now()
+					
+			except:
+				pass
+	
+	def report(self):
+		warning("[", len(self.dict), "Items ]")
 	
 	
 # def main():
