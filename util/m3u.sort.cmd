@@ -3,6 +3,7 @@
 
 from __future__ import print_function
 import sys
+from datefilter import datefilter
 
 
 def usage(prog):
@@ -118,6 +119,22 @@ def sortByTitleDigital(file):
 			print(table[entry])		
 	
 	
+def sortByTitleDate(file):
+	tableDate = {}
+	table = readData(file)
+	for entry in table:
+		key = datefilter(entry.decode('utf-8'))
+		if not key: key = entry
+		try: tableDate[key].append(entry)
+		except: tableDate[key] = [entry]
+		
+	for datekey in sorted(tableDate.keys()):
+		list = tableDate[datekey]
+		for entry in sorted(list):
+			print(entry)
+			print(table[entry])
+	
+	
 def main():
 	sys.argv = win32_unicode_argv()
 	if len(sys.argv) < 1:
@@ -131,6 +148,7 @@ def main():
     "Reverse":	sortByReverse,
 	"Title":	sortByTitle,
 	"TitleDigital":	sortByTitleDigital,
+	"TitleDate":	sortByTitleDate,
     }    
 	
 	try:
@@ -139,6 +157,7 @@ def main():
 		sort[sortType](f)
 	except:
 		# warning(sys.exc_info()[0])
+		# warning(sys.exc_info())
 		sort["Default"](f)	
 	
 	
