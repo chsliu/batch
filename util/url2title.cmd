@@ -9,6 +9,8 @@ import pickle
 import gzip
 from persistendb import PersistenDB, PersistenDBDated
 from datetime import datetime, timedelta
+from lang_detect import zh2utf8,lang_detect
+import chardet
 
 
 def usage(prog):
@@ -77,7 +79,10 @@ def outputtitle(file, db, onlynew):
 			if not onlynew:
 				# dbrejuvenate(db, url)
 				title = db[url].replace('\n',' ')
+				# codex = chardet.detect(title)
+				# warning(codex,title)
 				warning("[Cached]",title)
+				# print("TITLE:",title) 
 				print("TITLE:",title.encode('utf-8')) 
 				print(url) 
 		else:
@@ -85,12 +90,18 @@ def outputtitle(file, db, onlynew):
 				warning_item("[Title]")
 				page = BeautifulSoup(urllib2.urlopen(url))
 				title = page.title.string.replace('\n',' ')
+				# enc,likely = lang_detect(title)
+				# warning(enc,likely,title)
+				# codex = chardet.detect(title)
+				# warning(codex,title)
 				warning(title)
 				db[url] = title
+				# print("TITLE:",title) 
 				print("TITLE:",title.encode('utf-8')) 
 				print(url) 
 				page.decompose()
 			except:
+				warning(sys.exc_info())
 				warning("[Title Error]",sys.exc_info()[0],url)
 				
 	
