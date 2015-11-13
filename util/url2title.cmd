@@ -9,7 +9,7 @@ import pickle
 import gzip
 from persistendb import PersistenDB, PersistenDBDated
 from datetime import datetime, timedelta
-from lang_detect import zh2utf8,lang_detect
+# from lang_detect import zh2utf8,lang_detect
 import chardet
 
 
