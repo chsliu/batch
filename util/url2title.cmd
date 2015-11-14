@@ -245,7 +245,7 @@ def main():
 	except: pass
 	
 	onlynew = False
-	try: onlynew = sys.argv[3]
+	try: onlynew = bool(int(sys.argv[3]))
 	except: pass
 	
 	outputtitle(f,db,onlynew)
