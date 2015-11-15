@@ -274,9 +274,14 @@ def readPhrases(file):
 def main():
 	f = sys.stdin
 	
+	maxtokenlen = 7
+	try:
+		maxtokenlen = int(sys.argv[1])
+	except: pass
+
 	ignoresPatterns = ''
 	try:
-		file = open(sys.argv[1],'r')
+		file = open(sys.argv[2],'r')
 		ignoresPatterns = readIgnorePatterns(file)
 		file.close()
 	except: pass
@@ -284,21 +289,21 @@ def main():
 
 	ignoresPhrases = []
 	try:
-		file = open(sys.argv[2],'r')
+		file = open(sys.argv[3],'r')
 		ignoresPhrases = readPhrases(file)
 		file.close()
 	except: pass
 
 	importantPhrases = []
 	try:
-		file = open(sys.argv[3],'r')
+		file = open(sys.argv[4],'r')
 		importantPhrases = readPhrases(file)
 		file.close()
 	except: pass
 
 	# testphrase(f)
 	# parse(f)
-	parsem3u(f, ignoresPatterns, ignoresPhrases, importantPhrases)
+	parsem3u(f, maxtokenlen, ignoresPatterns, ignoresPhrases, importantPhrases)
 	
 	
 if __name__ == '__main__':
