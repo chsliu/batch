@@ -5,6 +5,7 @@ from __future__ import print_function
 import sys
 import re
 from functools import cmp_to_key
+import urllib
 
 
 def warning_item(*objs):
@@ -18,10 +19,11 @@ def warning(*objs):
 	print("",file=sys.stderr)
 
 
-def getTokens(text):
+def getTokens(maxtokenlen, text):
 	list = []
 	if text:
-		for width in [x+1 for x in range(5)]:
+		for width in [x+1 for x in range(len(text))]:
+		# for width in [x+1 for x in range(maxtokenlen)]:
 			list.extend([text[i:i+width] for i in range(len(text)-width+1)])	
 	return list
 	
@@ -121,7 +123,7 @@ def parse(file):
 		line = line.decode('utf-8')
 		# warning_item(line)
 		# list = getTokens(line)
-		list = getToken2(pattern,line)
+		list = getToken2(5,pattern,line)
 		# warning(list)
 		popular(d,list,line)
 		
@@ -134,13 +136,13 @@ def parse(file):
 	# list = genkeywords(rank, d, ignoreWords)
 	
 
-def getToken2(splitPattern,line):
+def getToken2(maxtokenlen,splitPattern,line):
 	# phrases = line.split()
 	phrases = re.split(splitPattern,line)
 	# getTokens_dump(phrases)
 	list = []
 	for phrase in phrases:
-		list.extend(getTokens(phrase))
+		list.extend(getTokens(maxtokenlen, phrase))
 	# getTokens_dump(list)
 	# list.extend(re.findall('\d+',line))
 	list.extend(re.findall('[a-zA-Z]+',line))
@@ -151,7 +153,7 @@ def testphrase(file):
 	pattern = u',|!|:|-|#|\(|\)|\|| |｜|│|－|：|「|　|\n|\?|\d+|\w+'
 	for line in file:
 		line = line.decode('utf-8')
-		list = getToken2(pattern,line)
+		list = getToken2(5,pattern,line)
 		getTokens_dump(list)
 	
 def readData(f):
@@ -184,7 +186,7 @@ def countTitleUrl(titles, table):
 			count = count + 1
 	return count
 	
-def parsem3u(file, ignoresPatterns, ignorePhrases, importantPhrases):
+def parsem3u(file, maxtokenlen, ignoresPatterns, ignorePhrases, importantPhrases, keywordfile):
 	# warning("parsem3u")
 	# pattern = u'\d+|\[a-zA-Z]+'
 	# pattern = u',|!|:|-|#|\(|\)|\|| |｜|│|－|：|「|　|\n|\?|\d+|\w+'
@@ -197,7 +199,7 @@ def parsem3u(file, ignoresPatterns, ignorePhrases, importantPhrases):
 	for title in table:
 		title = title.decode('utf-8')
 		warning("[Get Token from]",title)
-		keywords = getToken2(ignoresPatterns,title)
+		keywords = getToken2(maxtokenlen, ignoresPatterns,title)
 		# warning("keywords from title:",title)
 		# getTokens_dump(keywords)
 		# return
@@ -218,12 +220,13 @@ def parsem3u(file, ignoresPatterns, ignorePhrases, importantPhrases):
 	# getTokens_dump(keywordlist)
 	# getTokens_dump(sorted(keywordlist))
 	# return
+	listdump(keywordlist,keywordfile)
 	warning("[Output Titles Grouped by Keywords]")
 	for keyword in importantPhrases:
 		if keyword in keyword2Title:
 			if countTitleUrl(keyword2Title[keyword],table) > 0:
 				print("#EXTINF:0, ===",keyword.encode("utf-8"),"===")
-				print("https://www.youtube.com/results?q="+keyword.encode("utf-8"))
+				print("https://www.youtube.com/results?q="+urllib.quote(keyword.encode("utf-8")))
 				list = keyword2Title[keyword]
 				for title in list:
 					title = title.encode("utf-8")
@@ -235,7 +238,7 @@ def parsem3u(file, ignoresPatterns, ignorePhrases, importantPhrases):
 	# for keyword in sorted(keywordlist):
 		if countTitleUrl(keyword2Title[keyword],table) > 0:
 			print("#EXTINF:0, ===",keyword.encode("utf-8"),"===")
-			print("https://www.youtube.com/results?q="+keyword.encode("utf-8"))
+			print("https://www.youtube.com/results?q="+urllib.quote(keyword.encode("utf-8")))
 			list = keyword2Title[keyword]
 			for title in list:
 				title = title.encode("utf-8")
@@ -270,11 +273,24 @@ def readPhrases(file):
 	# warning(list)
 	return list
 	
+
+def listdump(list, filename):
+	f = open(filename, 'w')
+	for item in sorted(list, reverse=True):
+		f.write(item.encode("utf-8"))
+		f.write("\n")
+	f.close()
+	
+
+def listload(list, filename):
+	for line in open(filename, 'r'):
+		list.append(line.strip().decode('utf-8'))
+
 	
 def main():
 	f = sys.stdin
 	
-	maxtokenlen = 7
+	maxtokenlen = 5
 	try:
 		maxtokenlen = int(sys.argv[1])
 	except: pass
@@ -301,9 +317,14 @@ def main():
 		file.close()
 	except: pass
 
+	keywordfile = "keywords.txt"
+	try:
+		keywordfile = sys.argv[5]
+	except: pass
+
 	# testphrase(f)
 	# parse(f)
-	parsem3u(f, maxtokenlen, ignoresPatterns, ignoresPhrases, importantPhrases)
+	parsem3u(f, maxtokenlen, ignoresPatterns, ignoresPhrases, importantPhrases, keywordfile)
 	
 	
 if __name__ == '__main__':
