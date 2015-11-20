@@ -1,0 +1,3 @@
+It is not a secret to anyone who uses Windows 10 that this operating system is collecting a lot of private information and sending it back to Microsoft so they get more telemetry data. Many users are not happy that Windows 10 is spying on them and constantly seeking a way to stop it. Here is a way to prevent Windows 10 from collecting your sensitive data using only the built-in Windows Firewall.
+See the following Winaero article for more details:
+http://winaero.com/blog/stop-windows-10-spying-on-you-using-just-windows-firewall/

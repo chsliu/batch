@@ -213,12 +213,12 @@ def main():
 	# db = PersistenDB(dbsize)
 
 	dblimit = 1000
+	db = PersistenDB(dblimit)
 	try:
-		dblimit = int(sys.argv[2])
+		dblimit = sys.argv[2]
 		# warning("[dblimit",dblimit,"]")
 	except: pass
-	db = PersistenDB(dblimit)
-	# warning("[DB",1000,"items]")
+	# warning("[DB",dblimit,"items]")
 	try:
 		if dblimit[-1] == 'd':
 			dblimit = int(dblimit[:-1])
@@ -239,7 +239,7 @@ def main():
 		else:
 			dblimit = int(dblimit)
 			db = PersistenDB(dblimit)
-			# warning("[DB",dblimit,"items]")
+			warning("[DB",dblimit,"items]")
 	except: pass
 		
 	try:
