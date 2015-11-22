@@ -5,5 +5,5 @@ if exist %_% call %_%
 
 REM =================================
 
-call %~dp0\utility\scanvirus.bat
+call %~dp0\utility\sendemail.scanvirus.bat
 

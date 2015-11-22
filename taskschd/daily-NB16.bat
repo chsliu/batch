@@ -1,4 +1,4 @@
 REM =================================
 
-call %~dp0\..\utility\sync.bat
+call %~dp0\..\utility\sendemail.sync.bat
 

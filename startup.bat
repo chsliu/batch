@@ -1,26 +1,26 @@
 REM =================================
 
-call %~dp0\utility\gitsync.bat
+call %~dp0\utility\sendemail.gitsync.bat
 
 REM =================================
 
-call %~dp0\ShooterSubPyDownloader\gitsync.bat
+call %~dp0\ShooterSubPyDownloader\sendemail.gitsync.bat
 
 REM =================================
 
-call %appdata%\Kodi\userdata\gitsync.bat
+call %appdata%\Kodi\userdata\sendemail.gitsync.bat
 
 REM =================================
 
-call %~dp0\utility\alarm.bat
+call %~dp0\utility\sendemail.alarm.bat
 
 REM =================================
 
-call %~dp0\utility\chocolist.bat
+call %~dp0\utility\sendemail.chocolist.bat
 
 REM =================================
 
-call %~dp0\taskschd\%~n0.bat
+call %~dp0\taskschd\sendemail.%~n0.bat
 
 REM =================================
 

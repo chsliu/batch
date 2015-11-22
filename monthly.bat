@@ -9,5 +9,5 @@ cup -y all
 
 REM =================================
 
-call %~dp0\taskschd\cleanup.bat
+call %~dp0\taskschd\sendemail.cleanup.bat
 

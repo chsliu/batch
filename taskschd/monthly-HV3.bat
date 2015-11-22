@@ -1,7 +1,7 @@
 REM =================================
 
-call %~dp0\..\utility\update.bat
+call %~dp0\..\utility\sendemail.update.bat
 
 REM =================================
 
-REM call %~dp0\cleanup.bat
+REM call %~dp0\sendemail.cleanup.bat

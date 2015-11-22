@@ -1,8 +1,8 @@
 REM =================================
 
-call e:\Shares\Media\userdata\gitsync.bat
+call e:\Shares\Media\userdata\sendemail.gitsync.bat
 
 REM =================================
 
-call E:\Shares\Software\UNIX\Lubuntu\xbmc\userdata\gitsync.bat
+call E:\Shares\Software\UNIX\Lubuntu\xbmc\userdata\sendemail.gitsync.bat
 
