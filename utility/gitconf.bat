@@ -1,4 +1,4 @@
-@echo on
+REM @echo on
 
 set _=%~dp0\..\taskschd\gitsync-%COMPUTERNAME%.bat
 if exist %_% call %_%
@@ -11,4 +11,4 @@ git config --global credential.helper wincred
 
 git config --global push.default matching
 
-@echo off
+REM @echo off

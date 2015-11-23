@@ -227,6 +227,7 @@ def parsem3u(file, maxtokenlen, ignoresPatterns, ignorePhrases, importantPhrases
 			if countTitleUrl(keyword2Title[keyword],table) > 0:
 				print("#EXTINF:0, ===",keyword.encode("utf-8"),"===")
 				print("https://www.youtube.com/results?q="+urllib.quote(keyword.encode("utf-8")))
+				print("")
 				list = keyword2Title[keyword]
 				for title in list:
 					title = title.encode("utf-8")
@@ -234,11 +235,14 @@ def parsem3u(file, maxtokenlen, ignoresPatterns, ignorePhrases, importantPhrases
 						print(title)
 						print(table[title])
 						table.pop(title)			
+				print("")
+				print("")
 	for keyword in keywordlist:
 	# for keyword in sorted(keywordlist):
 		if countTitleUrl(keyword2Title[keyword],table) > 0:
 			print("#EXTINF:0, ===",keyword.encode("utf-8"),"===")
 			print("https://www.youtube.com/results?q="+urllib.quote(keyword.encode("utf-8")))
+			print("")
 			list = keyword2Title[keyword]
 			for title in list:
 				title = title.encode("utf-8")
@@ -246,13 +250,17 @@ def parsem3u(file, maxtokenlen, ignoresPatterns, ignorePhrases, importantPhrases
 					print(title)
 					print(table[title])
 					table.pop(title)
+			print("")
+			print("")
 	if len(table) > 0:
 		print("#EXTINF:0, === 其他 ===")
 		print("https://www.youtube.com/")
+		print("")
 		for title in sorted(table):
 			title = title
 			print(title)
 			print(table[title])
+		print("")
 		
 	
 def readIgnorePatterns(file):
