@@ -1,5 +1,7 @@
 @echo off
 
+goto :local
+
 set /p HOST=Hostname: 
 
 IF [%HOST%]==[] goto :local
