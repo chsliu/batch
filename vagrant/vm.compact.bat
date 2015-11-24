@@ -104,7 +104,8 @@ net start wuauserv
 
 cmd /c %SystemRoot%\System32\reg.exe ADD HKCU\Software\Sysinternals\SDelete /v EulaAccepted /t REG_DWORD /d 1 /f
 
-for %%G in (A B C D E F G H I J K L M N O P Q R S T U V W X Y Z) do (
+REM for %%G in (A B C D E F G H I J K L M N O P Q R S T U V W X Y Z) do (
+for %%G in (C) do (
   if exist %%G:\nul (
 	
 	cmd /c C:\Windows\Temp\ultradefrag-portable-6.1.0.amd64\udefrag.exe --optimize --repeat %%G:

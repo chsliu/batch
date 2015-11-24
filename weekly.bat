@@ -7,3 +7,6 @@ REM =================================
 
 call %~dp0\utility\sendemail.scanvirus.bat
 
+REM =================================
+
+call %~dp0\utility\sendemail.diskstatus.bat
