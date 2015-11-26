@@ -40,8 +40,8 @@ def win32_unicode_argv():
 
 def replace(file, old, new):
 	for line in file:
-		line=line.decode('utf-8').replace(old, new)
-		print line.encode('utf-8'),
+		line=line.decode(sys.stderr.encoding).replace(old, new)
+		print line.encode(sys.stderr.encoding),
 
 
 def main():
