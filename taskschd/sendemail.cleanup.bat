@@ -21,7 +21,7 @@ echo %DATE%%TIME% 				>%LOG1%
 
 REM =================================
 
-set _=%~dp0\%~n0-%COMPUTERNAME%.bat 	
+set _=%~dp0\cleanup-%COMPUTERNAME%.bat 	
 echo calling %_% ... 				>>%LOG1% 2>>&1
 if exist %_% call %_%			>>%LOG1% 2>>&1
 
