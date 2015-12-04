@@ -1,0 +1,79 @@
+Netcfg.exe -v -l  %windir%\inf\netserv.inf -c s -i MS_Server
+
+
+http://support.microsoft.com/kb/907459
+
+http://support.microsoft.com/kb/907459/en-us
+
+How to install the “File and Printer Sharing for Microsoft Networks” service and the “Client for Microsoft Networks” client on a Windows 2000 Professional-based computer
+
+
+To successfully install the File and Printer Sharing for Microsoft Networks service and the Client for Microsoft Networks client, follow these steps: 
+1.	Click Start, click Run, type %windir%\inf, and then click OK. 
+2.	Locate and right-click the Netserv.inf file, and then click Install to install the File and Printer Sharing for Microsoft Networks service. 
+3.	Click Start, click Run, type %windir%\inf, and then click OK. 
+4.	Locate and right-click the Netmscli.inf file, and then click Install to install the Client for Microsoft Networks client. 
+5.	Copy the following files from the Windows 2000 Professional installation disk to the %windir%\inf directory: 
+ 	Netcfg.exe 
+ 	Netcfgx.dll 
+ 	Msvcp50.dll
+6.	Create a batch file by using the following syntax and name it Batch.cmd: 
+7.	regsvr32 /s %windir%\inf\Netcfgx.dll
+8.	%windir%\inf\Netcfg.exe -v -l  %windir%\inf\netserv.inf -c s -i MS_Server
+9.	%windir%\inf\Netcfg.exe -v -winpe
+10.	Open a command prompt, type batch.cmd, and then press ENTER.
+
+netcfg -c s -i MS_Server
+
+
+http://www.pczone.com.tw/vbb3/thread/3/148921/
+
+使用 netcfg.exe 安装和移除网络组件
+
+--------------------------------------------------------------------------------
+原本是用于 PE 光盘的程序，不过也适用于安装好的 XP 等系统。
+
+名称：Link-Layer Topology Discovery Responder
+移除：netcfg -u ms_rspndr
+安装：netcfg -l %windir%\inf\rspndr.inf -c p -i ms_rspndr
+
+名称：Client for Microsoft Networks
+移除：netcfg -u ms_msclient
+安装：netcfg -l %windir%\inf\netmscli.inf -c c -i ms_msclient
+
+名称：File and Printer Sharing for Microsoft Networks
+移除：netcfg -u ms_server
+安装：netcfg -l %windir%\inf\netserv.inf -c s -i ms_server
+
+名称：Internet Protocol (TCP/IP)*
+移除：netcfg -u ms_tcpip
+安装：netcfg -l %windir%\inf\nettcpip.inf -c p -i ms_tcpip
+
+名称：WINS Client(TCP/IP) Protocol
+移除：netcfg -u ms_netbt
+安装：netcfg -l %windir%\inf\nettcpip.inf -c p -i ms_netbt
+
+名称：Point to Point Protocol Over Ethernet
+移除：netcfg -u ms_pppoe
+安装：netcfg -l %windir%\inf\netrast.inf -c p -i ms_pppoe
+
+
+
+WAN Miniport (PPPOE)
+netcfg -u ms_pppoe
+netcfg -l %windir%\inf\netrast.inf -c p -i ms_pppoe
+
+WAN Miniport (L2TP)
+netcfg -u ms_l2tp
+netcfg -l %windir%\inf\netrast.inf -c p -i ms_l2tp
+
+WAN Miniport (PPTP)
+netcfg -u ms_pptp
+netcfg -l %windir%\inf\netrast.inf -c p -i ms_pptp
+
+
+WAN Miniport (IP)
+netcfg -u ms_ndiswanip
+
+Direct Parallel
+netcfg -u ms_ptiminiport

@@ -116,4 +116,6 @@ for %%G in (C) do (
 
 call :EMPTYDIR %SystemRoot%\TEMP
 
+%windir%\System32\Sysprep\Sysprep.exe /quiet /generalize /oobe /shutdown
+
 shutdown /s /t 0
