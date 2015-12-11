@@ -263,7 +263,7 @@ def parsem3u(file, maxtokenlen, ignoresPatterns, ignorePhrases, importantPhrases
 		print("")
 		
 	
-def readIgnorePatterns(file):
+def readPatterns(file):
 	pattern = [' ']
 	for line in file:
 		line = line.strip().decode('utf-8')
@@ -276,6 +276,8 @@ def readIgnorePatterns(file):
 def readPhrases(file):
 	list = []
 	for line in file:
+		if len(line) == 0: continue
+		if line[0] == '#': continue
 		line = line.strip().decode('utf-8')
 		list.append(line)
 	# warning(list)
@@ -306,7 +308,7 @@ def main():
 	ignoresPatterns = ''
 	try:
 		file = open(sys.argv[2],'r')
-		ignoresPatterns = readIgnorePatterns(file)
+		ignoresPatterns = readPatterns(file)
 		file.close()
 	except: pass
 	# return

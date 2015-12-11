@@ -69,17 +69,40 @@ def htmldump(url):
 	# warning("[Dumping ....]",url)
 	warning_item("[Dumping]",url)
 	# raw_input()
+	print(url)
 	try:
 		filehandle = urllib2.urlopen(url)
-		print("".join(filehandle.readlines())) 
+		# print("".join(filehandle.readlines()))
+		page = filehandle.read().strip()
+		print(page)
 		# warning("[Dumping Done]",url)
-		warning("[Done]")
+		# stringTest(page)
+		# pageTest(page)
+		warning("[Done]",len(page),"Bytes",type(page))
 	except:
 		# warning("[Dumping Error]",url)
 		warning("[Error]")
 	return
-
-
+	
+	
+def stringTest(s):
+	from bs4 import UnicodeDammit
+	import hashlib
+	
+	dammit = UnicodeDammit(s)
+	
+	m = hashlib.md5()
+	m.update(s)
+	
+	warning("String:",len(s),"Bytes","MD5 Digest",m.hexdigest(),type(s),dammit.original_encoding)
+	
+	
+def pageTest(page):
+	from bs4 import BeautifulSoup
+	
+	warning("Page:",len(page),"Bytes","Title",BeautifulSoup(page,'html.parser').title)
+	
+	
 def main():
 	sys.argv = win32_unicode_argv()
 	if len(sys.argv) < 1:

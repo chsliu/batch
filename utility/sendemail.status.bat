@@ -97,12 +97,16 @@ winsat d3d		>>%LOG4% 2>>&1
 :winsatend
 echo.  >>%LOG4%
 
+REM No status if VM
+if defined UnderVM goto :smartctlend
+
 for /l %%G in (0,1,11) do (
   echo ======================	>>%LOG5% 2>>&1
   echo smartctl -a /dev/pd%%G	>>%LOG5% 2>>&1
   echo ======================	>>%LOG5% 2>>&1
   smartctl -a /dev/pd%%G 	>>%LOG5% 2>>&1
 )
+:smartctlend
 echo.  >>%LOG5%
 
 if not exist %LOG6NFO% msinfo32 /nfo %LOG6NFO%

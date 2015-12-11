@@ -65,12 +65,12 @@ REM =================================
 REM Gathering System Report
 REM =================================
 
-REM if not exist %LOG2% systeminfo >%LOG2% 2>>&1
-REM echo. >>%LOG2%
+if not exist %LOG2% systeminfo >%LOG2% 2>>&1
+echo. >>%LOG2%
 
-REM set UnderVM=
-REM call :findtext %LOG2% "Virtual Machine" UnderVM
-REM call :findtext %LOG2% "Virtual Platform" UnderVM
+set UnderVM=
+call :findtext %LOG2% "Virtual Machine" UnderVM
+call :findtext %LOG2% "Virtual Platform" UnderVM
 
 REM if not exist %LOG3% dxdiag /t %LOG3%
 REM echo. >>%LOG3%
@@ -97,12 +97,16 @@ REM winsat d3d		>>%LOG4% 2>>&1
 REM :winsatend
 REM echo.  >>%LOG4%
 
+REM No status if VM
+if defined UnderVM goto :EOF
+
 for /l %%G in (0,1,11) do (
   echo ======================	>>%LOG5% 2>>&1
   echo smartctl -a /dev/pd%%G	>>%LOG5% 2>>&1
   echo ======================	>>%LOG5% 2>>&1
   smartctl -a /dev/pd%%G 	>>%LOG5% 2>>&1
 )
+:smartctlend
 echo.  >>%LOG5%
 
 REM if not exist %LOG6NFO% msinfo32 /nfo %LOG6NFO%

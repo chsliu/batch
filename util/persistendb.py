@@ -99,12 +99,12 @@ class PersistenDB(UserDict.DictMixin):
 			try: 
 				count = self.age[key]
 				if count < countmin:
-					warning("[Retired]", self.dict[key])
+					warning("[Retired]", self.dict[key][:68])
 					# retired = retired + 1
 					del self.age[key]
 					del self.dict[key]
 			except:
-				warning("[AgeCounted]", self.dict[key])
+				warning("[AgeCounted]", self.dict[key][:68])
 				self.age[key] = count
 				
 		# if retired: warning("[Retired", retired, "]")

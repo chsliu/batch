@@ -61,19 +61,37 @@ def warning(*objs):
 
 def isValidURL(url):
 	from urlparse import urlparse
-	
 	o = urlparse(url)
+	# warning("url",len(url),type(url),o,o.netloc)
 	if o.netloc == '': return False
 	return True
 
+	
+# def isValidURL(line):
+	# import re
+	# regex = re.compile(
+        # r'^(?:http|ftp)s?://' # http:// or https://
+        # r'(?:(?:[A-Z0-9](?:[A-Z0-9-]{0,61}[A-Z0-9])?\.)+(?:[A-Z]{2,6}\.?|[A-Z0-9-]{2,}\.?)|' #domain...
+        # r'localhost|' #localhost...
+        # r'\d{1,3}\.\d{1,3}\.\d{1,3}\.\d{1,3})' # ...or ip
+        # r'(?::\d+)?' # optional port
+        # r'(?:/?|[/?]\S+)$', re.IGNORECASE)
+	# return re.match(regex,line) != None
+	
 
 def outputtitle(file, db, onlynew):
+	# warning("outputtitle")
+
 	import urllib2
-	from BeautifulSoup import BeautifulSoup
+	from bs4 import BeautifulSoup
 	for url in file:
 		url = url.strip()
 		
+		# warning("url",len(url),type(url),url)
+
 		if not isValidURL(url): continue
+		
+		# warning("valid",len(url),type(url),url)
 		
 		if url in db:
 			if not onlynew:
@@ -88,7 +106,8 @@ def outputtitle(file, db, onlynew):
 		else:
 			try:
 				warning_item("[Title]")
-				page = BeautifulSoup(urllib2.urlopen(url))
+				page = BeautifulSoup(urllib2.urlopen(url),'html.parser')
+				# page = BeautifulSoup(urllib2.urlopen(url),'lxml')
 				title = page.title.string.replace('\n',' ')
 				# enc,likely = lang_detect(title)
 				# warning(enc,likely,title)
