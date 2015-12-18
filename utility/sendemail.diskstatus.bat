@@ -7,6 +7,9 @@ REM =================================
 goto :main
 
 REM =================================
+REM call :whereis <exe> <Location Variable>
+REM call :whereis wmic.exe WMIC
+REM =================================
 :whereis
 set %2=
 for %%X in (%1) do (set %2=%%~$PATH:X)
@@ -14,12 +17,16 @@ for %%X in (%1) do (set %2=%%~$PATH:X)
 exit /b
 
 REM =================================
+REM call :findtext <file> <string> <Found Boolean Variable>
+REM call :findtext %LOG2% "Virtual Machine" UnderVM
+REM =================================
 :findtext
 >nul find %2 %1 && (
   echo %2 was found.
   set %3=1
 ) || (
   echo %2 was NOT found.
+  set %3=
 )
 
 exit /b
@@ -99,12 +106,16 @@ REM echo.  >>%LOG4%
 
 REM No status if VM
 if defined UnderVM goto :EOF
-
+set temp_smart=%temp%\%~n0-temp_smart.txt
 for /l %%G in (0,1,11) do (
-  echo ======================	>>%LOG5% 2>>&1
-  echo smartctl -a /dev/pd%%G	>>%LOG5% 2>>&1
-  echo ======================	>>%LOG5% 2>>&1
-  smartctl -a /dev/pd%%G 	>>%LOG5% 2>>&1
+  echo. 						 >%temp_smart% 2>>&1
+  echo ======================	>>%temp_smart% 2>>&1
+  echo smartctl -a /dev/pd%%G	>>%temp_smart% 2>>&1
+  echo ======================	>>%temp_smart% 2>>&1
+  smartctl -a /dev/pd%%G 		>>%temp_smart% 2>>&1
+  
+  call :findtext %temp_smart% "Unable to detect" HD_NOT_FOUND
+  if not defined HD_NOT_FOUND type %temp_smart% >>%LOG5%
 )
 :smartctlend
 echo.  >>%LOG5%

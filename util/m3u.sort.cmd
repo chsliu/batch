@@ -66,13 +66,13 @@ def readData(f):
 	
 	
 def sortByDefault(file):
-	warning("[Sort]", "Default")
+	# warning("[Sort]", "Default")
 	for line in file:
 		print(line, end="") 
 	
 
 def sortByReverse(f):
-	warning("[Sort]", "Reverse")
+	# warning("[Sort]", "Reverse")
 	items = []
 	while True:
 		line1 = f.readline().strip()
@@ -87,7 +87,7 @@ def sortByReverse(f):
 		
 
 def sortByTitle(file):
-	warning("[Sort]", "Title")
+	# warning("[Sort]", "Title")
 	table = readData(file)
 	# print(table) 
 	
@@ -99,7 +99,7 @@ def sortByTitle(file):
 def sortByTitleDigital(file):
 	import re
 	
-	warning("[Sort]", "Title Digital")
+	# warning("[Sort]", "Title Digital")
 	
 	table = readData(file)
 	tableDigital = {}
