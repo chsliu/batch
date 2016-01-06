@@ -67,7 +67,7 @@ def encode(encodetxt):
 
 def htmldump(url):
 	# warning("[Dumping ....]",url)
-	warning_item("[Dumping]",url)
+	# warning_item("[Dumping]",url)
 	# raw_input()
 	print(url)
 	try:
@@ -78,10 +78,11 @@ def htmldump(url):
 		# warning("[Dumping Done]",url)
 		# stringTest(page)
 		# pageTest(page)
-		warning("[Done]",len(page),"Bytes",type(page))
+		# warning("[Done]",len(page),"Bytes",type(page))
 	except:
+		warning(sys.exc_info())
 		# warning("[Dumping Error]",url)
-		warning("[Error]")
+		warning("[Dump Error]",url)
 	return
 	
 	

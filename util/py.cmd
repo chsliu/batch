@@ -3,6 +3,7 @@
 
 from __future__ import print_function
 import sys
+import inspect
 
 
 def warning_item(*objs):
@@ -14,16 +15,21 @@ def warning_item(*objs):
 def warning(*objs):
 	for obj in objs: warning_item(obj)
 	print("",file=sys.stderr)
-	
-	
+
+
+def lineno():
+	"""Returns the current line number in our program."""
+	return inspect.currentframe().f_back.f_lineno
+
+
 def parse(file):
 	pass
-	
-	
+
+
 def main():
 	f = sys.stdin
 	parse(f)
-	
-	
+
+
 if __name__ == '__main__':
     main()
