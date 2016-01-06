@@ -2,6 +2,7 @@
 
 from __future__ import print_function
 import sys
+import inspect
 from datefilter import datefilter
 
 
@@ -14,6 +15,11 @@ def warning_item(*objs):
 def warning(*objs):
 	for obj in objs: warning_item(obj)
 	print("",file=sys.stderr)
+
+
+def lineno():
+	"""Returns the current line number in our program."""
+	return inspect.currentframe().f_back.f_lineno
 
 
 def dofilter(file):

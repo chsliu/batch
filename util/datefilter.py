@@ -1,5 +1,6 @@
 from __future__ import print_function
 import sys
+import inspect
 import re
 from datetime import datetime, date
 
@@ -18,9 +19,14 @@ def warning(*objs):
 def isYear(num):
 	try: 
 		num = int(num)
-		if 1900 <= num and num <= datetime.now().year: return True
+		if 1900 <= num and num <= datetime.now().year+1: return True
 		if 0 <= num and num <= 99: return True
 	except: return False
+
+
+def lineno():
+	"""Returns the current line number in our program."""
+	return inspect.currentframe().f_back.f_lineno
 
 
 # def isMonth(num):
@@ -36,6 +42,30 @@ def isYear(num):
 		# if 1 <= num and num <= 31: return True
 	# except: return False
 	
+	
+def filter8digitwithpart(line):
+	m = re.search("\D+(\d{4})\D*(\d{2})\D*(\d{2})\D{1,2}(\d)", line)
+	# if m: return m.group(0)
+	if m: return m
+	return None
+	
+	
+def filter8digitwithpart_convert(m):
+	try:
+		g1 = m.group(1)
+		g2 = m.group(2)
+		g3 = m.group(3)
+		g4 = m.group(4)
+		# warning(g1,g2,g3)
+	except:
+		warning("line",lineno(),m)
+	try: return datetime(int(g1),int(g2),int(g3),int(g4))
+	except: pass	
+	g = g1+g2+g3
+	# warning(g,g[4:],g[:2],g[2:4]) 
+	try: return datetime(int(g[4:]),int(g[:2]),int(g[2:4]),int(g4))
+	except: pass	
+
 	
 # def filter8digit(line):
 	# m = re.search("(\d{4})\D*(\d{4})", line)
@@ -70,12 +100,12 @@ def filter8digitany_convert(m):
 		g3 = m.group(3)
 		# warning(g1,g2,g3)
 	except:
-		warning(m)
-	try: return date(int(g1),int(g2),int(g3))
+		warning("line",lineno(),m)
+	try: return datetime(int(g1),int(g2),int(g3))
 	except: pass	
 	g = g1+g2+g3
 	# warning(g,g[4:],g[:2],g[2:4]) 
-	try: return date(int(g[4:]),int(g[:2]),int(g[2:4]))
+	try: return datetime(int(g[4:]),int(g[:2]),int(g[2:4]))
 	except: pass	
 
 
@@ -92,10 +122,10 @@ def filter8digitanyrev_convert(m):
 		g2 = m.group(2)
 		g3 = m.group(3)
 	except:
-		warning(m)
-	try: return date(int(g3),int(g1),int(g2))
+		warning("line",lineno(),m)
+	try: return datetime(int(g3),int(g1),int(g2))
 	except: pass	
-	try: return date(int(g3),int(g2),int(g1))
+	try: return datetime(int(g3),int(g2),int(g1))
 	except: pass	
 
 
@@ -166,8 +196,8 @@ def filter7digit_convert(m):
 		g2 = m.group(2)
 		g3 = m.group(3)
 	except:
-		warning(m)
-	try: return date(1911+int(g1),int(g2),int(g3))
+		warning("line",lineno(),m)
+	try: return datetime(1911+int(g1),int(g2),int(g3))
 	except: pass
 	
 	
@@ -184,8 +214,8 @@ def filter7digitanychar_convert(m):
 		g2 = m.group(2)
 		g3 = m.group(3)
 	except:
-		warning(m)
-	try: return date(1911+int(g1),int(g2),int(g3))
+		warning("line",lineno(),m)
+	try: return datetime(1911+int(g1),int(g2),int(g3))
 	except: pass	
 	
 	
@@ -200,8 +230,8 @@ def filter6digit_convert(m):
 	try:
 		g1 = m.group(1)
 	except:
-		warning(m)
-	try: return date(2000+int(g1[:2]),int(g1[2:4]),int(g1[4:]))
+		warning("line",lineno(),m)
+	try: return datetime(2000+int(g1[:2]),int(g1[2:4]),int(g1[4:]))
 	except: pass
 	
 	
@@ -218,10 +248,10 @@ def filter6digitslash_convert(m):
 		g2 = m.group(2)
 		g3 = m.group(3)
 	except:
-		warning(m)
-	try: return date(int(g1),int(g2),int(g3))
+		warning("line",lineno(),m)
+	try: return datetime(int(g1),int(g2),int(g3))
 	except: pass
-	try: return date(int(g2),int(g3),int(g1))
+	try: return datetime(int(g2),int(g3),int(g1))
 	except: pass
 	
 	
@@ -235,11 +265,11 @@ def filter4digit(line):
 def filter4digit_convert(m):
 	try:
 		g1 = m.group(1)
-		try: return date(datetime.now().year,int(g1[:2]),int(g1[2:]))
+		try: return datetime(datetime.now().year,int(g1[:2]),int(g1[2:]))
 		except: pass
-		if isYear(int(g1)): return date(int(g1),1,1)
+		if isYear(int(g1)): return datetime(int(g1),1,1)
 	except:
-		warning(m)
+		warning("line",lineno(),m)
 	
 	
 def filter4digitanychar(line):
@@ -254,8 +284,8 @@ def filter4digitanychar_convert(m):
 		g1 = m.group(1)
 		g2 = m.group(2)
 	except:
-		warning(m)
-	try: return date(datetime.now().year,int(g1),int(g2))
+		warning("line",lineno(),m)
+	try: return datetime(datetime.now().year,int(g1),int(g2))
 	except: pass
 	
 	
@@ -263,6 +293,7 @@ def datefilter(line):
 	res = None
 	filter = None
 	convert = None
+	if not res: filter = "filter8digitwithpart"; 	convert = filter8digitwithpart_convert ;	res = filter8digitwithpart(line)
 	# if not res: filter = "filter8digit"; 			convert = filter8digit_convert ; 			res = filter8digit(line)
 	if not res: filter = "filter8digitany"; 		convert = filter8digitany_convert ;			res = filter8digitany(line)
 	if not res: filter = "filter8digitanyrev";		convert = filter8digitanyrev_convert ;		res = filter8digitanyrev(line)

@@ -38,7 +38,7 @@ class PersistenDB(UserDict.DictMixin):
 				count = pickle.load(pkl_file)
 				self.count = self.count + count
 			except:
-				pass
+				warning("[Open",self.filename,"failed]")
 			finally:
 				pkl_file.close()
 			
@@ -90,7 +90,10 @@ class PersistenDB(UserDict.DictMixin):
 		# countmin = self.count - self.maxitem
 		index = len(self.dict)-self.maxitem
 		if index <= 0: return
-		countmin = sorted(self.age.values())[index]
+		# warning("[Retire",self.filename,"step1]")
+		try: countmin = sorted(self.age.values())[index]
+		except: countmin = sys.maxint
+		# warning("[Retire",self.filename,"step2]")
 		# print(index,sorted(self.age.values())[index])		
 		
 		keys = self.dict.keys()
@@ -119,11 +122,13 @@ class PersistenDB(UserDict.DictMixin):
 	
 	
 	def close(self):
-		# warning("[close]")
+		# warning("[Closing",self.filename,"changed(",self.ischanged,")]")
 		if self.dict is None:
 			return
 		try:
+			# warning("[Closing",self.filename,"step1]")
 			if self.ischanged:
+				# warning("[Closing",self.filename,"step2]")
 				self.retire()
 				warning_item("[Saving]", self.filename)
 				pkl_file = gzip.open(self.filename, 'wb')
@@ -131,13 +136,15 @@ class PersistenDB(UserDict.DictMixin):
 				pickle.dump(self.age, pkl_file)
 				try:
 					pickle.dump(self.count, pkl_file)
-				except: pass
+				except: 
+					warning("[Close",self.filename,"pickle.dump failed]")
 				pkl_file.close()
 				self.ischanged = False
 				# warning("[", len(self.dict), "Done ]")
 				self.report()
 		except:
-			pass
+			warning(sys.exc_info())
+			warning("[Close",self.filename,"failed",sys.exc_info()[0],"]")
 
 	def __del__(self):
 		if self.filename is not None: self.close()

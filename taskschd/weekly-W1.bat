@@ -1,6 +1,6 @@
 REM =================================
 
-call "C:\Users\sita\AppData\Roaming\Kodi\userdata\playlists\video\YouTube\run.weekly.bat"
+REM call "C:\Users\sita\AppData\Roaming\Kodi\userdata\playlists\video\YouTube\run.weekly.bat"
 
 call "C:\Users\sita\AppData\Roaming\Kodi\userdata\playlists\video\TED\ted.interesting.bat"
 call "C:\Users\sita\AppData\Roaming\Kodi\userdata\playlists\video\TED\ted.medicine.bat"

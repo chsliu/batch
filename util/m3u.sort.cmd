@@ -105,7 +105,7 @@ def sortByTitleDigital(file):
 	tableDigital = {}
 	
 	for entry in table:
-		digit = re.sub("\D","",entry)
+		digit = int(re.sub("\D","",entry))
 		list = []
 		try: list = tableDigital[digit]
 		except: pass
