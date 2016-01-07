@@ -237,7 +237,7 @@ findstr /C:"Sector Sizes" %LOG5%					>>%LOG1%
 findstr /C:"Rotation Rate" %LOG5%					>>%LOG1%
 findstr /C:"Form Factor" %LOG5%						>>%LOG1%
 findstr /C:"ATA Version" %LOG5%						>>%LOG1%
-findstr /C:"overall-health" %LOG5%					>>%LOG1%
+findstr "overall-health" %LOG5%					>>%LOG1%
 findstr /B "ID#" %LOG5%							>>%LOG1%
 findstr "Reallocated_Sector_Ct" %LOG5%					>>%LOG1%
 findstr "Reported_Uncorrect" %LOG5%					>>%LOG1%
@@ -248,6 +248,7 @@ findstr "SSD_Life_Left" %LOG5%						>>%LOG1%
 findstr "Power_On_Hours" %LOG5%						>>%LOG1%
 findstr "Temperature_Celsius" %LOG5%					>>%LOG1%
 findstr /C:"occurred at disk power-on lifetime" %LOG5%			>>%LOG1%
+findstr "FAILING_NOW" %LOG5%						>>%LOG1%
 REM echo ---------------------------------					>>%LOG1%
 REM findstr /C:"> Disk" %LOG4%						>>%LOG1%
 REM findstr /C:"> ´`§Ç¼g¤J" %LOG4%						>>%LOG1%

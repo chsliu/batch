@@ -112,12 +112,20 @@ winsat d3d		>>%LOG4% 2>>&1
 :winsatend
 echo.  >>%LOG4%
 
+REM No status if VM
+if defined UnderVM goto :EOF
+set temp_smart=%temp%\%~n0-temp_smart.txt
 for /l %%G in (0,1,11) do (
-  echo ======================	>>%LOG5% 2>>&1
-  echo smartctl -a /dev/pd%%G	>>%LOG5% 2>>&1
-  echo ======================	>>%LOG5% 2>>&1
-  smartctl -a /dev/pd%%G 	>>%LOG5% 2>>&1
+  echo. 						 >%temp_smart% 2>>&1
+  echo ======================	>>%temp_smart% 2>>&1
+  echo smartctl -a /dev/pd%%G	>>%temp_smart% 2>>&1
+  echo ======================	>>%temp_smart% 2>>&1
+  smartctl -a /dev/pd%%G 		>>%temp_smart% 2>>&1
+  
+  call :findtext %temp_smart% "Unable to detect" HD_NOT_FOUND
+  if not defined HD_NOT_FOUND type %temp_smart% >>%LOG5%
 )
+:smartctlend
 echo.  >>%LOG5%
 
 if not exist %LOG6NFO% msinfo32 /nfo %LOG6NFO%
@@ -158,13 +166,14 @@ findstr "SSD_Life_Left" %LOG5%						>>%LOG1%
 findstr "Power_On_Hours" %LOG5%						>>%LOG1%
 findstr "Temperature_Celsius" %LOG5%					>>%LOG1%
 findstr /C:"occurred at disk power-on lifetime" %LOG5%			>>%LOG1%
+findstr "FAILING_NOW" %LOG5%						>>%LOG1%
 
 REM =================================
 REM Check for Alarm Status
 REM =================================
 
 set ALARM=
-findstr /C:"overall-health" %LOG5% > %LINE%
+findstr "overall-health" %LOG5% > %LINE%
 call :AWK %LINE% 6
 if defined RET if [PASSED] neq [%RET%] set ALARM=1
 
@@ -193,6 +202,10 @@ call :AWK %LINE% 6
 set THRESHOLD=%RET%
 call :AWK %LINE% 4
 if defined RET if [%THRESHOLD%] geq [%RET%] set ALARM=1
+
+findstr "FAILING_NOW" %LOG5% > %LINE%
+call :AWK %LINE% 9
+if defined RET if [FAILING_NOW] == [%RET%] set ALARM=1
 
 del %LINE%
 
