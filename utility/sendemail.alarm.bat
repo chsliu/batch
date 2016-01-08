@@ -175,27 +175,27 @@ REM =================================
 set ALARM=
 findstr "overall-health" %LOG5% > %LINE%
 call :AWK %LINE% 6
-if defined RET if [PASSED] neq [%RET%] set ALARM=1
+if defined RET if [%RET%] neq [PASSED] set ALARM=1
 
 findstr "Reallocated_Sector_Ct" %LOG5% > %LINE%
 call :AWK %LINE% 10
-if defined RET if [0] neq [%RET%] set ALARM=1
+if defined RET if [%RET%] gtr [5] set ALARM=1
 
 findstr "Reported_Uncorrect" %LOG5% > %LINE%
 call :AWK %LINE% 10
-if defined RET if [0] neq [%RET%] set ALARM=1
+if defined RET if [%RET%] neq [0] set ALARM=1
 
 findstr "Command_Timeout" %LOG5% > %LINE%
 call :AWK %LINE% 10
-if defined RET if [0] neq [%RET%] set ALARM=1
+if defined RET if [%RET%] neq [0] set ALARM=1
 
 findstr "Current_Pending_Sector" %LOG5% > %LINE%
 call :AWK %LINE% 10
-if defined RET if [0] neq [%RET%] set ALARM=1
+if defined RET if [%RET%] neq [0] set ALARM=1
 
 findstr "Offline_Uncorrectable" %LOG5% > %LINE%
 call :AWK %LINE% 10
-if defined RET if [0] neq [%RET%] set ALARM=1
+if defined RET if [%RET%] neq [0] set ALARM=1
 
 findstr "SSD_Life_Left" %LOG5% > %LINE%
 call :AWK %LINE% 6
@@ -205,7 +205,7 @@ if defined RET if [%THRESHOLD%] geq [%RET%] set ALARM=1
 
 findstr "FAILING_NOW" %LOG5% > %LINE%
 call :AWK %LINE% 9
-if defined RET if [FAILING_NOW] == [%RET%] set ALARM=1
+if defined RET if [%RET%] == [FAILING_NOW] set ALARM=1
 
 del %LINE%
 
