@@ -20,7 +20,7 @@ REM call :findtext <file> <string> <Found Boolean Variable>
 REM call :findtext %LOG2% "Virtual Machine" UnderVM
 REM =================================
 :findtext
->nul find %2 %1 && (
+>nul C:\Windows\System32\find.exe %2 %1 && (
   echo %2 was found.
   set %3=1
 ) || (
