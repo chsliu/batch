@@ -4,6 +4,7 @@
 from __future__ import print_function
 import sys
 import inspect
+from optparse import OptionParser
 
 
 def warning_item(*objs):
@@ -21,12 +22,30 @@ def lineno():
 	"""Returns the current line number in our program."""
 	return inspect.currentframe().f_back.f_lineno
 
-
+	
 def parse(file):
 	pass
 
 
+USAGE = "usage: %prog [options] arg1 arg2"
+
 def main():
+	parser = OptionParser(USAGE)
+	parser.add_option("-v", "--verbose",
+                  action="store_true", dest="verbose", default=True,
+                  help="make lots of noise [default]")
+	parser.add_option("-f", "--filename", metavar="FILE", help="write output to FILE")
+	opt, args = parser.parse_args()
+	
+	if len(args) < 1:
+		print(USAGE)
+		sys.exit(1)
+		
+	# file_name = args[0]
+
+	# if opt.dummy: dummy = int(opt.dummy)
+	# else:         dummy = 0
+		
 	f = sys.stdin
 	parse(f)
 

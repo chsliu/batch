@@ -48,6 +48,8 @@ import locale
 rootPathWords = [
 'C:',
 'D:',
+'E:',
+'F:',
 'P:',
 'Admin',
 'Download',
