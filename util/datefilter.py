@@ -58,7 +58,7 @@ def filter8digitwithpart_convert(m):
 		g4 = m.group(4)
 		# warning(g1,g2,g3)
 	except:
-		warning("line",lineno(),m)
+		warning("line,",lineno(),m.string,m.groups())
 	try: return datetime(int(g1),int(g2),int(g3),int(g4))
 	except: pass	
 	g = g1+g2+g3
@@ -100,7 +100,7 @@ def filter8digitany_convert(m):
 		g3 = m.group(3)
 		# warning(g1,g2,g3)
 	except:
-		warning("line",lineno(),m)
+		warning("line,",lineno(),m.string,m.groups())
 	try: return datetime(int(g1),int(g2),int(g3))
 	except: pass	
 	g = g1+g2+g3
@@ -122,7 +122,7 @@ def filter8digitanyrev_convert(m):
 		g2 = m.group(2)
 		g3 = m.group(3)
 	except:
-		warning("line",lineno(),m)
+		warning("line,",lineno(),m.string,m.groups())
 	try: return datetime(int(g3),int(g1),int(g2))
 	except: pass	
 	try: return datetime(int(g3),int(g2),int(g1))
@@ -184,7 +184,7 @@ def filter8digitanyrev_convert(m):
 	
 	
 def filter7digit(line):
-	m = re.search("\d{3}\d{2}\d{2}", line)
+	m = re.search("(\d{3})(\d{2})(\d{2})", line)
 	# if m: return m.group(0)
 	if m: return m
 	return None
@@ -196,7 +196,7 @@ def filter7digit_convert(m):
 		g2 = m.group(2)
 		g3 = m.group(3)
 	except:
-		warning("line",lineno(),m)
+		warning("line,",lineno(),m.string,m.groups())
 	try: return datetime(1911+int(g1),int(g2),int(g3))
 	except: pass
 	
@@ -214,7 +214,7 @@ def filter7digitanychar_convert(m):
 		g2 = m.group(2)
 		g3 = m.group(3)
 	except:
-		warning("line",lineno(),m)
+		warning("line,",lineno(),m.string,m.groups())
 	try: return datetime(1911+int(g1),int(g2),int(g3))
 	except: pass	
 	
@@ -230,7 +230,7 @@ def filter6digit_convert(m):
 	try:
 		g1 = m.group(1)
 	except:
-		warning("line",lineno(),m)
+		warning("line,",lineno(),m.string,m.groups())
 	try: return datetime(2000+int(g1[:2]),int(g1[2:4]),int(g1[4:]))
 	except: pass
 	
@@ -248,7 +248,7 @@ def filter6digitslash_convert(m):
 		g2 = m.group(2)
 		g3 = m.group(3)
 	except:
-		warning("line",lineno(),m)
+		warning("line,",lineno(),m.string,m.groups())
 	try: return datetime(int(g1),int(g2),int(g3))
 	except: pass
 	try: return datetime(int(g2),int(g3),int(g1))
@@ -269,7 +269,7 @@ def filter4digit_convert(m):
 		except: pass
 		if isYear(int(g1)): return datetime(int(g1),1,1)
 	except:
-		warning("line",lineno(),m)
+		warning("line,",lineno(),m.string,m.groups())
 	
 	
 def filter4digitanychar(line):
@@ -284,7 +284,7 @@ def filter4digitanychar_convert(m):
 		g1 = m.group(1)
 		g2 = m.group(2)
 	except:
-		warning("line",lineno(),m)
+		warning("line,",lineno(),m.string,m.groups())
 	try: return datetime(datetime.now().year,int(g1),int(g2))
 	except: pass
 	

@@ -4,6 +4,7 @@
 from __future__ import print_function
 import sys
 from datefilter import datefilter
+from datetime import datetime,timedelta
 
 
 def usage(prog):
@@ -52,12 +53,13 @@ def warning(*objs):
 	print("",file=sys.stderr)
 
 
-def today():
-	from datetime import date
-	return date.today().strftime("%Y%m%d")
+def delta(dat):
+	# print("dat type",type(dat),dat)
+	delta = datetime.now() - datetime.strptime(dat[:10],"%Y-%m-%d")
+	return delta
 	
 	
-def timestamp(f):
+def trim(f,maxdaysAgo):
 	# table = {}
 	line = f.readline()
 	while line:
@@ -65,11 +67,14 @@ def timestamp(f):
 		if len(line) and line[0] == '#':
 			url = f.readline().strip()
 			if url: 
-				# table[line]=url
 				dat,rule = datefilter(line.decode('utf-8'))
-				if not dat: 	print(line,"["+today()+"]")
-				else: 			print(line)
-				print(url)	
+				daysAgo = maxdaysAgo
+				if dat and dat != "None":	daysAgo = delta(dat).days
+				
+				if daysAgo < maxdaysAgo:
+					print(line)
+					# print(line,"[",daysAgo,"]")
+					print(url)	
 		else:
 			print("")
 		line = f.readline()
@@ -83,8 +88,27 @@ def main():
 	
 	f = sys.stdin
 	
-	timestamp(f)
+
+	days = 3
+	try:
+		days = sys.argv[1]
+	except: pass
+
+	try:
+		if days[-1] == 'd':
+			days = int(days[:-1])
+		elif days[-1] == 'w':
+			days = int(days[:-1])*7
+		elif days[-1] == 'm':
+			days = int(days[:-1])*365.0/12
+		elif days[-1] == 'y':
+			days = int(days[:-1])*365
+	except: pass
+			
+	
+	trim(f,days)
 	
 	
 if __name__ == '__main__':
 	main()
+
