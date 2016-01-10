@@ -1,0 +1,7 @@
+NT	= 2000
+XP	= 2003 = 2003 R2 = Home Server
+Vista	= 2008 = PowerShell, Server Core
+7	= 2008 R2 = 64bit Only
+8	= 2012
+8.1	= 2012 R2
+10	= 2016

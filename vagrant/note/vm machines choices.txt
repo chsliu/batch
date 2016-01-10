@@ -1,0 +1,6 @@
+linux server => debain 8.1 server
+linux desktop => ubuntu 1404 LTS desktop
+win ads1.2 => xp
+win vs2008 => win7
+win ce6 => win2000
+web develop => 2012R2

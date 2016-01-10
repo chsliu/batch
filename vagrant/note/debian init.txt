@@ -1,0 +1,37 @@
+#get ip
+ip addr show
+
+#ssh ip
+
+sudo apt-get install -y git ntpdate samba tmux
+
+git clone https://github.com/chsliu/script
+
+./gitconf.sh
+
+./gitsync.sh
+
+./install_sshkey.sh
+
+./timezone.fix.sh
+
+#edit crontab
+0 6 * * 0 /usr/bin/batch < /home/vagrant/script/update.sh
+0 6 * * 1 /usr/bin/batch < /home/vagrant/script/cleanup.sh
+#0 6 * * * /usr/bin/batch < /home/vagrant/script/backup.sh
+
+#-------------------------------------------------
+#change hostname
+sudo vi /etc/hostname
+sudo vi /etc/hosts
+sudo hostname xxxx
+
+sudo /etc/init.d/samba restart & exit
+
+#ssh host
+
+tmux
+
+./newinstall.sh
+
+./update.sh

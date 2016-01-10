@@ -1,0 +1,34 @@
+######
+#steps
+######
+#increase vhdx size
+sudo cfdisk /dev/sda
+#change type to "8e"
+sudo partprobe -s
+sudo pvcreate /dev/sda6
+sudo vgextend vagrant-vg /dev/sda6
+sudo lvextend -L +8G /dev/vagrant-vg/root
+sudo resize2fs /dev/vagrant-vg/root
+
+
+######
+#misc
+######
+df -h
+
+sudo fdisk -l
+
+sudo partprobe -s
+
+sudo lvmdiskscan
+
+sudo lvdisplay
+sudo vgdisplay
+sudo pvdisplay
+
+sudo lvs
+sudo vgs
+sudo pvs
+
+sudo e2fsck -f /dev/linuxvg/home
+

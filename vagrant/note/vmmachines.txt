@@ -1,0 +1,43 @@
+linux server => debian 8.1 server
+linux desktop => ubuntu 1404 LTS desktop
+win ads1.2 => win7
+win vs2008 => win7
+win ce6 => win7
+web develop => 2012R2
+
+Windows 7		RAM 1GB
+Windows 8.1 32Bit	RAM 1GB
+Windows 8.1 64Bit	RAM 2GB
+Windows 2012R2		RAM 2GB
+
+hyperv
+======
+-Debian 8.2.0
+
+-Ubuntu 14.04
+ericmann/trusty64
+withinboredom/Trusty64
+
+-Windows 7
+
+-Windows 2012R2
+
+
+
+hyperv test
+===========
+johnpbloch/homestead
+mwrock/Windows8.1-amd64, 		boot error
+mwrock/Windows2012R2, 			create error
+
+virtualbox
+==========
+dhoppe/debian-8.2.0-amd64-nocm 		***Debian 8.2.0***
+http://aka.ms/vagrant-win7-ie11
+http://aka.ms/vagrant-win81-ie11, 	boot error
+modernIE/w7-ie11
+modernIE/w10-edge
+jhcook/osx-yosemite-10.10
+ferventcoder/win7pro-x64-nocm-lite 	***Windows 7 x64***
+
+
