@@ -261,6 +261,7 @@ def parsem3u(file, maxtokenlen, ignoresPatterns, ignorePhrases, importantPhrases
 			print(title)
 			print(table[title])
 		print("")
+		print("")
 		
 	
 def readPatterns(file):
