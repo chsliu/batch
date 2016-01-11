@@ -293,21 +293,21 @@ def datefilter(line):
 	res = None
 	filter = None
 	convert = None
-	if not res: filter = "filter8digitwithpart"; 	convert = filter8digitwithpart_convert ;	res = filter8digitwithpart(line)
-	# if not res: filter = "filter8digit"; 			convert = filter8digit_convert ; 			res = filter8digit(line)
-	if not res: filter = "filter8digitany"; 		convert = filter8digitany_convert ;			res = filter8digitany(line)
-	if not res: filter = "filter8digitanyrev";		convert = filter8digitanyrev_convert ;		res = filter8digitanyrev(line)
-	# if not res: filter = "filter8digitslash"; 		res = filter8digitslash(line)
-	# if not res: filter = "filter8digitspace"; 		res = filter8digitspace(line)
-	# if not res: filter = "filter8digitdot"; 		res = filter8digitdot(line) 
-	# if not res: filter = "filter8digitdotreverse"; 	convert = filter8digitdotreverse_convert;	res = filter8digitdotreverse(line) 
-	# if not res: filter = "filter8digithyphen"; 		convert = filter8digithyphen_convert;		res = filter8digithyphen(line) 
-	if not res: filter = "filter7digit"; 			convert = filter7digit_convert;				res = filter7digit(line)
-	if not res: filter = "filter7digitanychar"; 	convert = filter7digitanychar_convert;		res = filter7digitanychar(line)
-	if not res: filter = "filter6digit"; 			convert = filter6digit_convert;				res = filter6digit(line)
-	if not res: filter = "filter6digitslash"; 		convert = filter6digitslash_convert;		res = filter6digitslash(line)
-	if not res: filter = "filter4digit"; 			convert = filter4digit_convert;				res = filter4digit(line)
-	if not res: filter = "filter4digitanychar"; 	convert = filter4digitanychar_convert;		res = filter4digitanychar(line)
+	if not res: filter = "8d+part";		convert = filter8digitwithpart_convert ;	res = filter8digitwithpart(line)
+	# if not res: filter = "8d";		convert = filter8digit_convert ; 			res = filter8digit(line)
+	if not res: filter = "8dany";		convert = filter8digitany_convert ;			res = filter8digitany(line)
+	if not res: filter = "8danyrev";	convert = filter8digitanyrev_convert ;		res = filter8digitanyrev(line)
+	# if not res: filter = "8dslash";	res = filter8digitslash(line)
+	# if not res: filter = "8dspace"; 	res = filter8digitspace(line)
+	# if not res: filter = "8ddot"; 	res = filter8digitdot(line) 
+	# if not res: filter = "8ddotrev";	convert = filter8digitdotreverse_convert;	res = filter8digitdotreverse(line) 
+	# if not res: filter = "8dhyphen";	convert = filter8digithyphen_convert;		res = filter8digithyphen(line) 
+	if not res: filter = "7d"; 			convert = filter7digit_convert;				res = filter7digit(line)
+	if not res: filter = "7dany"; 		convert = filter7digitanychar_convert;		res = filter7digitanychar(line)
+	if not res: filter = "6d"; 			convert = filter6digit_convert;				res = filter6digit(line)
+	if not res: filter = "6dslash"; 	convert = filter6digitslash_convert;		res = filter6digitslash(line)
+	if not res: filter = "4d"; 			convert = filter4digit_convert;				res = filter4digit(line)
+	if not res: filter = "4dany";		convert = filter4digitanychar_convert;		res = filter4digitanychar(line)
 	
 	# if res:
 		# if convert: warning_item("[",filter,"]",convert(res),"|||",line);

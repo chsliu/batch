@@ -56,6 +56,12 @@ def today():
 	from datetime import date
 	return date.today().strftime("%Y%m%d")
 	
+
+def m3u_title_insert(title,ins):
+	seg = title.split(",")
+	seg.insert(1,","+ins)
+	return "".join(seg)
+
 	
 def timestamp(f):
 	# table = {}
@@ -67,8 +73,13 @@ def timestamp(f):
 			if url: 
 				# table[line]=url
 				dat,rule = datefilter(line.decode('utf-8'))
-				if not dat: 	print(line,"["+today()+"]")
-				else: 			print(line)
+				if not dat: 	
+					print(line,"["+today()+"]")
+				elif rule == "4d":
+					print(m3u_title_insert(line,"["+today()+"]"))
+				else: 			
+					# print("["+rule+"]",line)
+					print(m3u_title_insert(line,"["+rule+"]"))
 				print(url)	
 		else:
 			print("")

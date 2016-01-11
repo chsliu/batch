@@ -69,8 +69,8 @@ def trim(f,maxdaysAgo):
 			url = f.readline().strip()
 			if url: 
 				dat,rule = datefilter(line.decode('utf-8'))
-				daysAgo = 0	# keep no date title
-				# daysAgo = maxdaysAgo	# remove no date title
+				# daysAgo = 0	# keep no date title
+				daysAgo = maxdaysAgo	# remove no date title
 				if dat and dat != "None":	daysAgo = delta(dat).days
 				
 				if daysAgo < maxdaysAgo:
