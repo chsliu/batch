@@ -61,6 +61,7 @@ def delta(dat):
 	
 def trim(f,maxdaysAgo):
 	# table = {}
+	trimcnt = 0
 	line = f.readline()
 	while line:
 		line = line.strip()
@@ -68,16 +69,22 @@ def trim(f,maxdaysAgo):
 			url = f.readline().strip()
 			if url: 
 				dat,rule = datefilter(line.decode('utf-8'))
-				daysAgo = maxdaysAgo
+				daysAgo = 0	# keep no date title
+				# daysAgo = maxdaysAgo	# remove no date title
 				if dat and dat != "None":	daysAgo = delta(dat).days
 				
 				if daysAgo < maxdaysAgo:
 					print(line)
 					# print(line,"[",daysAgo,"]")
-					print(url)	
+					print(url)
+				else:
+					warning("[Trim]",line.decode('utf-8'))
+					trimcnt = trimcnt + 1
 		else:
 			print("")
 		line = f.readline()
+		
+	warning("[Trim]",trimcnt,"Entries")
 	
 
 def main():
