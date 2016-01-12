@@ -45,6 +45,11 @@ def main():
 
 	# if opt.dummy: dummy = int(opt.dummy)
 	# else:         dummy = 0
+	
+	# try: pass
+	# except:
+		# warning(sys.exc_info()[0])
+		# warning(sys.exc_info())
 		
 	f = sys.stdin
 	parse(f)

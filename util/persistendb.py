@@ -30,6 +30,7 @@ class PersistenDB(UserDict.DictMixin):
 		self.filename = dbfilename
 		if os.path.isfile(self.filename):
 			try:
+				warning("[Opening",self.filename,"]")
 				pkl_file = gzip.open(self.filename, 'rb')
 				db = pickle.load(pkl_file)
 				self.dict.update(db)
@@ -38,6 +39,7 @@ class PersistenDB(UserDict.DictMixin):
 				count = pickle.load(pkl_file)
 				self.count = self.count + count
 			except:
+				warning(sys.exc_info())
 				warning("[Open",self.filename,"failed]")
 			finally:
 				pkl_file.close()
@@ -135,8 +137,10 @@ class PersistenDB(UserDict.DictMixin):
 				pickle.dump(self.dict, pkl_file)
 				pickle.dump(self.age, pkl_file)
 				try:
-					pickle.dump(self.count, pkl_file)
+					if hasattr(self, 'count'): pickle.dump(self.count, pkl_file)
 				except: 
+					# warning(sys.exc_info()[0])
+					warning(sys.exc_info())
 					warning("[Close",self.filename,"pickle.dump failed]")
 				pkl_file.close()
 				self.ischanged = False
