@@ -56,4 +56,12 @@ def main():
 
 
 if __name__ == '__main__':
-    main()
+	import traceback
+	import time
+	
+	try: 	
+		main()
+	except:
+		traceback.print_exc()
+		warning("Press Ctrl-C to Continue...")
+		while True:  time.sleep(1)
