@@ -32,12 +32,22 @@ class PersistenDB(UserDict.DictMixin):
 			try:
 				warning("[Opening",self.filename,"]")
 				pkl_file = gzip.open(self.filename, 'rb')
-				db = pickle.load(pkl_file)
-				self.dict.update(db)
-				age = pickle.load(pkl_file)
-				self.age.update(age)
-				count = pickle.load(pkl_file)
-				self.count = self.count + count
+				
+				try: 
+					db = pickle.load(pkl_file)
+					self.dict.update(db)
+				except: pass
+				
+				try: 
+					age = pickle.load(pkl_file)
+					self.age.update(age)
+				except: pass
+				
+				try: 
+					count = pickle.load(pkl_file)
+					self.count = self.count + count
+				except: pass
+				
 			except:
 				warning(sys.exc_info())
 				warning("[Open",self.filename,"failed]")

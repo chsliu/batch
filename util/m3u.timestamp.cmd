@@ -57,7 +57,7 @@ def today():
 	return date.today().strftime("%Y%m%d")
 	
 
-def m3u_title_insert(title,ins):
+def m3u_title_insert(ins,title):
 	seg = title.split(",")
 	seg.insert(1,","+ins)
 	return "".join(seg)
@@ -70,13 +70,15 @@ def timestamp(f):
 		line = line.strip()
 		if len(line) and line[0] == '#':
 			url = f.readline().strip()
-			if url: 
+			if url:
 				# table[line]=url
 				dat,rule = datefilter(line.decode('utf-8'))
 				if not dat: 	
-					print(line,"["+today()+"]")
+					print("["+today()+"]",line)
 				elif rule == "4d":
-					print(m3u_title_insert(line,"["+today()+"]"))
+					print(m3u_title_insert("["+today()+"]",line),"["+rule+"]")
+				elif rule == "4dany":
+					print(m3u_title_insert("["+today()+"]",line),"["+rule+"]")
 				else: 			
 					# print("["+rule+"]",line)
 					print(m3u_title_insert(line,"["+rule+"]"))
