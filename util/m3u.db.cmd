@@ -84,7 +84,7 @@ def m3udb(file, db, onlynew):
 	for url in file:
 		url = url.strip()
 		
-		if url[0] == "#": title = url
+		if len(url) > 0 and url[0] == "#": title = url
 		
 		if not isValidURL(url): continue
 		
