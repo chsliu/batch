@@ -25,8 +25,19 @@ def lineno():
 
 
 def encode(encodetxt):
-	enc=urllib.quote(encodetxt.encode('utf-8'))
-	return enc
+	# print("encodetxt",encodetxt)
+	
+	try:
+		enc=urllib.quote(encodetxt.encode('utf-8'))
+		return enc
+	except: pass
+	
+	try:
+		enc=urllib.quote(encodetxt)
+		return enc
+	except: pass
+	
+	return ""
 
 	
 def url_id(url):
