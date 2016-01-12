@@ -206,7 +206,7 @@ def ttag_uniq_dump(ttag,ttag2titles,title2tags,title2url,lastTags):
 		print("")	
 
 
-def tag_lv1_uniq_dump(tag,ttag2titles,tag2ttags,title2tags,title2url,CollectTags):
+def tag_lv1_uniq_dump_ttags(tag,ttag2titles,tag2ttags,title2tags,title2url,CollectTags):
 	lastTags = []
 	if tag in tag2ttags:
 		for ttag in tag2ttags[tag]:
@@ -220,12 +220,12 @@ def tag_lv1_uniq_dump(tag,ttag2titles,tag2ttags,title2tags,title2url,CollectTags
 					# CollectTags.append(tagx)
 	
 
-def tag_lv2_uniq_dump(tag,ttag2titles,tag2ttags,title2tags,title2url):
+def tag_lv2_uniq_dump_ttags(tag,ttag2titles,tag2ttags,title2tags,title2url):
 	# if tag in tag2ttags:
 	# print("#EXTINF:0, ===","tag:",tag.encode("utf-8"),"LV2","===")
 	# print("https://www.youtube.com/results?q="+urllib.quote(tag.encode("utf-8")))	
 	CollectTags = []
-	tag_lv1_uniq_dump(tag,ttag2titles,tag2ttags,title2tags,title2url,CollectTags)
+	tag_lv1_uniq_dump_ttags(tag,ttag2titles,tag2ttags,title2tags,title2url,CollectTags)
 	if tag in CollectTags: CollectTags.remove(tag)
 
 	# label = str(len(CollectTags))+" CollectTags"+",".join(CollectTags)
@@ -234,7 +234,7 @@ def tag_lv2_uniq_dump(tag,ttag2titles,tag2ttags,title2tags,title2url):
 	# for tagx in CollectTags:
 		# print("#EXTINF:0, ===","CollectTags "+str(len(CollectTags))+":",tagx.encode("utf-8"),"LV2","===")
 		# print("https://www.youtube.com/results?q="+urllib.quote(tag.encode("utf-8")))
-		# tag_lv1_uniq_dump(tagx,ttag2titles,tag2ttags,title2tags,title2url,[])
+		# tag_lv1_uniq_dump_ttags(tagx,ttag2titles,tag2ttags,title2tags,title2url,[])
 
 	
 def ttag2titles_uniq_dump_m3u(db,tag2ttags,title2tags,title2url):
@@ -248,10 +248,31 @@ def ttag2titles_uniq_dump_m3u(db,tag2ttags,title2tags,title2url):
 		# ttag_dump(ttag,db,title2tags,title2url)
 
 	for tag in tag2ttags:
-		tag_lv2_uniq_dump(tag,db,tag2ttags,title2tags,title2url)
+		tag_lv2_uniq_dump_ttags(tag,db,tag2ttags,title2tags,title2url)
 		
+def tag_uniq_dump(tag,tag2titles,title2tags,title2url):
+	first = True
+	count = titles_count(tag2titles[tag],title2tags)
+	if count > 1:
+		lastTags = []
+		for title in tag2titles[tag]:
+			if title in title2tags:
+				countMatching = countMatchingTags(title2tags[title],lastTags)
+				percent = countMatching*200/(len(title2tags[title])+len(lastTags))
+				if first: 
+					print("#EXTINF:0, ===",tag.encode("utf-8"),"===","("+str(count)+")")
+					print("https://www.youtube.com/results?q="+urllib.quote(tag.encode("utf-8")))
+					print("")
+					first = False
+				titletail="("+str(percent)+"%)"
+				title_dump(title2tags,title2url,title,titletail)
+				title2tags.pop(title)
+		if not first:
+			print("")
+			print("")	
+				
 		
-def phrases_dump_m3u(phrases,tag2ttags,ttag2titles,title2tags,title2url):
+def phrases_dump_m3u(phrases,tag2ttags,ttag2titles,title2tags,title2url,tag2titles):
 	print("#EXTINF:0, === 重要 ===")
 	print("https://www.youtube.com/")
 	print("")
@@ -262,13 +283,28 @@ def phrases_dump_m3u(phrases,tag2ttags,ttag2titles,title2tags,title2url):
 			# print("#EXTINF:0, === ","["+tag.encode("utf-8")+"]"," ===")
 			# print("https://www.youtube.com/results?q="+urllib.quote(tag.encode("utf-8")))
 			# for ttag in tag2ttags[tag]:
-				# tag_lv1_uniq_dump(ttag,ttag2titles,title2tags,title2url,lastTags)
+				# tag_lv1_uniq_dump_ttags(ttag,ttag2titles,title2tags,title2url,lastTags)
 		if tag in tag2ttags:
 			print("#EXTINF:0, ===","["+tag.encode("utf-8")+"]","===")
 			print("https://www.youtube.com/results?q="+urllib.quote(tag.encode("utf-8")))		
-			tag_lv2_uniq_dump(tag,ttag2titles,tag2ttags,title2tags,title2url)
+			tag_lv2_uniq_dump_ttags(tag,ttag2titles,tag2ttags,title2tags,title2url)
+		
+		if tag in tag2titles:
+			tag_uniq_dump(tag,tag2titles,title2tags,title2url)
+		
+
+def titles_count(titles,title2tags):
+	count = 0
+	for title in titles:
+		if title in title2tags: count = count + 1
+	return count
+	
 			
-						
+def tag2titles_uniq_dump_m3u(tag2titles,title2tags,title2url):
+	for tag in tag2titles:
+		tag_uniq_dump(tag,tag2titles,title2tags,title2url)
+	
+	
 def all_dump_m3u(title2tags,title2url):
 	print("#EXTINF:0, === 其他 ===")
 	print("https://www.youtube.com/")
@@ -479,11 +515,13 @@ def parsem3u(file):
 	for tag in tag2titles:
 		ttag2titles_add(ttag2titles, tag, tag2titles[tag][0], tag2titles[tag][1:],title2tags,tag2ttags)	
 		
-	phrases_dump_m3u(importantPhrases,tag2ttags,ttag2titles,title2tags,title2url)
+	phrases_dump_m3u(importantPhrases,tag2ttags,ttag2titles,title2tags,title2url,tag2titles)
 		
 	# warning("line,",lineno(),",","tag2titles_uniq_dump_m3u")
 	ttag2titles_uniq_dump_m3u(ttag2titles,tag2ttags,title2tags,title2url)
 	
+	tag2titles_uniq_dump_m3u(tag2titles,title2tags,title2url)
+
 	all_dump_m3u(title2tags,title2url)
 	
 	
