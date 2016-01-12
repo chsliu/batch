@@ -385,11 +385,12 @@ def tttag2titles_add(db,tag,title,taillist,title2tags):
 			
 def readPhrases(file):
 	list = []
-	for title in file:
-		if len(title) == 0: continue
-		if title[0] == '#': continue
-		title = title.strip().decode('utf-8')
-		list.append(title)
+	for line in file:
+		line = line.strip()
+		if len(line) == 0: continue
+		if line[0] == '#': continue
+		line = line.decode('utf-8')
+		list.append(line)
 	# warning(list)
 	return list
 
@@ -557,11 +558,17 @@ def main():
 		file = open(opt.priorityword,'r')
 		importantPhrases = readPhrases(file)
 		# print("importantPhrases",importantPhrases)
+		for word in importantPhrases:
+			warning("[AddWord]",word)
+			jieba.add_word(word)
 	if opt.ignoreword: 
 		# file = open(os.path.abspath('nlp/ignore-phrases'),'r')
 		file = open(opt.ignoreword,'r')
 		ignoresPhrases = readPhrases(file)
 		# print("ignoresPhrases",ignoresPhrases)
+		for word in ignoresPhrases:
+			warning("[AddWord]",word)
+			jieba.add_word(word)
 		
 	f = sys.stdin
 	# nlptest(f)

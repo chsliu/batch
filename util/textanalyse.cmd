@@ -277,9 +277,10 @@ def readPatterns(file):
 def readPhrases(file):
 	list = []
 	for line in file:
+		line = line.strip()
 		if len(line) == 0: continue
 		if line[0] == '#': continue
-		line = line.strip().decode('utf-8')
+		line = line.decode('utf-8')
 		list.append(line)
 	# warning(list)
 	return list
