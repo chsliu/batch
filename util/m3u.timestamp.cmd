@@ -74,14 +74,14 @@ def timestamp(f):
 				# table[line]=url
 				dat,rule = datefilter(line.decode('utf-8'))
 				if not dat: 	
-					print("["+today()+"]",line)
+					print(m3u_title_insert("["+today()+"]",line))
 				elif rule == "4d":
 					print(m3u_title_insert("["+today()+"]",line),"["+rule+"]")
 				elif rule == "4dany":
 					print(m3u_title_insert("["+today()+"]",line),"["+rule+"]")
 				else: 			
 					# print("["+rule+"]",line)
-					print(m3u_title_insert(line,"["+rule+"]"))
+					print(line,"["+rule+"]")
 				print(url)	
 		else:
 			print("")

@@ -559,7 +559,7 @@ def main():
 		importantPhrases = readPhrases(file)
 		# print("importantPhrases",importantPhrases)
 		for word in importantPhrases:
-			warning("[AddWord]",word)
+			# warning("[AddWord]",word)
 			jieba.add_word(word)
 	if opt.ignoreword: 
 		# file = open(os.path.abspath('nlp/ignore-phrases'),'r')
@@ -567,7 +567,7 @@ def main():
 		ignoresPhrases = readPhrases(file)
 		# print("ignoresPhrases",ignoresPhrases)
 		for word in ignoresPhrases:
-			warning("[AddWord]",word)
+			# warning("[AddWord]",word)
 			jieba.add_word(word)
 		
 	f = sys.stdin
