@@ -41,11 +41,12 @@ def savepage(file,db):
 	
 
 def outputpage(db):
-	# warning("===outputpage")
-	url = db["urls"][0]
-	# page = ""
-	page = db[url]
 	try:
+		# warning("===outputpage")
+		url = db["urls"][0]
+		# page = ""
+		page = db[url]
+		
 		# page = db[url].encode('utf-8')
 		print(url)
 		print(page)
