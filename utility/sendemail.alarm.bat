@@ -179,7 +179,7 @@ if defined RET if [%RET%] neq [PASSED] set ALARM=1
 
 findstr "Reallocated_Sector_Ct" %LOG5% > %LINE%
 call :AWK %LINE% 10
-if defined RET if [%RET%] gtr [5] set ALARM=1
+if defined RET if [%RET%] gtr [10] set ALARM=1
 
 findstr "Reported_Uncorrect" %LOG5% > %LINE%
 call :AWK %LINE% 10
