@@ -8,6 +8,6 @@ call "C:\Users\sita\AppData\Roaming\Kodi\userdata\playlists\video\update.bat"
 call "C:\Users\sita\AppData\Roaming\Kodi\userdata\playlists\video\run.daily.bat"
 
 
-pushd \\hv4\Media\userdata\
-call "\\hv4\Media\userdata\sendemail.gitsync.bat"
-popd
+REM pushd \\hv4\Media\userdata\
+REM call "\\hv4\Media\userdata\sendemail.gitsync.bat"
+REM popd
