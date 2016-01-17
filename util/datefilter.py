@@ -44,7 +44,7 @@ def lineno():
 	
 	
 def filter8digitwithpart(line):
-	m = re.search("\D+(\d{4})\D*(\d{2})\D*(\d{2})\D{1,2}(\d)", line)
+	m = re.search("\D+(\d{4})\D{1,2}(\d{2})\D{1,2}(\d{2})\D{1,2}(\d)", line)
 	# if m: return m.group(0)
 	if m: return m
 	return None
@@ -110,7 +110,7 @@ def filter8digitany_convert(m):
 
 
 def filter8digitanyrev(line):
-	m = re.search("\D+(\d{2})\D*(\d{2})\D*(\d{4})", line)
+	m = re.search("\D+(\d{2})\D{1,2}(\d{2})\D{1,2}(\d{4})", line)
 	# if m: return m.group(0)
 	if m: return m
 	return None
