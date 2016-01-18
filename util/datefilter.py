@@ -44,7 +44,7 @@ def lineno():
 	
 	
 def filter8digitwithpart(line):
-	m = re.search("\D+(\d{4})\D{1,2}(\d{2})\D{1,2}(\d{2})\D{1,2}(\d)", line)
+	m = re.search("\D+(\d{4})\D{0,2}(\d{2})\D{0,2}(\d{2})\D{1,2}(\d)", line)
 	# if m: return m.group(0)
 	if m: return m
 	return None
@@ -87,7 +87,7 @@ def filter8digitwithpart_convert(m):
 	
 	
 def filter8digitany(line):
-	m = re.search("\D+(\d{4})\D*(\d{2})\D*(\d{2})", line)
+	m = re.search("\D+(\d{4})\D{0,2}(\d{2})\D{0,2}(\d{2})", line)
 	# if m: return m.group(0)
 	if m: return m
 	return None
@@ -110,7 +110,7 @@ def filter8digitany_convert(m):
 
 
 def filter8digitanyrev(line):
-	m = re.search("\D+(\d{2})\D{1,2}(\d{2})\D{1,2}(\d{4})", line)
+	m = re.search("\D+(\d{2})\D{0,2}(\d{2})\D{0,2}(\d{4})", line)
 	# if m: return m.group(0)
 	if m: return m
 	return None
@@ -202,7 +202,7 @@ def filter7digit_convert(m):
 	
 	
 def filter7digitanychar(line):
-	m = re.search("\D+(\d{3})\D{1}(\d{1,2})\D{1}(\d{1,2})", line)
+	m = re.search("\D+(\d{3})\D{0,2}(\d{1,2})\D{0,2}(\d{1,2})", line)
 	# if m: return m.group(0)
 	if m: return m
 	return None
@@ -273,7 +273,7 @@ def filter4digit_convert(m):
 	
 	
 def filter4digitanychar(line):
-	m = re.search("(\d{1,2})\D{1}(\d{1,2})", line)
+	m = re.search("(\d{1,2})\D{0,2}(\d{1,2})", line)
 	# if m: return m.group(0)
 	if m: return m
 	return None
