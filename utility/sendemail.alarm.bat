@@ -84,8 +84,8 @@ if not exist %LOG2% systeminfo >%LOG2% 2>>&1
 echo. >>%LOG2%
 
 set UnderVM=
-call :findtext %LOG2% "Virtual Machine" UnderVM
-call :findtext %LOG2% "Virtual Platform" UnderVM
+if not defined UnderVM call :findtext %LOG2% "Virtual Machine" UnderVM
+if not defined UnderVM call :findtext %LOG2% "Virtual Platform" UnderVM
 
 if not exist %LOG3% dxdiag /t %LOG3%
 echo. >>%LOG3%
