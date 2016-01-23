@@ -31,3 +31,4 @@ wuinstall/update.bat
 utility/temp.txt
 *.swp
 *.*~
+.idea/
