@@ -239,7 +239,7 @@ def tag_lv2_uniq_dump_ttags(tag,ttag2titles,tag2ttags,title2tags,title2url):
 	
 def ttag2titles_uniq_dump_m3u(db,tag2ttags,title2tags,title2url):
 	# warning("line,",lineno(),",","tag2titles_uniq_dump_m3u")
-	print("#EXTINF:0, === 關鍵字 ===")
+	print("#EXTINF:0, === 一般關鍵字 ===")
 	print("https://www.youtube.com/")
 	print("")
 	
@@ -273,7 +273,7 @@ def tag_uniq_dump(tag,tag2titles,title2tags,title2url):
 				
 		
 def phrases_dump_m3u(phrases,tag2ttags,ttag2titles,title2tags,title2url,tag2titles):
-	print("#EXTINF:0, === 重要 ===")
+	print("#EXTINF:0, === 重要關鍵字 ===")
 	print("https://www.youtube.com/")
 	print("")
 
