@@ -37,9 +37,9 @@ def main():
 	parser.add_option("-f", "--filename", metavar="FILE", help="write output to FILE")
 	opt, args = parser.parse_args()
 	
-	if len(args) < 1:
-		print(USAGE)
-		sys.exit(1)
+	# if len(args) < 1:
+		# print(USAGE)
+		# sys.exit(1)
 		
 	# file_name = args[0]
 
