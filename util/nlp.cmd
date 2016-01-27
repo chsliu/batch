@@ -239,7 +239,7 @@ def tag_lv2_uniq_dump_ttags(tag,ttag2titles,tag2ttags,title2tags,title2url):
 	
 def ttag2titles_uniq_dump_m3u(db,tag2ttags,title2tags,title2url):
 	# warning("line,",lineno(),",","tag2titles_uniq_dump_m3u")
-	print("#EXTINF:0, === 一般關鍵字 ===")
+	print("#EXTINF:0, === <一般關鍵字> ===")
 	print("https://www.youtube.com/")
 	print("")
 	
@@ -273,7 +273,7 @@ def tag_uniq_dump(tag,tag2titles,title2tags,title2url):
 				
 		
 def phrases_dump_m3u(phrases,tag2ttags,ttag2titles,title2tags,title2url,tag2titles):
-	print("#EXTINF:0, === 重要關鍵字 ===")
+	print("#EXTINF:0, === <重要關鍵字> ===")
 	print("https://www.youtube.com/")
 	print("")
 
@@ -291,6 +291,29 @@ def phrases_dump_m3u(phrases,tag2ttags,ttag2titles,title2tags,title2url,tag2titl
 		
 		if tag in tag2titles:
 			tag_uniq_dump(tag,tag2titles,title2tags,title2url)
+
+
+def hotphrases_ranking(ttag2titles):
+	ranks = {}
+	for ttag in ttag2titles:
+		cnt = 0
+		for title in ttag2titles[ttag]:
+			cnt = cnt + 1
+		if cnt >= 4: 
+			try:	ranks[cnt].append(ttag)
+			except:	ranks[cnt] = [ttag]
+	return ranks
+			
+			
+def hotphrases_ttag2titles_uniq_dump_m3u(ttag2titles,title2tags,title2url):
+	print("#EXTINF:0, === <熱門關鍵字> ===")
+	print("https://www.youtube.com/")
+	print("")
+	
+	rank2ttags = hotphrases_ranking(ttag2titles)
+	for rank in sorted(rank2ttags.keys(),reverse=1):
+		for ttag in rank2ttags[rank]:
+			ttag_uniq_dump(ttag,ttag2titles,title2tags,title2url,[])
 		
 
 def titles_count(titles,title2tags):
@@ -306,7 +329,7 @@ def tag2titles_uniq_dump_m3u(tag2titles,title2tags,title2url):
 	
 	
 def all_dump_m3u(title2tags,title2url):
-	print("#EXTINF:0, === 其他 ===")
+	print("#EXTINF:0, === <其他> ===")
 	print("https://www.youtube.com/")
 	print("")
 	titles = sorted(title2tags.keys())
@@ -517,6 +540,8 @@ def parsem3u(file):
 	tag2ttags = {}
 	for tag in tag2titles:
 		ttag2titles_add(ttag2titles, tag, tag2titles[tag][0], tag2titles[tag][1:],title2tags,tag2ttags)	
+
+	hotphrases_ttag2titles_uniq_dump_m3u(ttag2titles,title2tags,title2url)
 		
 	phrases_dump_m3u(importantPhrases,tag2ttags,ttag2titles,title2tags,title2url,tag2titles)
 		
