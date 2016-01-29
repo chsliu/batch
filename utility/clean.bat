@@ -83,6 +83,7 @@ cd /d %temp%
 call :EMPTYDIR %temp%
 call :EMPTYDIR %USERPROFILE%\AppData\Local\Temp
 call :EMPTYDIR %SystemRoot%\TEMP
+call :EMPTYDIR "%LOCALAPPDATA%\Google\Chrome\User Data\Default\Cache"
 
 for %%G in (A B C D E F G H I J K L M N O P Q R S T U V W X Y Z) do (
   if exist %%G:\nul (
