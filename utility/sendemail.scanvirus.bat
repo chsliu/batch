@@ -56,7 +56,7 @@ REM =================================
 call :getsize %LOG1% size
 
 if %size% EQU 0 (
-set %LOG1%=
+set LOG1=
 )
 
 REM =================================
@@ -74,7 +74,7 @@ REM =================================
 call :getsize %LOG2% size
 
 if %size% EQU 0 (
-set %LOG2%=
+set LOG2=
 )
 
 REM =================================
