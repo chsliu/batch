@@ -30,7 +30,7 @@ class PersistenDB(UserDict.DictMixin):
 		self.filename = dbfilename
 		if os.path.isfile(self.filename):
 			try:
-				warning("[Opening",self.filename,"]")
+				# warning("[Opening",self.filename,"]")
 				pkl_file = gzip.open(self.filename, 'rb')
 				
 				try: 

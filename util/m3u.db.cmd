@@ -139,7 +139,7 @@ def main():
 		else:
 			dblimit = int(dblimit)
 			db = PersistenDB(dblimit)
-			warning("[DB",dblimit,"items]")
+			# warning("[DB",dblimit,"items]")
 	except: pass
 		
 	try:
