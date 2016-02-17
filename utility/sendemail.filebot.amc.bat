@@ -125,6 +125,7 @@ call :WaitForWord %LOG1% "Done" "Failure"
 echo List of newly download files:	 >%LOG2%
 findstr /C:"[COPY]" %LOG1%		>>%LOG2%
 findstr /C:"[MOVE]" %LOG1%		>>%LOG2%
+findstr /C:"Skipped" %LOG1%		>>%LOG2%
 
 call %~dp0\log2download.cmd %LOG2%	>>%LOG2%
 
