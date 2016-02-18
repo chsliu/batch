@@ -78,8 +78,8 @@ def timestamp(f):
 				elif dat == 'None':  	
 					print(m3u_title_insert("["+today()+"]",line),"["+rule+"]")
 				elif rule == "4d":
-					# print(m3u_title_insert("["+today()+"]",line),"["+rule+"]")
-					print(m3u_title_insert("["+dat[:10]+"]",line),"["+rule+"]")
+					print(m3u_title_insert("["+today()+"]",line),"["+rule+"]")
+					# print(m3u_title_insert("["+dat[:10]+"]",line),"["+rule+"]")
 				elif rule == "4dany":
 					# print(m3u_title_insert("["+today()+"]",line),"["+rule+"]")
 					print(m3u_title_insert("["+today()+"]",line),"["+rule+"]")
