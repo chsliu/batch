@@ -99,7 +99,7 @@ def tag2titles_reducebytags(db,title2tags,matching_percent=33):
 			# if title in title2tags:
 				countMatching = countMatchingTags(title2tags[title],lastTags)
 				percent = countMatching*200/(len(title2tags[title])+len(lastTags))
-				# if percent < 50: 
+				# if percent < matching_percent: 
 					# if first: 
 						# print("===",tag.encode("utf-8"),"(",len(db[tag]),")","===")
 						# first = False
@@ -121,7 +121,7 @@ def tag2titles_uniqdump(db,title2tags):
 			if title in title2tags:
 				# countMatching = countMatchingTags(title2tags[title],lastTags)
 				# percent = countMatching*200/(len(title2tags[title])+len(lastTags))
-				# if percent < 50: 
+				# if percent < matching_percent: 
 				if first: 
 					print("===",tag.encode("utf-8"),"(",len(db[tag]),")","===")
 					first = False
@@ -133,7 +133,7 @@ def tag2titles_uniqdump(db,title2tags):
 				# db[tag].remove(title)
 
 				
-def tag2titles_uniq_dump(db,title2tags):
+def tag2titles_uniq_dump(db,title2tags,matching_percent=33):
 	tags = sorted(db.keys())
 	lastTags = []
 	for tag in tags:
@@ -142,7 +142,7 @@ def tag2titles_uniq_dump(db,title2tags):
 			if title in title2tags:
 				countMatching = countMatchingTags(title2tags[title],lastTags)
 				percent = countMatching*200/(len(title2tags[title])+len(lastTags))
-				if percent < 50: 
+				if percent < matching_percent: 
 					if first: 
 						print("===",tag.encode("utf-8"),"(",len(db[tag]),")","===")
 						first = False
@@ -174,14 +174,14 @@ def list_merge(mainlist,fromlist):
 			mainlist.append(item)
 				
 				
-def ttag_uniq_dump(ttag,ttag2titles,title2tags,title2url,lastTags):
+def ttag_uniq_dump(ttag,ttag2titles,title2tags,title2url,lastTags,matching_percent=33):
 	first = True
 	# lastTags = []
 	for title in ttag2titles[ttag]:
 		if title in title2tags:
 			countMatching = countMatchingTags(title2tags[title],lastTags)
 			percent = countMatching*200/(len(title2tags[title])+len(lastTags))
-			if percent < 50: 
+			if percent < matching_percent: 
 				if first: 
 					print("#EXTINF:0, ===",ttag.encode("utf-8"),"===","("+str(len(ttag2titles[ttag]))+")")
 					print("https://www.youtube.com/results?q="+urllib.quote(ttag.encode("utf-8")))
