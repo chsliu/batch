@@ -90,7 +90,7 @@ def countMatchingTags(tags,lastTags):
 	return count
 
 			
-def tag2titles_reducebytags(db,title2tags):
+def tag2titles_reducebytags(db,title2tags,matching_percent=33):
 	tags = sorted(db.keys())
 	lastTags = []
 	for tag in tags:
@@ -106,7 +106,7 @@ def tag2titles_reducebytags(db,title2tags):
 					# print(title.encode("utf-8"),percent,"%")
 				# if countMatching < 3: print(title.encode("utf-8"),countMatching)
 				# print("removing",title.encode("utf-8"))
-				if percent >= 50: 
+				if percent >= matching_percent: 
 					lastTags = title2tags[title]
 					title2tags.pop(title)
 				# db[tag].remove(title)
