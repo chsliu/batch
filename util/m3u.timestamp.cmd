@@ -81,11 +81,12 @@ def timestamp(f):
 					print(m3u_title_insert("["+today()+"]",line),"["+rule+"]")
 					# print(m3u_title_insert("["+dat[:10]+"]",line),"["+rule+"]")
 				elif rule == "4dany":
-					# print(m3u_title_insert("["+today()+"]",line),"["+rule+"]")
 					print(m3u_title_insert("["+today()+"]",line),"["+rule+"]")
 				elif rule == "7d":
 					# print(m3u_title_insert("["+today()+"]",line),"["+rule+"]")
 					print(m3u_title_insert("["+dat[:10]+"]",line),"["+rule+"]")
+				elif rule == "7dany":
+					print(m3u_title_insert("["+today()+"]",line),"["+rule+"]")
 				else: 			
 					# print("["+rule+"]",line)
 					print(line,"["+rule+"]")
