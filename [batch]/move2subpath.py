@@ -51,6 +51,7 @@ rootPathWords = [
 'E:',
 'F:',
 'P:',
+'Z:',
 'Admin',
 'Download',
 'Games',
