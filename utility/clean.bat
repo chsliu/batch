@@ -34,6 +34,13 @@ rd /q /s %1 >NUL 2>>&1
 exit /b
 
 REM =================================
+:WHEREIS
+set %2=
+for %%X in (%1) do (set %2=%%~$PATH:X)
+
+exit /b
+
+REM =================================
 @echo off
 echo Make Sure Dropbox is not in c:
 echo Cleaning . . .
@@ -95,7 +102,11 @@ for %%G in (A B C D E F G H I J K L M N O P Q R S T U V W X Y Z) do (
 )
 
 REM =================================
+call :WHEREIS cleanmgr.exe CLEANMGR
 
+if not defined CLEANMGR goto :CleanEnd
 REM run below first
 REM cleanmgr /sageset:99
 cleanmgr /sagerun:99
+
+:CleanEnd
