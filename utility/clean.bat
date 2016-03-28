@@ -12,7 +12,7 @@ REM call :EMPTYDIR <dir to empty>
 REM call :EMPTYDIR c:\temp
 REM =================================
 :EMPTYDIR
-pushd %1 || exit /b
+pushd %1 >NUL 2>>&1 || exit /b
 echo Emptying %1 ...
 rd /q /s . >NUL 2>>&1
 takeown /f . /r /D Y >NUL 2>>&1
