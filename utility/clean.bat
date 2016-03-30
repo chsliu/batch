@@ -12,7 +12,7 @@ REM call :EMPTYDIR <dir to empty>
 REM call :EMPTYDIR c:\temp
 REM =================================
 :EMPTYDIR
-pushd %1 || exit /b
+pushd %1 >NUL 2>>&1 || exit /b
 echo Emptying %1 ...
 rd /q /s . >NUL 2>>&1
 takeown /f . /r /D Y >NUL 2>>&1
@@ -30,6 +30,13 @@ echo Removing %1 ...
 rd /q /s %1 >NUL 2>>&1
 takeown /f %1 /r /D Y >NUL 2>>&1
 rd /q /s %1 >NUL 2>>&1
+
+exit /b
+
+REM =================================
+:WHEREIS
+set %2=
+for %%X in (%1) do (set %2=%%~$PATH:X)
 
 exit /b
 
@@ -95,7 +102,11 @@ for %%G in (A B C D E F G H I J K L M N O P Q R S T U V W X Y Z) do (
 )
 
 REM =================================
+call :WHEREIS cleanmgr.exe CLEANMGR
 
+if not defined CLEANMGR goto :CleanEnd
 REM run below first
 REM cleanmgr /sageset:99
 cleanmgr /sagerun:99
+
+:CleanEnd
