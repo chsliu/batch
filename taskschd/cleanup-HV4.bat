@@ -1,18 +1,32 @@
 REM =================================
+goto :main
+REM =================================
 
-REM rd /s /q E:\DEL	
-rd /s /q E:\Shares\Admin\DEL	
-rd /s /q E:\Shares\Library\DEL	
-rd /s /q E:\Shares\Media\DEL
-rd /s /q E:\Shares\NetBackup\DEL
-rd /s /q E:\Shares\Photos\DEL
-rd /s /q E:\Shares\Software\DEL
-rd /s /q E:\Shares\Users\DEL
+:REMOVEDIR
+echo rd /s /q %1
+rd /s /q %1
+
+exit /b
+
+REM =================================
+:main
+REM =================================
+
+REM rd /s /q E:\DEL
+
+call :REMOVEDIR E:\Shares\Admin\DEL	
+call :REMOVEDIR E:\Shares\Library\DEL	
+call :REMOVEDIR E:\Shares\Media\DEL
+call :REMOVEDIR E:\Shares\NetBackup\DEL
+call :REMOVEDIR E:\Shares\Photos\DEL
+call :REMOVEDIR E:\Shares\Software\DEL
+call :REMOVEDIR E:\Shares\Users\DEL
 
 REM =================================
 
 set path=%path%;"E:\Shares\Admin\PortableApps\Portable Python 2.7.6.1\App"
 
 REM cleanup, keep last 3 dir, debug is 0(off)
+echo call E:\Shares\NetBackup\recycle\cleanup.py.cmd 3 0 
 call E:\Shares\NetBackup\recycle\cleanup.py.cmd 3 0 
 
