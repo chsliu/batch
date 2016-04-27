@@ -25,7 +25,7 @@ set TODAY=%MyDate:~0,4%-%MyDate:~4,2%-%MyDate:~6,2%
 set MONTH=%MyDate:~0,4%-%MyDate:~4,2%
 
 REM =================================
-mkdir %temp% >nul
+mkdir %temp% >nul 2>>&1
 set LOG1=%temp%\%~n0-%COMPUTERNAME%-%TODAY%.txt
 set TXT1=%temp%\%~n0.txt
 set LINE=%temp%\%~n0-line.txt
