@@ -88,12 +88,20 @@ set SHARE=\\hv4\Library
 set XBMC=w1
 
 REM =================================
+set nofiletag=call "d:\Users\sita\Documents\tasks\util\show.no.filetag.cmd"
+
+for /f %%i in ('%nofiletag% %8 [eztv]') do set fname=%%i
+move %8 %fname% >nul
+
+for /f %%i in ('%nofiletag% %5 [eztv]') do set fname=%%i
+
+REM =================================
 
 set L=%1
 set S=%2
 set N=%3
 set K=%4
-set F=%5
+set F=%fname%
 set D=%6
 
 call :dequote L
