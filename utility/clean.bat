@@ -105,8 +105,9 @@ REM =================================
 call :WHEREIS cleanmgr.exe CLEANMGR
 
 if not defined CLEANMGR goto :CleanEnd
-REM run below first
-REM cleanmgr /sageset:99
+echo Remember to run below first
+echo cleanmgr /sageset:99
+echo.
 cleanmgr /sagerun:99
 
 :CleanEnd
