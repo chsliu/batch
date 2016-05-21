@@ -13,6 +13,7 @@ from optparse import OptionParser
 
 importantPhrases = None
 ignoresPhrases = None
+oneWords = None
 
 
 def warning_item(*objs):
@@ -339,7 +340,33 @@ def all_dump_m3u(title2tags,title2url):
 	print("")
 	print("")	
 				
-						
+
+def oneword_dump_m3u(oneWords,title2tags,title2url):
+	print("#EXTINF:0, === <單字> ===")
+	print("https://www.youtube.com/")
+	print("")
+	first = True
+	titles = sorted(title2tags.keys())
+	for word in oneWords:
+		first = True
+		for title in titles:
+			if word in title:
+				if title in title2tags:
+					if first:
+						print("#EXTINF:0, ===","["+word.encode("utf-8")+"]","===")
+						print("https://www.youtube.com/results?q="+urllib.quote(word.encode("utf-8")))
+						print("")
+						first = False
+					title_dump(title2tags,title2url,title,"")
+					title2tags.pop(title)
+		if not first:
+			print("")
+			print("")
+	if first:
+		print("")
+		print("")	
+		
+	
 # def tagx2db_add(db,tag,list,title2tags):
 	# i = 0
 	# if len(list) <= 1: return
@@ -550,11 +577,13 @@ def parsem3u(file):
 	
 	tag2titles_uniq_dump_m3u(tag2titles,title2tags,title2url)
 
+	oneword_dump_m3u(oneWords,title2tags,title2url)
+	
 	all_dump_m3u(title2tags,title2url)
 	
 	
 def main():
-	global ignoresPhrases, importantPhrases
+	global ignoresPhrases, importantPhrases, oneWords
 	
 	parser = OptionParser()
 	# parser.add_option("-f", "--filename", metavar="FILE", help="write output to FILE")
@@ -564,6 +593,7 @@ def main():
 	parser.add_option("-s","--stopword", metavar="stopword", help="set stopwords")
 	parser.add_option("-p","--priorityword", metavar="priorityword", help="set priority words")
 	parser.add_option("-n","--ignoreword", metavar="ignoreword", help="set ignore words")
+	parser.add_option("-o","--oneword", metavar="oneword", help="set keywords with one word")
 	opt, args = parser.parse_args()
 
 
@@ -594,6 +624,9 @@ def main():
 		for word in ignoresPhrases:
 			# warning("[AddWord]",word)
 			jieba.add_word(word)
+	if opt.oneword: 
+		file = open(opt.oneword,'r')
+		oneWords = readPhrases(file)
 		
 	f = sys.stdin
 	# nlptest(f)
