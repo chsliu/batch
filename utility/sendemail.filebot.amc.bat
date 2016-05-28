@@ -88,15 +88,20 @@ set SHARE=\\hv4\Library
 set XBMC=w1
 
 REM =================================
+:: save original codepage
+for /f "tokens=2 delims=:" %%a in ('chcp') do @set /a "cp=%%~a"
+chcp 65001 >nul
+
+REM =================================
 set nofiletag=call "d:\Users\sita\Documents\tasks\util\show.no.filetag.cmd"
 
-for /f "delims=" %%i in ('%nofiletag% %8 [eztv]') do set fname=%%i
-move %8 "%fname%" >nul
-REM for /f "delims=" %%i in ('%nofiletag% %8 [rarbg]') do set fname=%%i
-REM move %8 "%fname%" >nul
+for /f %%i in ('%nofiletag% %8 [eztv]') do set fname=%%i
+move %8 %fname% >nul
 
-for /f "delims=" %%i in ('%nofiletag% %5 [eztv]') do set fname=%%i
-REM for /f "delims=" %%i in ('%nofiletag% %5 [rarbg]') do set fname=%%i
+for /f %%i in ('%nofiletag% %5 [eztv]') do set fname=%%i
+
+REM =================================
+chcp %cp% >nul
 
 REM =================================
 
