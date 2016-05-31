@@ -346,6 +346,7 @@ def oneword_dump_m3u(oneWords,title2tags,title2url):
 	print("https://www.youtube.com/")
 	print("")
 	first = True
+	end = False
 	titles = sorted(title2tags.keys())
 	for word in oneWords:
 		first = True
@@ -362,7 +363,8 @@ def oneword_dump_m3u(oneWords,title2tags,title2url):
 		if not first:
 			print("")
 			print("")
-	if first:
+			end = True
+	if not end:
 		print("")
 		print("")	
 		

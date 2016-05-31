@@ -96,12 +96,13 @@ REM =================================
 set nofiletag=call "d:\Users\sita\Documents\tasks\util\show.no.filetag.cmd"
 
 for /f %%i in ('%nofiletag% %8 [eztv]') do set fname=%%i
-move %8 %fname% >nul
+if not [%fname%]==[] move %8 "%fname%" >nul
 
 for /f %%i in ('%nofiletag% %5 [eztv]') do set fname=%%i
+if [%fname%]==[] set fname=%5
 
 REM =================================
-chcp %cp% >nul
+REM chcp %cp% >nul
 
 REM =================================
 
@@ -154,3 +155,8 @@ sendemail -s msa.hinet.net -f egreta.su@msa.hinet.net -t chsliu@gmail.com -u [Fi
 rem pause
 
 del %LOG1% %LOG2% %TXT1%
+
+REM =================================
+chcp %cp% >nul
+
+

@@ -109,9 +109,12 @@ def main():
 		# warning(sys.exc_info()[0])
 		# warning(sys.exc_info())
 		
-	# f = sys.stdin
-	parse(file_name,file_tag)
-	# parse(file_name,file_tag,variablename)
+	try:
+		# f = sys.stdin
+		parse(file_name,file_tag)
+		# parse(file_name,file_tag,variablename)
+	except:
+		pass
 
 
 if __name__ == '__main__':
