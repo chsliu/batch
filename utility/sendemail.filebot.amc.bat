@@ -96,7 +96,7 @@ REM =================================
 set nofiletag=call "d:\Users\sita\Documents\tasks\util\show.no.filetag.cmd"
 
 for /f %%i in ('%nofiletag% %8 [eztv]') do set fname=%%i
-if not [%fname%]==[] move %8 "%fname%" >nul
+if not [%fname%]==[] move "%8" "%fname%" >nul
 
 for /f %%i in ('%nofiletag% %5 [eztv]') do set fname=%%i
 if [%fname%]==[] set fname=%5
