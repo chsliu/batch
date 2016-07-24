@@ -1,12 +1,27 @@
 @echo off
+REM =================================
+goto :main
+REM =================================
 
+REM =================================
+:DeQuote
+for /f "delims=" %%A in ('echo %%%1%%') do set %1=%%~A
+REM goto :EOF
+exit /b
+
+REM =================================
 :main
+REM =================================
 if [%1]==[] goto :EOF
 
-echo Converting %1
+set target=%1
 
-ConvertZ.exe /i:utf8 /o:big5 "%1"
-ConvertZ.exe /i:big5 /o:utf8 "%1"
+call :DeQuote target
+
+echo Converting %target%
+
+ConvertZ.exe /i:utf8 /o:big5 "%target%"
+ConvertZ.exe /i:big5 /o:utf8 "%target%"
 
 shift
 goto :main

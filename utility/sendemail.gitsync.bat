@@ -13,6 +13,22 @@ for /f %%a in ('type "%1"^|find "" /v /c') do set /a cnt=%%a
 exit /b
 
 
+:INTERNETCHECK
+echo checking internet connection
+ping www.google.com -n 1 -w 1000 >NUL
+REM cls
+if errorlevel 1 (
+	set internet=Not connected to internet
+	goto :EOF
+) else (
+	set internet=Connected to internet
+)
+
+echo %internet%
+
+exit /b
+
+
 REM =================================
 :main
 REM =================================
@@ -29,6 +45,10 @@ mkdir %temp% >nul 2>>&1
 set LOG1=%temp%\%~n0-%COMPUTERNAME%-%TODAY%.txt
 set TXT1=%temp%\%~n0.txt
 set LINE=%temp%\%~n0-line.txt
+
+REM =================================
+
+call :INTERNETCHECK
 
 REM =================================
 
@@ -55,7 +75,7 @@ REM =================================
 
 git pull		>>%LOG1% 2>>&1
 
-git add . --all	>>%LOG1% 2>>&1
+git add -A	>>%LOG1% 2>>&1
 git commit -a -m "Automated commit at %var% on %COMPUTERNAME%"	>>%LOG1% 2>>&1
 git push		>>%LOG1% 2>>&1
 
