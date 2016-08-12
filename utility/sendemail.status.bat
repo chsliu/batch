@@ -20,6 +20,7 @@ REM =================================
   set %3=1
 ) || (
   echo %2 was NOT found.
+  set %3=
 )
 
 exit /b
@@ -99,16 +100,16 @@ echo.  >>%LOG4%
 
 REM No status if VM
 if defined UnderVM goto :EOF
-set temp_smart=%temp%\%~n0-temp_smart.txt
 for /l %%G in (0,1,11) do (
-  echo. 						 >%temp_smart% 2>>&1
-  echo ======================	>>%temp_smart% 2>>&1
-  echo smartctl -a /dev/pd%%G	>>%temp_smart% 2>>&1
-  echo ======================	>>%temp_smart% 2>>&1
-  smartctl -a /dev/pd%%G 		>>%temp_smart% 2>>&1
+  REM set temp_smart=%temp%\%~n0-temp_smart.txt
+  echo. 						 >%temp%\%~n0-pd%%G-smart.txt 2>>&1
+  echo ======================	>>%temp%\%~n0-pd%%G-smart.txt 2>>&1
+  echo smartctl -a /dev/pd%%G	>>%temp%\%~n0-pd%%G-smart.txt 2>>&1
+  echo ======================	>>%temp%\%~n0-pd%%G-smart.txt 2>>&1
+  smartctl -a /dev/pd%%G 		>>%temp%\%~n0-pd%%G-smart.txt 2>>&1
   
-  call :findtext %temp_smart% "Unable to detect" HD_NOT_FOUND
-  if not defined HD_NOT_FOUND type %temp_smart% >>%LOG5%
+  call :findtext %temp%\%~n0-pd%%G-smart.txt "Unable to detect" HD_NOT_FOUND
+  if not defined HD_NOT_FOUND type %temp%\%~n0-pd%%G-smart.txt >>%LOG5%
 )
 :smartctlend
 echo.  >>%LOG5%
@@ -223,25 +224,35 @@ powershell -command "if (Get-Command Get-PhysicalDisk -errorAction SilentlyConti
 powershell -command "if (Get-Command Get-PhysicalDisk -errorAction SilentlyContinue) {Get-PhysicalDisk | Format-List FriendlyName,OperationalStatus,HealthStatus,BusType,MediaType,Manufacturer,Model,Size,UniqueId}" 				>>%LOG1%
 )
 
-echo ---------------------------------					>>%LOG1%
-findstr /C:"Device Model" %LOG5%					>>%LOG1%
-findstr /C:"User Capacity" %LOG5%					>>%LOG1%
-findstr /C:"Sector Sizes" %LOG5%					>>%LOG1%
-findstr /C:"Rotation Rate" %LOG5%					>>%LOG1%
-findstr /C:"Form Factor" %LOG5%						>>%LOG1%
-findstr /C:"ATA Version" %LOG5%						>>%LOG1%
-findstr "overall-health" %LOG5%					>>%LOG1%
-findstr /B "ID#" %LOG5%							>>%LOG1%
-findstr "Reallocated_Sector_Ct" %LOG5%					>>%LOG1%
-findstr "Reported_Uncorrect" %LOG5%					>>%LOG1%
-findstr "Command_Timeout" %LOG5%					>>%LOG1%
-findstr "Current_Pending_Sector" %LOG5%					>>%LOG1%
-findstr "Offline_Uncorrectable" %LOG5%					>>%LOG1%
-findstr "SSD_Life_Left" %LOG5%						>>%LOG1%
-findstr "Power_On_Hours" %LOG5%						>>%LOG1%
-findstr "Temperature_Celsius" %LOG5%					>>%LOG1%
-findstr /C:"occurred at disk power-on lifetime" %LOG5%			>>%LOG1%
-findstr "FAILING_NOW" %LOG5%						>>%LOG1%
+for /l %%G in (0,1,11) do (
+  call :findtext %temp%\%~n0-pd%%G-smart.txt "Unable to detect" HD_NOT_FOUND
+  if not defined HD_NOT_FOUND (
+	echo ---------------------------------					>>%LOG1%
+	echo smartctl -a /dev/pd%%G								>>%LOG1%
+	echo ---------------------------------					>>%LOG1%
+	findstr /C:"Device Model" %temp%\%~n0-pd%%G-smart.txt					>>%LOG1%
+	findstr /C:"User Capacity" %temp%\%~n0-pd%%G-smart.txt					>>%LOG1%
+	findstr /C:"Sector Sizes" %temp%\%~n0-pd%%G-smart.txt					>>%LOG1%
+	findstr /C:"Rotation Rate" %temp%\%~n0-pd%%G-smart.txt					>>%LOG1%
+	findstr /C:"Form Factor" %temp%\%~n0-pd%%G-smart.txt						>>%LOG1%
+	findstr /C:"ATA Version" %temp%\%~n0-pd%%G-smart.txt						>>%LOG1%
+	findstr "overall-health" %temp%\%~n0-pd%%G-smart.txt					>>%LOG1%
+	findstr /B "ID#" %temp%\%~n0-pd%%G-smart.txt							>>%LOG1%
+	findstr "Reallocated_Sector_Ct" %temp%\%~n0-pd%%G-smart.txt					>>%LOG1%
+	findstr "Reported_Uncorrect" %temp%\%~n0-pd%%G-smart.txt					>>%LOG1%
+	findstr "Command_Timeout" %temp%\%~n0-pd%%G-smart.txt					>>%LOG1%
+	findstr "Current_Pending_Sector" %temp%\%~n0-pd%%G-smart.txt					>>%LOG1%
+	findstr "Offline_Uncorrectable" %temp%\%~n0-pd%%G-smart.txt					>>%LOG1%
+	findstr "SSD_Life_Left" %temp%\%~n0-pd%%G-smart.txt						>>%LOG1%
+	findstr "Power_On_Hours" %temp%\%~n0-pd%%G-smart.txt						>>%LOG1%
+	findstr "Temperature_Celsius" %temp%\%~n0-pd%%G-smart.txt					>>%LOG1%
+	findstr /C:"occurred at disk power-on lifetime" %temp%\%~n0-pd%%G-smart.txt			>>%LOG1%
+	findstr "FAILING_NOW" %temp%\%~n0-pd%%G-smart.txt						>>%LOG1%
+  )
+  
+  del %temp%\%~n0-pd%%G-smart.txt
+)
+
 echo ---------------------------------					>>%LOG1%
 findstr /C:"> Disk" %LOG4%						>>%LOG1%
 findstr /C:"> ´`§Ç¼g¤J" %LOG4%						>>%LOG1%

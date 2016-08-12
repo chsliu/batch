@@ -42,7 +42,13 @@ set MONTH=%MyDate:~0,4%-%MyDate:~4,2%
 
 REM =================================
 mkdir %temp% >nul 2>>&1
-set LOG1=%temp%\%~n0-%COMPUTERNAME%-%TODAY%.txt
+
+set T=%~dp0
+set T=%T::=%
+set T=%T:\\=%
+set T=%T:\=-%
+
+set LOG1=%temp%\%~n0-%COMPUTERNAME%-%T%%TODAY%.txt
 set TXT1=%temp%\%~n0.txt
 set LINE=%temp%\%~n0-line.txt
 
@@ -111,4 +117,4 @@ REM =================================
 
 rem pause
 
-C:\Windows\System32\timeout.exe 10
+REM C:\Windows\System32\timeout.exe 10
