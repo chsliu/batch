@@ -236,6 +236,7 @@ for /l %%G in (0,1,11) do (
 	echo ---------------------------------					>>%LOG1%
 	echo smartctl -a /dev/pd%%G								>>%LOG1%
 	echo ---------------------------------					>>%LOG1%
+	findstr /C:"Model Family" %temp%\%~n0-pd%%G-smart.txt					>>%LOG1%
 	findstr /C:"Device Model" %temp%\%~n0-pd%%G-smart.txt					>>%LOG1%
 	findstr /C:"User Capacity" %temp%\%~n0-pd%%G-smart.txt					>>%LOG1%
 	findstr /C:"Sector Sizes" %temp%\%~n0-pd%%G-smart.txt					>>%LOG1%
