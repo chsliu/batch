@@ -138,6 +138,7 @@ def filterKeyword(file,keyword):
 		titleUTF8 = title.decode('utf-8')
 		# warning(keyword,type(keyword),title,type(title),titleUTF8,type(titleUTF8))
 		# warning(title,type(title),titleUTF8,type(titleUTF8))
+		# warning("keyword:",keyword,type(keyword),"titleUTF8:",titleUTF8,type(titleUTF8))
 		if keyword in titleUTF8:
 			# warning("==2==")
 			print(title)
@@ -166,9 +167,17 @@ def main():
 		# sortType = sys.argv[1]
 		# print(sortType)
 		# sort[sortType](f)
-		opt = sys.argv[1]
+		# warning("sys.stdin.encoding:",sys.stdin.encoding,"sys.stderr.encoding:",sys.stderr.encoding)
+		# opt = sys.argv[1].strip().decode(sys.stderr.encoding)
+		opt = sys.argv[1].strip()
+		# str = sys.argv[1].strip()
+		# warning("filter:",sys.argv[1],type(sys.argv[1]),opt,type(opt),hex(str[0]),hex(str[1]))
+		# warning(type(str),hex(ord(str[0])))
+		# warning(type(str),hex(ord(str[1])))
+		# warning(hex(ord(opt[0])),hex(ord(opt[1])))
 	except:
-		warning(sys.exc_info()[0])
+		# warning(sys.exc_info()[0])
+		for line in sys.exc_info():	warning(line)
 		# warning(sys.exc_info())
 		
 	filter["Default"](f, opt)	
