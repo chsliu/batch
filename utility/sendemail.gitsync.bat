@@ -79,10 +79,11 @@ if exist %_% call %_%
 
 REM =================================
 
-git pull		>>%LOG1% 2>>&1
-
 git add -A	>>%LOG1% 2>>&1
 git commit -a -m "Automated commit at %var% on %COMPUTERNAME%"	>>%LOG1% 2>>&1
+
+git pull		>>%LOG1% 2>>&1
+
 git push		>>%LOG1% 2>>&1
 
 REM =================================

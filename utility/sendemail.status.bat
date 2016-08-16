@@ -86,9 +86,14 @@ winsat cpu -encryption	>>%LOG4% 2>>&1
 winsat mem		>>%LOG4% 2>>&1
 for %%G in (A B C D E F G H I J K L M N O P Q R S T U V W X Y Z) do (
   if exist %%G:\nul (
-    winsat disk -drive %%G			>>%LOG4% 2>>&1
-    rem winsat disk -seq -read -drive %%G	>>%LOG4% 2>>&1
-    winsat disk -ran -write -drive %%G		>>%LOG4% 2>>&1
+    winsat disk -drive %%G			>>%temp%\winsat-disk-%%G.txt 2>>&1
+    rem winsat disk -seq -read -drive %%G	>>%temp%\winsat-disk-%%G.txt 2>>&1
+    winsat disk -ran -write -drive %%G		>>%temp%\winsat-disk-%%G.txt 2>>&1
+
+	echo ---------------------------------					>>%LOG4%
+	echo 			Disk %%G:								>>%LOG4%
+	echo ---------------------------------					>>%LOG4%	
+	type %temp%\winsat-disk-%%G.txt >>%LOG4%
   )
 )
 winsat dwm		>>%LOG4% 2>>&1
@@ -254,11 +259,19 @@ for /l %%G in (0,1,11) do (
   del %temp%\%~n0-pd%%G-smart.txt
 )
 
-echo ---------------------------------					>>%LOG1%
-findstr /C:"> Disk" %LOG4%						>>%LOG1%
-findstr /C:"> ´`§Ç¼g¤J" %LOG4%						>>%LOG1%
-findstr /C:"> ©µ¿ð" %LOG4%						>>%LOG1%
-findstr /C:"> ÀH¾÷¼g¤J" %LOG4%						>>%LOG1%
+for %%G in (A B C D E F G H I J K L M N O P Q R S T U V W X Y Z) do (
+  if exist %%G:\nul (
+	echo ---------------------------------					>>%LOG1%
+	echo 			Disk %%G:								>>%LOG1%
+	echo ---------------------------------					>>%LOG1%
+	findstr /C:"> Disk" %temp%\winsat-disk-%%G.txt						>>%LOG1%
+	findstr /C:"> ´`§Ç¼g¤J" %temp%\winsat-disk-%%G.txt						>>%LOG1%
+	findstr /C:"> ©µ¿ð" %temp%\winsat-disk-%%G.txt						>>%LOG1%
+	findstr /C:"> ÀH¾÷¼g¤J" %temp%\winsat-disk-%%G.txt						>>%LOG1%
+	
+	del %temp%\winsat-disk-%%G.txt
+  )
+)
 
 echo.									>>%LOG1%
 echo =================================					>>%LOG1%
