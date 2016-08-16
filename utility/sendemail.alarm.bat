@@ -124,6 +124,15 @@ for /l %%G in (0,1,11) do (
   echo ======================	>>%temp%\%~n0-pd%%G-smart.txt 2>>&1
   smartctl -a /dev/pd%%G 		>>%temp%\%~n0-pd%%G-smart.txt 2>>&1
   
+  call :findtext %temp%\%~n0-pd%%G-smart.txt "Unable to read USB" USB_NOT_FOUND
+  if defined USB_NOT_FOUND (
+	  echo. 						 >%temp%\%~n0-pd%%G-smart.txt 2>>&1
+	  echo ======================	>>%temp%\%~n0-pd%%G-smart.txt 2>>&1
+	  echo smartctl -a /dev/pd%%G	>>%temp%\%~n0-pd%%G-smart.txt 2>>&1
+	  echo ======================	>>%temp%\%~n0-pd%%G-smart.txt 2>>&1
+	  smartctl -d sat -a /dev/pd%%G >>%temp%\%~n0-pd%%G-smart.txt 2>>&1
+  )
+
   call :findtext %temp%\%~n0-pd%%G-smart.txt "Unable to detect" HD_NOT_FOUND
   if not defined HD_NOT_FOUND type %temp%\%~n0-pd%%G-smart.txt >>%LOG5%
 )
