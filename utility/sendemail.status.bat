@@ -15,8 +15,8 @@ exit /b
 
 REM =================================
 :findtext
->nul find %2 %1 && (
-  echo %2 was found.
+>nul C:\Windows\System32\find.exe %2 %1 && (
+  echo %2 was found in %1.
   set %3=1
 ) || (
   echo %2 was NOT found.
@@ -24,6 +24,16 @@ REM =================================
 )
 
 exit /b
+
+REM =================================
+REM call :CountFileLine <file> <linecount>
+REM =================================
+:CountFileLine
+set %2=0
+for /f %%a in ('type "%1"^|C:\Windows\System32\find.exe "" /v /c') do set /a %2=%%a
+
+exit /b
+
 
 REM =================================
 :main
@@ -61,6 +71,7 @@ set LOG6CAB=%temp%\msinfo32-%COMPUTERNAME%.cab
 set LOG7=%temp%\ipconfig.txt
 set LOG8=%temp%\coreinfo.txt
 set TXT1=%temp%\%~n0.txt
+set linecnt_temp=%temp%\winsat-disk-count.txt
 
 REM =================================
 REM Gathering System Report
@@ -90,10 +101,20 @@ for %%G in (A B C D E F G H I J K L M N O P Q R S T U V W X Y Z) do (
     rem winsat disk -seq -read -drive %%G	>>%temp%\winsat-disk-%%G.txt 2>>&1
     winsat disk -ran -write -drive %%G		>>%temp%\winsat-disk-%%G.txt 2>>&1
 
-	echo ---------------------------------					>>%LOG4%
-	echo 			Disk %%G:								>>%LOG4%
-	echo ---------------------------------					>>%LOG4%	
-	type %temp%\winsat-disk-%%G.txt >>%LOG4%
+	REM type %temp%\winsat-disk-%%G.txt
+	findstr /C:">" %temp%\winsat-disk-%%G.txt >%linecnt_temp%
+	REM set cnt=0
+	for /f %%a in ('type "%linecnt_temp%"^|C:\Windows\System32\find.exe "" /v /c') do (
+		REM set /a cnt=%%a
+		REM echo cnt %%G = %%a
+		if %%a gtr 10 (
+			echo ---------------------------------					>>%LOG4%
+			echo 			Disk %%G:								>>%LOG4%
+			echo ---------------------------------					>>%LOG4%
+			type %temp%\winsat-disk-%%G.txt >>%LOG4%
+		)
+	)
+	del %linecnt_temp%
   )
 )
 winsat dwm		>>%LOG4% 2>>&1
@@ -270,15 +291,24 @@ for /l %%G in (0,1,11) do (
 
 for %%G in (A B C D E F G H I J K L M N O P Q R S T U V W X Y Z) do (
   if exist %%G:\nul (
-	echo ---------------------------------					>>%LOG1%
-	echo 			Disk %%G:								>>%LOG1%
-	echo ---------------------------------					>>%LOG1%
-	findstr /C:"> Disk" %temp%\winsat-disk-%%G.txt						>>%LOG1%
-	findstr /C:"> ´`§Ç¼g¤J" %temp%\winsat-disk-%%G.txt						>>%LOG1%
-	findstr /C:"> ©µ¿ð" %temp%\winsat-disk-%%G.txt						>>%LOG1%
-	findstr /C:"> ÀH¾÷¼g¤J" %temp%\winsat-disk-%%G.txt						>>%LOG1%
-	
-	del %temp%\winsat-disk-%%G.txt
+	REM type %temp%\winsat-disk-%%G.txt
+	findstr /C:">" %temp%\winsat-disk-%%G.txt >%linecnt_temp%
+	REM set cnt=0
+	for /f %%a in ('type "%linecnt_temp%"^|C:\Windows\System32\find.exe "" /v /c') do (
+		REM set /a cnt=%%a
+		REM echo cnt %%G = %%a
+		if %%a gtr 10 (
+			echo ---------------------------------					>>%LOG1%
+			echo 			Disk %%G:								>>%LOG1%
+			echo ---------------------------------					>>%LOG1%
+			findstr /C:"> Disk" %temp%\winsat-disk-%%G.txt						>>%LOG1%
+			findstr /C:"> ´`§Ç¼g¤J" %temp%\winsat-disk-%%G.txt						>>%LOG1%
+			findstr /C:"> ©µ¿ð" %temp%\winsat-disk-%%G.txt						>>%LOG1%
+			findstr /C:"> ÀH¾÷¼g¤J" %temp%\winsat-disk-%%G.txt						>>%LOG1%
+		)
+	)
+	del %linecnt_temp%
+	REM del %temp%\winsat-disk-%%G.txt
   )
 )
 
