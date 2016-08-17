@@ -42,7 +42,13 @@ set MONTH=%MyDate:~0,4%-%MyDate:~4,2%
 
 REM =================================
 mkdir %temp% >nul 2>>&1
-set LOG1=%temp%\%~n0-%COMPUTERNAME%-%TODAY%.txt
+
+set T=%~dp0
+set T=%T::=%
+set T=%T:\\=%
+set T=%T:\=-%
+
+set LOG1=%temp%\%~n0-%COMPUTERNAME%-%T%%TODAY%.txt
 set TXT1=%temp%\%~n0.txt
 set LINE=%temp%\%~n0-line.txt
 
@@ -73,10 +79,11 @@ if exist %_% call %_%
 
 REM =================================
 
-git pull		>>%LOG1% 2>>&1
-
 git add -A	>>%LOG1% 2>>&1
 git commit -a -m "Automated commit at %var% on %COMPUTERNAME%"	>>%LOG1% 2>>&1
+
+git pull		>>%LOG1% 2>>&1
+
 git push		>>%LOG1% 2>>&1
 
 REM =================================
@@ -111,4 +118,4 @@ REM =================================
 
 rem pause
 
-C:\Windows\System32\timeout.exe 10
+REM C:\Windows\System32\timeout.exe 10

@@ -1,14 +1,14 @@
 REM =================================
 
-call %~dp0\utility\sendemail.gitsync.bat
+start /min call %~dp0\utility\sendemail.gitsync.bat
 
 REM =================================
 
-call %~dp0\ShooterSubPyDownloader\sendemail.gitsync.bat
+start /min call %appdata%\Kodi\userdata\sendemail.gitsync.bat
 
 REM =================================
 
-call %appdata%\Kodi\userdata\sendemail.gitsync.bat
+start /min call %~dp0\ShooterSubPyDownloader\sendemail.gitsync.bat
 
 REM =================================
 

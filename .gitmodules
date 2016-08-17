@@ -1,0 +1,3 @@
+[submodule "ShooterSubPyDownloader"]
+	path = ShooterSubPyDownloader
+	url = https://github.com/chsliu/ShooterSubPyDownloader.git
