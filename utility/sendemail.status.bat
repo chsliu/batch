@@ -15,14 +15,25 @@ exit /b
 
 REM =================================
 :findtext
->nul find %2 %1 && (
-  echo %2 was found.
+>nul C:\Windows\System32\find.exe %2 %1 && (
+  echo %2 was found in %1.
   set %3=1
 ) || (
   echo %2 was NOT found.
+  set %3=
 )
 
 exit /b
+
+REM =================================
+REM call :CountFileLine <file> <linecount>
+REM =================================
+:CountFileLine
+set %2=0
+for /f %%a in ('type "%1"^|C:\Windows\System32\find.exe "" /v /c') do set /a %2=%%a
+
+exit /b
+
 
 REM =================================
 :main
@@ -60,6 +71,7 @@ set LOG6CAB=%temp%\msinfo32-%COMPUTERNAME%.cab
 set LOG7=%temp%\ipconfig.txt
 set LOG8=%temp%\coreinfo.txt
 set TXT1=%temp%\%~n0.txt
+set linecnt_temp=%temp%\winsat-disk-count.txt
 
 REM =================================
 REM Gathering System Report
@@ -85,9 +97,24 @@ winsat cpu -encryption	>>%LOG4% 2>>&1
 winsat mem		>>%LOG4% 2>>&1
 for %%G in (A B C D E F G H I J K L M N O P Q R S T U V W X Y Z) do (
   if exist %%G:\nul (
-    winsat disk -drive %%G			>>%LOG4% 2>>&1
-    rem winsat disk -seq -read -drive %%G	>>%LOG4% 2>>&1
-    winsat disk -ran -write -drive %%G		>>%LOG4% 2>>&1
+    winsat disk -drive %%G			>>%temp%\winsat-disk-%%G.txt 2>>&1
+    rem winsat disk -seq -read -drive %%G	>>%temp%\winsat-disk-%%G.txt 2>>&1
+    winsat disk -ran -write -drive %%G		>>%temp%\winsat-disk-%%G.txt 2>>&1
+
+	REM type %temp%\winsat-disk-%%G.txt
+	findstr /C:">" %temp%\winsat-disk-%%G.txt >%linecnt_temp%
+	REM set cnt=0
+	for /f %%a in ('type "%linecnt_temp%"^|C:\Windows\System32\find.exe "" /v /c') do (
+		REM set /a cnt=%%a
+		REM echo cnt %%G = %%a
+		if %%a gtr 10 (
+			echo ---------------------------------					>>%LOG4%
+			echo 			Disk %%G:								>>%LOG4%
+			echo ---------------------------------					>>%LOG4%
+			type %temp%\winsat-disk-%%G.txt >>%LOG4%
+		)
+	)
+	del %linecnt_temp%
   )
 )
 winsat dwm		>>%LOG4% 2>>&1
@@ -99,16 +126,25 @@ echo.  >>%LOG4%
 
 REM No status if VM
 if defined UnderVM goto :EOF
-set temp_smart=%temp%\%~n0-temp_smart.txt
 for /l %%G in (0,1,11) do (
-  echo. 						 >%temp_smart% 2>>&1
-  echo ======================	>>%temp_smart% 2>>&1
-  echo smartctl -a /dev/pd%%G	>>%temp_smart% 2>>&1
-  echo ======================	>>%temp_smart% 2>>&1
-  smartctl -a /dev/pd%%G 		>>%temp_smart% 2>>&1
+  REM set temp_smart=%temp%\%~n0-temp_smart.txt
+  echo. 						 >%temp%\%~n0-pd%%G-smart.txt 2>>&1
+  echo ======================	>>%temp%\%~n0-pd%%G-smart.txt 2>>&1
+  echo smartctl -a /dev/pd%%G	>>%temp%\%~n0-pd%%G-smart.txt 2>>&1
+  echo ======================	>>%temp%\%~n0-pd%%G-smart.txt 2>>&1
+  smartctl -a /dev/pd%%G 		>>%temp%\%~n0-pd%%G-smart.txt 2>>&1
   
-  call :findtext %temp_smart% "Unable to detect" HD_NOT_FOUND
-  if not defined HD_NOT_FOUND type %temp_smart% >>%LOG5%
+  call :findtext %temp%\%~n0-pd%%G-smart.txt "Unable to read USB" USB_NOT_FOUND
+  if defined USB_NOT_FOUND (
+	  echo. 						 >%temp%\%~n0-pd%%G-smart.txt 2>>&1
+	  echo ======================	>>%temp%\%~n0-pd%%G-smart.txt 2>>&1
+	  echo smartctl -a /dev/pd%%G	>>%temp%\%~n0-pd%%G-smart.txt 2>>&1
+	  echo ======================	>>%temp%\%~n0-pd%%G-smart.txt 2>>&1
+	  smartctl -d sat -a /dev/pd%%G >>%temp%\%~n0-pd%%G-smart.txt 2>>&1
+  )
+
+  call :findtext %temp%\%~n0-pd%%G-smart.txt "Unable to detect" HD_NOT_FOUND
+  if not defined HD_NOT_FOUND type %temp%\%~n0-pd%%G-smart.txt >>%LOG5%
 )
 :smartctlend
 echo.  >>%LOG5%
@@ -223,30 +259,58 @@ powershell -command "if (Get-Command Get-PhysicalDisk -errorAction SilentlyConti
 powershell -command "if (Get-Command Get-PhysicalDisk -errorAction SilentlyContinue) {Get-PhysicalDisk | Format-List FriendlyName,OperationalStatus,HealthStatus,BusType,MediaType,Manufacturer,Model,Size,UniqueId}" 				>>%LOG1%
 )
 
-echo ---------------------------------					>>%LOG1%
-findstr /C:"Device Model" %LOG5%					>>%LOG1%
-findstr /C:"User Capacity" %LOG5%					>>%LOG1%
-findstr /C:"Sector Sizes" %LOG5%					>>%LOG1%
-findstr /C:"Rotation Rate" %LOG5%					>>%LOG1%
-findstr /C:"Form Factor" %LOG5%						>>%LOG1%
-findstr /C:"ATA Version" %LOG5%						>>%LOG1%
-findstr "overall-health" %LOG5%					>>%LOG1%
-findstr /B "ID#" %LOG5%							>>%LOG1%
-findstr "Reallocated_Sector_Ct" %LOG5%					>>%LOG1%
-findstr "Reported_Uncorrect" %LOG5%					>>%LOG1%
-findstr "Command_Timeout" %LOG5%					>>%LOG1%
-findstr "Current_Pending_Sector" %LOG5%					>>%LOG1%
-findstr "Offline_Uncorrectable" %LOG5%					>>%LOG1%
-findstr "SSD_Life_Left" %LOG5%						>>%LOG1%
-findstr "Power_On_Hours" %LOG5%						>>%LOG1%
-findstr "Temperature_Celsius" %LOG5%					>>%LOG1%
-findstr /C:"occurred at disk power-on lifetime" %LOG5%			>>%LOG1%
-findstr "FAILING_NOW" %LOG5%						>>%LOG1%
-echo ---------------------------------					>>%LOG1%
-findstr /C:"> Disk" %LOG4%						>>%LOG1%
-findstr /C:"> ´`§Ç¼g¤J" %LOG4%						>>%LOG1%
-findstr /C:"> ©µ¿ð" %LOG4%						>>%LOG1%
-findstr /C:"> ÀH¾÷¼g¤J" %LOG4%						>>%LOG1%
+for /l %%G in (0,1,11) do (
+  call :findtext %temp%\%~n0-pd%%G-smart.txt "Unable to detect" HD_NOT_FOUND
+  if not defined HD_NOT_FOUND (
+	echo ---------------------------------					>>%LOG1%
+	echo smartctl -a /dev/pd%%G								>>%LOG1%
+	echo ---------------------------------					>>%LOG1%
+	findstr /C:"Model Family" %temp%\%~n0-pd%%G-smart.txt					>>%LOG1%
+	findstr /C:"Device Model" %temp%\%~n0-pd%%G-smart.txt					>>%LOG1%
+	findstr /C:"User Capacity" %temp%\%~n0-pd%%G-smart.txt					>>%LOG1%
+	findstr /C:"Sector Sizes" %temp%\%~n0-pd%%G-smart.txt					>>%LOG1%
+	findstr /C:"Rotation Rate" %temp%\%~n0-pd%%G-smart.txt					>>%LOG1%
+	findstr /C:"Form Factor" %temp%\%~n0-pd%%G-smart.txt						>>%LOG1%
+	findstr /C:"ATA Version" %temp%\%~n0-pd%%G-smart.txt						>>%LOG1%
+	findstr "overall-health" %temp%\%~n0-pd%%G-smart.txt					>>%LOG1%
+	findstr /B "ID#" %temp%\%~n0-pd%%G-smart.txt							>>%LOG1%
+	findstr "Reallocated_Sector_Ct" %temp%\%~n0-pd%%G-smart.txt					>>%LOG1%
+	findstr "Reported_Uncorrect" %temp%\%~n0-pd%%G-smart.txt					>>%LOG1%
+	findstr "Command_Timeout" %temp%\%~n0-pd%%G-smart.txt					>>%LOG1%
+	findstr "Current_Pending_Sector" %temp%\%~n0-pd%%G-smart.txt					>>%LOG1%
+	findstr "Offline_Uncorrectable" %temp%\%~n0-pd%%G-smart.txt					>>%LOG1%
+	findstr "SSD_Life_Left" %temp%\%~n0-pd%%G-smart.txt						>>%LOG1%
+	findstr "Power_On_Hours" %temp%\%~n0-pd%%G-smart.txt						>>%LOG1%
+	findstr "Temperature_Celsius" %temp%\%~n0-pd%%G-smart.txt					>>%LOG1%
+	findstr /C:"occurred at disk power-on lifetime" %temp%\%~n0-pd%%G-smart.txt			>>%LOG1%
+	findstr "FAILING_NOW" %temp%\%~n0-pd%%G-smart.txt						>>%LOG1%
+  )
+  
+  del %temp%\%~n0-pd%%G-smart.txt
+)
+
+for %%G in (A B C D E F G H I J K L M N O P Q R S T U V W X Y Z) do (
+  if exist %%G:\nul (
+	REM type %temp%\winsat-disk-%%G.txt
+	findstr /C:">" %temp%\winsat-disk-%%G.txt >%linecnt_temp%
+	REM set cnt=0
+	for /f %%a in ('type "%linecnt_temp%"^|C:\Windows\System32\find.exe "" /v /c') do (
+		REM set /a cnt=%%a
+		REM echo cnt %%G = %%a
+		if %%a gtr 10 (
+			echo ---------------------------------					>>%LOG1%
+			echo 			Disk %%G:								>>%LOG1%
+			echo ---------------------------------					>>%LOG1%
+			findstr /C:"> Disk" %temp%\winsat-disk-%%G.txt						>>%LOG1%
+			findstr /C:"> ´`§Ç¼g¤J" %temp%\winsat-disk-%%G.txt						>>%LOG1%
+			findstr /C:"> ©µ¿ð" %temp%\winsat-disk-%%G.txt						>>%LOG1%
+			findstr /C:"> ÀH¾÷¼g¤J" %temp%\winsat-disk-%%G.txt						>>%LOG1%
+		)
+	)
+	del %linecnt_temp%
+	REM del %temp%\winsat-disk-%%G.txt
+  )
+)
 
 echo.									>>%LOG1%
 echo =================================					>>%LOG1%
