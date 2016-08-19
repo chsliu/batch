@@ -174,6 +174,7 @@ for /l %%G in (0,1,11) do (
 	echo ---------------------------------					>>%LOG1%
 	findstr /C:"Model Family" %temp%\%~n0-pd%%G-smart.txt					>>%LOG1%
 	findstr /C:"Device Model" %temp%\%~n0-pd%%G-smart.txt					>>%LOG1%
+	findstr /C:"Serial Number" %temp%\%~n0-pd%%G-smart.txt					>>%LOG1%
 	findstr /C:"overall-health" %temp%\%~n0-pd%%G-smart.txt					>>%LOG1%
 	findstr /B "ID#" %temp%\%~n0-pd%%G-smart.txt							>>%LOG1%
 	findstr "Reallocated_Sector_Ct" %temp%\%~n0-pd%%G-smart.txt					>>%LOG1%
