@@ -13,6 +13,22 @@ for /f %%a in ('type "%1"^|find "" /v /c') do set /a cnt=%%a
 exit /b
 
 
+:INTERNETCHECK
+echo checking internet connection
+ping www.google.com -n 1 -w 1000 >NUL
+REM cls
+if errorlevel 1 (
+	set internet=Not connected to internet
+	goto :EOF
+) else (
+	set internet=Connected to internet
+)
+
+echo %internet%
+
+exit /b
+
+
 REM =================================
 :main
 REM =================================
@@ -26,9 +42,19 @@ set MONTH=%MyDate:~0,4%-%MyDate:~4,2%
 
 REM =================================
 mkdir %temp% >nul 2>>&1
-set LOG1=%temp%\%~n0-%COMPUTERNAME%-%TODAY%.txt
+
+set T=%~dp0
+set T=%T::=%
+set T=%T:\\=%
+set T=%T:\=-%
+
+set LOG1=%temp%\%~n0-%COMPUTERNAME%-%T%%TODAY%.txt
 set TXT1=%temp%\%~n0.txt
 set LINE=%temp%\%~n0-line.txt
+
+REM =================================
+
+call :INTERNETCHECK
 
 REM =================================
 
@@ -53,10 +79,11 @@ if exist %_% call %_%
 
 REM =================================
 
+git add -A	>>%LOG1% 2>>&1
+git commit -a -m "Automated commit at %var% on %COMPUTERNAME%"	>>%LOG1% 2>>&1
+
 git pull		>>%LOG1% 2>>&1
 
-git add . --all	>>%LOG1% 2>>&1
-git commit -a -m "Automated commit at %var% on %COMPUTERNAME%"	>>%LOG1% 2>>&1
 git push		>>%LOG1% 2>>&1
 
 REM =================================
@@ -91,4 +118,4 @@ REM =================================
 
 rem pause
 
-C:\Windows\System32\timeout.exe 10
+REM C:\Windows\System32\timeout.exe 10

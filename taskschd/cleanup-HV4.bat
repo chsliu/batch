@@ -2,9 +2,15 @@ REM =================================
 goto :main
 REM =================================
 
+REM =================================
+REM call :REMOVEDIR <dir to remove>
+REM call :REMOVEDIR c:\del
+REM =================================
 :REMOVEDIR
-echo rd /s /q %1
-rd /s /q %1
+echo Removing %1 ...
+rd /q /s %1 >NUL 2>>&1
+takeown /f %1 /r /D Y >NUL 2>>&1
+rd /q /s %1 >NUL 2>>&1
 
 exit /b
 

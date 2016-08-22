@@ -56,15 +56,24 @@ def lineno():
 	"""Returns the current line number in our program."""
 	return inspect.currentframe().f_back.f_lineno
 
+
+def filterinvalid(str):
+	if isinstance(str,unicode): 
+		str = unicode(str).encode('utf-8')
+		str = str.decode('utf-8')
+	return str
+
 	
 # def parse(fname,ftag,var):
 def parse(fname,ftag):
+	# print(fname,type(fname),ftag,type(ftag))
 	if ftag:
 		# tokens = fname.split(ftag)
 		# print(tokens)
 		fname_new = fname.replace(ftag,"")
 		# print(fname_new,var)
 		print(fname_new)
+		# print(filterinvalid(fname_new))
 		# raw_input()
 		# os.environ[var] = fname_new
 		# os.putenv(var,fname_new)
@@ -73,6 +82,7 @@ def parse(fname,ftag):
 		# for key in sorted(os.environ): print(key,"==",os.environ[key])
 	else:
 		print(fname)
+		# print(filterinvalid(fname))
 		
 
 def main():
@@ -99,9 +109,12 @@ def main():
 		# warning(sys.exc_info()[0])
 		# warning(sys.exc_info())
 		
-	# f = sys.stdin
-	parse(file_name,file_tag)
-	# parse(file_name,file_tag,variablename)
+	try:
+		# f = sys.stdin
+		parse(file_name,file_tag)
+		# parse(file_name,file_tag,variablename)
+	except:
+		pass
 
 
 if __name__ == '__main__':

@@ -1,8 +1,7 @@
-@echo off
+REM @echo off
+
 REM =================================
 goto :main
-REM =================================
-
 REM =================================
 :DeQuote
 for /f "delims=" %%A in ('echo %%%1%%') do set %1=%%~A
@@ -14,15 +13,16 @@ REM =================================
 REM =================================
 if [%1]==[] goto :EOF
 
-set target=%1
+set filename=%1
 
-call :DeQuote target
+call :DeQuote filename
 
-echo Converting %target%
+echo Converting %filename%
 
-ConvertZ.exe /i:utf8 /o:big5 "%target%"
-ConvertZ.exe /i:big5 /o:utf8 "%target%"
+ConvertZ.exe /o:big5 "%filename%"
+ConvertZ.exe /o:utf8 "%filename%"
 
+REM =================================
 shift
 goto :main
 

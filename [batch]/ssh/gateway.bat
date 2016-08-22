@@ -1,0 +1,1 @@
+@putty.exe -ssh cht@gateway -pw chtnvdsl

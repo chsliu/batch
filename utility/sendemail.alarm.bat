@@ -13,6 +13,7 @@ REM =================================
 :whereis
 set %2=
 for %%X in (%1) do (set %2=%%~$PATH:X)
+
 exit /b
 
 REM =================================
@@ -25,6 +26,7 @@ REM =================================
   set %3=1
 ) || (
   echo %2 was NOT found.
+  set %3=
 )
 exit /b
 
@@ -114,16 +116,25 @@ echo.  >>%LOG4%
 
 REM No status if VM
 if defined UnderVM goto :EOF
-set temp_smart=%temp%\%~n0-temp_smart.txt
 for /l %%G in (0,1,11) do (
-  echo. 						 >%temp_smart% 2>>&1
-  echo ======================	>>%temp_smart% 2>>&1
-  echo smartctl -a /dev/pd%%G	>>%temp_smart% 2>>&1
-  echo ======================	>>%temp_smart% 2>>&1
-  smartctl -a /dev/pd%%G 		>>%temp_smart% 2>>&1
+  REM set temp_smart=%temp%\%~n0-pd%%G-temp_smart.txt
+  echo. 						 >%temp%\%~n0-pd%%G-smart.txt 2>>&1
+  echo ======================	>>%temp%\%~n0-pd%%G-smart.txt 2>>&1
+  echo smartctl -a /dev/pd%%G	>>%temp%\%~n0-pd%%G-smart.txt 2>>&1
+  echo ======================	>>%temp%\%~n0-pd%%G-smart.txt 2>>&1
+  smartctl -a /dev/pd%%G 		>>%temp%\%~n0-pd%%G-smart.txt 2>>&1
   
-  call :findtext %temp_smart% "Unable to detect" HD_NOT_FOUND
-  if not defined HD_NOT_FOUND type %temp_smart% >>%LOG5%
+  call :findtext %temp%\%~n0-pd%%G-smart.txt "Unable to read USB" USB_NOT_FOUND
+  if defined USB_NOT_FOUND (
+	  echo. 						 >%temp%\%~n0-pd%%G-smart.txt 2>>&1
+	  echo ======================	>>%temp%\%~n0-pd%%G-smart.txt 2>>&1
+	  echo smartctl -a /dev/pd%%G	>>%temp%\%~n0-pd%%G-smart.txt 2>>&1
+	  echo ======================	>>%temp%\%~n0-pd%%G-smart.txt 2>>&1
+	  smartctl -d sat -a /dev/pd%%G >>%temp%\%~n0-pd%%G-smart.txt 2>>&1
+  )
+
+  call :findtext %temp%\%~n0-pd%%G-smart.txt "Unable to detect" HD_NOT_FOUND
+  if not defined HD_NOT_FOUND type %temp%\%~n0-pd%%G-smart.txt >>%LOG5%
 )
 :smartctlend
 echo.  >>%LOG5%
@@ -154,60 +165,73 @@ powershell -command "if (Get-Command Get-PhysicalDisk -errorAction SilentlyConti
 powershell -command "if (Get-Command Get-PhysicalDisk -errorAction SilentlyContinue) {Get-PhysicalDisk | Format-List FriendlyName,OperationalStatus,HealthStatus,BusType,MediaType,Manufacturer,Model,Size,UniqueId}" 				>>%LOG1%
 )
 
-echo ---------------------------------					>>%LOG1%
-findstr /C:"overall-health" %LOG5%					>>%LOG1%
-findstr /B "ID#" %LOG5%							>>%LOG1%
-findstr "Reallocated_Sector_Ct" %LOG5%					>>%LOG1%
-findstr "Reported_Uncorrect" %LOG5%					>>%LOG1%
-findstr "Command_Timeout" %LOG5%					>>%LOG1%
-findstr "Current_Pending_Sector" %LOG5%					>>%LOG1%
-findstr "Offline_Uncorrectable" %LOG5%					>>%LOG1%
-findstr "SSD_Life_Left" %LOG5%						>>%LOG1%
-findstr "Power_On_Hours" %LOG5%						>>%LOG1%
-findstr "Temperature_Celsius" %LOG5%					>>%LOG1%
-findstr /C:"occurred at disk power-on lifetime" %LOG5%			>>%LOG1%
-findstr "FAILING_NOW" %LOG5%						>>%LOG1%
-
-REM =================================
-REM Check for Alarm Status
-REM =================================
-
 set ALARM=
-findstr "overall-health" %LOG5% > %LINE%
-call :AWK %LINE% 6
-if defined RET if [%RET%] neq [PASSED] set ALARM=1
+for /l %%G in (0,1,11) do (
+  call :findtext %temp%\%~n0-pd%%G-smart.txt "Unable to detect" HD_NOT_FOUND
+  if not defined HD_NOT_FOUND (
+	echo ---------------------------------					>>%LOG1%
+	echo smartctl -a /dev/pd%%G								>>%LOG1%
+	echo ---------------------------------					>>%LOG1%
+	findstr /C:"Model Family" %temp%\%~n0-pd%%G-smart.txt					>>%LOG1%
+	findstr /C:"Device Model" %temp%\%~n0-pd%%G-smart.txt					>>%LOG1%
+	findstr /C:"Serial Number" %temp%\%~n0-pd%%G-smart.txt					>>%LOG1%
+	findstr /C:"overall-health" %temp%\%~n0-pd%%G-smart.txt					>>%LOG1%
+	findstr /B "ID#" %temp%\%~n0-pd%%G-smart.txt							>>%LOG1%
+	findstr "Reallocated_Sector_Ct" %temp%\%~n0-pd%%G-smart.txt					>>%LOG1%
+	findstr "Reported_Uncorrect" %temp%\%~n0-pd%%G-smart.txt					>>%LOG1%
+	findstr "Command_Timeout" %temp%\%~n0-pd%%G-smart.txt					>>%LOG1%
+	findstr "Current_Pending_Sector" %temp%\%~n0-pd%%G-smart.txt					>>%LOG1%
+	findstr "Offline_Uncorrectable" %temp%\%~n0-pd%%G-smart.txt					>>%LOG1%
+	findstr "SSD_Life_Left" %temp%\%~n0-pd%%G-smart.txt						>>%LOG1%
+	findstr "Power_On_Hours" %temp%\%~n0-pd%%G-smart.txt						>>%LOG1%
+	findstr "Temperature_Celsius" %temp%\%~n0-pd%%G-smart.txt					>>%LOG1%
+	findstr /C:"occurred at disk power-on lifetime" %temp%\%~n0-pd%%G-smart.txt			>>%LOG1%
+	findstr "FAILING_NOW" %temp%\%~n0-pd%%G-smart.txt						>>%LOG1%
+	
+	REM =================================
+	REM Check for Alarm Status
+	REM =================================
 
-findstr "Reallocated_Sector_Ct" %LOG5% > %LINE%
-call :AWK %LINE% 10
-if defined RET if [%RET%] gtr [10] set ALARM=1
+	findstr "overall-health" %temp%\%~n0-pd%%G-smart.txt > %LINE%
+	call :AWK %LINE% 6
+	if defined RET if [%RET%] neq [PASSED] set ALARM=1
 
-findstr "Reported_Uncorrect" %LOG5% > %LINE%
-call :AWK %LINE% 10
-if defined RET if [%RET%] neq [0] set ALARM=1
+	findstr "Reallocated_Sector_Ct" %temp%\%~n0-pd%%G-smart.txt > %LINE%
+	call :AWK %LINE% 10
+	if defined RET if [%RET%] gtr [10] set ALARM=1
 
-findstr "Command_Timeout" %LOG5% > %LINE%
-call :AWK %LINE% 10
-if defined RET if [%RET%] neq [0] set ALARM=1
+	findstr "Reported_Uncorrect" %temp%\%~n0-pd%%G-smart.txt > %LINE%
+	call :AWK %LINE% 10
+	if defined RET if [%RET%] neq [0] set ALARM=1
 
-findstr "Current_Pending_Sector" %LOG5% > %LINE%
-call :AWK %LINE% 10
-if defined RET if [%RET%] neq [0] set ALARM=1
+	findstr "Command_Timeout" %temp%\%~n0-pd%%G-smart.txt > %LINE%
+	call :AWK %LINE% 10
+	if defined RET if [%RET%] neq [0] set ALARM=1
 
-findstr "Offline_Uncorrectable" %LOG5% > %LINE%
-call :AWK %LINE% 10
-if defined RET if [%RET%] neq [0] set ALARM=1
+	findstr "Current_Pending_Sector" %temp%\%~n0-pd%%G-smart.txt > %LINE%
+	call :AWK %LINE% 10
+	if defined RET if [%RET%] neq [0] set ALARM=1
 
-findstr "SSD_Life_Left" %LOG5% > %LINE%
-call :AWK %LINE% 6
-set THRESHOLD=%RET%
-call :AWK %LINE% 4
-if defined RET if [%THRESHOLD%] geq [%RET%] set ALARM=1
+	findstr "Offline_Uncorrectable" %temp%\%~n0-pd%%G-smart.txt > %LINE%
+	call :AWK %LINE% 10
+	if defined RET if [%RET%] neq [0] set ALARM=1
 
-findstr "FAILING_NOW" %LOG5% > %LINE%
-call :AWK %LINE% 9
-if defined RET if [%RET%] == [FAILING_NOW] set ALARM=1
+	findstr "SSD_Life_Left" %temp%\%~n0-pd%%G-smart.txt > %LINE%
+	call :AWK %LINE% 6
+	set THRESHOLD=%RET%
+	call :AWK %LINE% 4
+	if defined RET if [%THRESHOLD%] geq [%RET%] set ALARM=1
 
-del %LINE%
+	findstr "FAILING_NOW" %temp%\%~n0-pd%%G-smart.txt > %LINE%
+	call :AWK %LINE% 9
+	if defined RET if [%RET%] == [FAILING_NOW] set ALARM=1
+
+	del %LINE%
+	
+  )
+  
+  del %temp%\%~n0-pd%%G-smart.txt
+)
 
 REM =================================
 REM Send E-mail only if ALARM is set
