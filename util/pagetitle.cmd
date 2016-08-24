@@ -25,7 +25,8 @@ def pagetitle(file):
 	
 	soup = BeautifulSoup(page,'html.parser')
 	# soup = BeautifulSoup(page,'lxml')
-	title = soup.title.string.replace('\n',' ')
+	title = ""
+	if soup.title: title = soup.title.string.replace('\n',' ')
 
 	warning("[Page]",title)
 	print("TITLE:",title.encode('utf-8')) 

@@ -187,49 +187,55 @@ for /l %%G in (0,1,11) do (
 	findstr "Temperature_Celsius" %temp%\%~n0-pd%%G-smart.txt					>>%LOG1%
 	findstr /C:"occurred at disk power-on lifetime" %temp%\%~n0-pd%%G-smart.txt			>>%LOG1%
 	findstr "FAILING_NOW" %temp%\%~n0-pd%%G-smart.txt						>>%LOG1%
-	
+
 	REM =================================
 	REM Check for Alarm Status
 	REM =================================
 
 	findstr "overall-health" %temp%\%~n0-pd%%G-smart.txt > %LINE%
-	call :AWK %LINE% 6
-	if defined RET if [%RET%] neq [PASSED] set ALARM=1
+	FOR /F "tokens=6 delims= " %%C IN (%LINE%) DO (
+		if [%%C] neq [PASSED] set ALARM=1
+	)
 
 	findstr "Reallocated_Sector_Ct" %temp%\%~n0-pd%%G-smart.txt > %LINE%
-	call :AWK %LINE% 10
-	if defined RET if [%RET%] gtr [10] set ALARM=1
+	FOR /F "tokens=10 delims= " %%C IN (%LINE%) DO (
+		if [%%C] gtr [0] set ALARM=1
+	)
 
 	findstr "Reported_Uncorrect" %temp%\%~n0-pd%%G-smart.txt > %LINE%
-	call :AWK %LINE% 10
-	if defined RET if [%RET%] neq [0] set ALARM=1
+	FOR /F "tokens=10 delims= " %%C IN (%LINE%) DO (
+		if [%%C] gtr [0] set ALARM=1
+	)
 
 	findstr "Command_Timeout" %temp%\%~n0-pd%%G-smart.txt > %LINE%
-	call :AWK %LINE% 10
-	if defined RET if [%RET%] neq [0] set ALARM=1
+	FOR /F "tokens=10 delims= " %%C IN (%LINE%) DO (
+		if [%%C] gtr [0] set ALARM=1
+	)
 
 	findstr "Current_Pending_Sector" %temp%\%~n0-pd%%G-smart.txt > %LINE%
-	call :AWK %LINE% 10
-	if defined RET if [%RET%] neq [0] set ALARM=1
+	FOR /F "tokens=10 delims= " %%C IN (%LINE%) DO (
+		if [%%C] gtr [0] set ALARM=1
+	)
 
 	findstr "Offline_Uncorrectable" %temp%\%~n0-pd%%G-smart.txt > %LINE%
-	call :AWK %LINE% 10
-	if defined RET if [%RET%] neq [0] set ALARM=1
+	FOR /F "tokens=10 delims= " %%C IN (%LINE%) DO (
+		if [%%C] gtr [0] set ALARM=1
+	)
 
 	findstr "SSD_Life_Left" %temp%\%~n0-pd%%G-smart.txt > %LINE%
-	call :AWK %LINE% 6
-	set THRESHOLD=%RET%
-	call :AWK %LINE% 4
-	if defined RET if [%THRESHOLD%] geq [%RET%] set ALARM=1
+	FOR /F "tokens=4-6 delims= " %%D IN (%LINE%) DO (
+		if [%%F] geq [%%D] set ALARM=1
+	)
 
 	findstr "FAILING_NOW" %temp%\%~n0-pd%%G-smart.txt > %LINE%
-	call :AWK %LINE% 9
-	if defined RET if [%RET%] == [FAILING_NOW] set ALARM=1
+	FOR /F "tokens=9 delims= " %%C IN (%LINE%) DO (
+		if [%%C] == [FAILING_NOW] set ALARM=1
+	)
 
 	del %LINE%
-	
+
   )
-  
+
   del %temp%\%~n0-pd%%G-smart.txt
 )
 
