@@ -11,4 +11,6 @@ git config --global credential.helper wincred
 
 git config --global push.default matching
 
+git config --global core.autocrlf false
+
 REM @echo off
