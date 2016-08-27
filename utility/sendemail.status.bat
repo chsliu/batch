@@ -16,11 +16,7 @@ exit /b
 REM =================================
 :findtext
 >nul C:\Windows\System32\find.exe %2 %1 && (
-<<<<<<< HEAD
-  echo %2 was found.
-=======
   echo %2 was found in %1.
->>>>>>> a31b4d386bdbc76d0802ce12563b4319fcc1b754
   set %3=1
 ) || (
   echo %2 was NOT found.
@@ -35,6 +31,26 @@ REM =================================
 :CountFileLine
 set %2=0
 for /f %%a in ('type "%1"^|C:\Windows\System32\find.exe "" /v /c') do set /a %2=%%a
+
+exit /b
+
+REM =================================
+:ZIPDIR
+
+powershell.exe -nologo -noprofile -command "& { Add-Type -A 'System.IO.Compression.FileSystem'; [IO.Compression.ZipFile]::CreateFromDirectory('%1', '%2'); }"
+
+exit /b
+
+REM =================================
+:ZIPFILE
+
+if not exist %1 exit /b
+
+set TEMPDIR=%temp%\%~n1
+mkdir %TEMPDIR%
+cp %1 %TEMPDIR%
+call :ZIPDIR %TEMPDIR% %2
+rmdir /s /q %TEMPDIR%
 
 exit /b
 
@@ -67,11 +83,13 @@ set LOG1=%temp%\%~n0-%COMPUTERNAME%-%TODAY%.txt
 set LOG2=%temp%\systeminfo.txt
 set LOG3=%temp%\dxdiag.txt
 set LOG3CAB=%temp%\dxdiag-%COMPUTERNAME%.cab
+set LOG3ZIP=%temp%\dxdiag-%COMPUTERNAME%.ZIP
 set LOG4=%temp%\winsat.txt
 set LOG5=%temp%\smart-%TODAY%.txt
 set LOG6=%temp%\msinfo32.txt
 set LOG6NFO=%temp%\msinfo32.nfo
 set LOG6CAB=%temp%\msinfo32-%COMPUTERNAME%.cab
+set LOG6ZIP=%temp%\msinfo32-%COMPUTERNAME%.ZIP
 set LOG7=%temp%\ipconfig.txt
 set LOG8=%temp%\coreinfo.txt
 set TXT1=%temp%\%~n0.txt
@@ -344,20 +362,26 @@ REM Send E-mail
 REM =================================
 
 copy %0 %TXT1% >nul
-if not exist %LOG3CAB% makecab %LOG3% %LOG3CAB%
-if not exist %LOG6CAB% makecab %LOG6NFO% %LOG6CAB%
+
+REM if not exist %LOG3CAB% makecab %LOG3% %LOG3CAB%
+if not exist %LOG3ZIP% call :ZIPFILE %LOG3% %LOG3ZIP%
+
+REM if not exist %LOG6CAB% makecab %LOG6NFO% %LOG6CAB%
+if not exist %LOG6ZIP% call :ZIPFILE %LOG6NFO% %LOG6ZIP%
 
 if not exist %LOG1% set LOG1=
 if not exist %LOG2% set LOG2=
 if not exist %LOG3CAB% set LOG3CAB=
+if not exist %LOG3ZIP% set LOG3ZIP=
 if not exist %LOG4% set LOG4=
 if not exist %LOG5% set LOG5=
 if not exist %LOG6CAB% set LOG6CAB=
+if not exist %LOG6ZIP% set LOG6ZIP=
 if not exist %LOG7% set LOG7=
 if not exist %LOG8% set LOG8=
 if not exist %TXT1% set TXT1=
 
-sendemail -s msa.hinet.net -f egreta.su@msa.hinet.net -t chsliu@gmail.com -u [LOG] %COMPUTERNAME% %~n0 -m %0 -a %LOG1% %LOG2% %LOG3CAB% %LOG4% %LOG5% %LOG6CAB% %LOG7% %LOG8% %TXT1%
+sendemail -s msa.hinet.net -f egreta.su@msa.hinet.net -t chsliu@gmail.com -u [LOG] %COMPUTERNAME% %~n0 -m %0 -a %LOG1% %LOG2% %LOG3CAB% %LOG3ZIP% %LOG4% %LOG5% %LOG6CAB% %LOG6ZIP% %LOG7% %LOG8% %TXT1%
 
 rem %LOG2% %LOG3% %LOG3CAB% %LOG4% %LOG6% %LOG6NFO% %LOG6CAB%
 del %LOG1% %LOG5% %LOG7% %TXT1%
