@@ -92,6 +92,8 @@ set LOG6CAB=%temp%\msinfo32-%COMPUTERNAME%.cab
 set LOG6ZIP=%temp%\msinfo32-%COMPUTERNAME%.ZIP
 set LOG7=%temp%\ipconfig.txt
 set LOG8=%temp%\coreinfo.txt
+set LOG9=%temp%\cpu.utilization.txt
+set LOG9T=%LOG9%.tmp
 set TXT1=%temp%\%~n0.txt
 set linecnt_temp=%temp%\winsat-disk-count.txt
 
@@ -178,6 +180,32 @@ ipconfig /all >>%LOG7% 2>>&1
 
 if not exist %LOG8% coreinfo >%LOG8%
 
+wmic path Win32_PerfFormattedData_PerfProc_Process get Name,WorkingSet,PercentProcessorTime >%LOG9T%
+type %LOG9T% >%LOG9%
+setlocal DisableDelayedExpansion
+(
+    for /F "tokens=1-3 delims= " %%A in (%LOG9%) DO (
+        set "par1=%%A"
+        set "par2=%%B"
+        set /a "par3=%%C/1048576"
+        setlocal EnableDelayedExpansion
+        echo !par2! !par2!			!par1!	!par3!MB
+        endlocal
+  )
+) >%LOG9T%
+echo PercentProcessorTime	Name		WorkingSet>%LOG9%
+(
+	for /F "usebackq tokens=1,* delims= " %%A in (`c:\Windows\System32\sort.exe %LOG9T%`) DO (
+		set /a "numtest=%%A"
+		setlocal EnableDelayedExpansion
+		REM if [!numtest!]==[%%A] echo %%B
+		REM if %%A GTR 0 echo !numtest! %%B
+		if !numtest! GTR 0 if !numtest! LSS 100 echo %%B
+		endlocal
+	)
+) >>%LOG9%
+del %LOG9T% >nul
+
 REM =================================
 REM Generate Report
 REM =================================
@@ -192,6 +220,8 @@ findstr /C:"          Processor" %LOG3% 				>>%LOG1%
 echo ---------------------------------					>>%LOG1%
 type %LOG6% | findstr /C:"ÅÞ¿è³B²z¾¹"					>>%LOG1%
 type %LOG6% | findstr /C:"Logical Processor"				>>%LOG1%
+echo ---------------------------------					>>%LOG1%
+type %LOG9%												>>%LOG1%
 echo ---------------------------------					>>%LOG1%
 findstr "LZW" %LOG4%							>>%LOG1%
 findstr "AES256" %LOG4%							>>%LOG1%
@@ -379,9 +409,10 @@ if not exist %LOG6CAB% set LOG6CAB=
 if not exist %LOG6ZIP% set LOG6ZIP=
 if not exist %LOG7% set LOG7=
 if not exist %LOG8% set LOG8=
+if not exist %LOG9% set LOG9=
 if not exist %TXT1% set TXT1=
 
-sendemail -s msa.hinet.net -f egreta.su@msa.hinet.net -t chsliu@gmail.com -u [LOG] %COMPUTERNAME% %~n0 -m %0 -a %LOG1% %LOG2% %LOG3CAB% %LOG3ZIP% %LOG4% %LOG5% %LOG6CAB% %LOG6ZIP% %LOG7% %LOG8% %TXT1%
+sendemail -s msa.hinet.net -f egreta.su@msa.hinet.net -t chsliu@gmail.com -u [LOG] %COMPUTERNAME% %~n0 -m %0 -a %LOG1% %LOG2% %LOG3CAB% %LOG3ZIP% %LOG4% %LOG5% %LOG6CAB% %LOG6ZIP% %LOG7% %LOG8% %LOG9% %TXT1%
 
 rem %LOG2% %LOG3% %LOG3CAB% %LOG4% %LOG6% %LOG6NFO% %LOG6CAB%
-del %LOG1% %LOG5% %LOG7% %TXT1%
+del %LOG1% %LOG5% %LOG7% %LOG9% %TXT1%
