@@ -180,8 +180,8 @@ ipconfig /all >>%LOG7% 2>>&1
 
 if not exist %LOG8% coreinfo >%LOG8%
 
-wmic path Win32_PerfFormattedData_PerfProc_Process get Name,WorkingSet,PercentProcessorTime >%LOG9T%
-type %LOG9T% >%LOG9%
+wmic path Win32_PerfFormattedData_PerfProc_Process get Name,WorkingSet,PercentProcessorTime |more >%LOG9%
+REM type %LOG9T% >%LOG9%
 setlocal DisableDelayedExpansion
 (
     for /F "tokens=1-3 delims= " %%A in (%LOG9%) DO (
@@ -221,7 +221,15 @@ echo ---------------------------------					>>%LOG1%
 type %LOG6% | findstr /C:"ÅÞ¿è³B²z¾¹"					>>%LOG1%
 type %LOG6% | findstr /C:"Logical Processor"				>>%LOG1%
 echo ---------------------------------					>>%LOG1%
+echo CPU Utilization									>>%LOG1%
+echo ---------------------------------					>>%LOG1%
 type %LOG9%												>>%LOG1%
+echo ---------------------------------					>>%LOG1%
+echo Load Average										>>%LOG1%
+echo ---------------------------------					>>%LOG1%
+echo ---------------------------------					>>%LOG1%
+echo Context Switch										>>%LOG1%
+echo ---------------------------------					>>%LOG1%
 echo ---------------------------------					>>%LOG1%
 findstr "LZW" %LOG4%							>>%LOG1%
 findstr "AES256" %LOG4%							>>%LOG1%
