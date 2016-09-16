@@ -77,6 +77,8 @@ REM =================================
 set _=%~dp0\..\utility\gitconf.bat
 if exist %_% call %_%
 
+git config -l 	>>%LOG1% 2>>&1
+
 REM =================================
 
 git add -A	>>%LOG1% 2>>&1
