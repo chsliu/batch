@@ -77,8 +77,6 @@ REM =================================
 set _=%~dp0\..\utility\gitconf.bat
 if exist %_% call %_%
 
-git config -l 	>>%LOG1% 2>>&1
-
 REM =================================
 
 git add -A	>>%LOG1% 2>>&1
@@ -104,6 +102,12 @@ call :COUNTLINE %LINE%
 rem echo cnt = %cnt%
 rem pause
 if %cnt% GTR 0 set ALARM=1
+
+REM =================================
+echo =================================	>>%LOG1%
+echo git config -l						>>%LOG1%
+echo =================================	>>%LOG1%
+git config -l 	>>%LOG1% 2>>&1
 
 REM =================================
 copy %0 %TXT1% >nul
