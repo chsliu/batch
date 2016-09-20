@@ -49,7 +49,7 @@ goto :WaitForWord
 REM =================================
 :Notify
 pushd %~dp0\..\pushbullet\
-python pushbullet_cmd.py UR97NWpn7i61jqO0BQkyZWQhaNmfGe8t note ufjW6eNsjz3KRxFVWm "%3" "%~n0 Download Complete"
+python pushbullet_cmd.py UR97NWpn7i61jqO0BQkyZWQhaNmfGe8t note ufjW6eNsjAkQAk8QjQ "%3" "%~n0 Download Complete"
 popd
 
 rem pause
