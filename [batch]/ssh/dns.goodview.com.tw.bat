@@ -1,1 +1,1 @@
-@ssh -i "D:\Users\sita\Dropbox\[КєКо]\SSHKey\nb19_rsa" admin@%~n0
+@ssh -i "D:\Users\sita\Dropbox\SSHKey\nb19_rsa" admin@%~n0
