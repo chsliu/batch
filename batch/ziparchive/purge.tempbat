@@ -1,0 +1,28 @@
+@echo off
+
+set ZIPDIR=\\vmw7\Download\minecraft
+set BASE=Yozªº¥@¬É
+set CNTMAX=%1
+
+if not defined CNTMAX goto :EOF
+
+set QUERY=dir /b /o:-d "%ZIPDIR%\%BASE%*.zip"
+
+set /a CNT=0
+
+for /f "delims=" %%f in ('%QUERY%') do (
+
+	set ZIP=%ZIPDIR%\%%f
+
+	setlocal enabledelayedexpansion
+
+	if !CNT! GEQ %CNTMAX% (
+		echo !CNT!: !ZIP!
+		
+	)
+	
+	endlocal	
+	
+	set /a CNT+=1
+
+)
