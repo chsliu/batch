@@ -21,8 +21,8 @@ REM =================================
 
 choco feature enable -nautoUninstaller
 
-REM classic-shell cpu-z crystaldiskinfo crystaldiskmark putty winmerge winscp foxitreader listary 
-cinst -y 7zip cmder directx dropbox everything f.lux filebot git github google-chrome-x64 gow hg kodi line mp3tag netscan64 notepadplusplus paint.net potplayer python2 skype teamviewer teraterm windowsliveinstaller wireshark
+REM classic-shell cpu-z crystaldiskinfo crystaldiskmark putty winmerge winscp foxitreader listary gow 
+cinst -y 7zip cmder directx dropbox everything f.lux filebot git github google-chrome-x64 hg kodi line mp3tag netscan64 notepadplusplus paint.net potplayer python2 skype teamviewer teraterm windowsliveinstaller wireshark
 
 REM =================================
 
