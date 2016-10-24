@@ -1,0 +1,1372 @@
+vim
+ls
+ls -la
+awk
+git
+git status
+cd/d C:\Users\sita\AppData\Roaming\Kodi\userdata
+git status
+gitsync.bat 
+where git
+gitsync.bat 
+choco feature list
+choco feature /?
+choco feature enable -n=autoUninstaller
+ipconfig
+clist -l > d:\nb19.txt
+cd/d D:\Users\sita\Documents\tasks\utility\newinstall
+newinstall.workstation.bat 
+cinst -y gow f.lux
+cinst -y f.lux
+ping github.com
+cd ..
+cd taskschd\
+gitsync.bat 
+github
+clist -l
+gitsync.bat 
+ping gateway -t
+ping 8.8.8.8
+ping dns -t
+clist directx
+cinst -y directx
+ping dns -t
+ping -t gateway
+exit
+where git
+where potplayer
+potplayer
+clist -l
+exit
+clist dev
+clist dev-c
+clist gtk
+clist artrage 
+clist hddguardian
+clist btsync
+clist sync
+clist -l
+git
+cd/d D:\Users\sita\Documents\tasks
+git pull
+exit
+ping hv2 -t
+exit
+cinst -y netscan64
+clist -l
+cuninst -y angryip
+clist wake
+ping hv2 -t
+cd/d D:\Users\sita\Documents\tasks\ShooterSubPyDownloader
+git pull
+ping vndb
+ping vmdb
+wuapp
+exit
+clist -l
+arp -a
+cup -y teamviewer
+netscan32
+netscan64
+netscan64 /?
+ping hv3
+ping hv3 -t
+exit
+cd/d D:\Users\sita\Documents\tasks\utility\wakeonlan
+hv3
+ping 8.8.8.8 -t
+ping gateway
+ping macmini
+ping gateway
+hv3wol.bat 
+hv3
+ping gateway
+cd/d D:\Users\sita\Documents\tasks\bin
+dir
+WolCmd.exe 
+psshutdown.exe /?
+psshutdown -s -t 0 -f \\g2
+NET USE \\g2\IPC$ 1 /USER:sita
+psshutdown -s -t 0 -f \\g2
+shutdown /s /m \\g2 /t 0
+psshutdown -s -t 0 -f \\g2
+shutdown /s /m \\g2 /t 0
+cd/d D:\Users\sita\Documents\tasks\utility\wakeonlan
+hv2
+hv2wol.bat 
+wolcmd /?
+ping hv3 -t
+net user administrator /active:yes
+net user administrator 
+ping hv3 -t
+cd/d D:\Users\sita\Documents\tasks\utility\wakeonlan
+g2
+ net use \\g2\ipc$ /user:sita 1
+shutdown /s /m \\g2 /t 0
+ping gateway -t
+ping g2
+shutdown /s /m \\g2 /t 0
+net user administrator /active:yes
+shutdown /s /m \\g2 /t 0
+ping hv3
+ping pshp -t
+ping vmw7 -t
+cd/d D:\Users\sita\Documents\tasks
+dir
+cd bin
+dir
+cd ..
+cd bin
+dir
+git add .
+cd ..
+utility\gitsync.bat 
+exit
+ping hv3 -t
+cd/d D:\Users\sita\Documents\tasks\utility\wakeonlan
+dir
+hv2wol.bat 
+exit
+cd/d D:\Users\sita\Documents\tasks\ShooterSubPyDownloader
+gitsync.bat 
+exit
+ping vmw7 -t
+ping hv4 -t
+ping hv3
+ping vmdb
+cd/d D:\Users\sita\Documents\tasks\iperf-2.0.5-3-win32
+hv4
+clist
+clist -l
+ping hv3 -t
+ping gateway
+ping hv4
+ping gateway -t
+cat
+ping hv3
+ping hv4 -t
+ping vmw7 -t
+ping gateway -t
+ping hv3 -t
+ping pshp -t
+choco install gae.sdk
+where python
+where pythonw
+cd/d D:\Users\sita\Documents\tasks\bin
+git add .
+git push
+choco install -y gae.sdk
+cd/d D:\Users\sita\Dropbox\cvsroot\appengine
+gcloud auth login
+gcloud
+dir
+python appcfg.py update goodviewwebsite
+appcfg.py
+python"C:\Program Files (x86)\Google\google_appengine\google\appengine\tools\appcfg.py" update goodviewwebsite
+pythoin
+python "C:\Program Files (x86)\Google\google_appengine\google\appengine\tools\appcfg.py" update goodviewwebsite
+python "C:\Program Files (x86)\Google\google_appengine\appcfg.py" update goodviewwebsite
+gcloud auth login
+cd/d D:\Users\sita\Dropbox\cvsroot\appengine\goodviewwebsite
+cd ..
+python "C:\Program Files (x86)\Google\google_appengine\appcfg.py" update goodviewwebsite
+cd/d D:\Users\sita\Dropbox\cvsroot\appengine
+python "C:\Program Files (x86)\Google\google_appengine\appcfg.py" update goodviewwebsite\
+cd/d D:\Users\sita\Dropbox\cvsroot\appengine
+PING 8.8.8.8 -T
+PING 8.8.8.8 -t
+PING -t hv3
+pushd \\vmw7\Download\Photos\Camera Uploads
+popd
+PING -t pshp 
+ping tivo2
+pushd \\vmw7\Download\Photos\ipadmini2
+popd
+PING -t hv3
+ping tivo2
+ping -t hv3
+f:
+dir "Commander Data Storyline"
+dir "Commander Data Storyline" /b
+dir "Commander Data Storyline" /b > commander.txt
+ping -t pshp
+ping -t dns
+ping -t gateway
+ping -t dns
+ping -t 8.8.8.8 
+ipconfig
+ping -t gateway
+ipconfig
+ping -t gateway
+exit
+ping -t gateway
+ping -t 8.8.8.8
+ping -t hv2 
+exit
+ping -t hv3
+clist steam
+choco install steam
+exit
+exit
+exit
+ifconfig
+ipconfig
+exit
+exit
+exit
+exit
+cd/d D:\Users\sita\Dropbox\cvsroot\appengine
+python "C:\Program Files (x86)\Google\google_appengine\appcfg.py" update goodviewwebsite\
+cd/d D:\Users\sita\Dropbox\cvsroot\appengine
+PING 8.8.8.8 -T
+PING 8.8.8.8 -t
+PING -t hv3
+pushd \\vmw7\Download\Photos\Camera Uploads
+popd
+PING -t pshp 
+ping tivo2
+pushd \\vmw7\Download\Photos\ipadmini2
+popd
+PING -t hv3
+ping tivo2
+ping -t hv3
+f:
+dir "Commander Data Storyline"
+dir "Commander Data Storyline" /b
+dir "Commander Data Storyline" /b > commander.txt
+ping -t pshp
+ping -t dns
+ping -t gateway
+ping -t dns
+ping -t 8.8.8.8 
+ipconfig
+ping -t gateway
+ipconfig
+ping -t gateway
+exit
+ping -t gateway
+ping -t 8.8.8.8
+ping -t hv2 
+exit
+ping -t hv3
+clist steam
+choco install steam
+exit
+exit
+exit
+ifconfig
+exit
+exit
+exit
+ssg
+ssh
+vm
+vm1404.bat 
+ping vm1404
+ipconfig
+ping hv4
+ping gateway
+git submodule add https://github.com/chsliu/ShooterSubPyDownloader.git
+git submodule help
+git submoduleupdate
+dir ShooterSubPyDownloader\
+type .gitmodules 
+git clone https://github.com/chsliu/ShooterSubPyDownloader.git
+cd ShooterSubPyDownloader\
+git submodule init
+git submodule update
+git diff sendemail.gitsync.bat
+git pull
+git gui
+git status
+cd ..
+dir
+exit
+bash
+where bash
+exit
+git submodule init
+git submodule update
+git diff sendemail.gitsync.bat
+git pull
+git gui
+dir
+exit
+where bash
+bash
+ping 192.168.1.75
+ping 192.168.1.75 -a
+ping vmw7
+clist core
+clist core | grep Visual
+cd/d D:\Users\sita\Documents\tasks\ShooterSubPyDownloader
+cd ..
+git status
+cd ShooterSubPyDownloader\
+ipconfig
+ping w1
+ping w1 -4
+ping 192.168.1.18 -a
+cd
+exit
+ssh
+vm1404.bat 
+exit
+ping w1 -4
+exit
+bash
+where bash
+exit
+git submodule init
+git submodule update
+git diff sendemail.gitsync.bat
+git pull
+git gui
+dir
+exit
+where bash
+bash
+ping 192.168.1.75
+ping 192.168.1.75 -a
+ping vmw7
+clist core
+clist core | grep Visual
+cd/d D:\Users\sita\Documents\tasks\ShooterSubPyDownloader
+cd ..
+git status
+cd ShooterSubPyDownloader\
+ipconfig
+ping 192.168.1.18 -a
+cd
+exit
+ssh
+vm1404.bat 
+cd/d \\w1\Users\sita\AppData\Roaming\Kodi\userdata\playlists\video\YouTube
+pushd \\w1\Users\sita\AppData\Roaming\Kodi\userdata\playlists\video\YouTube
+ping w1
+ping w1 -4
+del d:\Users\sita\.python\4c1e030b.pkld:\Users\sita\.python\4c1e030b.pkl
+del d:\Users\sita\.python\4c1e030b.pkl
+pl.yoz.道.bat
+exit
+pl.yoz.道.bat
+exit
+cd/d D:\Users\sita\Documents\tasksD:\Users\sita\Documents\tasks
+cd D:\Users\sita\Documents\tasks
+cd/d D:\Users\sita\Documents\tasks
+git pull
+git status
+pl.yoz.道.bat
+winsat disk -drive t
+cd Desktop\
+dir
+test t:\log.t.txt 
+test t:\log.d.txt 
+test t:\log.txt 
+exit
+exit
+where bash
+bash
+ping 192.168.1.75
+ping 192.168.1.75 -a
+ping vmw7
+clist core
+clist core | grep Visual
+cd/d D:\Users\sita\Documents\tasks\ShooterSubPyDownloader
+git status
+cd ShooterSubPyDownloader\
+ipconfig
+ping 192.168.1.18 -a
+cd
+exit
+ssh
+vm1404.bat 
+cd/d \\w1\Users\sita\AppData\Roaming\Kodi\userdata\playlists\video\YouTube
+pushd \\w1\Users\sita\AppData\Roaming\Kodi\userdata\playlists\video\YouTube
+ping w1
+ping w1 -4
+del d:\Users\sita\.python\4c1e030b.pkld:\Users\sita\.python\4c1e030b.pkl
+del d:\Users\sita\.python\4c1e030b.pkl
+pl.yoz.道.bat
+winsat disk -drive t
+t:
+type log.txt
+winsat disk -ran -write -drive t > log.txt
+winsat disk -drive d > log.txt
+winsat disk -ran -write -drive d >> log.txt
+findstr /C:">" log.txt 
+findstr /?
+move log.txt log.d.txt 
+winsat disk -drive t > log.txt
+winsat disk -ran -write -drive t >> log.txt
+move log.txt log.t.txt
+findstr /C:">" log.d.txt 
+findstr /C:">" log.t.txt 
+whereis find
+wmic cpu get loadpercentage
+cd/d C:\Users\sita\Desktop\sita.0
+cd sita
+cd sita.0\
+cd  IntelGraphicsProfiles
+cd ..
+dir
+dir /a
+exit
+exit
+exit
+exit
+ssg
+ssh
+vm
+vm1404.bat 
+ping vm1404
+ipconfig
+ping hv4
+ping gateway
+git submodule add https://github.com/chsliu/ShooterSubPyDownloader.git
+git submodule help
+git submoduleupdate
+dir ShooterSubPyDownloader\
+type .gitmodules 
+git clone https://github.com/chsliu/ShooterSubPyDownloader.git
+cd ShooterSubPyDownloader\
+git submodule init
+git submodule update
+git diff sendemail.gitsync.bat
+git pull
+git gui
+git status
+cd ..
+dir
+exit
+bash
+where bash
+exit
+git submodule init
+git submodule update
+git diff sendemail.gitsync.bat
+git pull
+git gui
+dir
+exit
+where bash
+bash
+ping 192.168.1.75
+ping 192.168.1.75 -a
+ping vmw7
+clist core
+clist core | grep Visual
+cd/d D:\Users\sita\Documents\tasks\ShooterSubPyDownloader
+cd ..
+git status
+cd ShooterSubPyDownloader\
+ipconfig
+ping w1
+ping w1 -4
+ping 192.168.1.18 -a
+cd
+exit
+ssh
+vm1404.bat 
+exit
+ping w1 -4
+exit
+bash
+where bash
+exit
+git submodule init
+git submodule update
+git diff sendemail.gitsync.bat
+git pull
+git gui
+exit
+where bash
+bash
+ping 192.168.1.75
+ping 192.168.1.75 -a
+clist core
+clist core | grep Visual
+cd/d D:\Users\sita\Documents\tasks\ShooterSubPyDownloader
+git status
+cd ShooterSubPyDownloader\
+ipconfig
+ping 192.168.1.18 -a
+cd
+exit
+vm1404.bat 
+cd/d \\w1\Users\sita\AppData\Roaming\Kodi\userdata\playlists\video\YouTube
+pushd \\w1\Users\sita\AppData\Roaming\Kodi\userdata\playlists\video\YouTube
+ping w1
+ping w1 -4
+del d:\Users\sita\.python\4c1e030b.pkld:\Users\sita\.python\4c1e030b.pkl
+del d:\Users\sita\.python\4c1e030b.pkl
+pl.yoz.道.bat
+exit
+pl.yoz.道.bat
+cd/d D:\Users\sita\Documents\tasksD:\Users\sita\Documents\tasks
+cd D:\Users\sita\Documents\tasks
+cd/d D:\Users\sita\Documents\tasks
+git pull
+git status
+cd Desktop\
+set cbt
+set cnt
+type test.bvat
+type test.bat
+test.bat 
+type winsat-disk-C.txt 
+test winsat-disk-C.txt 
+wmic cpu get loadpercentage
+ps
+ps aux | sort -nrk 3,3 | head -n 5
+for /f "skip=1" %p in ('wmic cpu get loadpercentage') do echo %p
+typeperf 
+typeperf "\processor(_Total)\% Processor Time"  -SC 1 -y
+ tasklist
+ tasklist
+powershell
+@for /f "skip=1" %p in ('wmic cpu get loadpercentage') do @echo %p
+@for /f "skip=1" %p in ('wmic cpu get loadpercentage') do @echo CPU Usage: %p%λ @λ @
+tasklist /v /t
+tasklist 
+tasklist /T
+tasklist /T /?
+tasklist /SVC
+tasklist /V
+tasklist /T /F
+tasklist /SVC /FI 
+tasklist /T 
+tasklist /D
+tasklist /?
+tasklist /M
+tasklist /=
+tasklist /T /FI "CPUTIME gt 00:00:10"
+wmic path Win32_PerfFormattedData_PerfProc_Process get Name,PercentProcessorTime
+wmic path Win32_PerfFormattedData_PerfProc_Process
+wmic cpu get loadpercentage /format:value
+@for /f "skip=1" %p in ('wmic cpu get loadpercentage') do @echo %p%
+tasklist /v 
+tasklist /FI "CPUTIME gt 00:00:10"
+WMIC path win32_process get Caption,Processid,Commandline
+WMIC path win32_process get Caption,Processid,Commandline > %temp%\cpu.usage.txt
+typeperf "\Process(*)\% Processor Time" -sc 1
+typeperf "\Process(*)\% Processor Time" -sc 1 > %temp%\cpu.usage.txt
+typeperf /?
+typeperf "\Processor(_Total)\% Processor Time"
+typeperf "\Process(*)\% Processor Time" -sc 1 > %temp%\cpu.usage.csv
+robocopy 
+ping vmw7
+robocopy /?
+backup.ssd.bat 
+set COMPUTERNAME
+WMIC path win32_process
+WMIC path win32_process> %temp%\cpu.usage.txt
+tasklist /v > %temp%\cpu.usage.txt
+WMIC path win32_process > %temp%\cpu.usage.txt
+WMIC path win32_process > %temp%\cpu.usage.csv
+"D:\Users\sita\Documents\tasks\[batch]\!!move2del.bat" "\\w1\Users\sita\AppData\Roaming\Kodi\userdata\playlists\video\YouTube\pl.politic.夜問打權.m3u"
+wmic path win32_process get Caption,Processid,Commandline,KernelModeTime,UserModeTime
+wmic path win32_process get Caption,Processid,KernelModeTime,UserModeTime,Commandline > %temp%\cpu.usage.txt
+wmic path win32_process get Caption,KernelModeTime,UserModeTime,Commandline
+wmic path win32_process get Caption,KernelModeTime,UserModeTime,Commandline > %temp%\cpu.usage.txt
+wmic path Win32_PerfFormattedData_PerfProc_Process > %temp%\cpu.usage.txt
+wmic path Win32_PerfFormattedData_PerfProc_Process get Name,PercentProcessorTime > %temp%\cpu.usage.txt
+dir
+sort
+where sort
+wmic path Win32_PerfFormattedData_PerfProc_Process get Name,VirtualBytes,PercentProcessorTime
+wmic path Win32_PerfFormattedData_PerfProc_Process get Name,VirtualBytes,PercentProcessorTime > %temp%\cpu.usage.txt
+wmic path Win32_PerfFormattedData_PerfProc_Process get Name,WorkingSet,PercentProcessorTime  > %temp%\cpu.usage.txt
+set par
+type cpu.usage.txt
+test.bat cpu.usage.txt 
+sort /r cpu.usage.txt
+cd ..
+ssh
+where ssh
+w1
+clear
+ls
+ssh.exe admin@dns.goodview.com.tw
+exit
+git pull
+git gui
+git status
+cd ..
+dir
+exit
+bash
+where bash
+exit
+git submodule init
+git submodule update
+git diff sendemail.gitsync.bat
+git pull
+git gui
+dir
+exit
+where bash
+bash
+ping 192.168.1.75
+ping 192.168.1.75 -a
+ping vmw7
+clist core
+clist core | grep Visual
+cd/d D:\Users\sita\Documents\tasks\ShooterSubPyDownloader
+cd ..
+git status
+cd ShooterSubPyDownloader\
+ipconfig
+ping w1
+ping w1 -4
+ping 192.168.1.18 -a
+cd
+exit
+cd/d "\\w1\Users\sita\AppData\Roaming\Kodi\userdata\playlists\video\YouTube\pl.yoz.道.bat"
+cd/d "\\w1\Users\sita\AppData\Roaming\Kodi\userdata\playlists\video\YouTube\
+pushd "\\w1\Users\sita\AppData\Roaming\Kodi\userdata\playlists\video\YouTube\
+del d:\Users\sita\.python\69403975.pkl
+pl.yoz.道.bat
+python
+popd
+ping hv4
+ssh
+vm1404.bat 
+ping vshpere.goodview.com.twvshpere.goodview.com.tw
+ping vshpere.goodview.com.tw
+w1
+exit
+cd/d "\\w1\Users\sita\AppData\Roaming\Kodi\userdata\playlists\video\YouTube\
+pushd "\\w1\Users\sita\AppData\Roaming\Kodi\userdata\playlists\video\YouTube\
+del d:\Users\sita\.python\69403975.pkl
+pl.yoz.道.bat
+python
+popd
+ping hv4
+vm1404.bat 
+ping vshpere.goodview.com.twvshpere.goodview.com.tw
+ping vshpere.goodview.com.tw
+ping w1
+ssh
+cls
+w1
+cd/d C:\Users\sita\AppData\Roaming\.minecraft\config
+cd/d D:\Users\sita\Dropbox\games\.minecraft\config
+git diff veinminer/general.cfg
+git status
+git diff JEI/worldSettings.cfg
+exit
+git diff JEI/worldSettings.cfg
+w1
+cls
+ssh
+vm1404.bat 
+exit
+cd/d C:\Users\sita\AppData\Roaming\.minecraft\config
+git diff veinminer/general.cfg
+cd/d D:\Users\sita\Dropbox\games\.minecraft\config
+git diff  JEI/jei.cfg
+git diff JEI/worldSettings.cfg
+git diff xaerowaypoints.txt
+git status
+ipconfig
+exit
+git status
+git diff JEI/worldSettings.cfg
+exit
+git diff JEI/worldSettings.cfg
+w1
+cls
+ssh
+vm1404.bat 
+exit
+cd/d C:\Users\sita\AppData\Roaming\.minecraft\config
+git diff veinminer/general.cfg
+git diff  JEI/jei.cfg
+git diff JEI/worldSettings.cfg
+ping gateway
+ping bridge
+cd/d D:\Users\sita\Dropbox\games\.minecraft\config
+git diff xaerowaypoints.txt
+git status
+minecraft.bat 
+ipconfig
+cd ..
+dir
+exit
+git status
+ssh
+vm2
+vm1404.bat 
+ipconfig
+exit
+ping dns -t
+ping gateway -t
+ping gateway -t
+ping dns -t
+where java
+where javaw
+path
+"C:\Users\sita\Downloads\jarfix.exe" /?
+"C:\Users\sita\Downloads\jarfix.exe" /64
+exit
+"C:\Users\sita\Downloads\jarfix.exe" /?
+"C:\Users\sita\Downloads\jarfix.exe" /64
+cd/d D:\Users\sita\Documents\tasks\utility
+sendemail.status.bat 
+exit
+ping dns -t
+ping gateway -t
+ping 192.168.1.75 -a
+ping vmw7
+clist core
+clist core | grep Visual
+cd/d D:\Users\sita\Documents\tasks\ShooterSubPyDownloader
+cd ..
+git status
+cd ShooterSubPyDownloader\
+ipconfig
+ping w1
+ping w1 -4
+ping 192.168.1.18 -a
+cd
+exit
+ssh
+vm1404.bat 
+exit
+ping w1 -4
+exit
+bash
+where bash
+exit
+git submodule init
+git submodule update
+git diff sendemail.gitsync.bat
+git pull
+git gui
+exit
+where bash
+bash
+ping 192.168.1.75
+ping 192.168.1.75 -a
+clist core
+clist core | grep Visual
+cd/d D:\Users\sita\Documents\tasks\ShooterSubPyDownloader
+git status
+cd ShooterSubPyDownloader\
+ipconfig
+ping 192.168.1.18 -a
+cd
+exit
+vm1404.bat 
+cd/d \\w1\Users\sita\AppData\Roaming\Kodi\userdata\playlists\video\YouTube
+pushd \\w1\Users\sita\AppData\Roaming\Kodi\userdata\playlists\video\YouTube
+ping w1
+ping w1 -4
+del d:\Users\sita\.python\4c1e030b.pkld:\Users\sita\.python\4c1e030b.pkl
+del d:\Users\sita\.python\4c1e030b.pkl
+pl.yoz.道.bat
+exit
+pl.yoz.道.bat
+cd/d D:\Users\sita\Documents\tasksD:\Users\sita\Documents\tasks
+cd D:\Users\sita\Documents\tasks
+cd/d D:\Users\sita\Documents\tasks
+git pull
+git status
+cd Desktop\
+set cbt
+set cnt
+type test.bvat
+type test.bat
+test.bat 
+type winsat-disk-C.txt 
+test winsat-disk-C.txt 
+ps
+ps aux | sort -nrk 3,3 | head -n 5
+for /f "skip=1" %p in ('wmic cpu get loadpercentage') do echo %p
+typeperf 
+typeperf "\processor(_Total)\% Processor Time"  -SC 1 -y
+ tasklist
+ tasklist
+powershell
+@for /f "skip=1" %p in ('wmic cpu get loadpercentage') do @echo %p
+@for /f "skip=1" %p in ('wmic cpu get loadpercentage') do @echo CPU Usage: %p%λ @λ @
+tasklist /v /t
+tasklist /T
+tasklist /T /?
+tasklist /SVC
+tasklist /V
+tasklist /T /F
+tasklist /SVC /FI 
+tasklist /T 
+tasklist /D
+tasklist /?
+tasklist /M
+tasklist /=
+tasklist /T /FI "CPUTIME gt 00:00:10"
+wmic path Win32_PerfFormattedData_PerfProc_Process get Name,PercentProcessorTime
+wmic cpu get loadpercentage /format:value
+@for /f "skip=1" %p in ('wmic cpu get loadpercentage') do @echo %p%
+tasklist /v 
+WMIC path win32_process get Caption,Processid,Commandline
+WMIC path win32_process get Caption,Processid,Commandline > %temp%\cpu.usage.txt
+typeperf "\Process(*)\% Processor Time" -sc 1
+typeperf "\Process(*)\% Processor Time" -sc 1 > %temp%\cpu.usage.txt
+typeperf /?
+typeperf "\Processor(_Total)\% Processor Time"
+typeperf "\Process(*)\% Processor Time" -sc 1 > %temp%\cpu.usage.csv
+robocopy 
+ping vmw7
+robocopy /?
+backup.ssd.bat 
+set COMPUTERNAME
+WMIC path win32_process
+WMIC path win32_process> %temp%\cpu.usage.txt
+tasklist /v > %temp%\cpu.usage.txt
+WMIC path win32_process > %temp%\cpu.usage.txt
+WMIC path win32_process > %temp%\cpu.usage.csv
+"D:\Users\sita\Documents\tasks\[batch]\!!move2del.bat" "\\w1\Users\sita\AppData\Roaming\Kodi\userdata\playlists\video\YouTube\pl.politic.夜問打權.m3u"
+wmic path win32_process get Caption,Processid,Commandline,KernelModeTime,UserModeTime
+wmic path win32_process get Caption,Processid,KernelModeTime,UserModeTime,Commandline > %temp%\cpu.usage.txt
+wmic path win32_process get Caption,KernelModeTime,UserModeTime,Commandline
+wmic path win32_process get Caption,KernelModeTime,UserModeTime,Commandline > %temp%\cpu.usage.txt
+wmic path Win32_PerfFormattedData_PerfProc_Process > %temp%\cpu.usage.txt
+wmic path Win32_PerfFormattedData_PerfProc_Process get Name,PercentProcessorTime > %temp%\cpu.usage.txt
+dir
+wmic path Win32_PerfFormattedData_PerfProc_Process get Name,VirtualBytes,PercentProcessorTime
+wmic path Win32_PerfFormattedData_PerfProc_Process get Name,VirtualBytes,PercentProcessorTime > %temp%\cpu.usage.txt
+wmic path Win32_PerfFormattedData_PerfProc_Process get Name,WorkingSet,PercentProcessorTime  > %temp%\cpu.usage.txt
+set par
+test.bat cpu.usage.txt 
+sort /r cpu.usage.txt
+cd ..
+ssh
+where ssh
+w1
+clear
+ls
+ssh.exe admin@dns.goodview.com.tw
+exit
+git pull
+git gui
+git status
+cd ..
+dir
+exit
+bash
+where bash
+exit
+git submodule init
+git submodule update
+git diff sendemail.gitsync.bat
+git pull
+git gui
+dir
+exit
+where bash
+bash
+ping 192.168.1.75
+ping 192.168.1.75 -a
+ping vmw7
+clist core
+clist core | grep Visual
+cd/d D:\Users\sita\Documents\tasks\ShooterSubPyDownloader
+cd ..
+git status
+cd ShooterSubPyDownloader\
+ipconfig
+ping w1
+ping w1 -4
+ping 192.168.1.18 -a
+cd
+exit
+cd/d "\\w1\Users\sita\AppData\Roaming\Kodi\userdata\playlists\video\YouTube\pl.yoz.道.bat"
+cd/d "\\w1\Users\sita\AppData\Roaming\Kodi\userdata\playlists\video\YouTube\
+pushd "\\w1\Users\sita\AppData\Roaming\Kodi\userdata\playlists\video\YouTube\
+del d:\Users\sita\.python\69403975.pkl
+pl.yoz.道.bat
+python
+popd
+ping hv4
+ssh
+vm1404.bat 
+ping vshpere.goodview.com.twvshpere.goodview.com.tw
+ping vshpere.goodview.com.tw
+w1
+exit
+cd/d "\\w1\Users\sita\AppData\Roaming\Kodi\userdata\playlists\video\YouTube\
+pushd "\\w1\Users\sita\AppData\Roaming\Kodi\userdata\playlists\video\YouTube\
+del d:\Users\sita\.python\69403975.pkl
+pl.yoz.道.bat
+python
+popd
+ping hv4
+vm1404.bat 
+ping vshpere.goodview.com.twvshpere.goodview.com.tw
+ping vshpere.goodview.com.tw
+ssh
+cls
+w1
+cd/d C:\Users\sita\AppData\Roaming\.minecraft\config
+cd/d D:\Users\sita\Dropbox\games\.minecraft\config
+git diff veinminer/general.cfg
+git status
+git diff JEI/worldSettings.cfg
+exit
+git diff JEI/worldSettings.cfg
+w1
+cls
+ssh
+vm1404.bat 
+exit
+cd/d C:\Users\sita\AppData\Roaming\.minecraft\config
+git diff veinminer/general.cfg
+cd/d D:\Users\sita\Dropbox\games\.minecraft\config
+git diff  JEI/jei.cfg
+git diff JEI/worldSettings.cfg
+git diff xaerowaypoints.txt
+git status
+ipconfig
+exit
+git status
+git diff JEI/worldSettings.cfg
+exit
+git diff JEI/worldSettings.cfg
+ssh
+vm1404.bat 
+exit
+cd/d C:\Users\sita\AppData\Roaming\.minecraft\config
+git diff veinminer/general.cfg
+git diff  JEI/jei.cfg
+git diff JEI/worldSettings.cfg
+ping gateway
+ping bridge
+cd/d D:\Users\sita\Dropbox\games\.minecraft\config
+git diff xaerowaypoints.txt
+git status
+minecraft.bat 
+ipconfig
+exit
+vm2
+vm1404.bat 
+ipconfig
+exit
+ping dns -t
+ping gateway -t
+ping gateway -t
+ping dns -t
+where java
+where javaw
+path
+"C:\Users\sita\Downloads\jarfix.exe" /?
+"C:\Users\sita\Downloads\jarfix.exe" /64
+exit
+set path
+PING W1
+PING W1 -4
+ping 192.168.1.18
+WHERE SORT
+cd/d "C:\Users\sita\Desktop\temp.bat"
+cd/d "C:\Users\sita\Desktop\"
+temp
+type aux1.txt.tmp 
+set a[1,1]=0
+set
+type usage.txt 
+for /?
+tail cpu.usage.txt
+sort /r cpu.usage.txt.tmp 
+del cpu.usage.txt.2.tmp 
+temp2.bat
+head
+head /?
+tail /?
+tail --help
+head --help
+wmic path Win32_PerfFormattedData_PerfProc_Process
+tasklist /FI "CPUTIME gt 00:00:10"
+tasklist /v
+tasklist 
+sort
+sort ?
+sort /?
+where sort
+set /?
+set /a test=123
+set test
+set /a test=abc
+wmic path Win32_PerfFormattedData_PerfProc_Process get Name,WorkingSet,PercentProcessorTime > cpu.usage.txt
+type cpu.usage.txt > cpu.usage.txt
+type cpu.usage.txt
+cd/d D:\Users\sita\Documents\tasks\utility
+sendemail.status.
+sendemail.status
+cd\
+cd d:\Users\sita\Desktop\
+temp.bat
+temp.bat 
+wmic path Win32_PerfFormattedData_PerfOS_System
+typeperf "\Processor(*)\% Processor Time"
+qtypeperf "\Processor(_Total)\% Processor Time" -sc 1
+typeperf "\Processor(_Total)\% Processor Time" -sc 1
+wmic path Win32_PerfFormattedData_PerfProc_Process get Name,WorkingSet,PercentProcessorTime
+wmic path win32_process get Caption,Processid,Commandline
+wmic cpu get loadpercentage
+typeperf "\Processor(*)\% Processor Time" -sc 1
+wmic path Win32_PerfFormattedData_PerfOS_System get ProcessorQueueLength
+ping w1
+dit
+d:
+c:
+cd ..
+dir
+ssh
+w1
+cls
+git status
+ping dns -t
+ping gateway -t
+ping gateway -t
+ping dns -t
+ssh
+vm1404.bat 
+exit
+exit
+ping gateway -t
+ping dns -t
+exit
+exit
+c/d D:\Users\sita\Dropbox\games\minecraft 1.7.10\config
+cd/d D:\Users\sita\Dropbox\games\minecraft 1.7.10\config
+git status
+git gui
+copy /?
+cd/d D:\Users\sita\Dropbox\games\minecraft curse\Instances\FTB Infinity Evolved
+ping w1 -4
+ping w1
+ping 192.168.1.18 -a
+ping gateway -t
+ping dns -t
+choco install vcpython27exit
+exit
+choco install vcpython27
+exit
+ping gateway -t
+exit
+ping dns -t 
+exit
+ping gateway -t
+ping dns -t
+cd/d D:\Users\sita\Dropbox\cvsroot\mb\dmbinj\tools\dio\contrib\CanFestival-3\objdictgen
+dir
+git status
+hg status
+type objdictedit.bat 
+objdictedit
+pythonw objdictedit.py
+python
+pythonw
+pythonw --version
+pythonw -V
+pythonw -v
+python objdictedit.py 
+python -m pip install --upgrade pip
+choco install vcpython27
+pip install wx
+exit
+python objdictedit.py 
+python -m pip install --upgrade pip
+choco install vcpython27
+set path=%path%;C:\Users\sita\AppData\Local\Programs\Common\Microsoft\Visual C++ for Python\9.0\
+where vcvarsall.bat
+pip install wx
+vcvarsall.bat
+"c:\tools\python2\python.exe" -c "import distutils.msvc9compiler as msvc; mc = msvc.MSVCCompiler(); mc.initialize(); print(mc.cc)"
+exit
+hg status
+type objdictedit.bat 
+objdictedit
+pythonw objdictedit.py
+pythonw
+pythonw --version
+pythonw -V
+pythonw -v
+python objdictedit.py 
+python -m pip install --upgrade pip
+choco install vcpython27
+pip install wx
+exit
+python objdictedit.py 
+python -m pip install --upgrade pip
+choco install vcpython27
+pip install wx
+vcvarsall.bat
+"c:\tools\python2\python.exe" -c "import distutils.msvc9compiler as msvc; mc = msvc.MSVCCompiler(); mc.initialize(); print(mc.cc)"
+python
+set path=%path%;C:\Users\sita\AppData\Local\Programs\Common\Microsoft\Visual C++ for Python\9.0\
+pip install setuptools
+pip install setuptools --upgrade
+set path
+set PYTHONPATH
+set PYTHONPATH=C:\Users\sita\AppData\Local\Programs\Common\Microsoft\Visual C++ for Python\9.0\
+where vcvarsall.bat
+cd C:\\Users\\sita\\AppData\\Local\\Programs\\Common\\Microsoft\\Visual C++ for Python\\9.0\\..\\..\\VC
+set VC
+set VS90COMNTOOLS=C:\Users\sita\AppData\Local\Programs\Common\Microsoft\Visual C++ for Python\9.0\VC\bin\amd64
+set VS
+set VS90COMNTOOLS=C:\Users\sita\AppData\Local\Programs\Common\Microsoft\Visual C++ for Python\9.0\VC\bin
+"c:\tools\python2\python.exe" -c "import distutils.msvc9compiler as msvc; mc = msvc .MSVCCompiler(); mc.initialize(); print(mc.cc)"
+exit
+python -m pip install --upgrade pip
+choco install vcpython27
+pip install wx
+exit
+python objdictedit.py 
+python -m pip install --upgrade pip
+choco install vcpython27
+set path=%path%;C:\Users\sita\AppData\Local\Programs\Common\Microsoft\Visual C++ for Python\9.0\
+vcvarsall.bat
+path
+python
+pip install -v wx
+python -v
+python 
+easy_install wx
+where vcvarsall.bat
+set VS90COMNTOOLS
+set VS90COMNTOOLS=C:\Users\sita\AppData\Local\Programs\Common\Microsoft\Visual C++ for Python\9.0\
+set VS90COMNTOOLS=C:\Users\sita\AppData\Local\Programs\Common\Microsoft\Visual C++ for Python\9.0\VC\bin
+"c:\tools\python2\python.exe" -c "import distutils.msvc9compiler as msvc; mc = msvc.MSVCCompiler(); mc.initialize(); print(mc.cc)"
+pip install wx
+cd/d 一週熱門影片
+cd/d D:\Users\sita\Dropbox\cvsroot\mb\dmbinj\tools\dio\src\common\canfestival
+type objdictedit.bat 
+pythonw %~dp0/../../../contrib/CanFestival-3/objdictgen/objdictedit.py
+python %~dp0/../../../contrib/CanFestival-3/objdictgen/objdictedit.py
+pip install gnosis
+python "D:\Users\sita\Dropbox\cvsroot\mb\dmbinj\tools\dio\contrib\CanFestival-3\objdictgen\objdictedit.py"
+cd/d C:\Users\sita\Desktop\Gnosis_Utils-1.2.2
+python setup.py 
+python setup.py install
+exit
+pip install gnosis
+python "D:\Users\sita\Dropbox\cvsroot\mb\dmbinj\tools\dio\contrib\CanFestival-3\objdictgen\objdictedit.py"
+cd/d C:\Users\sita\Desktop\Gnosis_Utils-1.2.2
+python setup.py 
+python setup.py install
+cd/d D:\Users\sita\Dropbox\cvsroot\mb\dmbinj\tools\dio\contrib\CanFestival-3\objdictgen
+set temp
+set temp=D:\temp
+pip uninstall wx
+pip install 'wx>=2.9.0,<3.0.0'
+python objdictedit.py
+dir
+set BASE
+cd/d D:\Users\sita\Dropbox\games\minecraft 1.9.4
+cd/d T:\Temp\minecraft
+test.bat 
+ping w1
+ping w1 -4
+ssh sita@192.168.56.1
+ping 192.168.1.18 -a
+D:\WindowsApps\Microsoft.ReCore_1.0.1925.2_x64__8wekyb3d8bbwe\ReCore.exe
+exit
+python setup.py 
+python setup.py install
+ssh
+s1
+w1
+D:\WindowsApps\Microsoft.ReCore_1.0.1925.2_x64__8wekyb3d8bbwe\ReCore.exe
+vagrant box lis
+vagrant box list
+exit
+cinst -y virtualbox
+cup -y virtualbox
+exit
+D:\WindowsApps\Microsoft.ReCore_1.0.1925.2_x64__8wekyb3d8bbwe\ReCore.exe
+vagrant box lis
+vagrant box list
+exit
+cinst -y virtualbox
+cup -y virtualbox
+ssh
+type dns.goodview.com.tw.bat 
+git status
+cd util
+cd ..
+cd utility
+dir
+sendemail.gitsync.bat 
+exit
+ping 192.168.1.18 -a
+D:\WindowsApps\Microsoft.ReCore_1.0.1925.2_x64__8wekyb3d8bbwe\ReCore.exe
+va
+dir
+cd vbxp990\
+vi up.bat 
+up
+exit
+dir
+ssh
+hvminecraft.bat 
+exit
+exit
+ping 192.168.1.18 -a
+D:\WindowsApps\Microsoft.ReCore_1.0.1925.2_x64__8wekyb3d8bbwe\ReCore.exe
+va
+dir
+cd vbxp990\
+vi up.bat 
+up
+python
+"D:\Users\sita\Documents\tasks\util\showmyip.cmd"
+"C:\Users\sita\Desktop\test.bat"
+"D:\Users\sita\Documents\tasks\taskschd\sendemail.startup.bat"
+ssh
+hv4
+hvminecraft.bat 
+where ssh
+ssh --version
+ssh -V
+exit
+set VS90COMNTOOLS=C:\Users\sita\AppData\Local\Programs\Common\Microsoft\Visual C++ for Python\9.0\VC\bin\amd64
+set VS
+set VS90COMNTOOLS=C:\Users\sita\AppData\Local\Programs\Common\Microsoft\Visual C++ for Python\9.0\VC\bin
+"c:\tools\python2\python.exe" -c "import distutils.msvc9compiler as msvc; mc = msvc .MSVCCompiler(); mc.initialize(); print(mc.cc)"
+ssh
+vm1404.bat 
+exit
+ssh
+where ssh
+ssh -V
+exit
+set path
+set path | clip
+exit
+ssh
+hvminecraft.bat 
+exit
+pip install wx
+python
+ping gateway -t
+exit
+ping dns -t
+Eexit
+exit
+set path | clip
+where ssh
+ssh -V
+vm1404.bat 
+hvminecraft.bat '
+exit
+ssh
+vm1404.bat 
+hvminecraft.bat 
+exit
+ssh
+hvminecraft.bat 
+vm1404.bat 
+exit
+vm1404.bat 
+ssh
+hvminecraft.bat 
+exit
+hvminecraft.bat '
+ssh
+hvminecraft.bat 
+"D:\Users\sita\Documents\tasks\util\showmyip.cmd"
+cd/d D:\Users\sita\Documents\tasks\utility
+git add -A :/
+git status
+cd ..
+cd util
+showmyip.cmd 
+ipconfig
+ipconfig /all
+hvm
+exit
+exit
+exit
+exit
+alias
+cmdload
+exit
+cd util
+showmyip.cmd 
+ipconfig
+ipconfig /all
+hvm
+e.
+cmderr
+clink
+history
+ls
+pwd
+cd/d D:\Users\sita\Documents\tasks
+gl
+alias
+alias /?
+cd
+exit
+ls
+alias
+exit
+vm1404.bat 
+exit
+vm1404.bat 
+ssh
+hvminecraft.bat 
+exit
+hvminecraft.bat '
+ssh
+"D:\Users\sita\Documents\tasks\util\showmyip.cmd"
+cd/d D:\Users\sita\Documents\tasks\utility
+git add -A :/
+git status
+cd ..
+cd util
+showmyip.cmd 
+ipconfig
+ipconfig /all
+hvm
+exit
+exit
+exit
+dir .bat
+dir *.bat
+type kodi.bat 
+type py3.bat
+type ssh.bat 
+alias cdssh=cd/d d:\Users\sita\Documents\tasks\[batch]\ssh
+alias cdkodi=cd/d C:\Users\sita\AppData\Roaming\Kodi
+type va.bat 
+alias cdva=set VAGRANT_HOME=D:\Users\sita\.vagrant.d; cd/d D:\Users\sita\vagrant
+alias cdva=cd/d D:\Users\sita\vagrant
+cdkodi
+alias kodi=C:\Users\sita\AppData\Roaming\Kodi
+kodi
+cd kodi
+alias /?
+cp /?
+cp --help
+copy /?
+cmdback
+cmdload
+cdva
+cd vbxp990\
+type up.bat 
+cdssh
+dir
+hvminecraft.bat 
+del D:\\Users\\sita\\Dropbox\.python\37474501.pkl
+del D:\Users\sita\Dropbox\.python\37474501.pkl
+"\\w1\Users\sita\AppData\Roaming\Kodi\userdata\playlists\video\YouTube\pl.radio.九八新聞台.bat"
+"\\w1\Users\sita\AppData\Roaming\Kodi\userdata\playlists\video\YouTube\pl.radio.財經起床號.bat"
+alias reload
+alias /reload
+alias
+cmdsave
+cd
+exit
+exit
+exit
