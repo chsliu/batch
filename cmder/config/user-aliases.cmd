@@ -30,3 +30,5 @@ al=alias
 gs=git status
 gp=d:\Users\sita\Documents\tasks\utility\gitsync.bat
 pd=popd
+su="d:\Users\sita\Documents\tasks\utility\getadmin.bat" "d:\Users\sita\Documents\tasks\utility\cmdk.bat"
+pathadd=echo setx PATH "%PATH%;%CD%"
