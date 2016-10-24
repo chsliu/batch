@@ -27,3 +27,4 @@ cfg="C:\Program Files (x86)\Notepad++\notepad++.exe" C:\tools\cmder\config\user-
 re=alias /reload
 al=alias
 gs=git status
+gp="d:\Users\sita\Documents\tasks\batch\gitsync.bat"
