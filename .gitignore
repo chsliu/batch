@@ -23,10 +23,10 @@ utility/temp.log
 utility/test.bat
 utility/test.txt
 utility/testemail.bat
-wuinstall/runasadmin.bat
-wuinstall/runasuser.bat
-wuinstall/test/*
-wuinstall/update.bat
+*/wuinstall/runasadmin.bat
+*/wuinstall/runasuser.bat
+*/wuinstall/test/*
+*/wuinstall/update.bat
 *.url
 utility/temp.txt
 *.swp
