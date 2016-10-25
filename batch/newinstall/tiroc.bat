@@ -11,7 +11,7 @@ set SCHEDULE=13:30-14:00-14:30
 set DAILY=%SCHEDULE:~0,5%
 set WEEKLY=%SCHEDULE:~6,5%
 set MONTHLY=%SCHEDULE:~12,5%
-set PASS=1
+set PASS=0000
 
 REM =================================
 
