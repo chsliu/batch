@@ -4,11 +4,17 @@ start /min call %~dp0\utility\sendemail.gitsync.bat ^&^& exit
 
 REM =================================
 
-start /min call %~dp0\ShooterSubPyDownloader\sendemail.gitsync.bat ^&^& exit
+set _=%~dp0\ShooterSubPyDownloader\sendemail.gitsync.bat
+if exist %_% (
+  start /min call %_% ^&^& exit
+)
 
 REM =================================
 
-start /min call %appdata%\Kodi\userdata\sendemail.gitsync.bat ^&^& exit
+set _=%appdata%\Kodi\userdata\sendemail.gitsync.bat
+if exist %_% (
+  start /min call %_% ^&^& exit
+)
 
 REM =================================
 
