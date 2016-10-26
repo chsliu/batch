@@ -23,7 +23,7 @@ pushd %~dp0
 
 REM =================================
 
-git add -A
+git add -A :/
 
 git commit -a -m "Automated commit at %var% on %COMPUTERNAME%"
 

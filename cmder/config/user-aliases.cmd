@@ -34,4 +34,5 @@ pd=popd
 su="%TASKS_ROOT%\utility\getadmin.bat" "%TASKS_ROOT%\utility\cmdk.bat"
 sudo="%TASKS_ROOT%\utility\getadmin.bat" $*
 pathadd="%TASKS_ROOT%\util\setenv.cmd" +PATH "%CD%"
-
+ed="C:\Program Files (x86)\Notepad++\notepad++.exe" $*
+ping=ping -t $*
