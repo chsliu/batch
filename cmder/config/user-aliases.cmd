@@ -32,5 +32,6 @@ gs=git status
 gp=%TASKS_ROOT%\utility\gitsync.bat
 pd=popd
 su="%TASKS_ROOT%\utility\getadmin.bat" "%TASKS_ROOT%\utility\cmdk.bat"
+sudo="%TASKS_ROOT%\utility\getadmin.bat" $*
 pathadd="%TASKS_ROOT%\util\setenv.cmd" +PATH "%CD%"
 
