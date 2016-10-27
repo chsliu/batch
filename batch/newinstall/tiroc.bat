@@ -31,7 +31,7 @@ call %~dp0\newinstall.taskschd.bat
 
 REM =================================
 
-call %~dp0\newinstall.kodi.bat
+REM call %~dp0\newinstall.kodi.bat
 
 REM =================================
 
