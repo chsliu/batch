@@ -1,0 +1,119 @@
+@echo off
+
+REM =================================
+set CONF="%~dp0\_config.cmd"
+if not exist %CONF% (
+
+call :ERRMSG 無法備份, 遺失設定檔 %CONF%
+goto :EOF
+
+) else (
+
+call %CONF%
+
+)
+
+REM =================================
+goto :main
+
+REM =================================
+:BASENAME
+set %2=%~nx1
+
+exit /b
+
+:ERRMSG
+echo %*
+C:\Windows\System32\timeout.exe 10
+
+exit /b
+
+REM =================================
+:main
+
+REM =================================
+set _=%~dp0
+set _="%_:~0,-1%"
+call :BASENAME %_% BASE
+
+REM =================================
+set MyDate=
+for /f "skip=1" %%x in ('wmic os get localdatetime') do if not defined MyDate set MyDate=%%x
+set TODAY=%MyDate:~0,4%-%MyDate:~4,2%-%MyDate:~6,2%
+set MONTH=%MyDate:~0,4%-%MyDate:~4,2%
+set HOUR=%MyDate:~8,2%
+set MINUTE=%MyDate:~10,2%
+
+REM =================================
+set CNT=%1
+set LOG="%~dp0\%~n0.log"
+set TEMPLOG="%TEMP%\%~n0.log"
+set SRCDIR="%~dp0 "
+REM set ZIP="%ZIPDIR%\%BASE%-%TODAY%_Latest.zip"
+set ZIP="%TEMP%\%BASE%.%TODAY%_%HOUR%%MINUTE%.%COMPUTERNAME%.zip"
+
+REM =================================
+del %ZIP% >nul 2>>&1
+
+REM if exist %ZIP% (
+REM if defined ZIPLAST (
+
+REM echo ---------------------------------
+REM echo Rename Last Backup Game to %ZIPLAST%
+REM echo ---------------------------------
+REM move /y %ZIP% %ZIPLAST% >nul 2>>&1
+
+REM ))
+
+REM set ZIPLAST="%ZIPDIR%\%BASE%-%TODAY%_%HOUR%%MINUTE%_before.zip"
+
+REM if exist %ZIP% (
+
+REM echo ---------------------------------
+REM echo Move Last Backup Game to %ZIPLAST%
+REM echo ---------------------------------
+REM move /y %ZIP% %ZIPLAST% >nul 2>>&1
+
+REM )
+
+powershell.exe -nologo -noprofile -command "& { Add-Type -A 'System.IO.Compression.FileSystem'; try { [IO.Compression.ZipFile]::CreateFromDirectory('%SRCDIR%', '%ZIP%'); } catch { exit 1; } }" 
+REM >%TEMPLOG% 2>>&1
+
+REM type %TEMPLOG%
+REM type %TEMPLOG% >>%LOG%
+
+REM echo ERRORLEVEL = %ERRORLEVEL%
+
+if ERRORLEVEL 1 (
+echo ---------------------------------
+echo !!!備份失敗!!!
+echo ---------------------------------
+del %ZIP% >nul 2>>&1
+
+if [%CNT%]==[] pause
+
+) else if ERRORLEVEL 0 (
+REM echo ---------------------------------
+echo 備份成功, %ZIP%
+REM echo ---------------------------------
+
+move /y %ZIP% "%ZIPDIR%"
+
+)
+
+REM set ZIPLAST="%ZIPDIR%\%BASE%-%TODAY%_%HOUR%%MINUTE%.zip"
+
+REM =================================
+REM echo count=%CNT%
+if [%CNT%]==[] goto :EOF
+if %CNT%==0 goto :EOF
+
+SET /A CNT-=1
+
+REM =================================
+REM C:\Windows\System32\timeout.exe 60
+C:\Windows\System32\choice.exe /d y /t 60 /M "繼續備份?"
+if errorlevel 2 goto :EOF
+goto :main
+
+

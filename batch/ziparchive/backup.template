@@ -1,0 +1,9 @@
+@echo off
+
+set MAXKEEP=4
+
+
+call "%~dp0\_backup.to.bat"
+
+call "%~dp0\_purge.bat" %MAXKEEP%
+
