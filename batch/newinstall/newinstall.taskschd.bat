@@ -1,6 +1,12 @@
 set path=%path%;C:\Program Files (x86)\Git\cmd
+set SCHEDULE=13:30-14:00-14:30
+set DAILY=%SCHEDULE:~0,5%
+set WEEKLY=%SCHEDULE:~6,5%
+set MONTHLY=%SCHEDULE:~12,5%
+
 
 if not defined DOC goto :EOF
+if not defined PASS goto :EOF
 
 setx TASKS_ROOT %DOC%\tasks
 
