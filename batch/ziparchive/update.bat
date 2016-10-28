@@ -19,7 +19,7 @@ if [%SRCDIR%\] EQU [%~dp0] goto :EOF
 
 copy /y "%SRCDIR%\*.template" "%~dp0\*.bat"
 
-if not exist "%~dp0\config.cmd" (
-	copy /y "%SRCDIR%\config.cmd" "%~dp0\*"
+if not exist "%~dp0\_config.cmd" (
+	copy /y "%SRCDIR%\_config.cmd" "%~dp0\*"
 )
 
