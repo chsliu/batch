@@ -1,0 +1,98 @@
+@echo off
+
+REM =================================
+REM if [%1]==[] "d:\Users\sita\Documents\tasks\utility\getadmin.bat" "%~dp0\%~nx0"
+
+REM =================================
+set CONF="%~dp0\_config.cmd"
+if not exist %CONF% (
+
+call :ERRMSG 無法還原, 遺失設定檔 %CONF%
+goto :EOF
+
+) else (
+
+call %CONF%
+
+)
+
+REM =================================
+goto :main
+
+REM =================================
+:BASENAME
+set %2=%~n1
+
+exit /b
+
+:ERRMSG
+echo %*
+C:\Windows\System32\timeout.exe 10
+
+exit /b
+
+REM =================================
+:main
+
+REM =================================
+set _=%~dp0
+set _="%_:~0,-1%"
+call :BASENAME %_% BASE
+
+REM =================================
+set SRCDIR="%~dp0 "
+set TEMPDIR="%TEMP%\%BASE%"
+
+REM =================================
+set ZIP=%ZIPDIR%\%BASE%.zip
+REM set QUERY=dir /b /o:d "%ZIPDIR%\%BASE:~0,3%*.zip"
+set QUERY=dir /b /o:d "%ZIPDIR%\%BASE%*.zip"
+
+for /f "delims=" %%f in ('%QUERY%') do set ZIP=%ZIPDIR%\%%f
+
+if not exist "%ZIP%" (
+
+call :ERRMSG 無法還原, 找不到備份檔 %ZIP%
+goto :EOF
+
+)
+
+REM echo =================================
+echo 還原進度來自 %ZIP% 
+REM echo =================================
+REM goto :EOF
+REM pause
+
+rd /s/q "%~dp0\db" >nul 2>>&1
+
+REM =================================
+rmdir /s /q %TEMPDIR% >nul 2>>&1
+powershell.exe -nologo -noprofile -command "& { Add-Type -A 'System.IO.Compression.FileSystem';  [IO.Compression.ZipFile]::ExtractToDirectory('%ZIP%', '%TEMPDIR%'); }"
+REM powershell.exe -nologo -noprofile -command "& { Add-Type -A 'System.IO.Compression.FileSystem';  try { [IO.Compression.ZipFile]::ExtractToDirectory('%ZIP%', '%TEMPDIR%'); } catch { exit 1; } }"
+
+if ERRORLEVEL 1 (
+echo ---------------------------------
+echo !!!還原失敗!!!
+echo ---------------------------------
+
+pause
+
+) else if ERRORLEVEL 0 (
+REM echo ---------------------------------
+echo 還原成功
+REM echo ---------------------------------
+
+)
+
+REM =================================
+set INCLUDE_FILES=
+set IGNORE_DIR=DEL TRIED WATCHED logs
+set IGNORE_FILES=config.cmd
+set OPTION=/MOVE /R:0 /E /NDL /NJH /NJS /MT /XF %IGNORE_FILES% /XD %IGNORE_DIR% 
+
+robocopy %TEMPDIR% %SRCDIR% %INCLUDE_FILES% %OPTION%
+
+REM =================================
+REM C:\Windows\System32\timeout.exe 10
+REM pause
+
