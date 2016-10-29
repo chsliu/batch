@@ -1,7 +1,7 @@
 @echo off
 
 REM =================================
-if [%1]==[] %~dp0\..\utility\getadmin.bat "%~dp0\%~nx0"
+if [%1]==[] %~dp0\..\utility\getadmin.bat "%~f0"
 
 REM =================================
 goto :main
@@ -385,6 +385,9 @@ findstr /C:"OS Name" %LOG2% 						>>%LOG1%
 findstr /B /C:"OS Version" %LOG2% 					>>%LOG1%
 findstr /C:"µù¥Uªº¾Ö¦³ªÌ" %LOG2% 					>>%LOG1%
 findstr /C:"Registered Owner" %LOG2% 					>>%LOG1%
+if defined WMIC (
+wmic path softwarelicensingservice get OA3xOriginalProductKey |more 	>>%LOG1% 
+)
 
 echo.									>>%LOG1%
 echo =================================					>>%LOG1%

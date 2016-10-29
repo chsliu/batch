@@ -10,4 +10,4 @@ SET myip=%%F
 )
 REM ECHO %myip%
 
-sendemail -s msa.hinet.net -f egreta.su@msa.hinet.net -t chsliu@gmail.com -u [LOG] %COMPUTERNAME% %~n0 -m "%0 from %myip%, http://www.infosniper.net/index.php?ip_address=%myip%&map_source=1&overview_map=1&lang=1&map_type=1&zoom_level=7"
+sendemail -s msa.hinet.net -f egreta.su@msa.hinet.net -t chsliu@gmail.com -u [LOG] %COMPUTERNAME% %~n0 -m "%0 from %myip%, http://www.infosniper.net/index.php?ip_address=%myip%"
