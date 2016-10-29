@@ -48,7 +48,7 @@ if not exist %1 exit /b
 
 set TEMPDIR=%temp%\%~n1
 mkdir %TEMPDIR%
-cp %1 %TEMPDIR%
+copy /y %1 %TEMPDIR%
 call :ZIPDIR %TEMPDIR% %2
 rmdir /s /q %TEMPDIR%
 
