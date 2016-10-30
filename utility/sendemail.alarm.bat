@@ -183,6 +183,8 @@ for /l %%G in (0,1,11) do (
 	findstr "Current_Pending_Sector" %temp%\%~n0-pd%%G-smart.txt					>>%LOG1%
 	findstr "Offline_Uncorrectable" %temp%\%~n0-pd%%G-smart.txt					>>%LOG1%
 	findstr "SSD_Life_Left" %temp%\%~n0-pd%%G-smart.txt						>>%LOG1%
+	findstr /C:"Lifetime Writes from Host" %temp%\%~n0-pd%%G-smart.txt			>>%LOG1%
+	findstr /C:"E9 " %temp%\%~n0-pd%%G-smart.txt						>>%LOG1%
 	findstr "Power_On_Hours" %temp%\%~n0-pd%%G-smart.txt						>>%LOG1%
 	findstr "Temperature_Celsius" %temp%\%~n0-pd%%G-smart.txt					>>%LOG1%
 	findstr /C:"occurred at disk power-on lifetime" %temp%\%~n0-pd%%G-smart.txt			>>%LOG1%
