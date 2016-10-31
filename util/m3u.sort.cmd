@@ -105,7 +105,11 @@ def sortByTitleDigital(file):
 	tableDigital = {}
 	
 	for entry in table:
-		digit = int(re.sub("\D","",entry))
+		# digit = int(re.sub("\D","",entry))
+		numbers = re.findall(r"\d+",entry)
+		if len(numbers)==0: digit = 0
+		elif len(numbers)==1: digit = int(numbers[0])
+		else: digit = int(numbers[1])
 		list = []
 		try: list = tableDigital[digit]
 		except: pass
@@ -114,9 +118,14 @@ def sortByTitleDigital(file):
 	
 	for digit in sorted(tableDigital.keys()):
 		list = tableDigital[digit]
+		dup = []
 		for entry in sorted(list):
-			print(entry)
-			print(table[entry])		
+			url = table[entry]
+			if url not in dup:
+				print(entry)
+				# print(table[entry])		
+				print(url)		
+				dup.append(url)
 	
 	
 def sortByTitleDate(file):
