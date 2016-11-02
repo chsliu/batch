@@ -35,4 +35,4 @@ pd=popd
 su="%TASKS_ROOT%\utility\getadmin.bat" "%TASKS_ROOT%\utility\cmdk.bat"
 pathadd="%TASKS_ROOT%\util\setenv.cmd" +PATH "%CD%"
 ohm=openhardwaremonitor
-aldf=D:\Users\sita\PortableApps\WinMergePortable\WinMergePortable.exe C:\tools\cmder\config\user-aliases.cmd D:\Users\sita\Documents\tasks\cmder\config\user-aliases.cmd
+aldf="C:\Program Files (x86)\Meld\Meld.exe" C:\tools\cmder\config\user-aliases.cmd D:\Users\sita\Documents\tasks\cmder\config\user-aliases.cmd
