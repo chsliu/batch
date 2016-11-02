@@ -7,12 +7,12 @@
 al=alias
 aldel=alias /d $1
 aldiff="C:\Program Files (x86)\Meld\Meld.exe" C:\tools\cmder\config\user-aliases.cmd D:\Users\sita\Documents\tasks\cmder\config\user-aliases.cmd
+alload=%TASKS_ROOT%\utility\gitsync.bat & robocopy %TASKS_ROOT%\cmder C:\tools\cmder *.bat *.cmd *.sh *.xml /S /R:0 /NDL /NJH /NJS /MT & alias /reload
 alre=alias /reload
+alsave=robocopy C:\tools\cmder %TASKS_ROOT%\cmder *.bat *.cmd *.sh *.xml /S /R:0 /NDL /NJH /NJS /MT & %TASKS_ROOT%\utility\gitsync.bat
 alsort=sort C:\tools\cmder\config\user-aliases.cmd | uniq > %temp%\user-aliases.cmd & move /y %temp%\user-aliases.cmd C:\tools\cmder\config\user-aliases.cmd
 clear=cls
-cload=%TASKS_ROOT%\utility\gitsync.bat & robocopy %TASKS_ROOT%\cmder C:\tools\cmder *.bat *.cmd *.sh *.xml /S /R:0 /NDL /NJH /NJS /MT & alias /reload
 cmderr=cd /d "%CMDER_ROOT%"
-csave=robocopy C:\tools\cmder %TASKS_ROOT%\cmder *.bat *.cmd *.sh *.xml /S /R:0 /NDL /NJH /NJS /MT & %TASKS_ROOT%\utility\gitsync.bat
 e.=explorer .
 ed="C:\Program Files (x86)\Notepad++\notepad++.exe" $*
 edal="C:\Program Files (x86)\Notepad++\notepad++.exe" C:\tools\cmder\config\user-aliases.cmd
