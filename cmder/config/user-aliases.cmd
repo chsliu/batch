@@ -1,9 +1,9 @@
-;= %SystemRoot%\system32\doskey /listsize=1000 /macrofile=%0%
 ;= @echo off
-;= Add aliases below here
-;= goto:eof
 ;= rem Call DOSKEY and use this file as the macrofile
+;= %SystemRoot%\system32\doskey /listsize=1000 /macrofile=%0%
 ;= rem In batch mode, jump to the end of the file
+;= goto:eof
+;= rem Add aliases below here
 al=alias
 aldel=alias /d $1
 aldiff="C:\Program Files (x86)\Meld\Meld.exe" C:\tools\cmder\config\user-aliases.cmd D:\Users\sita\Documents\tasks\cmder\config\user-aliases.cmd
