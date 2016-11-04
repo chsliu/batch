@@ -16,6 +16,7 @@ cmderr=cd /d "%CMDER_ROOT%"
 e.=explorer .
 ed="C:\Program Files (x86)\Notepad++\notepad++.exe" $*
 edal="C:\Program Files (x86)\Notepad++\notepad++.exe" C:\tools\cmder\config\user-aliases.cmd
+edhost="C:\Program Files (x86)\Notepad++\notepad++.exe" C:\Windows\System32\drivers\etc\hosts
 gl=git log --oneline --all --graph --decorate  $*
 gp=%TASKS_ROOT%\utility\gitsync.bat
 gs=git status
