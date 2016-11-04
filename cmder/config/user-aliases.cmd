@@ -35,3 +35,4 @@ pwd=cd
 py=pushd C:\Users\%USERNAME%\AppData\Roaming\Kodi\userdata\playlists\video\YouTube
 su="%TASKS_ROOT%\utility\getadmin.bat" "%TASKS_ROOT%\utility\cmdk.bat"
 vi=vim $*
+v=vagrant $*
