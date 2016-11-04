@@ -1,0 +1,61 @@
+@echo off
+
+REM =================================
+set CONF="%~dp0\_config.cmd"
+if not exist %CONF% (
+
+call :ERRMSG 無法執行, 遺失設定檔 %CONF%
+goto :EOF
+
+) else (
+
+call %CONF%
+
+)
+
+REM =================================
+goto :main
+
+REM =================================
+:BASENAME
+set %2=%~n1
+
+exit /b
+
+REM =================================
+:main
+
+REM =================================
+set _=%~dp0
+set _="%_:~0,-1%"
+call :BASENAME %_% BASE
+REM set BASE=%BASE:~0,-1%
+
+REM =================================
+REM set ZIPDIR=\\vmw7\Download\minecraft
+REM set BASE=Yoz的世界
+set CNTMAX=%1
+
+if not defined CNTMAX goto :EOF
+
+REM =================================
+set QUERY=dir /b /o:-d "%ZIPDIR%\%BASE%*.zip"
+
+set /a CNT=0
+
+for /f "delims=" %%f in ('%QUERY%') do (
+
+	set ZIP=%ZIPDIR%\%%f
+
+	setlocal enabledelayedexpansion
+
+	if !CNT! GEQ %CNTMAX% (
+		echo !CNT!: Removing !ZIP!
+		del "!ZIP!"
+	)
+	
+	endlocal	
+	
+	set /a CNT+=1
+
+)

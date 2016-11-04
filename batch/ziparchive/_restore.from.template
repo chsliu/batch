@@ -4,7 +4,7 @@ REM =================================
 REM if [%1]==[] "d:\Users\sita\Documents\tasks\utility\getadmin.bat" "%~dp0\%~nx0"
 
 REM =================================
-set CONF="%~dp0\config.cmd"
+set CONF="%~dp0\_config.cmd"
 if not exist %CONF% (
 
 call :ERRMSG 無法還原, 遺失設定檔 %CONF%
@@ -86,7 +86,7 @@ REM echo ---------------------------------
 
 REM =================================
 set INCLUDE_FILES=
-set IGNORE_DIR=DEL TRIED WATCHED 
+set IGNORE_DIR=DEL TRIED WATCHED logs
 set IGNORE_FILES=config.cmd
 set OPTION=/MOVE /R:0 /E /NDL /NJH /NJS /MT /XF %IGNORE_FILES% /XD %IGNORE_DIR% 
 

@@ -21,7 +21,9 @@ REM =================================
 
 choco feature enable -nautoUninstaller
 
-cinst -y 7zip cmder f.lux git kodi potplayer putty teamviewer python2
+REM git 
+
+cinst -y 7zip cmder f.lux kodi potplayer putty teamviewer python2
 
 REM =================================
 

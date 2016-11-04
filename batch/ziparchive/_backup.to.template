@@ -1,7 +1,7 @@
 @echo off
 
 REM =================================
-set CONF="%~dp0\config.cmd"
+set CONF="%~dp0\_config.cmd"
 if not exist %CONF% (
 
 call :ERRMSG 無法備份, 遺失設定檔 %CONF%
@@ -18,7 +18,7 @@ goto :main
 
 REM =================================
 :BASENAME
-set %2=%~n1
+set %2=%~nx1
 
 exit /b
 
