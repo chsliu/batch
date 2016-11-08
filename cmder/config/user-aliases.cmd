@@ -39,3 +39,4 @@ vup=vagrant up
 vre=vagrant reload
 vi=vim $*
 diff="C:\Program Files (x86)\Meld\Meld.exe" $*
+pr=pushd %TASKS_ROOT%\rsync\DeltaCopyRaw
