@@ -30,7 +30,7 @@ ping=ping -t $*
 pk=pushd C:\Users\%USERNAME%\AppData\Roaming\Kodi  
 ps=pushd %TASKS_ROOT%\batch\ssh  
 pu=pushd %TASKS_ROOT%\utility
-pv=pushd D:\Users\%USERNAME%\vagrant 
+pv=set VAGRANT_HOME=D:\Users\sita\.vagrant.d & pushd D:\Users\%USERNAME%\vagrant 
 pwd=cd
 py=pushd C:\Users\%USERNAME%\AppData\Roaming\Kodi\userdata\playlists\video\YouTube
 su="%TASKS_ROOT%\utility\getadmin.bat" "%TASKS_ROOT%\utility\cmdk.bat"
@@ -38,3 +38,4 @@ v=vagrant $*
 vup=vagrant up
 vre=vagrant reload
 vi=vim $*
+diff="C:\Program Files (x86)\Meld\Meld.exe" $*
