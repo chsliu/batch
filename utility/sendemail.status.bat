@@ -15,7 +15,7 @@ exit /b
 
 REM =================================
 :findtext
->nul C:\Windows\System32\find.exe %2 %1 && (
+>nul %windir%\System32\find.exe %2 %1 && (
   echo %2 was found in %1.
   set %3=1
 ) || (
@@ -30,14 +30,16 @@ REM call :CountFileLine <file> <linecount>
 REM =================================
 :CountFileLine
 set %2=0
-for /f %%a in ('type "%1"^|C:\Windows\System32\find.exe "" /v /c') do set /a %2=%%a
+for /f %%a in ('type "%1"^|%windir%\System32\find.exe "" /v /c') do set /a %2=%%a
 
 exit /b
 
 REM =================================
 :ZIPDIR
 
+if defined POWERSHELL (
 powershell.exe -nologo -noprofile -command "& { Add-Type -A 'System.IO.Compression.FileSystem'; [IO.Compression.ZipFile]::CreateFromDirectory('%1', '%2'); }"
+) 
 
 exit /b
 
@@ -46,11 +48,17 @@ REM =================================
 
 if not exist %1 exit /b
 
+if defined POWERSHELL (
 set TEMPDIR=%temp%\%~n1
 mkdir %TEMPDIR%
 copy /y %1 %TEMPDIR%
 call :ZIPDIR %TEMPDIR% %2
 rmdir /s /q %TEMPDIR%
+
+) else (
+makecab %1 %2
+
+)
 
 exit /b
 
@@ -64,6 +72,7 @@ REM =================================
 call :whereis wmic.exe WMIC
 call :whereis winsat.exe WINSAT
 call :whereis powershell.exe POWERSHELL
+call :whereis msinfo32.exe MSINFO32
 
 REM =================================
 if not defined WMIC goto :MyDateEnd
@@ -128,7 +137,7 @@ for %%G in (A B C D E F G H I J K L M N O P Q R S T U V W X Y Z) do (
 	REM type %temp%\winsat-disk-%%G.txt
 	findstr /C:">" %temp%\winsat-disk-%%G.txt >%linecnt_temp%
 	REM set cnt=0
-	for /f %%a in ('type "%linecnt_temp%"^|C:\Windows\System32\find.exe "" /v /c') do (
+	for /f %%a in ('type "%linecnt_temp%"^|%windir%\System32\find.exe "" /v /c') do (
 		REM set /a cnt=%%a
 		REM echo cnt %%G = %%a
 		if %%a gtr 10 (
@@ -173,13 +182,21 @@ for /l %%G in (0,1,11) do (
 :smartctlend
 echo.  >>%LOG5%
 
+if not defined MSINFO32 (
+  echo. > %LOG6NFO%
+  echo. > %LOG6%
+  goto :log6end
+)
 if not exist %LOG6NFO% msinfo32 /nfo %LOG6NFO%
 if not exist %LOG6% msinfo32 /report %LOG6%
+
+:log6end
 
 ipconfig /all >>%LOG7% 2>>&1
 
 if not exist %LOG8% coreinfo >%LOG8%
 
+if not defined WMIC goto :log9end
 wmic path Win32_PerfFormattedData_PerfProc_Process get Name,WorkingSet,PercentProcessorTime |more >%LOG9%
 REM type %LOG9T% >%LOG9%
 setlocal DisableDelayedExpansion
@@ -195,7 +212,7 @@ setlocal DisableDelayedExpansion
 ) >%LOG9T%
 echo PercentProcessorTime	Name		WorkingSet>%LOG9%
 (
-	for /F "usebackq tokens=1,* delims= " %%A in (`c:\Windows\System32\sort.exe %LOG9T%`) DO (
+	for /F "usebackq tokens=1,* delims= " %%A in (`%windir%\System32\sort.exe %LOG9T%`) DO (
 		set /a "numtest=%%A"
 		setlocal EnableDelayedExpansion
 		REM if [!numtest!]==[%%A] echo %%B
@@ -205,6 +222,8 @@ echo PercentProcessorTime	Name		WorkingSet>%LOG9%
 	)
 ) >>%LOG9%
 del %LOG9T% >nul
+
+:log9end
 
 REM =================================
 REM Generate Report
@@ -248,8 +267,10 @@ echo NETWORK								>>%LOG1%
 echo =================================					>>%LOG1%
 findstr /C:"¹êÅé¦ì§}" %LOG7%						>>%LOG1%
 findstr /C:"Physical Address" %LOG7%					>>%LOG1%
+if defined POWERSHELL (
 Echo "Get-NetAdapterPowerManagement"					>>%LOG1%
 powershell -command "Get-NetAdapter | Get-NetAdapterPowerManagement"	>>%LOG1%
+)
 
 echo.									>>%LOG1%
 echo =================================					>>%LOG1%
@@ -355,7 +376,7 @@ for %%G in (A B C D E F G H I J K L M N O P Q R S T U V W X Y Z) do (
 	REM type %temp%\winsat-disk-%%G.txt
 	findstr /C:">" %temp%\winsat-disk-%%G.txt >%linecnt_temp%
 	REM set cnt=0
-	for /f %%a in ('type "%linecnt_temp%"^|C:\Windows\System32\find.exe "" /v /c') do (
+	for /f %%a in ('type "%linecnt_temp%"^|%windir%\System32\find.exe "" /v /c') do (
 		REM set /a cnt=%%a
 		REM echo cnt %%G = %%a
 		if %%a gtr 10 (
@@ -404,11 +425,17 @@ REM =================================
 
 copy %0 %TXT1% >nul
 
-REM if not exist %LOG3CAB% makecab %LOG3% %LOG3CAB%
+if not defined POWERSHELL (
+if not exist %LOG3CAB% makecab %LOG3% %LOG3CAB%
+) else (
 if not exist %LOG3ZIP% call :ZIPFILE %LOG3% %LOG3ZIP%
+)
 
-REM if not exist %LOG6CAB% makecab %LOG6NFO% %LOG6CAB%
+if not defined POWERSHELL (
+if not exist %LOG6CAB% makecab %LOG6NFO% %LOG6CAB%
+) else (
 if not exist %LOG6ZIP% call :ZIPFILE %LOG6NFO% %LOG6ZIP%
+)
 
 if not exist %LOG1% set LOG1=
 if not exist %LOG2% set LOG2=
