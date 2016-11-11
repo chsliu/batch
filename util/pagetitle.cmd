@@ -5,6 +5,17 @@ from __future__ import print_function
 import sys
 
 
+class bcolors:
+    HEADER = '\033[95m'
+    OKBLUE = '\033[94m'
+    OKGREEN = '\033[92m'
+    WARNING = '\033[93m'
+    FAIL = '\033[91m'
+    ENDC = '\033[0m'
+    BOLD = '\033[1m'
+    UNDERLINE = '\033[4m'
+	
+
 def warning_item(*objs):
 	for obj in objs:
 		if isinstance(obj,unicode): obj=unicode(obj).encode(sys.stderr.encoding,'replace')
@@ -28,7 +39,8 @@ def pagetitle(file):
 	title = ""
 	if soup.title: title = soup.title.string.replace('\n',' ')
 
-	warning("  [Page]",title)
+	REM warning("  [Page]",title)
+	warning(bcolors.WARNING,"  [Page]",title,bcolors.ENDC)
 	print("TITLE:",title.encode('utf-8')) 
 	print(url)
 	
