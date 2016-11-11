@@ -1,1 +1,1 @@
-@ssh -i "D:\Users\sita\Dropbox\SSHKey\nb19_rsa" vagrant@%1
+@ssh -i "D:\Users\sita\Dropbox\SSHKey\nb19_rsa" vagrant@192.168.1.%1
