@@ -39,7 +39,7 @@ def pagetitle(file):
 	title = ""
 	if soup.title: title = soup.title.string.replace('\n',' ')
 
-	REM warning("  [Page]",title)
+	# warning("  [Page]",title)
 	warning(bcolors.WARNING,"  [Page]",title,bcolors.ENDC)
 	print("TITLE:",title.encode('utf-8')) 
 	print(url)
