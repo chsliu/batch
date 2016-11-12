@@ -53,7 +53,7 @@ REM x: execute
 REM X: Execute/search
 REM s: system file
 REM t: temporary file
-set options=-avz --progress --chmod=a=rw,Da+x --fake-super --delete --delete-excluded --exclude-from '%~dp0%PATTERNS%' --backup --backup-dir='/recycle/%MONTH%/%TODAY%/%USERNAME%/%COMPUTERNAME%/%drive:~0,1%/%~n1'
+set options=-avz --progress --chmod=a=rw,Da+x --no-owner --no-group --fake-super --delete --delete-excluded --exclude-from '%~dp0%PATTERNS%' --backup --backup-dir='/recycle/%MONTH%/%TODAY%/%USERNAME%/%COMPUTERNAME%/%drive:~0,1%/%~n1'
 
 REM =================================
 echo ================================
