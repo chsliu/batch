@@ -189,7 +189,7 @@ for /l %%G in (0,1,11) do (
 	findstr "Temperature_Celsius" %temp%\%~n0-pd%%G-smart.txt					>>%LOG1%
 	findstr /C:"occurred at disk power-on lifetime" %temp%\%~n0-pd%%G-smart.txt			>>%LOG1%
 	findstr "FAILING_NOW" %temp%\%~n0-pd%%G-smart.txt						>>%LOG1%
-	findstr "output error" %temp%\%~n0-pd%%G-smart.txt						>>%LOG1%
+	findstr /C:"output error" %temp%\%~n0-pd%%G-smart.txt						>>%LOG1%
 
 	REM =================================
 	REM Check for Alarm Status
@@ -235,7 +235,7 @@ for /l %%G in (0,1,11) do (
 		if [%%C] == [FAILING_NOW] set ALARM=1
 	)
 
-	findstr "output error" %temp%\%~n0-pd%%G-smart.txt > %LINE%
+	findstr /C:"output error" %temp%\%~n0-pd%%G-smart.txt > %LINE%
 	FOR /F "tokens=6 delims= " %%C IN (%LINE%) DO (
 		if [%%C] == [error] set ALARM=1
 	)
