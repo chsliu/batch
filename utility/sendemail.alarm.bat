@@ -199,10 +199,10 @@ for /l %%G in (0,1,11) do (
 		if [%%C] neq [PASSED] set ALARM=1
 	)
 
-	findstr "Reallocated_Sector_Ct" %temp%\%~n0-pd%%G-smart.txt > %LINE%
-	FOR /F "tokens=10 delims= " %%C IN (%LINE%) DO (
-		if [%%C] gtr [0] set ALARM=1
-	)
+	REM findstr "Reallocated_Sector_Ct" %temp%\%~n0-pd%%G-smart.txt > %LINE%
+	REM FOR /F "tokens=10 delims= " %%C IN (%LINE%) DO (
+		REM if [%%C] gtr [0] set ALARM=1
+	REM )
 
 	findstr "Reported_Uncorrect" %temp%\%~n0-pd%%G-smart.txt > %LINE%
 	FOR /F "tokens=10 delims= " %%C IN (%LINE%) DO (
@@ -214,24 +214,29 @@ for /l %%G in (0,1,11) do (
 		if [%%C] gtr [0] set ALARM=1
 	)
 
-	findstr "Current_Pending_Sector" %temp%\%~n0-pd%%G-smart.txt > %LINE%
-	FOR /F "tokens=10 delims= " %%C IN (%LINE%) DO (
-		if [%%C] gtr [0] set ALARM=1
-	)
+	REM findstr "Current_Pending_Sector" %temp%\%~n0-pd%%G-smart.txt > %LINE%
+	REM FOR /F "tokens=10 delims= " %%C IN (%LINE%) DO (
+		REM if [%%C] gtr [0] set ALARM=1
+	REM )
 
 	findstr "Offline_Uncorrectable" %temp%\%~n0-pd%%G-smart.txt > %LINE%
 	FOR /F "tokens=10 delims= " %%C IN (%LINE%) DO (
 		if [%%C] gtr [0] set ALARM=1
 	)
 
-	findstr "SSD_Life_Left" %temp%\%~n0-pd%%G-smart.txt > %LINE%
-	FOR /F "tokens=4-6 delims= " %%D IN (%LINE%) DO (
-		if [%%F] geq [%%D] set ALARM=1
-	)
+	REM findstr "SSD_Life_Left" %temp%\%~n0-pd%%G-smart.txt > %LINE%
+	REM FOR /F "tokens=4-6 delims= " %%D IN (%LINE%) DO (
+		REM if [%%F] geq [%%D] set ALARM=1
+	REM )
 
 	findstr "FAILING_NOW" %temp%\%~n0-pd%%G-smart.txt > %LINE%
 	FOR /F "tokens=9 delims= " %%C IN (%LINE%) DO (
 		if [%%C] == [FAILING_NOW] set ALARM=1
+	)
+
+	findstr "output error" %temp%\%~n0-pd%%G-smart.txt > %LINE%
+	FOR /F "tokens=6 delims= " %%C IN (%LINE%) DO (
+		if [%%C] == [error] set ALARM=1
 	)
 
 	del %LINE%
@@ -239,6 +244,11 @@ for /l %%G in (0,1,11) do (
   )
 
   del %temp%\%~n0-pd%%G-smart.txt
+)
+
+findstr "Degraded" %LOG1% > %LINE%
+FOR /F "tokens=3 delims= " %%C IN (%LINE%) DO (
+	if [%%C] == [Degraded] set ALARM=1
 )
 
 REM =================================
@@ -251,6 +261,8 @@ if not exist %LOG6CAB% makecab %LOG6NFO% %LOG6CAB%
 
 if defined ALARM (
 sendemail -s msa.hinet.net -f egreta.su@msa.hinet.net -t chsliu@gmail.com -u [LOG] %COMPUTERNAME% %~n0 ERROR -m %0 -a %LOG1% %LOG2% %LOG3CAB% %LOG4% %LOG5% %LOG6CAB% %TXT1%
+) else (
+sendemail -s msa.hinet.net -f egreta.su@msa.hinet.net -t chsliu@gmail.com -u [LOG] %COMPUTERNAME% %~n0 -m %0 -a %LOG1% %LOG2% %LOG3CAB% %LOG4% %LOG5% %LOG6CAB% %TXT1%
 )
 
 type %LOG1%
