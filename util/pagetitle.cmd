@@ -14,7 +14,17 @@ class bcolors:
     ENDC = '\033[0m'
     BOLD = '\033[1m'
     UNDERLINE = '\033[4m'
-	
+    Red = '\033[91m'
+    Green = '\033[92m'
+    Blue = '\033[94m'
+    Cyan = '\033[96m'
+    White = '\033[97m'
+    Yellow = '\033[93m'
+    Magenta = '\033[95m'
+    Grey = '\033[90m'
+    Black = '\033[90m'
+    Default = '\033[99m'
+
 
 def warning_item(*objs):
 	for obj in objs:
@@ -40,7 +50,7 @@ def pagetitle(file):
 	if soup.title: title = soup.title.string.replace('\n',' ')
 
 	# warning("  [Page]",title)
-	warning(bcolors.WARNING,"  [Page]",title,bcolors.ENDC)
+	warning(bcolors.White,"  [Page]",title,bcolors.ENDC)
 	print("TITLE:",title.encode('utf-8')) 
 	print(url)
 	
