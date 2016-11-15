@@ -48,8 +48,8 @@ REM =================================
 
 if not exist %1 exit /b
 
-if defined POWERSHELL (
 set TEMPDIR=%temp%\%~n1
+if defined POWERSHELL (
 mkdir %TEMPDIR%
 copy /y %1 %TEMPDIR%
 call :ZIPDIR %TEMPDIR% %2
@@ -369,6 +369,8 @@ for /l %%G in (0,1,11) do (
 	findstr "Temperature_Celsius" %temp%\%~n0-pd%%G-smart.txt					>>%LOG1%
 	findstr /C:"occurred at disk power-on lifetime" %temp%\%~n0-pd%%G-smart.txt			>>%LOG1%
 	findstr "FAILING_NOW" %temp%\%~n0-pd%%G-smart.txt						>>%LOG1%
+	findstr /C:"output error" %temp%\%~n0-pd%%G-smart.txt						>>%LOG1%
+	findstr /C:"Unknown USB" %temp%\%~n0-pd%%G-smart.txt						>>%LOG1%
   )
   
   del %temp%\%~n0-pd%%G-smart.txt
