@@ -48,8 +48,8 @@ REM =================================
 
 if not exist %1 exit /b
 
-if defined POWERSHELL (
 set TEMPDIR=%temp%\%~n1
+if defined POWERSHELL (
 mkdir %TEMPDIR%
 copy /y %1 %TEMPDIR%
 call :ZIPDIR %TEMPDIR% %2
