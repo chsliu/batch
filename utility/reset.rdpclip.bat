@@ -2,4 +2,4 @@ taskkill /F /IM rdpclip.exe
 
 start rdpclip
 
-timeout.exe 10
+rem timeout.exe 10
