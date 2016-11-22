@@ -1,8 +1,8 @@
 @echo off
 
-powershell -command "Get-Counter '\Paging File(*)\%% Usage'"
+REM powershell -command "Get-Counter '\Paging File(*)\%% Usage'"
 
-powershell -command "Get-Counter '\Paging File(*)\%% Usage Peak'"
+REM powershell -command "Get-Counter '\Paging File(*)\%% Usage Peak'"
 
 wmic pagefile list /format:list 
 
