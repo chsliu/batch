@@ -1,6 +1,6 @@
 REM =================================
 
-start /min call %~dp0\..\utility\sendemail.update.bat ^&^& exit
+start /min call %~dp0\..\batch\wuinstall\sendemail.update.bat ^&^& exit
 
 REM =================================
 
