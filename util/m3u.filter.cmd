@@ -64,6 +64,18 @@ def readData(f):
 		line = f.readline()
 	return table
 	
+
+def readDataOrdered(f):
+	items = []
+	while True:
+		line1 = f.readline().strip()
+		line2 = f.readline().strip()
+		if not line2: break
+		item = (line1, line2)
+		items.append(item)
+
+	return items
+
 	
 # def sortByDefault(file):
 	# for line in file:
@@ -129,9 +141,9 @@ def readData(f):
 			# print(table[entry])
 	
 
-def filterKeyword(file,keyword):
+def filterKeyword0(file,keyword):
 	table = readData(file)
-	tableDigital = {}
+	# tableDigital = {}
 	
 	# warning(keyword,type(keyword))
 	for title in table:
@@ -144,7 +156,17 @@ def filterKeyword(file,keyword):
 			print(title)
 			print(table[title])
 		
+
+def filterKeyword(file,keyword):
+	items = readDataOrdered(file)
 	
+	for item in items:
+		titleUTF8 = item[0].decode('utf-8')
+		if keyword in titleUTF8:
+			print(item[0])
+			print(item[1])
+
+			
 def main():
 	sys.argv = win32_unicode_argv()
 	if len(sys.argv) < 1:
