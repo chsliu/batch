@@ -102,7 +102,7 @@ if __name__ == '__main__':
 	import time
 	
 	try:
-		sys.argv = win32_unicode_argv()
+		if sys.platform == 'win32': sys.argv = win32_unicode_argv()
 		main()
 	except:
 		traceback.print_exc()
