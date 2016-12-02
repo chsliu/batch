@@ -1,7 +1,26 @@
 @echo off
 
 REM =================================
+goto :main
+
+REM =================================
+REM call :whereis <exe> <Location Variable>
+REM call :whereis wmic.exe WMIC
+REM =================================
+:whereis
+set %2=
+for %%X in (%1) do (set %2=%%~$PATH:X)
+
+exit /b
+
+REM =================================
+:main
+REM =================================
 set path=%path%;%~dp0\..\bin
+
+REM =================================
+call :whereis wmic.exe WMIC
+call :whereis uniq.exe UNIQ
 
 REM =================================
 if not defined WMIC goto :MyDateEnd
@@ -14,13 +33,29 @@ set MONTH=%MyDate:~0,4%-%MyDate:~4,2%
 :MyDateEnd
 
 REM =================================
-set LOG1=%temp%\%~n0-%COMPUTERNAME%-%TODAY%.txt
+set TXT1=%temp%\%~n0.txt
+set LOG1=%temp%\disklog-%COMPUTERNAME%-%TODAY%.txt
+set SUMMARY=%temp%\%~n0-%COMPUTERNAME%-%TODAY%.txt
+set TEMPFILE=%temp%\%~n0-tempfile.txt
 
 REM =================================
 call %~dp0\getdisklog.bat 1 >%LOG1%
 
 REM =================================
-sendemail -s msa.hinet.net -f egreta.su@msa.hinet.net -t chsliu@gmail.com -u [LOG] %COMPUTERNAME% %~n0 -m %0 -a %LOG1%
+findstr /C:"Physical disk"		%LOG1%	>>%SUMMARY%
+findstr /C:"Serial"				%LOG1%	>>%SUMMARY%
+findstr /C:"Virtual disk" 		%LOG1%	>>%SUMMARY%
+findstr /C:"PDO name" 			%LOG1%	>>%SUMMARY%
+
+if defined UNIQ (
+	type %SUMMARY% | %UNIQ% > %TEMPFILE%
+	move /y %TEMPFILE% %SUMMARY% >nul
+)
+
+REM =================================
+copy %0 %TXT1% >nul
+
+sendemail -s msa.hinet.net -f egreta.su@msa.hinet.net -t chsliu@gmail.com -u [LOG] %COMPUTERNAME% %~n0 -m %0 -a %SUMMARY% %LOG1% %TXT1%
 
 rem %LOG2% %LOG3% %LOG3CAB% %LOG4% %LOG6% %LOG6NFO% %LOG6CAB%
-del %LOG1%
+del %SUMMARY% %LOG1% %TXT1%
