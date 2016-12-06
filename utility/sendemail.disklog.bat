@@ -33,10 +33,10 @@ set MONTH=%MyDate:~0,4%-%MyDate:~4,2%
 :MyDateEnd
 
 REM =================================
-set TXT1=%temp%\%~n0.txt
-set LOG1=%temp%\disklog-%COMPUTERNAME%-%TODAY%.txt
-set SUMMARY=%temp%\%~n0-%COMPUTERNAME%-%TODAY%.txt
 set TEMPFILE=%temp%\%~n0-tempfile.txt
+set TXT1=%temp%\%~n0.txt
+set SUMMARY=%temp%\summary-%COMPUTERNAME%-%TODAY%.txt
+set LOG1=%temp%\disklog-%COMPUTERNAME%-%TODAY%.txt
 
 REM =================================
 call %~dp0\getdisklog.bat 1 >%LOG1%
