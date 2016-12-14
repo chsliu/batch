@@ -51,6 +51,7 @@ REM =================================
 call :whereis wmic.exe WMIC
 call :whereis winsat.exe WINSAT
 call :whereis powershell.exe POWERSHELL
+call :whereis uniq.exe UNIQ
 
 REM =================================
 if not defined WMIC goto :MyDateEnd
@@ -75,8 +76,11 @@ set LOG5=%temp%\smart-%TODAY%.txt
 set LOG6=%temp%\msinfo32.txt
 set LOG6NFO=%temp%\msinfo32.nfo
 set LOG6CAB=%temp%\msinfo32-%COMPUTERNAME%.cab
+set LOG7=%temp%\disklog-%COMPUTERNAME%-%TODAY%.txt
+set LOG7S=%temp%\summary-disklog-%COMPUTERNAME%-%TODAY%.txt
 set TXT1=%temp%\%~n0.txt
 set LINE=%temp%\%~n0-line.txt
+set TEMPFILE=%temp%\%~n0-tempfile.txt
 
 REM =================================
 REM Gathering System Report
@@ -142,6 +146,18 @@ echo.  >>%LOG5%
 if not exist %LOG6NFO% msinfo32 /nfo %LOG6NFO%
 if not exist %LOG6% msinfo32 /report %LOG6%
 
+call %~dp0\getdisklog.bat 1 >%LOG7%
+
+findstr /C:"Physical disk"		%LOG7%	>>%LOG7S%
+findstr /C:"Serial"				%LOG7%	>>%LOG7S%
+findstr /C:"Virtual disk" 		%LOG7%	>>%LOG7S%
+findstr /C:"PDO name" 			%LOG7%	>>%LOG7S%
+
+if defined UNIQ (
+	type %LOG7S% | %UNIQ% > %TEMPFILE%
+	move /y %TEMPFILE% %LOG7S% >nul
+)
+
 REM =================================
 REM Generate Report
 REM =================================
@@ -152,6 +168,9 @@ echo.									>>%LOG1%
 echo =================================					>>%LOG1%
 echo DISK								>>%LOG1%
 echo =================================					>>%LOG1%
+echo ---------------------------------					>>%LOG1%
+Echo "disklog"							>>%LOG1%
+
 if defined POWERSHELL (
 echo ---------------------------------					>>%LOG1%
 Echo "Get-Volume"							>>%LOG1%
@@ -263,7 +282,7 @@ if not exist %LOG3CAB% makecab %LOG3% %LOG3CAB%
 if not exist %LOG6CAB% makecab %LOG6NFO% %LOG6CAB%
 
 if defined ALARM (
-sendemail -s msa.hinet.net -f egreta.su@msa.hinet.net -t chsliu@gmail.com -u [LOG] %COMPUTERNAME% %~n0 ERROR -m %0 -a %LOG1% %LOG2% %LOG3CAB% %LOG4% %LOG5% %LOG6CAB% %TXT1%
+sendemail -s msa.hinet.net -f egreta.su@msa.hinet.net -t chsliu@gmail.com -u [LOG] %COMPUTERNAME% %~n0 ERROR -m %0 -a %LOG1% %LOG2% %LOG3CAB% %LOG4% %LOG5% %LOG6CAB% %TXT1% %LOG7%
 ) else (
 REM sendemail -s msa.hinet.net -f egreta.su@msa.hinet.net -t chsliu@gmail.com -u [LOG] %COMPUTERNAME% %~n0 -m %0 -a %LOG1% %LOG2% %LOG3CAB% %LOG4% %LOG5% %LOG6CAB% %TXT1%
 )
@@ -271,6 +290,6 @@ REM sendemail -s msa.hinet.net -f egreta.su@msa.hinet.net -t chsliu@gmail.com -u
 type %LOG1%
 
 rem %LOG2% %LOG3% %LOG3CAB% %LOG4% %LOG6% %LOG6NFO% %LOG6CAB% 
-del %LOG1% %LOG5% %TXT1%
+del %LOG1% %LOG5% %TXT1% %LOG7%
 
 C:\Windows\System32\timeout.exe 10
