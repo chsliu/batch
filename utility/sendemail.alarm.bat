@@ -1,4 +1,4 @@
-rem @echo off
+@echo off
 
 REM =================================
 if [%1]==[] %~dp0\..\utility\getadmin.bat "%~dp0\%~nx0"
@@ -12,7 +12,7 @@ REM call :whereis wmic.exe WMIC
 REM =================================
 :whereis
 set %2=
-for %%X in (%1) do (set %2=%%~$PATH:X)
+for %%X in (%1) do (set %2="%%~$PATH:X")
 
 exit /b
 
