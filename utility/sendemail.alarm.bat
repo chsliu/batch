@@ -41,6 +41,14 @@ FOR /F "tokens=%2 delims= " %%G IN (%1) DO (
 )
 exit /b
 
+REM =================================
+REM call :COUNTLINE <linefile>
+REM call :COUNTLINE temp.txt
+REM =================================
+:COUNTLINE
+for /f %%a in ('type "%1"^|find "" /v /c') do set /a COUNTLINES=%%a
+
+exit /b
 
 REM =================================
 :main
@@ -157,6 +165,7 @@ if defined UNIQ (
 	type %LOG7S% | %UNIQ% > %TEMPFILE%
 	move /y %TEMPFILE% %LOG7S% >nul
 )
+call :COUNTLINE %LOG7S%
 
 REM =================================
 REM Generate Report
@@ -168,8 +177,12 @@ echo.									>>%LOG1%
 echo =================================					>>%LOG1%
 echo DISK								>>%LOG1%
 echo =================================					>>%LOG1%
+
+if %COUNTLINES% GTR 0 (
 echo ---------------------------------					>>%LOG1%
 Echo "disklog"							>>%LOG1%
+type %LOG7S%							>>%LOG1%
+)
 
 if defined POWERSHELL (
 echo ---------------------------------					>>%LOG1%
@@ -290,6 +303,6 @@ REM sendemail -s msa.hinet.net -f egreta.su@msa.hinet.net -t chsliu@gmail.com -u
 type %LOG1%
 
 rem %LOG2% %LOG3% %LOG3CAB% %LOG4% %LOG6% %LOG6NFO% %LOG6CAB% 
-del %LOG1% %LOG5% %TXT1% %LOG7%
+del %LOG1% %LOG5% %TXT1% %LOG7% %LOG7S%
 
 C:\Windows\System32\timeout.exe 10
