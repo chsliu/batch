@@ -9,7 +9,7 @@ goto :main
 REM =================================
 :whereis
 set %2=
-for %%X in (%1) do (set %2=%%~$PATH:X)
+for %%X in (%1) do (set %2="%%~$PATH:X")
 
 exit /b
 

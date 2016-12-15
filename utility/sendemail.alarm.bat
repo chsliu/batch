@@ -12,7 +12,7 @@ REM call :whereis wmic.exe WMIC
 REM =================================
 :whereis
 set %2=
-for %%X in (%1) do (set %2=%%~$PATH:X)
+for %%X in (%1) do (set %2="%%~$PATH:X")
 
 exit /b
 
@@ -41,6 +41,14 @@ FOR /F "tokens=%2 delims= " %%G IN (%1) DO (
 )
 exit /b
 
+REM =================================
+REM call :COUNTLINE <linefile>
+REM call :COUNTLINE temp.txt
+REM =================================
+:COUNTLINE
+for /f %%a in ('type "%1"^|find "" /v /c') do set /a COUNTLINES=%%a
+
+exit /b
 
 REM =================================
 :main
@@ -81,6 +89,7 @@ set LOG7S=%temp%\summary-disklog-%COMPUTERNAME%-%TODAY%.txt
 set TXT1=%temp%\%~n0.txt
 set LINE=%temp%\%~n0-line.txt
 set TEMPFILE=%temp%\%~n0-tempfile.txt
+set ALARM=
 
 REM =================================
 REM Gathering System Report
@@ -157,6 +166,7 @@ if defined UNIQ (
 	type %LOG7S% | %UNIQ% > %TEMPFILE%
 	move /y %TEMPFILE% %LOG7S% >nul
 )
+call :COUNTLINE %LOG7S%
 
 REM =================================
 REM Generate Report
@@ -168,8 +178,13 @@ echo.									>>%LOG1%
 echo =================================					>>%LOG1%
 echo DISK								>>%LOG1%
 echo =================================					>>%LOG1%
+
+if %COUNTLINES% GTR 0 (
+set ALARM=1
 echo ---------------------------------					>>%LOG1%
 Echo "disklog"							>>%LOG1%
+type %LOG7S%							>>%LOG1%
+)
 
 if defined POWERSHELL (
 echo ---------------------------------					>>%LOG1%
@@ -184,7 +199,6 @@ powershell -command "if (Get-Command Get-PhysicalDisk -errorAction SilentlyConti
 REM powershell -command "if (Get-Command Get-PhysicalDisk -errorAction SilentlyContinue) {Get-PhysicalDisk | Format-List FriendlyName,OperationalStatus,HealthStatus,BusType,MediaType,Manufacturer,Model,Size,UniqueId}" 				>>%LOG1%
 )
 
-set ALARM=
 for /l %%G in (0,1,11) do (
   call :findtext %temp%\%~n0-pd%%G-smart.txt "Unable to detect" HD_NOT_FOUND
   if not defined HD_NOT_FOUND (
@@ -282,7 +296,7 @@ if not exist %LOG3CAB% makecab %LOG3% %LOG3CAB%
 if not exist %LOG6CAB% makecab %LOG6NFO% %LOG6CAB%
 
 if defined ALARM (
-sendemail -s msa.hinet.net -f egreta.su@msa.hinet.net -t chsliu@gmail.com -u [LOG] %COMPUTERNAME% %~n0 ERROR -m %0 -a %LOG1% %LOG2% %LOG3CAB% %LOG4% %LOG5% %LOG6CAB% %TXT1% %LOG7%
+sendemail -s msa.hinet.net -f egreta.su@msa.hinet.net -t chsliu@gmail.com -u [LOG] %COMPUTERNAME% %~n0 ERROR -m %0 -a %LOG1% %LOG2% %LOG3CAB% %LOG4% %LOG5% %LOG6CAB% %LOG7% %TXT1%
 ) else (
 REM sendemail -s msa.hinet.net -f egreta.su@msa.hinet.net -t chsliu@gmail.com -u [LOG] %COMPUTERNAME% %~n0 -m %0 -a %LOG1% %LOG2% %LOG3CAB% %LOG4% %LOG5% %LOG6CAB% %TXT1%
 )
@@ -290,6 +304,6 @@ REM sendemail -s msa.hinet.net -f egreta.su@msa.hinet.net -t chsliu@gmail.com -u
 type %LOG1%
 
 rem %LOG2% %LOG3% %LOG3CAB% %LOG4% %LOG6% %LOG6NFO% %LOG6CAB% 
-del %LOG1% %LOG5% %TXT1% %LOG7%
+del %LOG1% %LOG5% %TXT1% %LOG7% %LOG7S%
 
 C:\Windows\System32\timeout.exe 10
