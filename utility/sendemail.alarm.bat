@@ -89,6 +89,7 @@ set LOG7S=%temp%\summary-disklog-%COMPUTERNAME%-%TODAY%.txt
 set TXT1=%temp%\%~n0.txt
 set LINE=%temp%\%~n0-line.txt
 set TEMPFILE=%temp%\%~n0-tempfile.txt
+set ALARM=
 
 REM =================================
 REM Gathering System Report
@@ -179,6 +180,7 @@ echo DISK								>>%LOG1%
 echo =================================					>>%LOG1%
 
 if %COUNTLINES% GTR 0 (
+set ALARM=1
 echo ---------------------------------					>>%LOG1%
 Echo "disklog"							>>%LOG1%
 type %LOG7S%							>>%LOG1%
@@ -197,7 +199,6 @@ powershell -command "if (Get-Command Get-PhysicalDisk -errorAction SilentlyConti
 REM powershell -command "if (Get-Command Get-PhysicalDisk -errorAction SilentlyContinue) {Get-PhysicalDisk | Format-List FriendlyName,OperationalStatus,HealthStatus,BusType,MediaType,Manufacturer,Model,Size,UniqueId}" 				>>%LOG1%
 )
 
-set ALARM=
 for /l %%G in (0,1,11) do (
   call :findtext %temp%\%~n0-pd%%G-smart.txt "Unable to detect" HD_NOT_FOUND
   if not defined HD_NOT_FOUND (
