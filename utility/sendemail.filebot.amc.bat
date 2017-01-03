@@ -146,6 +146,8 @@ findstr /C:"Skipped" %LOG1%		>>%LOG2%
 
 call %~dp0\log2download.cmd %LOG2%	>>%LOG2%
 
+REM pause
+
 REM =================================
 
 copy %0 %TXT1% >nul
@@ -159,4 +161,4 @@ del %LOG1% %LOG2% %TXT1%
 REM =================================
 chcp %cp% >nul
 
-
+ 
