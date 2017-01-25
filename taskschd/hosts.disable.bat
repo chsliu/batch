@@ -1,28 +1,47 @@
-REM =================================
-if [%1]==[] %~dp0\..\utility\getadmin.bat "%~dp0\%~nx0"
+@echo off
 
 REM =================================
-set SRC="\\hv4\Software\UNIX\Lubuntu\hosts"
-set HOSTSTEMP=%TEMP%\hosts.txt
-set DST="C:\Windows\System32\drivers\etc\hosts"
+REM Acquire Administrative Privileges
+REM =================================
+set ADMIN=%TASKS_ROOT%\utility\getadmin.bat
+if /I [%1] NEQ [%ADMIN%] %ADMIN% "%~dp0\%~nx0" %*
+shift
 
 REM =================================
-copy /y %SRC% %HOSTSTEMP%
+if [%1] == [] goto :Usage
 
 REM =================================
-REM Blocked host list
-REM =================================
-echo 127.0.0.1	www.youtube.com>>%HOSTSTEMP%
-REM =================================
+set DOMAIN=%1
+set HOSTS="C:\Windows\System32\drivers\etc\hosts"
+set TEMPHOSTS=%TEMP%\hosts.txt
+set LINEMARKER="#REMOVE THIS LINE"
+
+goto :main
+
+REM ================================================================
+REM call :SED <old pattern> <new pattern> <input file> <output file>
+REM ================================================================
+:SED
+cscript //NoLogo %TASKS_ROOT%\vbs\sed.vbs s/%1/%2/ < "%3" > "%4"
+
+exit /b
+
+:Usage
+echo Domain name is required.
+REM pause
+
+goto :EOF
 
 REM =================================
-move /y %HOSTSTEMP% %DST%
+:main
 
-REM =================================
-icacls %DST% /grant "NT AUTHORITY\SYSTEM":(F)
-icacls %DST% /grant BUILTIN\Administrators:(F)
-icacls %DST% /grant BUILTIN\Users:(RX)
-REM icacls %DST% /grant "APPLICATION PACKAGE AUTHORITY\ALL APPLICATION PACKAGES":(RX)
+REM call :SED PART.* XXX test.txt test2.txt
 
-REM =================================
-ipconfig /flushdns
+REM call :SED ".* dns" "" hosts hosts.txt
+REM call :SED ".* dns" "9.9.9.9 dns" hosts hosts.txt
+
+call :SED ".* %DOMAIN%" %LINEMARKER% %HOSTS% %TEMPHOSTS%
+type "%TEMPHOSTS%" | findstr /v /C:%LINEMARKER% > %HOSTS%
+del %TEMPHOSTS%
+
+echo 127.0.0.1 %DOMAIN% >> %HOSTS%
