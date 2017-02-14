@@ -1,4 +1,4 @@
-@echo off
+rem @echo off
 
 REM =================================
 goto :main
@@ -9,7 +9,7 @@ REM call :whereis wmic.exe WMIC
 REM =================================
 :whereis
 set %2=
-for %%X in (%1) do (set %2="%%~$PATH:X")
+for %%X in (%1) do (set %2=%%~$PATH:X)
 
 exit /b
 
@@ -47,10 +47,13 @@ findstr /C:"Serial"				%LOG1%	>>%SUMMARY%
 findstr /C:"Virtual disk" 		%LOG1%	>>%SUMMARY%
 findstr /C:"PDO name" 			%LOG1%	>>%SUMMARY%
 
-if defined UNIQ (
+REM =================================
+if not defined UNIQ goto :UNIQEnd
+
 	type %SUMMARY% | %UNIQ% > %TEMPFILE%
 	move /y %TEMPFILE% %SUMMARY% >nul
-)
+
+:UNIQEnd
 
 REM =================================
 copy %0 %TXT1% >nul
