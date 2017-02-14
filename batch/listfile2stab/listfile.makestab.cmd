@@ -104,7 +104,7 @@ def filename_wash(filename):
 		
 def parse(filename,prefix,postfix,ends):
 	import io
-	for line in io.open(filename,'r',encoding='utf-8-sig').readlines():
+	for line in reversed(io.open(filename,'r',encoding='utf-8-sig').readlines()):
 		line=line.strip()
 		# print(line)		
 		tokens=line.split(':')
@@ -116,10 +116,11 @@ def parse(filename,prefix,postfix,ends):
 		if len(tokens) >= 1: drive=tokens[0]
 		if len(tokens) >= 2: path=tokens[1]
 		newfilename=prefix+'\\'+drive+path
-		if not newfilename.endswith(ends):
-			newfilename=newfilename+'.'+postfix+".txt"
-		warning("New File:",newfilename)
-		check_create_file(filename_wash(newfilename))
+		if not os.path.exists(newfilename):
+			if not newfilename.endswith(ends):
+				newfilename=newfilename+'.'+postfix+".txt"
+			warning("New File:",newfilename)
+			check_create_file(filename_wash(newfilename))
 
 
 def main():
