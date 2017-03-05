@@ -1,10 +1,10 @@
 REM =================================
 
-start /min call e:\Shares\Media\userdata\sendemail.gitsync.bat ^&^& exit
+REM start /min call e:\Shares\Media\userdata\sendemail.gitsync.bat ^&^& exit
 
 REM =================================
 
-start /min call E:\Shares\Software\UNIX\Lubuntu\xbmc\userdata\sendemail.gitsync.bat ^&^& exit
+REM start /min call E:\Shares\Software\UNIX\Lubuntu\xbmc\userdata\sendemail.gitsync.bat ^&^& exit
 
 REM =================================
 
