@@ -62,6 +62,7 @@ rootPathWords = [
 'Photos',
 'Software',
 'Users',
+'YouTube',
 'Video',
 ]
 
