@@ -27,8 +27,8 @@ pathadd="%TASKS_ROOT%\util\setenv.cmd" +PATH "%CD%"
 pd=popd
 pdd=pushd D:\Users\%USERNAME%\Dropbox\Desktop
 ping=ping -t $*
-pk=pushd C:\Users\%USERNAME%\AppData\Roaming\Kodi  
-ps=pushd %TASKS_ROOT%\batch\ssh  
+pk=pushd C:\Users\%USERNAME%\AppData\Roaming\Kodi\userdata
+ph=pushd %TASKS_ROOT%\batch\ssh  
 pu=pushd %TASKS_ROOT%\utility
 pv=set VAGRANT_HOME=D:\Users\sita\.vagrant.d & pushd D:\Users\%USERNAME%\vagrant 
 pwd=cd
