@@ -3,7 +3,7 @@
 ;= %SystemRoot%\system32\doskey /listsize=1000 /macrofile=%0%
 ;= rem In batch mode, jump to the end of the file
 ;= goto:eof
-;= rem Add aliases below here
+;= Add aliases below here
 a=alias
 adel=alias /d $1
 adiff="C:\Program Files (x86)\Meld\Meld.exe" C:\tools\cmder\config\user-aliases.cmd D:\Users\sita\Documents\tasks\cmder\config\user-aliases.cmd
