@@ -1,5 +1,24 @@
 @echo off
 
-set path=C:\Program Files\Git\usr\bin;%path%
+REM =================================
+goto :main
 
-ssh -i "D:\Users\sita\Dropbox (個人)\SSHKey\nb19_rsa" sita@%~n0
+REM =================================
+REM call :AWK <linefile> <location>
+REM call :AWK temp.txt 10
+REM =================================
+:AWK
+set RET=
+FOR /F "tokens=%2 delims= " %%G IN (%1) DO (
+    set RET=%%G
+)
+exit /b
+
+REM =================================
+:main
+
+REM =================================
+call :AWK %LOCALAPPDATA%\Dropbox\info.json 3
+set ROOT=%RET:",="%
+
+"C:\Program Files\Git\usr\bin\ssh.exe" -i "%ROOT%\SSHKey\nb19_rsa" sita@%~n0
