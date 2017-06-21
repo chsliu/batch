@@ -38,6 +38,17 @@ def win32_unicode_argv():
                 xrange(start, argc.value)]
 
 
+def warning_item(*objs):
+	for obj in objs:
+		if isinstance(obj,unicode): obj=unicode(obj).encode(sys.stderr.encoding,'replace')
+		print(obj,file=sys.stderr, end=" ")
+
+
+def warning(*objs):
+	for obj in objs: warning_item(obj)
+	print("",file=sys.stderr)
+
+
 def replace(file, old, new):
 	for line in file:
 		line=line.decode('utf-8').replace(old, new)
