@@ -1,11 +1,12 @@
 @setlocal enableextensions & python -x "%~f0" %* & goto :EOF
 
+from __future__ import print_function
 import sys
 
 
 def usage(prog):
     # print "%s <inputfile> <pattern> [reversed]" % prog
-    print "%s <pattern> [Reverse]" % prog
+    print("%s <pattern> [Reverse]" % prog) 
 
 
 def win32_unicode_argv():
@@ -52,7 +53,8 @@ def warning(*objs):
 def replace(file, old, new):
 	for line in file:
 		line=line.decode('utf-8').replace(old, new)
-		print line.encode('utf-8'),
+		# print line.encode('utf-8'),
+		print(line.encode('utf-8'), end="")
 
 
 def main():
