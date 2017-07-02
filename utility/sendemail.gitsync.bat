@@ -73,6 +73,16 @@ for /f "delims=" %%a in ('time/t') do @set mytime=%%a
 set var=%mydate%%mytime% 
 
 REM =================================
+git config --global user.email "chsliu@gmail.com"
+
+git config --global user.name "Sita Liu"
+
+git config --global credential.helper wincred
+
+git config --global push.default matching
+
+git config --global core.autocrlf false
+REM =================================
 
 set _=%~dp0\..\utility\gitconf.bat
 if exist %_% call %_%

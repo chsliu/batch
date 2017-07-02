@@ -5,11 +5,21 @@ from __future__ import print_function
 import sys
 import inspect
 from optparse import OptionParser
-import os
 
 
-USAGE = "usage: %prog inputfile"
+USAGE = "usage: %prog [options] arg1 arg2"
 
+
+class bcolors:
+    HEADER = '\033[95m'
+    OKBLUE = '\033[94m'
+    OKGREEN = '\033[92m'
+    WARNING = '\033[93m'
+    FAIL = '\033[91m'
+    ENDC = '\033[0m'
+    BOLD = '\033[1m'
+    UNDERLINE = '\033[4m'
+	
 
 def win32_unicode_argv():
     """Uses shell32.GetCommandLineArgvW to get sys.argv as a list of Unicode
@@ -56,65 +66,30 @@ def lineno():
 	"""Returns the current line number in our program."""
 	return inspect.currentframe().f_back.f_lineno
 
-
-def filterinvalid(str):
-	if isinstance(str,unicode): 
-		str = unicode(str).encode('utf-8')
-		str = str.decode('utf-8')
-	return str
-
-	
-# def parse(fname,ftag,var):
-def parse(fname,ftag):
-	# print(fname,type(fname),ftag,type(ftag))
-	if ftag:
-		# tokens = fname.split(ftag)
-		# print(tokens)
-		fname_new = fname.replace(ftag,"")
-		# print(fname_new,var)
-		print(fname_new)
-		# print(filterinvalid(fname_new))
-		# raw_input()
-		# os.environ[var] = fname_new
-		# os.putenv(var,fname_new)
-		# os.environ['abc'] = fname_new
-		# print(os.environ)
-		# for key in sorted(os.environ): print(key,"==",os.environ[key])
-	else:
-		print(fname)
-		# print(filterinvalid(fname))
+def print_item(*objs):
+	for obj in objs:
+		if isinstance(obj,unicode): obj=unicode(obj).encode(sys.stderr.encoding,'replace')
+		print(obj,file=sys.stdout, end="")
 		
+def parse(file):
+	import json
+	j=json.loads(open(file,'r').read())
+	# print(j)
+	try: print_item(j['personal']['path']) 
+	# try: print_item('"'+j['personal']['path']+'"') 
+	except: traceback.print_exc()
+
 
 def main():
 	parser = OptionParser(USAGE)
 	parser.add_option("-v", "--verbose",
                   action="store_true", dest="verbose", default=True,
                   help="make lots of noise [default]")
-	# parser.add_option("-f", "--filename", metavar="FILE", help="write output to FILE")
+	parser.add_option("-f", "--filename", metavar="FILE", help="write output to FILE")
 	opt, args = parser.parse_args()
-	
-	if len(args) < 1:
-		print(USAGE)
-		sys.exit(1)
 		
-	file_name = args[0]
-	file_tag = args[1]
-	# variablename = sys.argv[0]
-
-	# if opt.dummy: dummy = int(opt.dummy)
-	# else:         dummy = 0
-	
-	# try: pass
-	# except:
-		# warning(sys.exc_info()[0])
-		# warning(sys.exc_info())
-		
-	try:
-		# f = sys.stdin
-		parse(file_name,file_tag)
-		# parse(file_name,file_tag,variablename)
-	except:
-		pass
+	# f = sys.stdin
+	parse(args[0])
 
 
 if __name__ == '__main__':
@@ -122,7 +97,7 @@ if __name__ == '__main__':
 	import time
 	
 	try:
-		sys.argv = win32_unicode_argv()
+		if sys.platform == 'win32': sys.argv = win32_unicode_argv()
 		main()
 	except:
 		traceback.print_exc()
