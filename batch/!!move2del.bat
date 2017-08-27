@@ -5,4 +5,5 @@ echo python "%~dp0move2subpath.py" DEL %*
 
 python "%~dp0move2subpath.py" DEL %*
 
-REM pause
+timeout 10
+rem pause
