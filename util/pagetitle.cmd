@@ -41,11 +41,12 @@ def pagetitle(file):
 	from bs4 import BeautifulSoup
 
 	url = file.readline().strip()
-	page = file.read().strip()
-	# stringTest(page)
+	# html_doc = file.read().strip()
+	html_doc = file.read().decode('utf8')
+	# stringTest(html_doc)
 	
-	soup = BeautifulSoup(page,'html.parser')
-	# soup = BeautifulSoup(page,'lxml')
+	soup = BeautifulSoup(html_doc,'html.parser')
+	# soup = BeautifulSoup(html_doc,'lxml')
 	title = ""
 	if soup.title: title = soup.title.string.replace('\n',' ')
 
