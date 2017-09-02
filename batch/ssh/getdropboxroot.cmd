@@ -73,11 +73,13 @@ def print_item(*objs):
 		
 def parse(file):
 	import json
-	j=json.loads(open(file,'r').read())
+	try: 
+		j=json.loads(open(file,'r').read())
+		try: print_item(j['personal']['path']) 
+		# try: print_item('"'+j['personal']['path']+'"') 
+		except: traceback.print_exc()
+	except: print("C:\\")
 	# print(j)
-	try: print_item(j['personal']['path']) 
-	# try: print_item('"'+j['personal']['path']+'"') 
-	except: traceback.print_exc()
 
 
 def main():
