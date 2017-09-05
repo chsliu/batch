@@ -1,7 +1,7 @@
 @echo off
 
 REM =================================
-if [%1]==[] %~dp0\..\utility\getadmin.bat "%~f0"
+if [%1]==[] %~dp0..\utility\getadmin.bat "%~f0"
 
 REM =================================
 goto :main
