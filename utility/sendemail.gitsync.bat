@@ -96,6 +96,8 @@ git pull		>>%LOG1% 2>>&1
 
 git push		>>%LOG1% 2>>&1
 
+git stash list	>>%LOG1% 2>>&1
+
 REM =================================
 
 popd
