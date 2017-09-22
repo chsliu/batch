@@ -5,6 +5,8 @@ from __future__ import print_function
 import sys
 import re
 from bs4 import BeautifulSoup
+import codecs
+codecs.register(lambda name: codecs.lookup('utf-8') if name == 'cp65001' else None)
 
 
 def warning_item(*objs):
@@ -33,7 +35,9 @@ def parselineToKey(line, pat, index=0):
 	
 def hrefsearch(file,href_regex,maxitem):
 	url = file.readline().strip()
-	html_doc = getHtml(file)
+	# html_doc = getHtml(file)
+	html_doc = file.read().decode('utf8')
+	# print(html_doc)
 	# stringTest(html_doc)
 	# warning("[hrefsearch]",len(html_doc),"Bytes",type(html_doc))
 	
@@ -53,6 +57,14 @@ def hrefsearch(file,href_regex,maxitem):
 	list = []
 	dict = {}
 	for tag in soup.find_all(href=re.compile(href_regex)):
+	
+		# print(tag)
+		# try:
+			# print(tag.text.strip().encode('utf-8'))
+			# print(tag.text.strip().decode('utf-8'))
+		# except:
+			# print(sys.exc_info())
+			
 		title = tag.text.strip().encode('utf-8')
 		if len(title) > 0:
 			# print("TITLE:",title)

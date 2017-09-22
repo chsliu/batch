@@ -5,6 +5,8 @@ from __future__ import print_function
 import sys
 import urllib2
 import urllib
+import codecs
+codecs.register(lambda name: codecs.lookup('utf-8') if name == 'cp65001' else None)
 
 
 def usage(prog):
