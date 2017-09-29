@@ -119,7 +119,7 @@ class PersistenDB(UserDict.DictMixin):
 					del self.age[key]
 					del self.dict[key]
 			except:
-				warning("[AgeCounted]", self.dict[key][:68])
+				warning("[AgeCounted]", self.dict[key][:68].encode('cp950'))
 				self.age[key] = count
 				
 		# if retired: warning("[Retired", retired, "]")
