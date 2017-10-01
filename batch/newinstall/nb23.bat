@@ -21,7 +21,7 @@ REM =================================
 
 choco feature enable -nautoUninstaller
 
-cinst -y 7zip cmder cpu-z crystaldiskinfo everything git google-chrome-x64 kodi msysgit netscan64 notepadplusplus openhardwaremonitor potplayer python2 rsync teamviewer winbox wireshark
+cinst -y 7zip cmder cpu-z crystaldiskinfo dropbox everything foxitreader git google-chrome-x64 Gow ImDisk-Toolkit imgburn kodi meld msysgit netscan64 notepadplusplus openhardwaremonitor potplayer python2 rsync steam teamviewer vagrant virtualbox winbox wireshark
 
 REM cinst -y openssh -params '"/SSHServerFeature"'
 

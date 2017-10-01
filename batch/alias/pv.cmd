@@ -1,0 +1,1 @@
+@set VAGRANT_HOME

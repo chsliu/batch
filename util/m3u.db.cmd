@@ -11,7 +11,9 @@ from persistendb import PersistenDB, PersistenDBDated
 from datetime import datetime, timedelta
 # from lang_detect import zh2utf8,lang_detect
 import chardet
+import codecs
 
+# sys.stderr = codecs.getwriter('utf-8')(sys.stderr)
 
 class bcolors:
     HEADER = '\033[95m'
@@ -111,13 +113,13 @@ def m3udb(file, db, onlynew):
 		
 		if url in db:
 			if not onlynew:
-				warning("[Cached]",title.decode('utf-8'))
+				warning("[Cached]",title.decode('utf-8').encode('cp950','replace'))
 
 				print(title)
 				print(url) 
 		else:
 			titleUnicode = title.decode('utf-8')
-			warning(bcolors.White,"[Title]",titleUnicode,bcolors.ENDC)
+			warning(bcolors.White,"[Title]",titleUnicode.encode('cp950','replace'),bcolors.ENDC)
 			db[url] = titleUnicode
 
 			print(title) 

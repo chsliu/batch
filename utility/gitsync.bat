@@ -31,6 +31,8 @@ git pull
 
 git push	
 
+git stash list
+
 REM =================================
 popd
 
