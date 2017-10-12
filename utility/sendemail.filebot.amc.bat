@@ -84,7 +84,7 @@ REM set LOG1="D:\Users\sita\PortableApps\FileBot-portable\logs\%~n3.txt"
 set LOG1="C:\Users\sita\AppData\Roaming\FileBot\logs\%~n3.txt"
 set LOG2="%temp%\%~n3-summary.txt"
 set TXT1=%temp%\%~n0.txt
-set SHARE=\\lxcfs5\Library
+set SHARE=\\lxcomv5\Library
 set XBMC=w1
 
 REM =================================
