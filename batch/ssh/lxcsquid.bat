@@ -1,5 +1,7 @@
 @echo off
 
+chcp 950
+
 call %~dp0\getdropboxroot.cmd %LOCALAPPDATA%\Dropbox\info.json >%TEMP%\temp.txt
 set /p ROOT=<%TEMP%\temp.txt
 del %TEMP%\temp.txt >nul
