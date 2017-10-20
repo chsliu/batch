@@ -17,9 +17,9 @@ REM =================================
 
 choco feature enable -nautoUninstaller
 
-REM git kodi
+REM git 
 
-cinst -y 7zip cmder Everything f.lux foxitreader imdisk-toolkit notepadplusplus potplayer python2 teamviewer
+cinst -y 7zip cmder dropbox Everything f.lux foxitreader imdisk-toolkit notepadplusplus potplayer python2 teamviewer
 
 REM =================================
 
