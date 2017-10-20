@@ -7,7 +7,7 @@ REM =================================
 set path=%path%;C:\Program Files (x86)\Git\cmd
 set DOC=c:\Users\%USERNAME%\Documents
 REM set TASKS=%DOC%\tasks
-set PASS=0000
+set PASS=1111
 
 REM =================================
 
@@ -19,7 +19,7 @@ choco feature enable -nautoUninstaller
 
 REM git 
 
-cinst -y 7zip cmder dropbox Everything f.lux foxitreader imdisk-toolkit notepadplusplus potplayer python2 teamviewer
+cinst -y 7zip cmder dropbox Everything f.lux foxitreader google-chrome-x64 imdisk-toolkit notepadplusplus potplayer python2 teamviewer
 
 REM =================================
 
