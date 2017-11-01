@@ -10,10 +10,10 @@ REM call %~dp0\..\ShooterSubPyDownloader\sendemail.shootersuball.bat "\\hv4\Libr
 
 REM call %~dp0\..\ShooterSubPyDownloader\sendemail.shootersuball.bat "\\hv4\Media"
 
-REM call %~dp0\..\ShooterSubPyDownloader\sendemail.shootersuball.bat "\\lxcfs5\Library"
+call %~dp0\..\ShooterSubPyDownloader\sendemail.shootersuball.bat "\\lxcfs5\Library"
 
-REM call %~dp0\..\ShooterSubPyDownloader\sendemail.shootersuball.bat "\\lxcfs5\Media"
+call %~dp0\..\ShooterSubPyDownloader\sendemail.shootersuball.bat "\\lxcfs5\Media"
 
-call %~dp0\..\ShooterSubPyDownloader\sendemail.shootersuball.bat "\\lxcomv5\Library"
+REM call %~dp0\..\ShooterSubPyDownloader\sendemail.shootersuball.bat "\\lxcomv5\Library"
 
-call %~dp0\..\ShooterSubPyDownloader\sendemail.shootersuball.bat "\\lxcomv5\Media"
+REM call %~dp0\..\ShooterSubPyDownloader\sendemail.shootersuball.bat "\\lxcomv5\Media"
