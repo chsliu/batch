@@ -7,7 +7,7 @@ set /p ROOT=<%TEMP%\temp.txt
 del %TEMP%\temp.txt >nul
 
 set ROOT=D:\Users\sita\Nextcloud
-set HOST=ca65.southeastasia.cloudapp.azure.com
+set HOST=ca65.eastasia.cloudapp.azure.com
 
 echo "C:\Program Files\Git\usr\bin\ssh.exe" -i "%ROOT%\SSHKey\nb19_rsa" sita@%HOST%
 "C:\Program Files\Git\usr\bin\ssh.exe" -i "%ROOT%\SSHKey\nb19_rsa" sita@%HOST%
