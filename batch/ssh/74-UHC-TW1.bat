@@ -7,7 +7,8 @@ set /p ROOT=<%TEMP%\temp.txt
 del %TEMP%\temp.txt >nul
 
 set ROOT=D:\Users\sita\Nextcloud
-set HOST=35.194.214.154
+REM set HOST=35.194.214.154
+set HOST=uhc.creeper.tw
 
 echo "C:\Program Files\Git\usr\bin\ssh.exe" -i "%ROOT%\SSHKey\nb19_rsa" sita@%HOST%
 "C:\Program Files\Git\usr\bin\ssh.exe" -i "%ROOT%\SSHKey\nb19_rsa" sita@%HOST%
