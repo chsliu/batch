@@ -11,7 +11,8 @@ REM set HOST=ca65.westus.cloudapp.azure.com
 REM set HOST=35.229.146.129
 REM set HOST=104.199.235.88
 REM set HOST=35.194.199.228
-set HOST=107.167.176.31
+REM set HOST=107.167.176.31
+set HOST=tw1.creeper.tw
 
 
 echo "C:\Program Files\Git\usr\bin\ssh.exe" -i "%ROOT%\SSHKey\nb19_rsa" sita@%HOST%
