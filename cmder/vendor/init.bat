@@ -11,7 +11,11 @@ if not defined verbose-output ( set verbose-output=0 )
 
 :: Find root dir
 if not defined CMDER_ROOT (
-    for /f "delims=" %%i in ("%ConEmuDir%\..\..") do set "CMDER_ROOT=%%~fi"
+    if defined ConEmuDir (
+        for /f "delims=" %%i in ("%ConEmuDir%\..\..") do set "CMDER_ROOT=%%~fi"
+    ) else (
+        for /f "delims=" %%i in ("%~dp0\..") do set "CMDER_ROOT=%%~fi"
+    )
 )
 
 :: Remove trailing '\'
@@ -127,8 +131,8 @@ if not exist "%user-aliases%" (
     type "%user-aliases%" | findstr /i ";= Add aliases below here" >nul
     if "!errorlevel!" == "1" (
         echo Creating initial user-aliases store in "%user-aliases%"...
-        copy "%CMDER_ROOT%\%user-aliases%" "%user-aliases%.old_format" 
-        copy "%CMDER_ROOT%\vendor\user-aliases.cmd.example" "%user-aliases%" 
+        copy "%CMDER_ROOT%\%user-aliases%" "%user-aliases%.old_format"
+        copy "%CMDER_ROOT%\vendor\user-aliases.cmd.example" "%user-aliases%"
     )
 )
 
@@ -149,20 +153,13 @@ call "%user-aliases%"
 :: manually extracting the archive rather than executing the 7z sfx
 if exist "%CMDER_ROOT%\vendor\git-for-windows\post-install.bat" (
     call :verbose-output Running Git for Windows one time Post Install....
-    cd /d "%CMDER_ROOT%\vendor\git-for-windows\"
+    pushd "%CMDER_ROOT%\vendor\git-for-windows\"
     "%CMDER_ROOT%\vendor\git-for-windows\git-bash.exe" --no-needs-console --hide --no-cd --command=post-install.bat
-    cd /d %USERPROFILE%
+    popd
 )
 
 :: Set home path
 if not defined HOME set "HOME=%USERPROFILE%"
-
-:: This is either a env variable set by the user or the result of
-:: cmder.exe setting this variable due to a commandline argument or a "cmder here"
-if defined CMDER_START (
-    cd /d "%CMDER_START%"
-)
-
 
 if exist "%CMDER_ROOT%\config\user-profile.cmd" (
     REM Create this file and place your own command in there
@@ -173,7 +170,14 @@ if exist "%CMDER_ROOT%\config\user-profile.cmd" (
     echo :: use this file to run your own startup commands
     echo :: use  in front of the command to prevent printing the command
     echo.
+    echo :: uncomment this to have the ssh agent load when cmder starts
     echo :: call "%%GIT_INSTALL_ROOT%%/cmd/start-ssh-agent.cmd"
+    echo.
+    echo :: uncomment this next two lines to use pageant as the ssh authentication agent
+    echo :: SET SSH_AUTH_SOCK=/tmp/.ssh-pageant-auth-sock
+    echo :: call "%%GIT_INSTALL_ROOT%%/cmd/start-ssh-pageant.cmd"
+    echo.
+    echo :: you can add your plugins to the cmder path like so
     echo :: set "PATH=%%CMDER_ROOT%%\vendor\whatever;%%PATH%%"
     echo.
     ) > "%CMDER_ROOT%\config\user-profile.cmd"
