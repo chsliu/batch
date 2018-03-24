@@ -46,9 +46,9 @@ call :PATHNAME %0 BASE
 call :BASENAME %BASE:~0,-1% BASE
 
 REM =================================
-echo gsutil rsync %bucket%/%BASE% %DST%
+echo gsutil rm %bucket%/%BASE%/*
 REM pause
-gsutil rsync %bucket%/%BASE% %DST%
+gsutil rm %bucket%/%BASE%/*
 
 REM =================================
 pause

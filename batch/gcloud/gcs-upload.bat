@@ -21,7 +21,7 @@ REM =================================
 if [%1]==[""] goto :EOF
 
 REM =================================
-set path=C:\Users\sita\AppData\Local\Google\Cloud SDK\google-cloud-sdk\bin;%PATH%;
+set path=%LOCALAPPDATA%\Google\Cloud SDK\google-cloud-sdk\bin;%PATH%;
 set bucket=gs://creeper-tw-backup
 call :PATHNAME "%0" BASE
 call :BASENAME "%BASE:~0,-1%" BASE
