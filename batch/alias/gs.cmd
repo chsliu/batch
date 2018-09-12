@@ -1,1 +1,1 @@
-@git status
+@%TASKS_ROOT%\utility\gitsync.bat
