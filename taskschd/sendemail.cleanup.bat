@@ -13,7 +13,8 @@ set TODAY=%MyDate:~0,4%-%MyDate:~4,2%-%MyDate:~6,2%
 set MONTH=%MyDate:~0,4%-%MyDate:~4,2%
 REM =================================
 
-set LOG1=%~dp0\%~n0-%TODAY%.txt
+REM set LOG1=%~dp0\%~n0-%TODAY%.txt
+set LOG1=%temp%\%~n0-%TODAY%.txt
 set TXT1=%temp%\%~n0.txt
 set TXT2=%temp%\cleanup-%COMPUTERNAME%.txt
 
