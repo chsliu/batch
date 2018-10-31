@@ -40,4 +40,5 @@ v=vagrant $*
 vi=vim $*
 diff="C:\Program Files (x86)\Meld\Meld.exe" $*
 pr=pushd %TASKS_ROOT%\rsync\DeltaCopyRaw
-hosts=vi /c/Users/sita/.ssh/known_hosts
+;hosts=vi /c/Users/sita/.ssh/known_hosts
+hosts=vi c:\Users\sita\.ssh\known_hosts
