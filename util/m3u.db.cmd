@@ -111,20 +111,23 @@ def m3udb(file, db, onlynew):
 		
 		if not isValidURL(url): continue
 		
-		if url in db:
-			if not onlynew:
-				warning("[Cached]",title.decode('utf-8').encode('cp950','replace'))
+		try:
+			if url in db:
+				if not onlynew:
+					warning("[Cached]",title.decode('utf-8').encode('cp950','replace'))
 
-				print(title)
-				print(url) 
-		else:
-			titleUnicode = title.decode('utf-8')
-			warning(bcolors.White,"[Title]",titleUnicode.encode('cp950','replace'),bcolors.ENDC)
-			db[url] = titleUnicode
+					print(title)
+					print(url) 
+			else:
+				titleUnicode = title.decode('utf-8')
+				warning(bcolors.White,"[Title]",titleUnicode.encode('cp950','replace'),bcolors.ENDC)
+				db[url] = titleUnicode
 
-			print(title) 
-			print(url)
-	
+				print(title) 
+				print(url)
+		except Exception as err:
+			warning(bcolors.Red,err,bcolors.ENDC)
+			
 	
 def main():
 	sys.argv = win32_unicode_argv()
