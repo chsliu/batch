@@ -114,12 +114,12 @@ class PersistenDB(UserDict.DictMixin):
 			try: 
 				count = self.age[key]
 				if count < countmin:
-					warning("[Retired]", self.dict[key][:68].encode('cp950'))
+					warning("[Retired]", self.dict[key][:68].encode('cp950','replace'))
 					# retired = retired + 1
 					del self.age[key]
 					del self.dict[key]
 			except:
-				warning("[AgeCounted]", self.dict[key][:68].encode('cp950'))
+				warning("[AgeCounted]", self.dict[key][:68].encode('cp950','replace'))
 				self.age[key] = count
 				
 		# if retired: warning("[Retired", retired, "]")
@@ -141,24 +141,42 @@ class PersistenDB(UserDict.DictMixin):
 			# warning("[Closing",self.filename,"step1]")
 			if self.ischanged:
 				# warning("[Closing",self.filename,"step2]")
+				lineno=144
 				self.retire()
+				lineno=146
 				warning_item("[Saving]", self.filename)
 				pkl_file = gzip.open(self.filename, 'wb')
-				pickle.dump(self.dict, pkl_file)
-				pickle.dump(self.age, pkl_file)
-				try:
+				
+				lineno=150
+				try: pickle.dump(self.dict, pkl_file)
+				except:
+					warning(sys.exc_info())
+					warning("[Close on dict",self.filename,"pickle.dump failed]")
+					
+				lineno=156
+				try: pickle.dump(self.age, pkl_file)
+				except:
+					warning(sys.exc_info())
+					warning("[Close on age",self.filename,"pickle.dump failed]")
+					
+				lineno=162
+				try: 
 					if hasattr(self, 'count'): pickle.dump(self.count, pkl_file)
-				except: 
+				except:
 					# warning(sys.exc_info()[0])
 					warning(sys.exc_info())
-					warning("[Close",self.filename,"pickle.dump failed]")
+					warning("[Close on count",self.filename,"pickle.dump failed]")
+					
+				lineno=170
 				pkl_file.close()
+				lineno=172
 				self.ischanged = False
 				# warning("[", len(self.dict), "Done ]")
+				lineno=175
 				self.report()
 		except:
 			warning(sys.exc_info())
-			warning("[Close",self.filename,"failed",sys.exc_info()[0],"]")
+			warning("[Close",lineno,self.filename,"failed",sys.exc_info()[0],"]")
 
 	def __del__(self):
 		if self.filename is not None: self.close()
@@ -194,7 +212,7 @@ class PersistenDBDated(PersistenDB):
 				time = self.age[key]
 				try:
 					if time < timemin:
-						warning("[Retired]", self.dict[key].encode('cp950'))
+						warning("[Retired]", self.dict[key].encode('cp950','replace'))
 						del self.age[key]
 						del self.dict[key]
 				except:
