@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="utf-8"?>
 <key name="Software">
 	<key name="ConEmu">
-		<key name=".Vanilla" modified="2018-07-27 21:29:25" build="161206">
+		<key name=".Vanilla" modified="2018-12-13 07:43:38" build="161206">
 			<value name="ColorTable00" type="dword" data="00222827"/>
 			<value name="ColorTable01" type="dword" data="009e5401"/>
 			<value name="ColorTable02" type="dword" data="0004aa74"/>
@@ -686,17 +686,17 @@
 					<value name="Count" type="long" data="1"/>
 					<value name="Cmd1" type="string" data="C:\WINDOWS\system32\cmd.exe /k &quot;&quot;C:\Users\sita\AppData\Local\Google\Cloud SDK\cloud_env.bat&quot;&quot;"/>
 				</key>
-				<key name="&lt;Startup&gt;" modified="2018-08-01 12:44:13" build="161206">
+				<key name="&lt;Startup&gt;" modified="2018-12-13 07:51:40" build="161206">
 					<value name="GuiArgs" type="string" data=""/>
-					<value name="Cmd1" type="string" data="-cur_console:b -cur_console:d:D:\Users\sita\Documents\tasks\batch\ssh -cur_console:C:C:\tools\cmder\icons\cmder.ico cmd /k &quot;%ConEmuDir%\..\init.bat&quot;"/>
+					<value name="Cmd1" type="string" data="&gt; -cur_console:b -cur_console:d:D:\Users\sita\Documents\tasks\batch\ssh -cur_console:C:C:\tools\cmder\icons\cmder.ico cmd /k &quot;%ConEmuDir%\..\init.bat&quot;"/>
 					<value name="Cmd2" type="string" data="-cur_console:b -cur_console:d:D:\Users\sita\Documents\tasks\batch\ssh -cur_console:C:C:\tools\cmder\icons\cmder.ico cmd /k &quot;%ConEmuDir%\..\init.bat&quot;"/>
 					<value name="Cmd3" type="string" data="-cur_console:b -cur_console:d:D:\Users\sita\Documents\tasks\batch\ssh -cur_console:C:C:\tools\cmder\icons\cmder.ico cmd /k &quot;%ConEmuDir%\..\init.bat&quot;"/>
-					<value name="Cmd4" type="string" data="-cur_console:b -cur_console:d:d:\Users\sita\Downloads\74-UHC-SP\plugins\Buscript -cur_console:C:C:\tools\cmder\icons\cmder.ico cmd /k &quot;%ConEmuDir%\..\init.bat&quot;"/>
-					<value name="Cmd5" type="string" data="&gt; -cur_console:b -cur_console:d:d:\Users\sita\Downloads\74-UHC-SP -cur_console:C:C:\tools\cmder\icons\cmder.ico cmd /k &quot;%ConEmuDir%\..\init.bat&quot;"/>
+					<value name="Cmd4" type="string" data="-cur_console:b -cur_console:d:≐며Ǟ -cur_console:C:C:\tools\cmder\icons\cmder.ico {cmd::Cmder}"/>
+					<value name="Cmd5" type="string" data="&gt; -cur_console:b -cur_console:d:d:\Users\sita\Downloads\74-UHC-SP -cur_console:C:C:\tools\cmder\icons\cmder.ico {cmd::Cmder}"/>
 					<value name="Cmd6" type="string" data="-cur_console:b -cur_console:d:D:\Users\sita\Documents\tasks\batch\ssh -cur_console:C:C:\tools\cmder\icons\cmder.ico cmd /k &quot;%ConEmuDir%\..\init.bat&quot;"/>
 					<value name="Cmd7" type="string" data="-cur_console:b -cur_console:d:d:\Users\sita\Downloads\74-UHC-SP -cur_console:C:C:\tools\cmder\icons\cmder.ico cmd /k &quot;%ConEmuDir%\..\init.bat&quot;"/>
-					<value name="Active" type="long" data="5"/>
-					<value name="Count" type="long" data="5"/>
+					<value name="Active" type="long" data="1"/>
+					<value name="Count" type="long" data="3"/>
 				</key>
 			</key>
 			<key name="Apps" modified="2018-04-25 05:47:42" build="161206">
