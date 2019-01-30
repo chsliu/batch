@@ -28,11 +28,14 @@ pd=popd
 pdd=pushd D:\Users\%USERNAME%\Dropbox\Desktop
 ping=ping -t $*
 pk=pushd C:\Users\%USERNAME%\AppData\Roaming\Kodi\userdata
-ph=pushd %TASKS_ROOT%\batch\ssh  
+ph=pushd %TASKS_ROOT%\batch\ssh
 pu=pushd %TASKS_ROOT%\utility
 pv=set VAGRANT_HOME=D:\Users\sita\.vagrant.d & pushd D:\Users\%USERNAME%\vagrant 
 pwd=cd
 py=pushd C:\Users\%USERNAME%\AppData\Roaming\Kodi\userdata\playlists\video\YouTube
+pm=pushd D:\Users\sita\PortableApps\miscord-win
+puhc=pushd d:\Users\sita\Downloads\74-UHC
+pjs=pushd d:\Users\sita\Downloads\74-UHC\plugins\Buscript
 su="%TASKS_ROOT%\utility\getadmin.bat" "%TASKS_ROOT%\utility\cmdk.bat"
 v=vagrant $*
 ;vup=vagrant up
