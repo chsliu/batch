@@ -39,6 +39,7 @@ pjs=pushd d:\Users\sita\Downloads\74-UHC\plugins\Buscript
 31=pushd D:\Users\sita\Downloads\31-lobby
 38=pushd d:\Users\sita\Downloads\38-ChaYeMeetup
 48=pushd d:\Users\sita\Downloads\48-ChaYeKitPvP
+50=pushd d:\Users\sita\Downloads\50-FanTomShooter
 74=pushd d:\Users\sita\Downloads\74-UHC
 su="%TASKS_ROOT%\utility\getadmin.bat" "%TASKS_ROOT%\utility\cmdk.bat"
 v=vagrant $*
