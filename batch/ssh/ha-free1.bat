@@ -7,7 +7,7 @@ set /p ROOT=<%TEMP%\temp.txt
 del %TEMP%\temp.txt >nul
 
 set ROOT=D:\Users\sita\Nextcloud
-set HOST=34.83.145.164
+set HOST=35.233.234.22
 
 REM echo "C:\Program Files\Git\usr\bin\ssh.exe" -i "%ROOT%\SSHKey\nb19_rsa" -o StrictHostKeyChecking=no -o UserKnownHostsFile=/dev/null sita@%~n0
 REM "C:\Program Files\Git\usr\bin\ssh.exe" -i "%ROOT%\SSHKey\nb19_rsa" -o StrictHostKeyChecking=no -o UserKnownHostsFile=/dev/null sita@%~n0
