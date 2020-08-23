@@ -47,8 +47,8 @@ def win32_unicode_argv():
     if argc.value > 0:
         # Remove Python executable and commands if present
         start = argc.value - len(sys.argv)
-        return [argv[i] for i in
-                xrange(start, argc.value)]
+        # return [argv[i] for i in xrange(start, argc.value)]
+        return [argv[i] for i in range(start, argc.value)]
 
 
 def warning_item(*objs):
