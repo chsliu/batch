@@ -41,6 +41,7 @@ pjs=pushd d:\Users\sita\Downloads\74-UHC\plugins\Buscript
 48=pushd d:\Users\sita\Downloads\48-ChaYeKitPvP
 50=pushd d:\Users\sita\Downloads\50-FanTomShooter
 74=pushd d:\Users\sita\Downloads\74-UHC
+vb1804=pushd D:\Users\sita\vagrant\vb1804
 vb2004=pushd D:\Users\sita\vagrant\vb2004
 su="%TASKS_ROOT%\utility\getadmin.bat" "%TASKS_ROOT%\utility\cmdk.bat"
 va=vagrant $*
