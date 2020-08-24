@@ -9,13 +9,23 @@ set CMDER_INIT_START=%time%
 :: !!! Use "%CMDER_ROOT%\config\user_profile.cmd" to add your own startup commands
 
 :: Use /v command line arg or set to > 0 for verbose output to aid in debugging.
-set verbose_output=0
-set debug_output=0
-set time_init=0
-set fast_init=0
-set max_depth=1
-:: Add *nix tools to end of path. 0 turns off *nix tools.
-set nix_tools=1
+if not defined verbose_output set verbose_output=0
+
+:: Use /d command line arg or set to 1 for debug output to aid in debugging.
+if not defined debug_output set debug_output=0
+
+:: Use /t command line arg or set to 1 to display init time.
+if not defined time_init set time_init=0
+
+:: Use /f command line arg to speed up init at the expense of some functionality.
+if not defined fast_init set fast_init=0
+
+:: Use /max_depth 1-5 to set max recurse depth for calls to `enhance_path_recursive`
+if not defined max_depth set max_depth=1
+
+:: Add *nix tools to end of path. 0 turns off *nix tools, 2 adds *nix tools to the front of thr path.
+if not defined nix_tools set nix_tools=1
+
 set "CMDER_USER_FLAGS= "
 
 :: Find root dir
@@ -120,14 +130,16 @@ goto var_loop
 
 if defined CMDER_USER_CONFIG (
     %lib_console% debug_output init.bat "CMDER IS ALSO USING INDIVIDUAL USER CONFIG FROM '%CMDER_USER_CONFIG%'!"
+
+    if not exist "%CMDER_USER_CONFIG%\opt" md "%CMDER_USER_CONFIG%\opt"
 )
 
 :: Pick right version of clink
 if "%PROCESSOR_ARCHITECTURE%"=="x86" (
-    set architecture=86
+    set clink_architecture=x86
     set architecture_bits=32
 ) else (
-    set architecture=64
+    set clink_architecture=x64
     set architecture_bits=64
 )
 
@@ -141,17 +153,27 @@ if "%CMDER_CLINK%" == "1" (
       copy "%CMDER_ROOT%\vendor\clink_settings.default" "%CMDER_USER_CONFIG%\settings"
       echo Additional *.lua files in "%CMDER_USER_CONFIG%" are loaded on startup.\
     )
-    "%CMDER_ROOT%\vendor\clink\clink_x%architecture%.exe" inject --quiet --profile "%CMDER_USER_CONFIG%" --scripts "%CMDER_ROOT%\vendor"
+    "%CMDER_ROOT%\vendor\clink\clink_%clink_architecture%.exe" inject --quiet --profile "%CMDER_USER_CONFIG%" --scripts "%CMDER_ROOT%\vendor"
   ) else (
     if not exist "%CMDER_ROOT%\config\settings" (
       echo Generating clink initial settings in "%CMDER_ROOT%\config\settings"
       copy "%CMDER_ROOT%\vendor\clink_settings.default" "%CMDER_ROOT%\config\settings"
       echo Additional *.lua files in "%CMDER_ROOT%\config" are loaded on startup.
     )
-    "%CMDER_ROOT%\vendor\clink\clink_x%architecture%.exe" inject --quiet --profile "%CMDER_ROOT%\config" --scripts "%CMDER_ROOT%\vendor"
+    "%CMDER_ROOT%\vendor\clink\clink_%clink_architecture%.exe" inject --quiet --profile "%CMDER_ROOT%\config" --scripts "%CMDER_ROOT%\vendor"
   )
 ) else (
   %lib_console% verbose_output "WARNING: Incompatible 'ComSpec/Shell' Detetected Skipping Clink Injection!"
+)
+
+if "%CMDER_CONFIGURED%" GTR "1" (
+  %lib_console% verbose_output "Cmder is already configured, skipping Cmder Init!"
+
+  goto USER_ALIASES
+) else if "%CMDER_CONFIGURED%" == "1" (
+  %lib_console% verbose_output "Cmder is already configured, skipping to Cmder User Init!"
+
+  goto USER_CONFIG_START
 )
 
 :: Prepare for git-for-windows
@@ -165,7 +187,6 @@ if not defined TERM set TERM=cygwin
 :: * test if a git is in path and if yes, use that
 :: * last, use our vendored git
 :: also check that we have a recent enough version of git by examining the version string
-setlocal enabledelayedexpansion
 if defined GIT_INSTALL_ROOT (
     if exist "%GIT_INSTALL_ROOT%\cmd\git.exe" goto :SPECIFIED_GIT
 ) else if "%fast_init%" == "1" (
@@ -184,48 +205,12 @@ if defined GIT_INSTALL_ROOT (
 :: check if git is in path...
 for /F "delims=" %%F in ('where git.exe 2^>nul') do (
     :: get the absolute path to the user provided git binary
-    pushd %%~dpF
-    :: check if there's shim - and if yes follow the path
-    if exist git.shim (
-        for /F "tokens=2 delims== " %%I in (git.shim) do (
-            pushd %%~dpI
-            set "test_dir=!CD!"
-            popd
-        )
-    ) else (
-        set "test_dir=!CD!"
-    )
-    popd
+    %lib_git% is_git_shim "%%~dpF"
+    %lib_git% get_user_git_version
+    %lib_git% compare_git_versions
 
-    :: get the version information for the user provided git binary
-    %lib_git% read_version USER "!test_dir!"
-    %lib_git% validate_version USER !GIT_VERSION_USER!
-
-    if !errorlevel! geq 0 (
-        :: compare the user git version against the vendored version
-        %lib_git% compare_versions USER VENDORED
-
-        :: use the user provided git if its version is greater than, or equal to the vendored git
-        if !errorlevel! geq 0 if exist "!test_dir:~0,-4!\cmd\git.exe" (
-            set "GIT_INSTALL_ROOT=!test_dir:~0,-4!"
-            set test_dir=
-            goto :FOUND_GIT
-        ) else if !errorlevel! geq 0 (
-            set "GIT_INSTALL_ROOT=!test_dir!"
-            set test_dir=
-            goto :FOUND_GIT
-        ) else (
-            call :verbose_output Found old !GIT_VERSION_USER! in "!test_dir!", but not using...
-            set test_dir=
-        )
-    ) else (
-
-        :: if the user provided git executable is not found
-        if !errorlevel! equ -255 (
-            call :verbose_output No git at "!git_executable!" found.
-            set test_dir=
-        )
-
+    if defined GIT_INSTALL_ROOT (
+        goto :FOUND_GIT
     )
 )
 
@@ -233,59 +218,62 @@ for /F "delims=" %%F in ('where git.exe 2^>nul') do (
 :VENDORED_GIT
 if exist "%CMDER_ROOT%\vendor\git-for-windows" (
     set "GIT_INSTALL_ROOT=%CMDER_ROOT%\vendor\git-for-windows"
-    %lib_console% debug_output "Using vendored Git '!GIT_VERSION_VENDORED!' from '!GIT_INSTALL_ROOT!..."
+    %lib_console% debug_output "Using vendored Git '%GIT_VERSION_VENDORED%'..."
     goto :CONFIGURE_GIT
 ) else (
     goto :NO_GIT
 )
 
 :SPECIFIED_GIT
-%lib_console% debug_output "Using /GIT_INSTALL_ROOT from '%GIT_INSTALL_ROOT%..."
+%lib_console% debug_output "Using /GIT_INSTALL_ROOT..."
 goto :CONFIGURE_GIT
 
 :FOUND_GIT
-%lib_console% debug_output "Using found Git '!GIT_VERSION_USER!' from '%GIT_INSTALL_ROOT%..."
+%lib_console% debug_output "Using found Git '%GIT_VERSION_USER%' from '%GIT_INSTALL_ROOT%..."
 goto :CONFIGURE_GIT
 
 :CONFIGURE_GIT
+%lib_console% debug_output "Using Git from '%GIT_INSTALL_ROOT%..."
 :: Add git to the path
-if defined GIT_INSTALL_ROOT (
-    rem add the unix commands at the end to not shadow windows commands like more
-    if %nix_tools% equ 1 (
-        %lib_console% debug_output init.bat "Preferring Windows commands"
-        set "path_position=append"
-    ) else (
-        %lib_console% debug_output init.bat "Preferring *nix commands"
-        set "path_position="
-    )
+if exist "%GIT_INSTALL_ROOT%\cmd\git.exe" %lib_path% enhance_path "%GIT_INSTALL_ROOT%\cmd" ""
 
-    if exist "!GIT_INSTALL_ROOT!\cmd\git.exe" %lib_path% enhance_path "!GIT_INSTALL_ROOT!\cmd" !path_position!
-    if exist "!GIT_INSTALL_ROOT!\mingw32" (
-        %lib_path% enhance_path "!GIT_INSTALL_ROOT!\mingw32\bin" !path_position!
-    ) else if exist "!GIT_INSTALL_ROOT!\mingw64" (
-        %lib_path% enhance_path "!GIT_INSTALL_ROOT!\mingw64\bin" !path_position!
-    )
-
-    if %nix_tools% geq 1 (
-        %lib_path% enhance_path "!GIT_INSTALL_ROOT!\usr\bin" !path_position!
-    )
-
-    :: define SVN_SSH so we can use git svn with ssh svn repositories
-    if not defined SVN_SSH set "SVN_SSH=%GIT_INSTALL_ROOT:\=\\%\\bin\\ssh.exe"
-    
-    if not defined LANG (
-        :: Find locale.exe: From the git install root, from the path, using the git installed env, or fallback using the env from the path.
-        if not defined git_locale if exist "!GIT_INSTALL_ROOT!\usr\bin\locale.exe" set git_locale="!GIT_INSTALL_ROOT!\usr\bin\locale.exe"
-        if not defined git_locale for /F "delims=" %%F in ('where locale.exe 2^>nul') do (if not defined git_locale  set git_locale="%%F")
-        if not defined git_locale if exist "!GIT_INSTALL_ROOT!\usr\bin\env.exe" set git_locale="!GIT_INSTALL_ROOT!\usr\bin\env.exe" /usr/bin/locale
-        if not defined git_locale set git_locale=env /usr/bin/locale
-        for /F "delims=" %%F in ('!git_locale! -uU 2') do (
-            set "LANG=%%F"
-        )
-    )
+:: Add the unix commands at the end to not shadow windows commands like more
+if %nix_tools% equ 1 (
+    %lib_console% verbose_output "Preferring Windows commands"
+    set "path_position=append"
+) else (
+    %lib_console% verbose_output "Preferring *nix commands"
+    set "path_position="
 )
 
-endlocal & set "PATH=%PATH%" & set "LANG=%LANG%" & set "SVN_SSH=%SVN_SSH%" & set "GIT_INSTALL_ROOT=%GIT_INSTALL_ROOT%"
+if %nix_tools% geq 1 (
+    if exist "%GIT_INSTALL_ROOT%\mingw32" (
+        %lib_path% enhance_path "%GIT_INSTALL_ROOT%\mingw32\bin" %path_position%
+    ) else if exist "%GIT_INSTALL_ROOT%\mingw64" (
+        %lib_path% enhance_path "%GIT_INSTALL_ROOT%\mingw64\bin" %path_position%
+    )
+
+    %lib_path% enhance_path "%GIT_INSTALL_ROOT%\usr\bin" %path_position%
+)
+
+:: define SVN_SSH so we can use git svn with ssh svn repositories
+if not defined SVN_SSH set "SVN_SSH=%GIT_INSTALL_ROOT:\=\\%\\bin\\ssh.exe"
+
+:: Find locale.exe: From the git install root, from the path, using the git installed env, or fallback using the env from the path.
+if not defined git_locale if exist "%GIT_INSTALL_ROOT%\usr\bin\locale.exe" set git_locale="%GIT_INSTALL_ROOT%\usr\bin\locale.exe"
+if not defined git_locale for /F "tokens=* delims=" %%F in ('where locale.exe 2^>nul') do ( if not defined git_locale  set git_locale="%%F" )
+if not defined git_locale if exist "%GIT_INSTALL_ROOT%\usr\bin\env.exe" set git_locale="%GIT_INSTALL_ROOT%\usr\bin\env.exe" /usr/bin/locale
+if not defined git_locale for /F "tokens=* delims=" %%F in ('where env.exe 2^>nul') do ( if not defined git_locale  set git_locale="%%F" /usr/bin/locale )
+
+if defined git_locale (
+  %lib_console% debug_output init.bat "Env Var - git_locale=%git_locale%"
+  if not defined LANG (
+      for /F "delims=" %%F in ('%git_locale% -uU 2') do (
+          set "LANG=%%F"
+      )
+  )
+)
+
 %lib_console% debug_output init.bat "Env Var - GIT_INSTALL_ROOT=%GIT_INSTALL_ROOT%"
 %lib_console% debug_output init.bat "Found Git in: '%GIT_INSTALL_ROOT%'"
 goto :PATH_ENHANCE
@@ -296,9 +284,11 @@ endlocal
 
 :PATH_ENHANCE
 %lib_path% enhance_path "%CMDER_ROOT%\vendor\bin"
-%lib_path% enhance_path_recursive "%CMDER_ROOT%\bin" %max_depth%
+
+:USER_CONFIG_START
+%lib_path% enhance_path_recursive "%CMDER_ROOT%\bin" 0 %max_depth%
 if defined CMDER_USER_BIN (
-  %lib_path% enhance_path_recursive "%CMDER_USER_BIN%" %max_depth%
+  %lib_path% enhance_path_recursive "%CMDER_USER_BIN%" 0 %max_depth%
 )
 %lib_path% enhance_path "%CMDER_ROOT%" append
 
@@ -309,6 +299,7 @@ if defined CMDER_USER_CONFIG (
   %lib_profile% run_profile_d "%CMDER_USER_CONFIG%\profile.d"
 )
 
+:USER_ALIASES
 :: Allows user to override default aliases store using profile.d
 :: scripts run above by setting the 'aliases' env variable.
 ::
@@ -331,22 +322,11 @@ if "%CMDER_ALIASES%" == "1" (
   )
 
   REM Make sure we have a self-extracting user_aliases.cmd file
-  setlocal enabledelayedexpansion
   if not exist "%user_aliases%" (
       echo Creating initial user_aliases store in "%user_aliases%"...
       copy "%CMDER_ROOT%\vendor\user_aliases.cmd.default" "%user_aliases%"
   ) else (
-      type "%user_aliases%" | %WINDIR%\System32\findstr /i ";= Add aliases below here" >nul
-      if "!errorlevel!" == "1" (
-          echo Creating initial user_aliases store in "%user_aliases%"...
-          if defined CMDER_USER_CONFIG (
-              copy "%user_aliases%" "%user_aliases%.old_format"
-              copy "%CMDER_ROOT%\vendor\user_aliases.cmd.default" "%user_aliases%"
-          ) else (
-              copy "%user_aliases%" "%user_aliases%.old_format"
-              copy "%CMDER_ROOT%\vendor\user_aliases.cmd.default" "%user_aliases%"
-          )
-      )
+    %lib_base% update_legacy_aliases
   )
 
   :: Update old 'user_aliases' to new self executing 'user_aliases.cmd'
@@ -359,11 +339,12 @@ if "%CMDER_ALIASES%" == "1" (
     type "%user_aliases%.old_format" >> "%user_aliases%"
     del "%user_aliases%.old_format"
   )
-  endlocal
 )
 
 :: Add aliases to the environment
 call "%user_aliases%"
+
+if "%CMDER_CONFIGURED%" gtr "1" goto CMDER_CONFIGURED
 
 :: See vendor\git-for-windows\README.portable for why we do this
 :: Basically we need to execute this post-install.bat because we are
@@ -390,7 +371,7 @@ if defined CMDER_USER_CONFIG (
   set "initialConfig=%CMDER_USER_CONFIG%\user_profile.cmd"
   if exist "%CMDER_USER_CONFIG%\user_profile.cmd" (
       REM Create this file and place your own command in there
-      %lib_console% debug_output init.bat "Calling - %CMDER_USER_CONFIG%\user_profile.cmd
+      %lib_console% debug_output init.bat "Calling - %CMDER_USER_CONFIG%\user_profile.cmd"
       call "%CMDER_USER_CONFIG%\user_profile.cmd"
   )
 )
@@ -414,11 +395,13 @@ if "%CMDER_ALIASES%" == "1" if exist "%CMDER_ROOT%\bin\alias.bat" if exist "%CMD
 )
 
 set initialConfig=
-set CMDER_CONFIGURED=1
+
+:CMDER_CONFIGURED
+if not defined CMDER_CONFIGURED set CMDER_CONFIGURED=1
 
 set CMDER_INIT_END=%time%
 
 if %time_init% gtr 0 (
-  "%cmder_root%\vendor\bin\timer.cmd" %CMDER_INIT_START% %CMDER_INIT_END%
+  "%cmder_root%\vendor\bin\timer.cmd" "%CMDER_INIT_START%" "%CMDER_INIT_END%"
 )
 exit /b
