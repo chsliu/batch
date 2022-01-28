@@ -32,6 +32,8 @@ choco feature enable -nautoUninstaller
 
 cinst -y 7zip cmder cpu-z crystaldiskinfo dropbox everything foxitreader git google-chrome-x64 Gow ImDisk-Toolkit imgburn kodi meld msysgit netscan64 notepadplusplus openhardwaremonitor potplayer python2 rsync steam teamviewer vagrant virtualbox winbox wireshark
 
+cinst -y discord line processhacker synergy telegram ultraedit wechat
+
 REM cinst -y openssh -params '"/SSHServerFeature"'
 
 REM =================================
@@ -53,6 +55,9 @@ REM git clone https://github.com/chsliu/ShooterSubPyDownloader.git
 REM =================================
 
 REM call %~dp0\newinstall.kodi.bat
+
+REM =================================
+setx path "%path%;C:\Users\sita\Downloads\tasks\batch\alias"
 
 REM =================================
 
