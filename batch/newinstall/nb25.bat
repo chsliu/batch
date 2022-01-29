@@ -30,9 +30,39 @@ REM =================================
 
 choco feature enable -nautoUninstaller
 
-cinst -y 7zip cmder cpu-z crystaldiskinfo dropbox everything foxitreader git google-chrome-x64 Gow ImDisk-Toolkit imgburn kodi meld msysgit netscan64 notepadplusplus openhardwaremonitor potplayer python2 rsync steam teamviewer vagrant virtualbox winbox wireshark
+cinst -y 7zip bind-toolsonly Cmder cpu-z crystaldiskinfo crystaldiskmark discord dropbox Everything everything filezilla foxitreader git github-desktop GoogleChrome Gow ImDisk-Toolkit imgburn kodi line meld msysgit netscan64 nextcloud-client notepadplusplus openhardwaremonitor potplayer processhacker putty python2 rsync steam synergy teamviewer telegram ultraedit vagrant virtualbox VirtualBox.ExtensionPack vscode wechat winbox wireshark
 
-cinst -y discord line processhacker synergy telegram ultraedit wechat
+REM anydesk
+REM atom
+REM autohotkey
+REM filebot
+REM Firefox
+REM gitkraken
+REM hugo
+REM nginx
+REM ngrok
+REM nodejs
+REM nssm
+REM sourcetree
+REM sublimetext3
+REM teraterm
+REM typora
+REM wsl-ubuntu-2004
+
+REM # Visual C++ Build Tools 2015
+REM microsoft-visual-cpp-build-tools
+REM # Visual C++ Build Tools 2015
+REM VisualCppBuildTools
+REM # Visual Studio 2017
+REM microsoft-build-tools
+REM # Visual C++ Build Tools 2017
+REM visualcpp-build-tools
+REM # Visual Studio Installer 2017 2019
+REM visualstudio-installer
+REM # Visual Studio 2017 Build Tools
+REM visualstudio2017buildtools
+REM # Visual Studio 2019 Build Tools
+REM visualstudio2019buildtools
 
 REM cinst -y openssh -params '"/SSHServerFeature"'
 
