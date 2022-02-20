@@ -9,5 +9,7 @@ del %TEMP%\temp.txt >nul
 REM set ROOT=D:\Users\sita\Nextcloud
 set ROOT=C:\Users\sita\Vault
 
-echo "C:\Program Files\Git\usr\bin\ssh.exe" -i "%ROOT%\SSHKey\nb19_rsa" sita@%~n0
-"C:\Program Files\Git\usr\bin\ssh.exe" -i "%ROOT%\SSHKey\nb19_rsa" sita@%~n0
+REM echo "C:\Program Files\Git\usr\bin\ssh.exe" -i "%ROOT%\SSHKey\nb19_rsa" sita@%~n0
+REM "C:\Program Files\Git\usr\bin\ssh.exe" -i "%ROOT%\SSHKey\nb19_rsa" sita@%~n0
+echo "C:\Windows\System32\OpenSSH\ssh.exe" -i "%ROOT%\SSHKey\nb19_rsa" sita@%~n0
+"C:\Windows\System32\OpenSSH\ssh.exe" -i "%ROOT%\SSHKey\nb19_rsa" sita@%~n0
