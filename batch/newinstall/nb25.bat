@@ -87,7 +87,20 @@ REM =================================
 REM call %~dp0\newinstall.kodi.bat
 
 REM =================================
+REM increase limit to 2048
+reg add "HKLM\SYSTEM\CurrentControlSet\Control\Session Manager\Environment" /f /v Test /d 12345
+
+REM broadcast WM_SETTINGCHANGE
+setx /M USERNAME %USERNAME%
+
+REM append to path
 setx path "%path%;C:\Users\sita\Downloads\tasks\batch\alias"
+
+REM =================================
+REM enter github credential
+if exist %~dp0\..\..\utility\gitsync.bat (
+	call %~dp0\..\..\utility\gitsync.bat
+)
 
 REM =================================
 
