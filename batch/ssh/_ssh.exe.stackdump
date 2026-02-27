@@ -1,0 +1,6 @@
+Exception: STATUS_ACCESS_VIOLATION at eip=6118D001
+eax=0043E6CA ebx=20436010 ecx=77AC1CF3 edx=0043E6CA esi=00000000 edi=0000006C
+ebp=0000000A esp=0065928C program=C:\Users\sita\AppData\Roaming\MobaXterm\slash\bin\_ssh.exe, pid 1846, thread main
+cs=0023 ds=002B es=002B fs=0053 gs=002B ss=002B
+Stack trace:
+Frame     Function  Args
